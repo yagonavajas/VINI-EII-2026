@@ -417,3 +417,110 @@ class SoFIFAScraper:
                 print(f"    {p.get('overall_rating', ''):>3}  {p.get('name', ''):30s}  {p.get('positions', '')}")
 
         print(sep)
+
+
+# ============================================================================
+# MAIN - Scraping Entry Point
+# ============================================================================
+
+def scrape_fifa_version(version: str, year: str) -> bool:
+    """
+    Scrape a specific FIFA version and save to CSV files.
+    
+    Args:
+        version: FIFA version (e.g., "12" for FIFA 12)
+        year: Year (e.g., "2012")
+    
+    Returns:
+        True if scraping was successful, False otherwise
+    """
+    import os
+    
+    # Output directory: csv_sofifa folder in the same location as this script
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    output_dir = os.path.join(base_dir, "csv_sofifa")
+
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+
+    teams_file   = os.path.join(output_dir, f"teams_{year}.csv")
+    players_file = os.path.join(output_dir, f"players_{year}.csv")
+
+    scraper = SoFIFAScraper(version=version)
+
+    teams, players = scraper.scrape_all()
+
+    if not teams and not players:
+        print(
+            f"\n[!] Nothing was scraped for FIFA {version} ({year}).\n"
+            "    Possible reasons:\n"
+            "    • FIFA roster data is not available in the SoFIFA API.\n"
+            "    • The API returned 403 (access restricted) or 404 (not found).\n"
+            "    • Check your internet connection and try again.\n"
+        )
+        return False
+
+    scraper.save_to_csv(teams_file=teams_file, players_file=players_file)
+
+    print(f"\n[OK] Files written to:\n  {teams_file}\n  {players_file}")
+    return True
+
+
+def main() -> None:
+    """
+    Scrape FIFA versions from 2012 to 2022.
+    Maps years to FIFA versions:
+    - 2012 → FIFA 12
+    - 2013 → FIFA 13
+    - 2014 → FIFA 14
+    - ... and so on
+    """
+    # Mapping year to FIFA version
+    fifa_versions = {
+        "2012": "12",
+        "2013": "13",
+        "2014": "14",
+        "2015": "15",
+        "2016": "16",
+        "2017": "17",
+        "2018": "18",
+        "2019": "19",
+        "2020": "20",
+        "2021": "21",
+        "2022": "22",
+    }
+    
+    print("\n" + "=" * 60)
+    print("SoFIFA Scraper - Scraping 2012-2022")
+    print("=" * 60)
+    
+    successful = 0
+    failed = 0
+    
+    for year, fifa_version in fifa_versions.items():
+        print("\n" + "=" * 60)
+        print(f"Scraping FIFA {fifa_version} ({year})...")
+        print("=" * 60)
+        
+        if scrape_fifa_version(version=fifa_version, year=year):
+            successful += 1
+        else:
+            failed += 1
+        
+        # Polite delay between versions
+        time.sleep(2)
+    
+    # Summary
+    print("\n" + "=" * 60)
+    print("SCRAPING COMPLETE")
+    print("=" * 60)
+    print(f"  Successful: {successful}/{len(fifa_versions)}")
+    print(f"  Failed:     {failed}/{len(fifa_versions)}")
+    print("=" * 60)
+    
+    if failed > 0:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

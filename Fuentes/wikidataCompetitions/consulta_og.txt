@@ -1,0 +1,41 @@
+SELECT ?year ?competitionLabel ?teamLabel WHERE {
+  VALUES ?competition {
+
+    # Internacional
+    wd:Q18756    # UEFA Champions League
+    wd:Q18760   # UEFA Europa League
+    
+    # Inglaterra
+    wd:Q9448      # Premier League
+    wd:Q11151    # FA Cup
+    wd:Q11152   # EFL Cup
+    
+    # España
+    wd:Q324867    # La Liga
+    wd:Q163683   # Copa del Rey
+    
+    # Italia
+    wd:Q15804     # Serie A
+    wd:Q16400    # Coppa Italia
+    
+    # Francia
+    wd:Q13394    # Ligue 1
+    wd:Q19376    # Coupe de France
+    
+    # Alemania
+    wd:Q82595     # Bundesliga
+    wd:Q150880   # DFB-Pokal
+  }
+
+  ?season wdt:P3450 ?competition;
+          wdt:P1346 ?team;
+          wdt:P580 ?startTime.
+
+  BIND(YEAR(?startTime) AS ?year)
+  FILTER(?year >= 2012 && ?year <= 2022)
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "es,en".
+  }
+}
+ORDER BY ?year ?competitionLabel

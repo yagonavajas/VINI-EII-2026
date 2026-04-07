@@ -34,11 +34,14 @@ class WikidataCompetitionScraper:
           OPTIONAL {{ ?competition wdt:P17 ?country. }}
           
           ?season wdt:P3450 ?competition;
-                  wdt:P1346 ?team;
-                  wdt:P580 ?startTime.
+                  wdt:P1346 ?team.
           
-          BIND(YEAR(?startTime) AS ?year)
-          FILTER(?year >= 2012 && ?year <= 2022)
+          OPTIONAL {{ ?season wdt:P580 ?startTime. }}
+          OPTIONAL {{ ?season wdt:P582 ?endTime. }}
+          
+          BIND(COALESCE(?startTime, ?endTime) AS ?date)
+          BIND(YEAR(?date) AS ?year)
+          FILTER(?year >= 2015 && ?year <= 2020)
           
           SERVICE wikibase:label {{
                         bd:serviceParam wikibase:language "[AUTO_LANGUAGE],es,en".
@@ -92,44 +95,8 @@ class WikidataCompetitionScraper:
             })
         return formatted
     
-    def save_to_csv(self, results: List[Dict], filename: str) -> str:
-        """Guarda resultados en CSV"""
-        filepath = os.path.join(self.output_dir, filename)
-        
-        if not results:
-            print(f"  [WARNING] No hay resultados para guardar en {filename}")
-            return filepath
-        
-        try:
-            with open(filepath, 'w', newline='', encoding='utf-8') as csvfile:
-                fieldnames = ['año', 'pais', 'competicion', 'equipo']
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                writer.writeheader()
-                writer.writerows(results)
-            
-            print(f"  [OK] Guardado en: {filepath}")
-            return filepath
-            
-        except Exception as e:
-            print(f"  [ERROR] {e}")
-            return filepath
-    
-    def fetch_competition(self, competition_qid: str, competition_name: str,
-                         year_min: int = 2012, year_max: int = 2022):
-        """Obtiene y guarda datos de una competición individual"""
-        print(f"\n[DOWNLOAD] Descargando: {competition_name}")
-        
-        query = self.build_query([competition_qid])
-        raw_results = self.execute_query(query)
-        formatted_results = self.format_results(raw_results, {competition_qid: competition_name})
-        
-        csv_filename = f"{competition_name.lower().replace(' ', '_')}.csv"
-        filepath = self.save_to_csv(formatted_results, csv_filename)
-        
-        return formatted_results, filepath
-    
     def fetch_multiple_competitions(self, competitions: Dict[str, str],
-                                   year_min: int = 2012, year_max: int = 2022):
+                                   year_min: int = 2015, year_max: int = 2020):
         """Obtiene datos de múltiples competiciones y los guarda en un único CSV"""
         competition_qids = list(competitions.keys())
         
@@ -139,6 +106,7 @@ class WikidataCompetitionScraper:
         print(f"{'='*60}")
         
         query = self.build_query(competition_qids)
+        print(query)
         print(f"\n[DOWNLOAD] Ejecutando consulta combinada...")
         raw_results = self.execute_query(query)
         formatted_results = self.format_results(raw_results, competitions)
@@ -175,12 +143,11 @@ class WikidataCompetitionScraper:
             return filepath
 
 
-
-# ============================================================================
 # CONFIGURACIÓN DE COMPETICIONES
-# ============================================================================
+
 
 COMPETITIONS = {
+    #Europa
     'Q18756': 'UEFA Champions League',
     'Q18760': 'UEFA Europa League',
     'Q484028': 'Super Copa de Europa',
@@ -193,17 +160,17 @@ COMPETITIONS = {
     
     # España
     'Q324867': 'La Liga',
-    'Q163683': 'Copa del Rey',
+    'Q483794': 'Copa del Rey',
     'Q485997': 'Supercopa de España',
     
     # Italia
     'Q15804': 'Serie A',
-    'Q16400': 'Coppa Italia',
+    'Q169918': 'Coppa Italia',
     'Q19618': 'Supercoppa Italiana',
     
     # Francia
     'Q13394': 'Ligue 1',
-    'Q19376': 'Coupe de France',
+    'Q212412': 'Coupe de France',
     'Q653544': 'Trophée des Champions',
     
     # Alemania
@@ -212,9 +179,7 @@ COMPETITIONS = {
     'Q156973': 'DFL-Supercup'
 }
 
-# ============================================================================
-# MAIN
-# ============================================================================
+# Main
 
 if __name__ == "__main__":
     scraper = WikidataCompetitionScraper(output_dir="wikidataCompetitions")

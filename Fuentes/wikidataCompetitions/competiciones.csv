@@ -1,128 +1,96 @@
 año,pais,competicion,equipo
-2012,Italia,Serie A,Juventus
-2013,Italia,Serie A,Juventus
-2014,Italia,Serie A,Juventus
-2015,Italia,Serie A,Juventus
 2016,Italia,Serie A,Juventus
 2017,Italia,Serie A,Juventus
 2018,Italia,Serie A,Juventus
 2019,Italia,Serie A,Juventus
-2020,Italia,Serie A,Inter de Milán
-2021,Italia,Serie A,A.C. Milan
-2022,Italia,Serie A,Società Sportiva Calcio Napoli
-2012,Alemania,Bundesliga,F. C. Bayern Múnich
-2013,Alemania,Bundesliga,F. C. Bayern Múnich
-2014,Alemania,Bundesliga,F. C. Bayern Múnich
-2015,Alemania,Bundesliga,F. C. Bayern Múnich
+2020,Italia,Serie A,Juventus
 2016,Alemania,Bundesliga,F. C. Bayern Múnich
 2017,Alemania,Bundesliga,F. C. Bayern Múnich
 2018,Alemania,Bundesliga,F. C. Bayern Múnich
-2019,Alemania,Bundesliga,FC Bayern München
+2019,Alemania,Bundesliga,F. C. Bayern Múnich
 2020,Alemania,Bundesliga,FC Bayern München
-2021,Alemania,Bundesliga,FC Bayern München
-2022,Alemania,Bundesliga,FC Bayern München
-2012,Francia,Ligue 1,Paris Saint-Germain FC
-2013,Francia,Ligue 1,Paris Saint-Germain FC
-2014,Francia,Ligue 1,Paris Saint-Germain FC
-2015,Francia,Ligue 1,Paris Saint-Germain FC
-2016,Francia,Ligue 1,A.S. Monaco F.C.
-2017,Francia,Ligue 1,Paris Saint-Germain FC
+2016,Francia,Ligue 1,Paris Saint-Germain FC
+2017,Francia,Ligue 1,A.S. Monaco F.C.
 2018,Francia,Ligue 1,Paris Saint-Germain FC
 2019,Francia,Ligue 1,Paris Saint-Germain FC
-2020,Francia,Ligue 1,Lille Olympique Sporting Club
-2021,Francia,Ligue 1,Paris Saint-Germain FC
-2022,Francia,Ligue 1,Paris Saint-Germain FC
-2012,Reino Unido,Premier League,Manchester United Football Club
-2013,Reino Unido,Premier League,Manchester City Football Club
-2014,Reino Unido,Premier League,Chelsea Football Club
-2015,Reino Unido,Premier League,Leicester City Football Club
-2016,Reino Unido,Premier League,Chelsea Football Club
-2017,Reino Unido,Premier League,Manchester City Football Club
+2020,Francia,Ligue 1,Paris Saint-Germain FC
+2016,Reino Unido,Premier League,Leicester City Football Club
+2017,Reino Unido,Premier League,Chelsea Football Club
 2018,Reino Unido,Premier League,Manchester City Football Club
-2019,Reino Unido,Premier League,Liverpool Fútbol Club
-2020,Reino Unido,Premier League,Manchester City Football Club
-2021,Reino Unido,Premier League,Manchester City Football Club
-2022,Reino Unido,Premier League,Manchester City Football Club
-2014,Alemania,Copa de Alemania,VfL Wolfsburgo
-2015,Alemania,Copa de Alemania,F. C. Bayern Múnich
-2016,Alemania,Copa de Alemania,Borussia Dortmund
-2017,Alemania,Copa de Alemania,Eintracht Frankfurt
-2018,Alemania,Copa de Alemania,F. C. Bayern Múnich
+2019,Reino Unido,Premier League,Manchester City Football Club
+2020,Reino Unido,Premier League,Liverpool Fútbol Club
+2016,Reino Unido,Community Shield,Manchester United Football Club
+2017,Reino Unido,Community Shield,Arsenal Fútbol Club
+2018,Reino Unido,Community Shield,Manchester City Football Club
+2019,Reino Unido,Community Shield,Manchester City Football Club
+2020,Reino Unido,Community Shield,Arsenal Fútbol Club
+2016,Italia,Copa Italia,Juventus
+2017,Italia,Copa Italia,Juventus
+2018,Italia,Copa Italia,Juventus
+2019,Italia,Copa Italia,Società Sportiva Lazio
+2020,Italia,Copa Italia,Società Sportiva Calcio Napoli
+2016,Alemania,Copa de Alemania,F. C. Bayern Múnich
+2017,Alemania,Copa de Alemania,Borussia Dortmund
+2018,Alemania,Copa de Alemania,Eintracht Frankfurt
 2019,Alemania,Copa de Alemania,F. C. Bayern Múnich
-2020,Alemania,Copa de Alemania,Borussia Dortmund
-2021,Alemania,Copa de Alemania,RB Leipzig
-2022,Alemania,Copa de Alemania,RB Leipzig
-2012,Reino Unido,Copa de la Liga (Inglaterra y Gales),Swansea City Association Football Club
-2013,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
-2014,Reino Unido,Copa de la Liga (Inglaterra y Gales),Chelsea Football Club
-2015,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
-2016,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester United Football Club
-2017,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
+2020,Alemania,Copa de Alemania,F. C. Bayern Múnich
+2016,Francia,Copa de Francia,Paris Saint-Germain FC
+2017,Francia,Copa de Francia,Paris Saint-Germain FC
+2018,Francia,Copa de Francia,Paris Saint-Germain FC
+2019,Francia,Copa de Francia,Stade Rennais Football Club
+2020,Francia,Copa de Francia,Paris Saint-Germain FC
+2016,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
+2017,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester United Football Club
 2018,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
 2019,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
 2020,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester City Football Club
-2021,Reino Unido,Copa de la Liga (Inglaterra y Gales),Wolverhampton Wanderers F.C.
-2021,Reino Unido,Copa de la Liga (Inglaterra y Gales),Liverpool Fútbol Club
-2022,Reino Unido,Copa de la Liga (Inglaterra y Gales),Manchester United Football Club
-2012,Reino Unido,FA Cup,Wigan Athletic Football Club
-2013,Reino Unido,FA Cup,Arsenal Fútbol Club
-2014,Reino Unido,FA Cup,Arsenal Fútbol Club
-2015,Reino Unido,FA Cup,Manchester United Football Club
-2016,Reino Unido,FA Cup,Arsenal Fútbol Club
-2017,Reino Unido,FA Cup,Chelsea Football Club
-2018,Reino Unido,FA Cup,Manchester City Football Club
-2019,Reino Unido,FA Cup,Arsenal Fútbol Club
-2020,Reino Unido,FA Cup,Leicester City Football Club
-2021,Reino Unido,FA Cup,Liverpool Fútbol Club
-2022,Reino Unido,FA Cup,Manchester City Football Club
-2013,N/A,Liga Europa de la UEFA,Sevilla Fútbol Club
-2014,N/A,Liga Europa de la UEFA,Sevilla Fútbol Club
-2015,N/A,Liga Europa de la UEFA,Sevilla Fútbol Club
-2016,N/A,Liga Europa de la UEFA,Manchester United Football Club
-2017,N/A,Liga Europa de la UEFA,Atlético de Madrid
-2018,N/A,Liga Europa de la UEFA,Chelsea Football Club
-2019,N/A,Liga Europa de la UEFA,Sevilla Fútbol Club
-2020,N/A,Liga Europa de la UEFA,Villarreal Club de Fútbol
-2021,N/A,Liga Europa de la UEFA,Eintracht Frankfurt
-2022,N/A,Liga Europa de la UEFA,Sevilla Fútbol Club
-2012,N/A,Liga de Campeones de la UEFA,F. C. Bayern Múnich
-2013,N/A,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
-2014,N/A,Liga de Campeones de la UEFA,Fútbol Club Barcelona
-2015,N/A,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
-2016,N/A,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
-2017,N/A,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
-2018,N/A,Liga de Campeones de la UEFA,Liverpool Fútbol Club
-2019,N/A,Liga de Campeones de la UEFA,F. C. Bayern Múnich
-2020,N/A,Liga de Campeones de la UEFA,Chelsea Football Club
-2021,N/A,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
-2022,N/A,Liga de Campeones de la UEFA,Manchester City Football Club
-2012,España,Primera División de España,Fútbol Club Barcelona
-2013,España,Primera División de España,Atlético de Madrid
-2014,España,Primera División de España,Fútbol Club Barcelona
-2014,España,Primera División de España,Real Betis Balompié
-2015,España,Primera División de España,Fútbol Club Barcelona
-2016,España,Primera División de España,Real Madrid Club de Fútbol
-2017,España,Primera División de España,Fútbol Club Barcelona
+2016,España,Copa del Rey,Fútbol Club Barcelona
+2017,España,Copa del Rey,Fútbol Club Barcelona
+2018,España,Copa del Rey,Fútbol Club Barcelona
+2019,España,Copa del Rey,Valencia Club de Fútbol
+2020,España,Copa del Rey,Real Sociedad de Fútbol
+2016,Reino Unido,FA Cup,Manchester United Football Club
+2017,Reino Unido,FA Cup,Arsenal Fútbol Club
+2018,Reino Unido,FA Cup,Chelsea Football Club
+2019,Reino Unido,FA Cup,Manchester City Football Club
+2020,Reino Unido,FA Cup,Arsenal Fútbol Club
+2016,España,Liga Europa de la UEFA,Sevilla Fútbol Club
+2017,Reino Unido,Liga Europa de la UEFA,Manchester United Football Club
+2018,Francia,Liga Europa de la UEFA,Atlético de Madrid
+2019,Azerbaiyán,Liga Europa de la UEFA,Chelsea Football Club
+2020,Alemania,Liga Europa de la UEFA,Sevilla Fútbol Club
+2016,Italia,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
+2017,Reino Unido,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
+2018,Ucrania,Liga de Campeones de la UEFA,Real Madrid Club de Fútbol
+2019,España,Liga de Campeones de la UEFA,Liverpool Fútbol Club
+2020,Portugal,Liga de Campeones de la UEFA,F. C. Bayern Múnich
+2016,España,Primera División de España,Fútbol Club Barcelona
+2017,España,Primera División de España,Real Madrid Club de Fútbol
 2018,España,Primera División de España,Fútbol Club Barcelona
-2019,España,Primera División de España,Real Madrid Club de Fútbol
-2020,España,Primera División de España,Atlético de Madrid
-2021,España,Primera División de España,Real Madrid Club de Fútbol
-2022,España,Primera División de España,Fútbol Club Barcelona
-2012,Alemania,Supercopa de Alemania,F. C. Bayern Múnich
-2013,Alemania,Supercopa de Alemania,Borussia Dortmund
-2014,Alemania,Supercopa de Alemania,Borussia Dortmund
-2012,Arabia Saudí,Supercopa de España,Real Madrid Club de Fútbol
-2013,Arabia Saudí,Supercopa de España,Fútbol Club Barcelona
-2014,Arabia Saudí,Supercopa de España,Atlético de Madrid
-2015,Arabia Saudí,Supercopa de España,Athletic Club
-2016,Arabia Saudí,Supercopa de España,Fútbol Club Barcelona
-2017,Arabia Saudí,Supercopa de España,Real Madrid Club de Fútbol
-2018,Arabia Saudí,Supercopa de España,Fútbol Club Barcelona
-2020,Arabia Saudí,Supercopa de España,Real Madrid Club de Fútbol
-2021,Arabia Saudí,Supercopa de España,Athletic Club
-2022,Arabia Saudí,Supercopa de España,Real Madrid Club de Fútbol
-2012,N/A,Supercopa de Europa,Atlético de Madrid
-2013,N/A,Supercopa de Europa,F. C. Bayern Múnich
-2014,N/A,Supercopa de Europa,Real Madrid Club de Fútbol
-2015,N/A,Supercopa de Europa,Fútbol Club Barcelona
-2016,N/A,Supercopa de Europa,Real Madrid Club de Fútbol
+2019,España,Primera División de España,Fútbol Club Barcelona
+2020,España,Primera División de España,Real Madrid Club de Fútbol
+2016,Alemania,Supercopa de Alemania,F. C. Bayern Múnich
+2017,Alemania,Supercopa de Alemania,F. C. Bayern Múnich
+2018,Alemania,Supercopa de Alemania,F. C. Bayern Múnich
+2019,Alemania,Supercopa de Alemania,Borussia Dortmund
+2020,Alemania,Supercopa de Alemania,F. C. Bayern Múnich
+2016,España,Supercopa de España,Fútbol Club Barcelona
+2017,España,Supercopa de España,Real Madrid Club de Fútbol
+2018,España,Supercopa de España,Fútbol Club Barcelona
+2019,Arabia Saudí,Supercopa de España,Real Madrid Club de Fútbol
+2020,España,Supercopa de España,Athletic Club
+2016,Noruega,Supercopa de Europa,Real Madrid Club de Fútbol
+2017,Macedonia del Norte,Supercopa de Europa,Real Madrid Club de Fútbol
+2018,Estonia,Supercopa de Europa,Atlético de Madrid
+2019,Turquía,Supercopa de Europa,Liverpool Fútbol Club
+2020,Hungría,Supercopa de Europa,F. C. Bayern Múnich
+2016,Austria,Supercopa de Francia,Paris Saint-Germain FC
+2017,Marruecos,Supercopa de Francia,Paris Saint-Germain FC
+2018,República Popular China,Supercopa de Francia,Paris Saint-Germain FC
+2019,República Popular China,Supercopa de Francia,Paris Saint-Germain FC
+2020,Francia,Supercopa de Francia,Paris Saint-Germain FC
+2016,Italia,Supercopa de Italia,A.C. Milan
+2017,Italia,Supercopa de Italia,Società Sportiva Lazio
+2018,Italia,Supercopa de Italia,Juventus
+2019,Italia,Supercopa de Italia,Società Sportiva Lazio
+2020,Italia,Supercopa de Italia,Juventus

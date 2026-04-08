@@ -1,5 +1,3 @@
-"""Consultas SPARQL a Wikidata para obtener datos de competiciones deportivas en CSV"""
-
 import requests
 import csv
 from typing import Dict, List
@@ -26,28 +24,40 @@ class WikidataCompetitionScraper:
         values_section = "\n    ".join([f"wd:{qid}" for qid in competitions_qids])
         
         return f"""
-                SELECT ?year ?competition ?competitionLabel ?countryLabel ?teamLabel WHERE {{
-          VALUES ?competition {{
-            {values_section}
-          }}
-          
-          OPTIONAL {{ ?competition wdt:P17 ?country. }}
-          
-          ?season wdt:P3450 ?competition;
-                  wdt:P1346 ?team.
-          
-          OPTIONAL {{ ?season wdt:P580 ?startTime. }}
-          OPTIONAL {{ ?season wdt:P582 ?endTime. }}
-          
-          BIND(COALESCE(?startTime, ?endTime) AS ?date)
-          BIND(YEAR(?date) AS ?year)
-          FILTER(?year >= 2015 && ?year <= 2020)
-          
-          SERVICE wikibase:label {{
-                        bd:serviceParam wikibase:language "[AUTO_LANGUAGE],es,en".
-          }}
-        }}
-        ORDER BY ?competitionLabel ?year
+            SELECT ?year ?competition ?competitionLabel ?countryLabel ?teamLabel 
+            WHERE {{
+                VALUES ?competition {{
+                    {values_section}
+                }}
+            
+                ?season wdt:P3450 ?competition;
+                        wdt:P1346 ?team.
+
+                OPTIONAL {{ ?season wdt:P17 ?country. }}
+                
+                OPTIONAL {{ ?season wdt:P580 ?startTime. }}
+                OPTIONAL {{ ?season wdt:P582 ?endTime. }}
+                OPTIONAL {{ ?season wdt:P585 ?pointInTime. }}
+                
+                BIND(
+                  IF(BOUND(?pointInTime),
+                    YEAR(?pointInTime),
+                    IF(BOUND(?endTime),
+                        YEAR(?endTime),
+                        IF(BOUND(?startTime),
+                             YEAR(?startTime) + 1,
+                            9999
+                      )
+                    )
+                  ) AS ?year
+                )
+                FILTER(?year >= 2016 && ?year <= 2020)
+            
+                SERVICE wikibase:label {{
+                            bd:serviceParam wikibase:language "[AUTO_LANGUAGE],es,en".
+            }}
+            }}
+            ORDER BY ?competitionLabel ?year
         """
     
     def execute_query(self, query: str) -> List[Dict]:
@@ -60,8 +70,7 @@ class WikidataCompetitionScraper:
             headers = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
             }
-            
-            print(f"  Ejecutando consulta...")
+
             response = requests.get(self.WIKIDATA_ENDPOINT, params=params, headers=headers, timeout=30)
             response.raise_for_status()
             
@@ -96,17 +105,16 @@ class WikidataCompetitionScraper:
         return formatted
     
     def fetch_multiple_competitions(self, competitions: Dict[str, str],
-                                   year_min: int = 2015, year_max: int = 2020):
+                                   year_min: int = 2016, year_max: int = 2020):
         """Obtiene datos de múltiples competiciones y los guarda en un único CSV"""
         competition_qids = list(competitions.keys())
         
         print(f"\n{'='*60}")
-        print(f">> Descargando {len(competitions)} competiciones...")
-        print(f">> Competiciones: {', '.join(competitions.values())}")
+        print(f">>Descargando {len(competitions)} Competiciones: {', '.join(competitions.values())}")
         print(f"{'='*60}")
         
         query = self.build_query(competition_qids)
-        print(query)
+        #print(query)
         print(f"\n[DOWNLOAD] Ejecutando consulta combinada...")
         raw_results = self.execute_query(query)
         formatted_results = self.format_results(raw_results, competitions)

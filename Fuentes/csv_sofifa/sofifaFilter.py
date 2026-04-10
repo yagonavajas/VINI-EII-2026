@@ -32,7 +32,7 @@ def combine_team_files(start_year, end_year):
     # Generar nombre del archivo de salida
     start_str = str(start_year)[2:]
     end_str = str(end_year)[2:]
-    output_filename = f"teams_{start_str}_{end_str}.csv"
+    output_filename = f"teams_{start_str}_{end_str}_sofifa.csv"
     output_path = current_dir / output_filename
     
     # Guardar el archivo combinado
@@ -72,7 +72,7 @@ def combine_player_files(start_year, end_year):
     # Generar nombre del archivo de salida
     start_str = str(start_year)[2:]
     end_str = str(end_year)[2:]
-    output_filename = f"players_{start_str}_{end_str}.csv"
+    output_filename = f"players_{start_str}_{end_str}_sofifa.csv"
     output_path = current_dir / output_filename
     
     # Guardar el archivo combinado
@@ -83,7 +83,7 @@ def combine_player_files(start_year, end_year):
     return True
 
 def main():
-    start_year = 2015
+    start_year = 2016
     end_year = 2020
     combine_team_files(start_year, end_year)
     combine_player_files(start_year, end_year)

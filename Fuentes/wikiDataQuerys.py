@@ -129,7 +129,7 @@ class WikidataCompetitionScraper:
     
     def _save_all_to_csv(self, results: List[Dict]) -> str:
         """Guarda todos los resultados en archivo CSV único"""
-        filepath = os.path.join(self.output_dir, "competiciones.csv")
+        filepath = os.path.join(self.output_dir, "competiciones_wikidata.csv")
         
         if not results:
             print(f"  [WARNING] No hay resultados para guardar")

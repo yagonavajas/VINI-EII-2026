@@ -24,7 +24,7 @@ class WikidataCompetitionScraper:
         values_section = "\n    ".join([f"wd:{qid}" for qid in competitions_qids])
         
         return f"""
-            SELECT ?year ?competition ?competitionLabel ?countryLabel ?teamLabel 
+            SELECT ?year ?competition ?competitionLabel ?countryLabel ?team ?teamLabel 
             WHERE {{
                 VALUES ?competition {{
                     {values_section}
@@ -87,20 +87,26 @@ class WikidataCompetitionScraper:
         formatted = []
         for result in results:
             competition_value = result.get('competition', {}).get('value', '')
-            qid_match = re.search(r'(Q\d+)$', competition_value)
-            qid = qid_match.group(1) if qid_match else ''
+            competition_qid = re.search(r'(Q\d+)$', competition_value)
+            competition_qid = competition_qid.group(1) if competition_qid else ''
 
             competition_label = result.get('competitionLabel', {}).get('value', 'N/A')
             
             # Si Wikidata devuelve QID en lugar de etiqueta, usar nombre del diccionario
-            if re.fullmatch(r'Q\d+', competition_label) and qid in competitions:
-                competition_label = competitions[qid]
+            if re.fullmatch(r'Q\d+', competition_label) and competition_qid in competitions:
+                competition_label = competitions[competition_qid]
+
+            team_value = result.get('team', {}).get('value', '')
+            team_qid = re.search(r'(Q\d+)$', team_value)
+            team_qid = team_qid.group(1) if team_qid else ''
 
             formatted.append({
                 'año': result.get('year', {}).get('value', 'N/A'),
                 'pais': result.get('countryLabel', {}).get('value', 'N/A'),
-                'competicion': competition_label,
-                'equipo': result.get('teamLabel', {}).get('value', 'N/A')
+                'competition': competition_qid,
+                'competitionLabel': competition_label,
+                'team': team_qid,
+                'teamLabel': result.get('teamLabel', {}).get('value', 'N/A')
             })
         return formatted
     
@@ -137,7 +143,7 @@ class WikidataCompetitionScraper:
         
         try:
             with open(filepath, 'w', newline='', encoding='utf-8') as csvfile:
-                fieldnames = ['año', 'pais', 'competicion', 'equipo']
+                fieldnames = ['año', 'pais', 'competition', 'competitionLabel', 'team', 'teamLabel']
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(results)

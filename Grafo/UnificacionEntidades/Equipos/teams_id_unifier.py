@@ -59,7 +59,6 @@ def unify_entities(sofifa_df, fbdb_df, sofifa_name_col, fbdb_name_col, sofifa_id
         wikidata_df['_norm'] = wikidata_df['teamLabel'].apply(normalize_text)
         wikidata_prepared = wikidata_df
         print(f"  WikiData preparada con {len(wikidata_prepared)} equipos únicos")
-        print(wikidata_df)
     
     # Pre-normalizar todos los nombres de forma vectorizada
     sofifa_df['_norm'] = sofifa_df[sofifa_name_col].apply(normalize_text)
@@ -189,16 +188,16 @@ def build_wikidata_team_mapping(wikidata_file):
 def team_id_unifier():
     """Unifica equipos de sofifa y fbdb, enriqueciendo con datos de WikiData"""
     print("Procesando equipos...")
-    sofifa = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/teams_16_20_sofifa.csv')
-    fbdb = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/teams_16_20_fbdb.csv')
+    sofifa = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/Equipos/teams_16_20_sofifa.csv')
+    fbdb = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/Equipos/teams_16_20_fbdb.csv')
     
     # Cargar datos de WikiData
-    wikidata_df = build_wikidata_team_mapping('./Aplicacion/Grafo/UnificacionEntidades/competiciones_wikidata.csv')
+    wikidata_df = build_wikidata_team_mapping('./Aplicacion/Grafo/UnificacionEntidades/Equipos/competiciones_wikidata.csv')
     
     definite, candidates, total = unify_entities(sofifa, fbdb, 'name', 'name', 'id', 'teamID', 
                                           threshold=55, threshold_candidates=40,
-                                          output_file='./Aplicacion/Grafo/UnificacionEntidades/equipos_unificados.csv',
-                                          output_file_candidates='./Aplicacion/Grafo/UnificacionEntidades/equipos_candidatos.csv',
+                                          output_file='./Aplicacion/Grafo/UnificacionEntidades/Equipos/equipos_unificados.csv',
+                                          output_file_candidates='./Aplicacion/Grafo/UnificacionEntidades/Equipos/equipos_candidatos.csv',
                                           wikidata_df=wikidata_df)
     
     print(f"  Equipos únicos procesados: {total}")

@@ -186,6 +186,42 @@ def validarYLimpiarEquipos(ano_inicial, ano_final):
     print(f"   Equipos guardados: {len(teams_validos)}")
 
 
+def procesarShots(ano_inicial, ano_final):
+    """
+    Filtra shots.csv eliminando los disparos de partidos que están fuera del rango.
+    Guarda el resultado en shots_16_20_fbdb.csv.
+    """
+    print(f"\n{'='*60}")
+    print(f"Procesando shots {ano_inicial}/{ano_final}...")
+    print(f"{'='*60}")
+    
+    SHOTS_FILE = f"{BASE_PATH}shots.csv"
+    DELETE_FILE = f"{OUTPUT_PATH}delete_16_20.csv"
+    SHOTS_OUTPUT = f"{OUTPUT_PATH}shots_16_20_fbdb.csv"
+    
+    # 1. Cargar datos
+    print(f"\n1. Leyendo shots.csv...")
+    shots_df = pd.read_csv(SHOTS_FILE, encoding='utf-8')
+    print(f"   Total de disparos: {len(shots_df)}")
+    
+    # 2. Cargar IDs de partidos a eliminar
+    print(f"\n2. Leyendo partidos a eliminar (delete_16_20.csv)...")
+    delete_df = pd.read_csv(DELETE_FILE, encoding='utf-8')
+    games_to_delete = set(delete_df['gameID'].values)
+    print(f"   Partidos a eliminar: {len(games_to_delete)}")
+    
+    # 3. Filtrar shots eliminando los de partidos fuera del rango
+    print(f"\n3. Filtrando shots...")
+    shots_filtrado = shots_df[~shots_df['gameID'].isin(games_to_delete)]
+    print(f"   Disparos eliminados: {len(shots_df) - len(shots_filtrado)}")
+    print(f"   Disparos guardados: {len(shots_filtrado)}")
+    
+    # 4. Guardar resultado
+    print(f"\n4. Guardando shots_16_20_fbdb.csv...")
+    shots_filtrado.to_csv(SHOTS_OUTPUT, index=False, encoding='utf-8')
+    print(f"   Archivo generado: {SHOTS_OUTPUT}")
+
+
 def generarRelacionJugadoresEquipos():
     """
     Crea players_teams.csv con jugadores y equipos.
@@ -313,6 +349,9 @@ def main():
     
     # Procesar temporadas de games/appearances
     procesarTemporada(ano_inicial, ano_final)
+    
+    # Procesar shots
+    procesarShots(ano_inicial, ano_final)
     
     # Procesar equipos (solo teamstats)
     procesarEquiposTemporada(ano_inicial, ano_final)

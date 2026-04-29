@@ -8,74 +8,123 @@ from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
 VINI = Namespace("http://vini-eii.org/")
 
 # Cargar el CSV de equipos unificados una sola vez
-EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/equipos_unificados_v2.csv"
+EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/equipos_unificados_v2.csv"
+COUNTRIES_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/paises_unificados.csv"
+COMPETITIONS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/competiciones_unificadas.csv"
 _equipos_cache = None
+_countries_cache = None
+_competitions_cache = None
 
 
-def addTeams(g):
+def addTeamsSofifa(graph):
     with open("./Aplicacion/Grafo/Archivos/teams_16_20_sofifa.csv", newline='', encoding='utf-8') as teams_file:
         reader = csv.DictReader(teams_file)
 
         for row in reader:
-            id_final = obtener_id_final(idSofifa=row["id"])
+            id_team = obtener_id_equipo(idSofifa=row["id"])
+            id_country = obtener_id_country(nameSofifa=row["country"])
+            id_competition = obtener_id_competition(nameSofifa=row["league"])
 
             year = row["year"]
 
-            team_season_id = f"{id_final}_{year}"
+            team_season_id = f"{id_team}_{year}"
             uri = URIRef("http://vini-eii.org/teamSeason/" + team_season_id)
             
-            team_uri = URIRef("http://vini-eii.org/team/" + id_final)
+            team_uri = URIRef("http://vini-eii.org/team/" + id_team)
             
-            country_uri = URIRef("http://vini-eii.org/country/" + row["country"].replace(" ", "_"))
-            league_uri = URIRef("http://vini-eii.org/league/" + row["league"].replace(" ", "_"))
+            country_uri = URIRef("http://vini-eii.org/country/" + id_country)
+            league_uri = URIRef("http://vini-eii.org/league/" + id_competition)
             
             season_uri = URIRef("http://vini-eii.org/season/" + year)
 
 
-            g.add((uri, RDF.type, VINI.TeamSeason))
+            graph.add((uri, RDF.type, VINI.TeamSeason))
 
-            g.add((team_uri, VINI.hasSeason, uri))
-            g.add((uri, VINI.inSeason, season_uri))
+            graph.add((team_uri, VINI.hasSeason, uri))
+            graph.add((uri, VINI.inSeason, season_uri))
 
-            g.add((uri, VINI.hasCountry, country_uri))
-            g.add((uri, VINI.playsInLeague, league_uri))
+            graph.add((uri, VINI.hasCountry, country_uri))
+            graph.add((uri, VINI.playsInLeague, league_uri))
 
             # datos del equipo EN una temporada
-            g.add((uri, VINI.name, Literal(row["name"])))
-            g.add((uri, VINI.country, Literal(row["country"])))
-            g.add((uri, VINI.league, Literal(row["league"])))
-            g.add((uri, VINI.formation, Literal(row["formation"])))
+            graph.add((uri, VINI.name, Literal(row["name"])))
+            #g.add((uri, VINI.country, Literal(row["country"])))
+            #g.add((uri, VINI.league, Literal(row["league"])))
+            graph.add((uri, VINI.formation, Literal(row["formation"])))
 
-            g.add((uri, VINI.overall, Literal(row["overall"])))
-            g.add((uri, VINI.attack, Literal(row["attack"])))
-            g.add((uri, VINI.midfield, Literal(row["midfield"])))
-            g.add((uri, VINI.defence, Literal(row["defence"])))
+            graph.add((uri, VINI.overall, Literal(row["overall"])))
+            graph.add((uri, VINI.attack, Literal(row["attack"])))
+            graph.add((uri, VINI.midfield, Literal(row["midfield"])))
+            graph.add((uri, VINI.defence, Literal(row["defence"])))
 
-            g.add((uri, VINI.transfer_budget, Literal(row["transfer_budget"])))
-            g.add((uri, VINI.club_worth, Literal(row["club_worth"])))
+            graph.add((uri, VINI.transfer_budget, Literal(row["transfer_budget"])))
+            graph.add((uri, VINI.club_worth, Literal(row["club_worth"])))
 
-            g.add((uri, VINI.speed, Literal(row["speed"])))
-            g.add((uri, VINI.dribbling, Literal(row["dribbling"])))
-            g.add((uri, VINI.passing, Literal(row["passing"])))
-            g.add((uri, VINI.positioning, Literal(row["positioning"])))
-            g.add((uri, VINI.crossing, Literal(row["crossing"])))
-            g.add((uri, VINI.shooting, Literal(row["shooting"])))
-            g.add((uri, VINI.aggression, Literal(row["aggression"])))
-            g.add((uri, VINI.pressure, Literal(row["pressure"])))
+            graph.add((uri, VINI.speed, Literal(row["speed"])))
+            graph.add((uri, VINI.dribbling, Literal(row["dribbling"])))
+            graph.add((uri, VINI.passing, Literal(row["passing"])))
+            graph.add((uri, VINI.positioning, Literal(row["positioning"])))
+            graph.add((uri, VINI.crossing, Literal(row["crossing"])))
+            graph.add((uri, VINI.shooting, Literal(row["shooting"])))
+            graph.add((uri, VINI.aggression, Literal(row["aggression"])))
+            graph.add((uri, VINI.pressure, Literal(row["pressure"])))
 
-            g.add((uri, VINI.team_width, Literal(row["team_width"])))
-            g.add((uri, VINI.defender_line, Literal(row["defender_line"])))
+            graph.add((uri, VINI.team_width, Literal(row["team_width"])))
+            graph.add((uri, VINI.defender_line, Literal(row["defender_line"])))
            
-            g.add((uri, VINI.domestic_prestige, Literal(row["domestic_prestige"])))
-            g.add((uri, VINI.international_prestige, Literal(row["international_prestige"])))
+            graph.add((uri, VINI.domestic_prestige, Literal(row["domestic_prestige"])))
+            graph.add((uri, VINI.international_prestige, Literal(row["international_prestige"])))
 
-            g.add((uri, VINI.players, Literal(row["players"])))
-            g.add((uri, VINI.starting_xi_avg_age, Literal(row["starting_xi_avg_age"])))
-            g.add((uri, VINI.whole_team_avg_age, Literal(row["whole_team_avg_age"])))
+            graph.add((uri, VINI.players, Literal(row["players"])))
+            graph.add((uri, VINI.starting_xi_avg_age, Literal(row["starting_xi_avg_age"])))
+            graph.add((uri, VINI.whole_team_avg_age, Literal(row["whole_team_avg_age"])))
 
-            g.add((uri, VINI.year, Literal(year)))
+            graph.add((uri, VINI.year, Literal(year)))
 
-def obtener_id_final(idSofifa=None, idfbdb=None, idWikidata=None):
+def addCompetitionsWikidata(graph):
+    with open("./Aplicacion/Grafo/Archivos/competiciones_wikidata.csv", newline='', encoding='utf-8') as teams_file:
+        reader = csv.DictReader(teams_file)
+
+        for row in reader:
+            id_team = obtener_id_equipo(idWikidata=row["team"])
+            id_country = obtener_id_country(idWikidata=row["country"])
+            id_competition = obtener_id_competition(idWikidata=row["competition"])
+
+            year = row["año"]
+
+            # Crear entidad CompetitionWinner que representa el evento de ganar una competición
+            competition_winner_id = f"{id_competition}_{id_team}_{year}"
+            winner_uri = URIRef("http://vini-eii.org/competitionWinner/" + competition_winner_id)
+            
+            # URIs para las entidades relacionadas
+            team_uri = URIRef("http://vini-eii.org/team/" + id_team)
+            country_uri = URIRef("http://vini-eii.org/country/" + id_country)
+            competition_uri = URIRef("http://vini-eii.org/competition/" + id_competition)
+            season_uri = URIRef("http://vini-eii.org/season/" + year)
+
+            # Definir tipo y relaciones principales
+            graph.add((winner_uri, RDF.type, VINI.CompetitionWinner))
+            
+            # Relaciones con las entidades principales
+            graph.add((winner_uri, VINI.competition, competition_uri))
+            graph.add((winner_uri, VINI.winningTeam, team_uri))
+            graph.add((winner_uri, VINI.country, country_uri))
+            graph.add((winner_uri, VINI.season, season_uri))
+            
+            # Propiedades del evento
+            # graph.add((winner_uri, VINI.year, Literal(year)))
+            # graph.add((winner_uri, VINI.competitionName, Literal(row["competitionLabel"])))
+            # graph.add((winner_uri, VINI.teamName, Literal(row["teamLabel"])))
+            # graph.add((winner_uri, VINI.countryName, Literal(row["countryLabel"])))
+            
+            # Relación inversa: el equipo ganó esta competición
+            graph.add((team_uri, VINI.wonCompetition, winner_uri))
+            
+            # Relación inversa: la competición fue ganada por este equipo
+            graph.add((competition_uri, VINI.wonBy, winner_uri))
+
+
+def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None):
     global _equipos_cache
     if _equipos_cache is None:
         df = pd.read_csv(EQUIPOS_UNIFICADOS_PATH, encoding='utf-8')
@@ -108,20 +157,99 @@ def obtener_id_final(idSofifa=None, idfbdb=None, idWikidata=None):
     
     return None                  
             
+def obtener_id_country(idWikidata=None, nameSofifa=None, nameWikidata=None):
+    global _countries_cache
+    if _countries_cache is None:
+        df = pd.read_csv(COUNTRIES_UNIFICADOS_PATH, encoding='utf-8')
+        _countries_cache = df
+    df = _countries_cache
+    
+    # Buscar por idWikidata
+    if idWikidata and str(idWikidata).strip():
+        resultado = df[df['idWikidata'] == str(idWikidata)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    # Luego buscar por nameSofifa (nombre en inglés)
+    if nameSofifa and str(nameSofifa).strip():
+        resultado = df[df['nameSofifa'] == str(nameSofifa)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    # Finalmente buscar por nameWikidata (nombre en español)
+    if nameWikidata and str(nameWikidata).strip():
+        resultado = df[df['nameWikidata'] == str(nameWikidata)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    return None
+
+
+def obtener_id_competition(idWikidata=None, idSofifa=None, idFbdb=None, nameSofifa=None, nameWikidata=None):
+    global _competitions_cache
+    if _competitions_cache is None:
+        df = pd.read_csv(COMPETITIONS_UNIFICADOS_PATH, encoding='utf-8')
+        _competitions_cache = df
+    df = _competitions_cache
+    
+    # Buscar por idWikidata
+    if idWikidata and str(idWikidata).strip():
+        resultado = df[df['idWikidata'] == str(idWikidata)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    # Buscar por idSofifa
+    if idSofifa and str(idSofifa).strip():
+        try:
+            resultado = df[df['idSofifa'] == int(idSofifa)]
+            if not resultado.empty:
+                return str(int(resultado['idFinal'].values[0]))
+        except (ValueError, TypeError):
+            pass
+    
+    # Buscar por idFbdb
+    if idFbdb and str(idFbdb).strip():
+        try:
+            resultado = df[df['idFbdb'] == int(idFbdb)]
+            if not resultado.empty:
+                return str(int(resultado['idFinal'].values[0]))
+        except (ValueError, TypeError):
+            pass
+    
+    # Buscar por nameSofifa
+    if nameSofifa and str(nameSofifa).strip():
+        resultado = df[df['nameSofifa'] == str(nameSofifa)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    # Finalmente buscar por nameWikidata
+    if nameWikidata and str(nameWikidata).strip():
+        resultado = df[df['nameWikidata'] == str(nameWikidata)]
+        if not resultado.empty:
+            return str(int(resultado['idFinal'].values[0]))
+    
+    return None                  
+            
 def saveGraph(g, filename):
     ttl = g.serialize(format="turtle")
     with open(filename, "w", encoding="utf-8") as f:
         f.write(ttl)
 
 def main():
-    # Crear el grafo
     g = Graph()
     g.bind("vini", VINI)
-
-    addTeams(g)
-
-
+    addTeamsSofifa(g)
     saveGraph(g, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
+
+    e = Graph()
+    e.bind("vini", VINI)
+    addCompetitionsWikidata(e)
+    saveGraph(e, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+
+    # addCompetitionsWikidata(g)
+    # saveGraph(g, "./Aplicacion/Grafo/Grafos/competition_teams_graph.ttl")
+
+
 
 if __name__ == "__main__":
     main()

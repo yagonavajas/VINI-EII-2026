@@ -1,0 +1,22 @@
+# Ganadores de las champions entre 2016 y 2020
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/football/> 
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?year ?teamName ?overall ?formation
+WHERE {
+  ?winner a vini:CompetitionWinner ;
+          vini:competition <http://vini-eii.org/competition/6> ;
+          vini:winningTeam ?team ;
+          vini:season ?season .
+  
+  ?team vini:hasSeason ?teamSeason .
+  ?teamSeason vini:inSeason ?season ;
+              vini:name ?teamName ;
+              vini:overall ?overall ;
+              vini:formation ?formation .
+  
+  BIND(SUBSTR(STR(?season), STRLEN(STR(?season)) - 3) AS ?year)
+}
+ORDER BY ?year ?teamName

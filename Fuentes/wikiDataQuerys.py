@@ -24,7 +24,7 @@ class WikidataCompetitionScraper:
         values_section = "\n    ".join([f"wd:{qid}" for qid in competitions_qids])
         
         return f"""
-            SELECT ?year ?competition ?competitionLabel ?countryLabel ?team ?teamLabel 
+            SELECT ?year ?competition ?competitionLabel ?country ?countryLabel ?team ?teamLabel 
             WHERE {{
                 VALUES ?competition {{
                     {values_section}
@@ -63,6 +63,7 @@ class WikidataCompetitionScraper:
     def execute_query(self, query: str) -> List[Dict]:
         """Ejecuta consulta SPARQL contra Wikidata"""
         try:
+            print(query)
             params = {
                 "query": query,
                 "format": "json"
@@ -100,9 +101,14 @@ class WikidataCompetitionScraper:
             team_qid = re.search(r'(Q\d+)$', team_value)
             team_qid = team_qid.group(1) if team_qid else ''
 
+            country_value = result.get('country', {}).get('value', '')
+            country_qid = re.search(r'(Q\d+)$', country_value)
+            country_qid = country_qid.group(1) if country_qid else ''
+
             formatted.append({
                 'año': result.get('year', {}).get('value', 'N/A'),
-                'pais': result.get('countryLabel', {}).get('value', 'N/A'),
+                'country': country_qid,
+                'countryLabel': result.get('countryLabel', {}).get('value', 'N/A'),
                 'competition': competition_qid,
                 'competitionLabel': competition_label,
                 'team': team_qid,
@@ -143,7 +149,7 @@ class WikidataCompetitionScraper:
         
         try:
             with open(filepath, 'w', newline='', encoding='utf-8') as csvfile:
-                fieldnames = ['año', 'pais', 'competition', 'competitionLabel', 'team', 'teamLabel']
+                fieldnames = ['año', 'country', 'countryLabel', 'competition', 'competitionLabel', 'team', 'teamLabel']
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(results)

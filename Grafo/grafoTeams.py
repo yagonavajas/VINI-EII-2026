@@ -8,7 +8,7 @@ from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
 VINI = Namespace("http://vini-eii.org/")
 
 # Cargar el CSV de equipos unificados una sola vez
-EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/equipos_unificados_v2.csv"
+EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/equipos_unificados_v3.csv"
 COUNTRIES_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/paises_unificados.csv"
 COMPETITIONS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/competiciones_unificadas.csv"
 _equipos_cache = None
@@ -82,8 +82,8 @@ def addTeamsSofifa(graph):
             graph.add((uri, VINI.year, Literal(year)))
 
 def addCompetitionsWikidata(graph):
-    with open("./Aplicacion/Grafo/Archivos/competiciones_wikidata.csv", newline='', encoding='utf-8') as teams_file:
-        reader = csv.DictReader(teams_file)
+    with open("./Aplicacion/Grafo/Archivos/competiciones_wikidata.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
 
         for row in reader:
             id_team = obtener_id_equipo(idWikidata=row["team"])
@@ -123,6 +123,135 @@ def addCompetitionsWikidata(graph):
             # Relación inversa: la competición fue ganada por este equipo
             graph.add((competition_uri, VINI.wonBy, winner_uri))
 
+def addTeamStatsFBDB(graph):
+    # with open("./Aplicacion/Grafo/Archivos/teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+    #     reader = csv.DictReader(file)
+
+    #     for row in reader:
+    #         id_team = obtener_id_equipo(idfbdb=row["teamID"])
+    #         id_country = obtener_id_country(nameSofifa=row["country"])
+    #         id_competition = obtener_id_competition(nameSofifa=row["league"])
+
+    #         year = row["season"]
+
+    #         team_season_id = f"{id_team}_{year}"
+    #         uri = URIRef("http://vini-eii.org/teamSeason/" + team_season_id)
+            
+    #         team_uri = URIRef("http://vini-eii.org/team/" + id_team)
+            
+    #         country_uri = URIRef("http://vini-eii.org/country/" + id_country)
+    #         league_uri = URIRef("http://vini-eii.org/league/" + id_competition)
+            
+    #         season_uri = URIRef("http://vini-eii.org/season/" + year)
+
+
+    #         graph.add((uri, RDF.type, VINI.TeamSeason))
+
+    #         graph.add((team_uri, VINI.hasSeason, uri))
+
+    #         graph.add((uri, VINI.year, Literal(year)))
+
+    pass
+
+def addGamesFBDB(graph): 
+    with open("./Aplicacion/Grafo/Archivos/games_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+
+        count = 0
+
+        for row in reader:
+            id_game = row["gameID"]
+
+            id_team_home = obtener_id_equipo(idfbdb=row["homeTeamID"])
+            id_team_away = obtener_id_equipo(idfbdb=row["awayTeamID"])
+            
+            id_competition = obtener_id_competition(idFbdb=row["leagueID"])
+            
+            if id_team_home is None or id_team_away is None or id_competition is None:
+                print(f"Advertencia: No se pudo encontrar ID para el juego {id_game}. HomeTeamID: {row['homeTeamID']} -> {id_team_home}, AwayTeamID: {row['awayTeamID']} -> {id_team_away}, LeagueID: {row['leagueID']} -> {id_competition}")
+                continue
+
+            year = row["season"]
+
+            team_home_season_id = f"{id_team_home}_{year}"
+            team_away_season_id = f"{id_team_away}_{year}"
+
+            game_uri = URIRef("http://vini-eii.org/game/" + id_game)
+            
+            team_home_uri = URIRef("http://vini-eii.org/team/" + team_home_season_id)
+            team_away_uri = URIRef("http://vini-eii.org/team/" + team_away_season_id)
+            
+            league_uri = URIRef("http://vini-eii.org/league/" + id_competition)
+            
+            season_uri = URIRef("http://vini-eii.org/season/" + year)
+
+
+            graph.add((game_uri, RDF.type, VINI.Game))
+
+            graph.add((team_home_uri, VINI.playGame, game_uri))
+            graph.add((team_away_uri, VINI.playGame, game_uri))
+
+            graph.add((league_uri, VINI.hasGame, game_uri))
+
+            graph.add((game_uri, VINI.season, season_uri))
+
+
+            graph.add((game_uri, VINI.date, Literal(row["date"])))
+            graph.add((game_uri, VINI.year, Literal(year)))
+
+            # Performance del equipo local
+            home_performance_uri = URIRef("http://vini-eii.org/gamePerformance/" + id_game + "_home")
+            graph.add((home_performance_uri, RDF.type, VINI.GamePerformance))
+            graph.add((home_performance_uri, VINI.game, game_uri))
+            graph.add((home_performance_uri, VINI.team, team_home_uri))
+            graph.add((team_home_uri, VINI.hasPerformance, home_performance_uri))
+            
+            graph.add((home_performance_uri, VINI.goals, Literal(row["homeGoals"])))
+            graph.add((home_performance_uri, VINI.probability, Literal(row["homeProbability"])))
+            graph.add((home_performance_uri, VINI.goalsHalfTime, Literal(row["homeGoalsHalfTime"])))
+
+            # Performance del equipo visitante
+            away_performance_uri = URIRef("http://vini-eii.org/gamePerformance/" + id_game + "_away")
+            graph.add((away_performance_uri, RDF.type, VINI.GamePerformance))
+            graph.add((away_performance_uri, VINI.game, game_uri))
+            graph.add((away_performance_uri, VINI.team, team_away_uri))
+            graph.add((team_away_uri, VINI.hasPerformance, away_performance_uri))
+            
+
+            graph.add((away_performance_uri, VINI.goals, Literal(row["awayGoals"])))
+            graph.add((away_performance_uri, VINI.probability, Literal(row["awayProbability"])))
+            graph.add((away_performance_uri, VINI.goalsHalfTime, Literal(row["awayGoalsHalfTime"])))
+
+            # Probabilidad de empate (propiedad del partido)
+            graph.add((game_uri, VINI.drawProbability, Literal(row["drawProbability"])))
+
+            # Apuestas - Nodo independiente para cada casa de apuestas
+            betting_houses = {
+                "B365": ("B365H", "B365D", "B365A"),
+                "BW": ("BWH", "BWD", "BWA"),
+                "IW": ("IWH", "IWD", "IWA"),
+                "PS": ("PSH", "PSD", "PSA"),
+                "WH": ("WHH", "WHD", "WHA"),
+                "VC": ("VCH", "VCD", "VCA"),
+                "PSC": ("PSCH", "PSCD", "PSCA")
+            }
+            
+            for house_name, (home_key, draw_key, away_key) in betting_houses.items():
+                if any(row.get(key) for key in [home_key, draw_key, away_key]):
+                    bet_uri = URIRef("http://vini-eii.org/gameBet/" + id_game + "_" + house_name)
+                    graph.add((bet_uri, RDF.type, VINI.GameBet))
+                    graph.add((bet_uri, VINI.game, game_uri))
+                    graph.add((bet_uri, VINI.bettingHouse, Literal(house_name)))
+                    graph.add((game_uri, VINI.hasBet, bet_uri))
+                    
+                    graph.add((bet_uri, VINI.homeOdds, Literal(row[home_key])))
+                    graph.add((bet_uri, VINI.drawOdds, Literal(row[draw_key])))
+                    graph.add((bet_uri, VINI.awayOdds, Literal(row[away_key])))
+
+            count += 1
+
+            if count % 1000 == 0:
+                print(f"Procesadas {count} filas")
 
 def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None):
     global _equipos_cache
@@ -236,18 +365,25 @@ def saveGraph(g, filename):
         f.write(ttl)
 
 def main():
-    g = Graph()
-    g.bind("vini", VINI)
-    addTeamsSofifa(g)
-    saveGraph(g, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
+    # teamsSofifa = Graph()
+    # teamsSofifa.bind("vini", VINI)
+    # addTeamsSofifa(teamsSofifa)
+    # saveGraph(teamsSofifa, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
 
-    e = Graph()
-    e.bind("vini", VINI)
-    addCompetitionsWikidata(e)
-    saveGraph(e, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+    # competitionsWikidata = Graph()
+    # competitionsWikidata.bind("vini", VINI)
+    # addCompetitionsWikidata(competitionsWikidata)
+    # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
 
-    # addCompetitionsWikidata(g)
-    # saveGraph(g, "./Aplicacion/Grafo/Grafos/competition_teams_graph.ttl")
+    # teamStatsFBDB = Graph()
+    # teamStatsFBDB.bind("vini", VINI)
+    # addTeamStatsFBDB(teamStatsFBDB)
+    # saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/team_stats_graph.ttl")
+
+    gamesFBDB = Graph()
+    gamesFBDB.bind("vini", VINI)
+    addGamesFBDB(gamesFBDB)
+    saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
 
 
 

@@ -1,0 +1,4727 @@
+@prefix ex: <http://example.org/football/> .
+
+<http://example.org/team/1> a ex:FootballTeam ;
+    ex:attack "81",
+        "82",
+        "84" ;
+    ex:club_worth "€0",
+        "€2.4B",
+        "€2B" ;
+    ex:country "England" ;
+    ex:defence "78",
+        "80",
+        "81",
+        "82" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Premier League" ;
+    ex:midfield "79",
+        "80",
+        "82",
+        "83" ;
+    ex:name "Arsenal" ;
+    ex:overall "80",
+        "82",
+        "83" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€70M",
+        "€74M",
+        "€90.7M",
+        "€92.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/10> a ex:FootballTeam ;
+    ex:attack "83",
+        "84",
+        "85",
+        "86",
+        "87" ;
+    ex:club_worth "€0",
+        "€2.2B",
+        "€2.7B",
+        "€2.8B",
+        "€3B" ;
+    ex:country "England" ;
+    ex:defence "81",
+        "82",
+        "83" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Holding",
+        "4-4-1-1 Midfield" ;
+    ex:league "Premier League" ;
+    ex:midfield "82",
+        "85",
+        "86",
+        "87",
+        "88" ;
+    ex:name "Manchester City" ;
+    ex:overall "82",
+        "83",
+        "84",
+        "85" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€100M",
+        "€117.9M",
+        "€150M",
+        "€170M",
+        "€176M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/10029> a ex:FootballTeam ;
+    ex:attack "75",
+        "77",
+        "78",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€166.3M",
+        "€246.1M",
+        "€328.1M" ;
+    ex:country "Germany" ;
+    ex:defence "75",
+        "76",
+        "77",
+        "79" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Defend",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "74",
+        "76",
+        "77",
+        "79" ;
+    ex:name "TSG 1899 Hoffenheim" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€15M",
+        "€18M",
+        "€22M",
+        "€28M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/10030> a ex:FootballTeam ;
+    ex:attack "70" ;
+    ex:club_worth "€29.3M" ;
+    ex:country "Germany" ;
+    ex:defence "69" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "70" ;
+    ex:name "SC Paderborn 07" ;
+    ex:overall "69" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€5M" ;
+    ex:year "2020" .
+
+<http://example.org/team/100409> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "77",
+        "78" ;
+    ex:club_worth "€0",
+        "€118.3M",
+        "€119.3M" ;
+    ex:country "Germany" ;
+    ex:defence "73",
+        "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "73",
+        "74",
+        "75" ;
+    ex:name "FC Augsburg" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€6M",
+        "€9.5M",
+        "€9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/100888> a ex:FootballTeam ;
+    ex:attack "74",
+        "75" ;
+    ex:club_worth "€10.5M",
+        "€10.8M",
+        "€8.5M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "5-3-2",
+        "5-4-1 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "76" ;
+    ex:name "CD Leganés" ;
+    ex:overall "75" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€3.1M",
+        "€3.8M",
+        "€4.2M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/106> a ex:FootballTeam ;
+    ex:attack "77",
+        "81" ;
+    ex:club_worth "€0",
+        "€780M" ;
+    ex:country "England" ;
+    ex:defence "73",
+        "74" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "Premier League" ;
+    ex:midfield "74",
+        "76" ;
+    ex:name "Sunderland" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€28M",
+        "€38.1M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/109> a ex:FootballTeam ;
+    ex:attack "76",
+        "79",
+        "81" ;
+    ex:club_worth "€0",
+        "€650M" ;
+    ex:country "England" ;
+    ex:defence "73",
+        "74",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-4-1-1 Midfield" ;
+    ex:league "Premier League" ;
+    ex:midfield "73",
+        "75",
+        "76" ;
+    ex:name "West Bromwich Albion" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€22M",
+        "€35.1M",
+        "€41.1M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/11> a ex:FootballTeam ;
+    ex:attack "69",
+        "83",
+        "84",
+        "85" ;
+    ex:club_worth "€0",
+        "€3.4B",
+        "€3.5B",
+        "€3.6B" ;
+    ex:country "England" ;
+    ex:defence "77",
+        "80",
+        "81",
+        "82" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-3-1-2",
+        "4-3-3 Holding" ;
+    ex:league "Premier League" ;
+    ex:midfield "80",
+        "81",
+        "83",
+        "84" ;
+    ex:name "Manchester United" ;
+    ex:overall "81",
+        "82",
+        "83" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€120M",
+        "€169.2M",
+        "€175M",
+        "€177M",
+        "€80M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/110> a ex:FootballTeam ;
+    ex:attack "75",
+        "79" ;
+    ex:club_worth "€388.5M",
+        "€425M" ;
+    ex:country "England" ;
+    ex:defence "76",
+        "78" ;
+    ex:dribbling "Little",
+        "Lots" ;
+    ex:formation "5-2-3",
+        "5-3-2" ;
+    ex:league "Premier League" ;
+    ex:midfield "79",
+        "80" ;
+    ex:name "Wolverhampton Wanderers" ;
+    ex:overall "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€42M",
+        "€60M" ;
+    ex:year "2019",
+        "2020" .
+
+<http://example.org/team/110062> a ex:FootballTeam ;
+    ex:attack "79" ;
+    ex:club_worth "€6.4M",
+        "€9.8M" ;
+    ex:country "Spain" ;
+    ex:defence "75",
+        "76" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-3-2-1",
+        "5-4-1 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "76" ;
+    ex:name "Girona FC" ;
+    ex:overall "75",
+        "77" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Little" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2.6M",
+        "€3.9M" ;
+    ex:year "2018",
+        "2019" .
+
+<http://example.org/team/110316> a ex:FootballTeam ;
+    ex:attack "67" ;
+    ex:club_worth "€0" ;
+    ex:country "France" ;
+    ex:defence "68" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "68" ;
+    ex:name "GFC Ajaccio" ;
+    ex:overall "68" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Lots" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2M" ;
+    ex:year "2016" .
+
+<http://example.org/team/110374> a ex:FootballTeam ;
+    ex:attack "76",
+        "78",
+        "81" ;
+    ex:club_worth "€0",
+        "€202M" ;
+    ex:country "Italy" ;
+    ex:defence "75",
+        "77",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-4-2-1",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "74",
+        "76",
+        "77",
+        "78" ;
+    ex:name "Fiorentina" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€19.5M",
+        "€23M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/110502> a ex:FootballTeam ;
+    ex:attack "68",
+        "71" ;
+    ex:club_worth "€0",
+        "€10.1M" ;
+    ex:country "Germany" ;
+    ex:defence "71" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "71",
+        "73" ;
+    ex:name "SV Darmstadt 98" ;
+    ex:overall "71",
+        "72" ;
+    ex:passing "Long" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2.2M",
+        "€2.5M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/110556> a ex:FootballTeam ;
+    ex:attack "73",
+        "74",
+        "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€101M",
+        "€117M" ;
+    ex:country "Italy" ;
+    ex:defence "73",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-4-3 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "73",
+        "74",
+        "75" ;
+    ex:name "Genoa" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10M",
+        "€12M",
+        "€8.5M",
+        "€8.6M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/110569> a ex:FootballTeam ;
+    ex:attack "72",
+        "73" ;
+    ex:club_worth "€24M",
+        "€32M",
+        "€35M" ;
+    ex:country "France" ;
+    ex:defence "70",
+        "71" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "5-2-1-2" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "72",
+        "73" ;
+    ex:name "Dijon FCO" ;
+    ex:overall "71",
+        "72" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€2.5M",
+        "€2M",
+        "€4.1M",
+        "€4.3M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/110636> a ex:FootballTeam ;
+    ex:attack "73",
+        "74" ;
+    ex:club_worth "€40.3M",
+        "€60.3M" ;
+    ex:country "Germany" ;
+    ex:defence "72" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "Fortuna Düsseldorf" ;
+    ex:overall "73" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€7.5M" ;
+    ex:year "2019",
+        "2020" .
+
+<http://example.org/team/110734> a ex:FootballTeam ;
+    ex:attack "70" ;
+    ex:club_worth "€34M" ;
+    ex:country "Italy" ;
+    ex:defence "70",
+        "71" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Flat",
+        "4-4-2 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "71" ;
+    ex:name "Crotone" ;
+    ex:overall "70" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€5M" ;
+    ex:year "2017",
+        "2018" .
+
+<http://example.org/team/110832> a ex:FootballTeam ;
+    ex:attack "73",
+        "76",
+        "78" ;
+    ex:club_worth "€0",
+        "€48M",
+        "€55M" ;
+    ex:country "Spain" ;
+    ex:defence "72",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "73",
+        "75" ;
+    ex:name "Granada CF" ;
+    ex:overall "74",
+        "75" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€5.5M",
+        "€6.1M",
+        "€7M" ;
+    ex:year "2016",
+        "2017",
+        "2020" .
+
+<http://example.org/team/110839> a ex:FootballTeam ;
+    ex:attack "74" ;
+    ex:club_worth "€4.5M" ;
+    ex:country "Spain" ;
+    ex:defence "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "73" ;
+    ex:name "SD Huesca" ;
+    ex:overall "72" ;
+    ex:passing "Long" ;
+    ex:shooting "Normal" ;
+    ex:speed "Fast" ;
+    ex:transfer_budget "€2.1M" ;
+    ex:year "2019" .
+
+<http://example.org/team/111239> a ex:FootballTeam ;
+    ex:attack "71",
+        "73" ;
+    ex:club_worth "€0",
+        "€30.1M" ;
+    ex:country "Germany" ;
+    ex:defence "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "72" ;
+    ex:name "FC Ingolstadt 04" ;
+    ex:overall "72" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€4M",
+        "€6M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/111657> a ex:FootballTeam ;
+    ex:attack "68",
+        "73" ;
+    ex:club_worth "€0",
+        "€45M" ;
+    ex:country "Italy" ;
+    ex:defence "68",
+        "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-3-3 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "68",
+        "70" ;
+    ex:name "Frosinone" ;
+    ex:overall "69",
+        "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€1.8M",
+        "€7M" ;
+    ex:year "2016",
+        "2019" .
+
+<http://example.org/team/111974> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€94M" ;
+    ex:country "Italy" ;
+    ex:defence "71",
+        "73",
+        "74",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "74",
+        "75",
+        "76" ;
+    ex:name "Sassuolo" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10M",
+        "€13M",
+        "€16M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/112026> a ex:FootballTeam ;
+    ex:attack "71" ;
+    ex:club_worth "€30M" ;
+    ex:country "Italy" ;
+    ex:defence "70" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "72" ;
+    ex:name "Benevento" ;
+    ex:overall "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€6M" ;
+    ex:year "2018" .
+
+<http://example.org/team/112172> a ex:FootballTeam ;
+    ex:attack "75",
+        "78",
+        "80",
+        "81" ;
+    ex:club_worth "€347.2M",
+        "€377.2M",
+        "€401.2M",
+        "€421.2M" ;
+    ex:country "Germany" ;
+    ex:defence "73",
+        "76",
+        "78",
+        "79" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-2-2",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "76",
+        "80",
+        "81" ;
+    ex:name "RB Leipzig" ;
+    ex:overall "75",
+        "78",
+        "79",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€50M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/112409> a ex:FootballTeam ;
+    ex:attack "72" ;
+    ex:club_worth "€0" ;
+    ex:country "Italy" ;
+    ex:defence "70" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-4-1-1 Attack" ;
+    ex:league "Serie A" ;
+    ex:midfield "70" ;
+    ex:name "Carpi" ;
+    ex:overall "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€1.9M" ;
+    ex:year "2016" .
+
+<http://example.org/team/112791> a ex:FootballTeam ;
+    ex:attack "75" ;
+    ex:club_worth "€25M" ;
+    ex:country "Italy" ;
+    ex:defence "71",
+        "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2" ;
+    ex:league "Serie A" ;
+    ex:midfield "71",
+        "73",
+        "74" ;
+    ex:name "SPAL" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€4.5M",
+        "€5M" ;
+    ex:year "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/12> a ex:FootballTeam ;
+    ex:attack "76" ;
+    ex:club_worth "€600M" ;
+    ex:country "England" ;
+    ex:defence "74" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1" ;
+    ex:league "Premier League" ;
+    ex:midfield "74" ;
+    ex:name "Middlesbrough" ;
+    ex:overall "75" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€28.3M" ;
+    ex:year "2017" .
+
+<http://example.org/team/13> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€462M",
+        "€615M",
+        "€983M" ;
+    ex:country "England" ;
+    ex:defence "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-1-1 Attack",
+        "4-4-2 Flat",
+        "5-2-3" ;
+    ex:league "Premier League" ;
+    ex:midfield "75",
+        "77",
+        "78" ;
+    ex:name "Newcastle United" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€25.5M",
+        "€34.1M",
+        "€35M",
+        "€40M" ;
+    ex:year "2016",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/144> a ex:FootballTeam ;
+    ex:attack "78" ;
+    ex:club_worth "€410M" ;
+    ex:country "England" ;
+    ex:defence "73" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Premier League" ;
+    ex:midfield "76" ;
+    ex:name "Fulham FC" ;
+    ex:overall "75" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€45M" ;
+    ex:year "2019" .
+
+<http://example.org/team/1530> a ex:FootballTeam ;
+    ex:attack "70",
+        "72",
+        "74",
+        "75" ;
+    ex:club_worth "€0",
+        "€28M",
+        "€30M",
+        "€37M" ;
+    ex:country "France" ;
+    ex:defence "71",
+        "73",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "73",
+        "74",
+        "75" ;
+    ex:name "Angers SCO" ;
+    ex:overall "71",
+        "73",
+        "74" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€2.4M",
+        "€3.5M",
+        "€4.7M",
+        "€5.6M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/166> a ex:FootballTeam ;
+    ex:attack "75",
+        "77",
+        "80" ;
+    ex:club_worth "€0",
+        "€152M",
+        "€153M",
+        "€320M",
+        "€62M" ;
+    ex:country "Germany" ;
+    ex:defence "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "75",
+        "76",
+        "77" ;
+    ex:name "Hertha BSC" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€12M",
+        "€8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/169> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€114M",
+        "€119M",
+        "€128M",
+        "€138M" ;
+    ex:country "Germany" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-1-2-1-2 Narrow",
+        "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "73",
+        "75",
+        "76" ;
+    ex:name "1. FSV Mainz 05" ;
+    ex:overall "74",
+        "75" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€7M",
+        "€9.1M",
+        "€9.2M",
+        "€9.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/17> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "78" ;
+    ex:club_worth "€0",
+        "€1.1B",
+        "€430.5M",
+        "€800M",
+        "€981.5M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat",
+        "5-2-3",
+        "5-4-1 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "77" ;
+    ex:name "Southampton" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€32M",
+        "€35M",
+        "€49.8M",
+        "€50.5M",
+        "€50M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/171> a ex:FootballTeam ;
+    ex:attack "73" ;
+    ex:club_worth "€66.1M" ;
+    ex:country "Germany" ;
+    ex:defence "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "72" ;
+    ex:name "1. FC Nürnberg" ;
+    ex:overall "72" ;
+    ex:passing "Long" ;
+    ex:shooting "Lots" ;
+    ex:speed "Fast" ;
+    ex:transfer_budget "€5.4M" ;
+    ex:year "2019" .
+
+<http://example.org/team/1746> a ex:FootballTeam ;
+    ex:attack "72",
+        "74" ;
+    ex:club_worth "€0",
+        "€37M",
+        "€60M" ;
+    ex:country "Italy" ;
+    ex:defence "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-1-2-1-2 Narrow" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "73" ;
+    ex:name "Empoli" ;
+    ex:overall "72",
+        "73" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€3.4M",
+        "€5M" ;
+    ex:year "2016",
+        "2017",
+        "2019" .
+
+<http://example.org/team/175> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "82" ;
+    ex:club_worth "€0",
+        "€303.1M",
+        "€316.1M",
+        "€420.1M",
+        "€451M" ;
+    ex:country "Germany" ;
+    ex:defence "75",
+        "77",
+        "78",
+        "79" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Narrow",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "77",
+        "78",
+        "79" ;
+    ex:name "VfL Wolfsburg" ;
+    ex:overall "77",
+        "78",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€40M",
+        "€42M",
+        "€50M",
+        "€60M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1792> a ex:FootballTeam ;
+    ex:attack "75",
+        "78" ;
+    ex:club_worth "€0",
+        "€336M" ;
+    ex:country "England" ;
+    ex:defence "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Premier League" ;
+    ex:midfield "74" ;
+    ex:name "Norwich City" ;
+    ex:overall "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€22M",
+        "€25M" ;
+    ex:year "2016",
+        "2020" .
+
+<http://example.org/team/1794> a ex:FootballTeam ;
+    ex:attack "73" ;
+    ex:club_worth "€332.5M" ;
+    ex:country "England" ;
+    ex:defence "75" ;
+    ex:dribbling "Little" ;
+    ex:formation "5-3-2" ;
+    ex:league "Premier League" ;
+    ex:midfield "77" ;
+    ex:name "Sheffield United" ;
+    ex:overall "75" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€18M" ;
+    ex:year "2020" .
+
+<http://example.org/team/1795> a ex:FootballTeam ;
+    ex:attack "76",
+        "77",
+        "78" ;
+    ex:club_worth "€0",
+        "€400M",
+        "€415M",
+        "€635M",
+        "€640M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "Premier League" ;
+    ex:midfield "74",
+        "77",
+        "78" ;
+    ex:name "Watford" ;
+    ex:overall "75",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€19M",
+        "€33M",
+        "€38.5M",
+        "€44.8M",
+        "€48M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1796> a ex:FootballTeam ;
+    ex:attack "74",
+        "76",
+        "77" ;
+    ex:club_worth "€378.5M",
+        "€525.6M",
+        "€540M",
+        "€575M" ;
+    ex:country "England" ;
+    ex:defence "76",
+        "77",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-4-2 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "74",
+        "75",
+        "76",
+        "77" ;
+    ex:name "Burnley" ;
+    ex:overall "74",
+        "76",
+        "77" ;
+    ex:passing "Long",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€25M",
+        "€31M",
+        "€40.7M",
+        "€45M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1799> a ex:FootballTeam ;
+    ex:attack "73",
+        "75",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€418.5M",
+        "€555.6M",
+        "€650M",
+        "€660M" ;
+    ex:country "England" ;
+    ex:defence "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-4-2 Flat",
+        "4-5-1 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "77" ;
+    ex:name "Crystal Palace" ;
+    ex:overall "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€23.5M",
+        "€34.5M",
+        "€37.5M",
+        "€45.8M",
+        "€50M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/18> a ex:FootballTeam ;
+    ex:attack "82",
+        "85",
+        "86" ;
+    ex:club_worth "€0",
+        "€1.7B",
+        "€1.8B",
+        "€2.3B",
+        "€2.4B" ;
+    ex:country "England" ;
+    ex:defence "79",
+        "81",
+        "82",
+        "83" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-1-2" ;
+    ex:league "Premier League" ;
+    ex:midfield "78",
+        "81",
+        "82",
+        "83" ;
+    ex:name "Tottenham Hotspur" ;
+    ex:overall "79",
+        "81",
+        "82",
+        "83" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€45M",
+        "€69.1M",
+        "€71.4M",
+        "€76M",
+        "€85M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1806> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€740M",
+        "€780M" ;
+    ex:country "England" ;
+    ex:defence "76",
+        "77" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "78" ;
+    ex:name "Stoke City" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€30M",
+        "€48.3M",
+        "€49.3M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/1808> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76" ;
+    ex:club_worth "€383.3M",
+        "€435M",
+        "€440M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-1-1 Midfield" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "77" ;
+    ex:name "Brighton & Hove Albion" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€31.6M",
+        "€32M",
+        "€36.5M" ;
+    ex:year "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1809> a ex:FootballTeam ;
+    ex:attack "72",
+        "73",
+        "75",
+        "77" ;
+    ex:club_worth "€0",
+        "€34M",
+        "€35M",
+        "€40M" ;
+    ex:country "France" ;
+    ex:defence "70",
+        "71",
+        "73",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Narrow",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "73",
+        "74" ;
+    ex:name "Toulouse FC" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€5.5M",
+        "€6M",
+        "€7.2M",
+        "€7.8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1816> a ex:FootballTeam ;
+    ex:attack "73",
+        "75" ;
+    ex:club_worth "€12M",
+        "€25M",
+        "€31M" ;
+    ex:country "France" ;
+    ex:defence "71",
+        "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-1-1 Attack",
+        "4-4-2 Flat" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73" ;
+    ex:name "Amiens SC" ;
+    ex:overall "73" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€2M",
+        "€3.9M",
+        "€5.5M" ;
+    ex:year "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1819> a ex:FootballTeam ;
+    ex:attack "73",
+        "74",
+        "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€68M",
+        "€70M",
+        "€75M",
+        "€80M" ;
+    ex:country "France" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "5-2-1-2" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "75",
+        "76",
+        "77" ;
+    ex:name "AS Saint-Étienne" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€10.9M",
+        "€9.5M",
+        "€9.7M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1823> a ex:FootballTeam ;
+    ex:attack "69" ;
+    ex:club_worth "€25M" ;
+    ex:country "France" ;
+    ex:defence "68" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "72" ;
+    ex:name "AS Nancy Lorraine" ;
+    ex:overall "70" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Lots" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€3M" ;
+    ex:year "2017" .
+
+<http://example.org/team/1824> a ex:FootballTeam ;
+    ex:attack "73",
+        "76",
+        "78",
+        "80" ;
+    ex:club_worth "€0",
+        "€186.8M",
+        "€199.8M",
+        "€266.8M",
+        "€79.8M" ;
+    ex:country "Germany" ;
+    ex:defence "73",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-5-2",
+        "4-2-3-1 Wide",
+        "5-2-1-2",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "72",
+        "75",
+        "77",
+        "78" ;
+    ex:name "Eintracht Frankfurt" ;
+    ex:overall "75",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€12.5M",
+        "€14.5M",
+        "€25M",
+        "€6M",
+        "€7.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1831> a ex:FootballTeam ;
+    ex:attack "73" ;
+    ex:club_worth "€35.2M" ;
+    ex:country "Germany" ;
+    ex:defence "73" ;
+    ex:dribbling "Little" ;
+    ex:formation "3-4-2-1" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "71" ;
+    ex:name "1. FC Union Berlin" ;
+    ex:overall "72" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€6.5M" ;
+    ex:year "2020" .
+
+<http://example.org/team/1837> a ex:FootballTeam ;
+    ex:attack "75",
+        "77",
+        "78",
+        "80" ;
+    ex:club_worth "€0",
+        "€157M" ;
+    ex:country "Italy" ;
+    ex:defence "73",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-3-1-2",
+        "4-4-2 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "73",
+        "75",
+        "76",
+        "77" ;
+    ex:name "Sampdoria" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10.5M",
+        "€14M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1842> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76",
+        "78" ;
+    ex:club_worth "€62M" ;
+    ex:country "Italy" ;
+    ex:defence "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-1-2",
+        "4-3-2-1" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "73",
+        "74",
+        "76" ;
+    ex:name "Cagliari" ;
+    ex:overall "73",
+        "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10M",
+        "€6M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1843> a ex:FootballTeam ;
+    ex:attack "73",
+        "74" ;
+    ex:club_worth "€0",
+        "€70M" ;
+    ex:country "Italy" ;
+    ex:defence "72",
+        "73" ;
+    ex:dribbling "Normal" ;
+    ex:formation "3-4-2-1" ;
+    ex:league "Serie A" ;
+    ex:midfield "71",
+        "72" ;
+    ex:name "Palermo FC" ;
+    ex:overall "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€8M",
+        "€9M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/1853> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€39.7M",
+        "€39M" ;
+    ex:country "Spain" ;
+    ex:defence "73",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-3-3 Holding",
+        "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "76",
+        "77" ;
+    ex:name "Levante UD" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€6.5M",
+        "€8.2M" ;
+    ex:year "2016",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1860> a ex:FootballTeam ;
+    ex:attack "73",
+        "75",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€30.4M",
+        "€35.4M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "75",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "74",
+        "75",
+        "77" ;
+    ex:name "Getafe CF" ;
+    ex:overall "74",
+        "77",
+        "78" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€4.9M",
+        "€5.4M",
+        "€6.2M" ;
+    ex:year "2016",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/189> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€85M" ;
+    ex:country "Italy" ;
+    ex:defence "72",
+        "73",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Narrow",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "74",
+        "75",
+        "76" ;
+    ex:name "Bologna" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€12.7M",
+        "€12M",
+        "€13M",
+        "€15M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/19> a ex:FootballTeam ;
+    ex:attack "76",
+        "78",
+        "79",
+        "82" ;
+    ex:club_worth "€0",
+        "€1.1B",
+        "€1.3B",
+        "€682.5M" ;
+    ex:country "England" ;
+    ex:defence "73",
+        "74",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "5-2-3" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "77",
+        "78" ;
+    ex:name "West Ham United" ;
+    ex:overall "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€30M",
+        "€51.5M",
+        "€63.2M",
+        "€74M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/190> a ex:FootballTeam ;
+    ex:attack "74" ;
+    ex:club_worth "€25M" ;
+    ex:country "Italy" ;
+    ex:defence "70" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-3-1-2" ;
+    ex:league "Serie A" ;
+    ex:midfield "72" ;
+    ex:name "Brescia" ;
+    ex:overall "72" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€5.2M" ;
+    ex:year "2020" .
+
+<http://example.org/team/192> a ex:FootballTeam ;
+    ex:attack "73",
+        "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€67M" ;
+    ex:country "Italy" ;
+    ex:defence "72",
+        "73",
+        "75" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-1-2-1-2 Wide",
+        "4-3-1-2",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "74",
+        "76",
+        "77" ;
+    ex:name "AC ChievoVerona" ;
+    ex:overall "73",
+        "74",
+        "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€4.6M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019" .
+
+<http://example.org/team/1939> a ex:FootballTeam ;
+    ex:attack "72",
+        "75" ;
+    ex:club_worth "€390M",
+        "€400M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Premier League" ;
+    ex:midfield "73" ;
+    ex:name "Huddersfield Town" ;
+    ex:overall "74" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€32.4M",
+        "€37.5M" ;
+    ex:year "2018",
+        "2019" .
+
+<http://example.org/team/1943> a ex:FootballTeam ;
+    ex:attack "72",
+        "74",
+        "76",
+        "78",
+        "79" ;
+    ex:club_worth "€0",
+        "€381M",
+        "€406.6M",
+        "€525M",
+        "€540M" ;
+    ex:country "England" ;
+    ex:defence "72",
+        "74",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-4-1-1 Attack",
+        "4-4-2 Flat",
+        "4-5-1 Flat",
+        "5-2-3" ;
+    ex:league "Premier League" ;
+    ex:midfield "74",
+        "75",
+        "76" ;
+    ex:name "AFC Bournemouth" ;
+    ex:overall "73",
+        "74",
+        "76",
+        "77" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€16M",
+        "€33.4M",
+        "€36.5M",
+        "€41.3M",
+        "€47M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/1952> a ex:FootballTeam ;
+    ex:attack "76" ;
+    ex:club_worth "€555.6M" ;
+    ex:country "England" ;
+    ex:defence "75" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-4-1-1 Midfield" ;
+    ex:league "Premier League" ;
+    ex:midfield "74" ;
+    ex:name "Hull City" ;
+    ex:overall "75" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€22.9M" ;
+    ex:year "2017" .
+
+<http://example.org/team/1960> a ex:FootballTeam ;
+    ex:attack "76",
+        "77",
+        "78" ;
+    ex:club_worth "€0",
+        "€560M",
+        "€640M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "5-4-1 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "75",
+        "76" ;
+    ex:name "Swansea City" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€25M",
+        "€41.7M",
+        "€45M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/1961> a ex:FootballTeam ;
+    ex:attack "73" ;
+    ex:club_worth "€365M" ;
+    ex:country "England" ;
+    ex:defence "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Premier League" ;
+    ex:midfield "73" ;
+    ex:name "Cardiff City" ;
+    ex:overall "73" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€35M" ;
+    ex:year "2019" .
+
+<http://example.org/team/2> a ex:FootballTeam ;
+    ex:attack "74",
+        "77" ;
+    ex:club_worth "€0",
+        "€401.6M" ;
+    ex:country "England" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "5-3-2" ;
+    ex:league "Premier League" ;
+    ex:midfield "74",
+        "75" ;
+    ex:name "Aston Villa" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€29M",
+        "€37.5M" ;
+    ex:year "2016",
+        "2020" .
+
+<http://example.org/team/200> a ex:FootballTeam ;
+    ex:attack "72" ;
+    ex:club_worth "€41M" ;
+    ex:country "Italy" ;
+    ex:defence "72" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-3-3 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "70" ;
+    ex:name "Pescara" ;
+    ex:overall "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€7M" ;
+    ex:year "2017" .
+
+<http://example.org/team/206> a ex:FootballTeam ;
+    ex:attack "72",
+        "73",
+        "74" ;
+    ex:club_worth "€0",
+        "€65M" ;
+    ex:country "Italy" ;
+    ex:defence "71",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-2-3-1 Narrow",
+        "4-3-3 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "72",
+        "75" ;
+    ex:name "Hellas Verona FC" ;
+    ex:overall "72",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€5.3M",
+        "€8.5M",
+        "€8M" ;
+    ex:year "2016",
+        "2018",
+        "2020" .
+
+<http://example.org/team/21> a ex:FootballTeam ;
+    ex:attack "85",
+        "87",
+        "88",
+        "91" ;
+    ex:club_worth "€0",
+        "€2.5B",
+        "€2.8B" ;
+    ex:country "Germany" ;
+    ex:defence "81",
+        "84",
+        "85",
+        "86" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "84",
+        "85" ;
+    ex:name "FC Bayern München" ;
+    ex:overall "84",
+        "85",
+        "86" ;
+    ex:passing "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€100M",
+        "€80M",
+        "€90M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/210> a ex:FootballTeam ;
+    ex:attack "70",
+        "71",
+        "73" ;
+    ex:club_worth "€0",
+        "€30M",
+        "€32M" ;
+    ex:country "France" ;
+    ex:defence "72",
+        "73",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-3 Flat",
+        "4-3-1-2",
+        "4-3-3 Holding",
+        "4-4-1-1 Attack" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "72",
+        "73" ;
+    ex:name "Stade Malherbe Caen" ;
+    ex:overall "71",
+        "72",
+        "73" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€3.5M",
+        "€4M",
+        "€5.7M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019" .
+
+<http://example.org/team/217> a ex:FootballTeam ;
+    ex:attack "74" ;
+    ex:club_worth "€0",
+        "€30M" ;
+    ex:country "France" ;
+    ex:defence "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-3-3 Holding",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "72" ;
+    ex:name "FC Lorient" ;
+    ex:overall "72",
+        "73" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€3.7M",
+        "€3.8M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/219> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€160M",
+        "€175M",
+        "€180M",
+        "€90M" ;
+    ex:country "France" ;
+    ex:defence "74",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "76",
+        "77",
+        "78",
+        "79",
+        "80" ;
+    ex:name "Olympique de Marseille" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€11M",
+        "€14M",
+        "€17.9M",
+        "€18M",
+        "€21.2M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/22> a ex:FootballTeam ;
+    ex:attack "81",
+        "82",
+        "83",
+        "84",
+        "85" ;
+    ex:club_worth "€0",
+        "€736.2M",
+        "€971.2M",
+        "€991.9M" ;
+    ex:country "Germany" ;
+    ex:defence "79",
+        "81",
+        "82" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "3-4-3 Flat",
+        "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "80",
+        "81",
+        "82",
+        "83" ;
+    ex:name "Borussia Dortmund" ;
+    ex:overall "81",
+        "82" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€30M",
+        "€50M",
+        "€60M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/224> a ex:FootballTeam ;
+    ex:attack "72",
+        "73" ;
+    ex:club_worth "€20M",
+        "€29M" ;
+    ex:country "France" ;
+    ex:defence "72" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "70",
+        "75" ;
+    ex:name "Nîmes Olympique" ;
+    ex:overall "71",
+        "73" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€4.1M",
+        "€4.8M" ;
+    ex:year "2019",
+        "2020" .
+
+<http://example.org/team/23> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "81" ;
+    ex:club_worth "€0",
+        "€314.8M",
+        "€326.8M",
+        "€364.8M" ;
+    ex:country "Germany" ;
+    ex:defence "75",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-1-2",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "78",
+        "79" ;
+    ex:name "Borussia Mönchengladbach" ;
+    ex:overall "78",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€20M",
+        "€25M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/240> a ex:FootballTeam ;
+    ex:attack "81",
+        "84",
+        "85" ;
+    ex:club_worth "€0",
+        "€1.2B" ;
+    ex:country "Spain" ;
+    ex:defence "81",
+        "82",
+        "83",
+        "84" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "80",
+        "82",
+        "83" ;
+    ex:name "Atlético Madrid" ;
+    ex:overall "81",
+        "83",
+        "84" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€60M",
+        "€68.6M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/241> a ex:FootballTeam ;
+    ex:attack "87",
+        "88",
+        "91",
+        "92",
+        "93" ;
+    ex:club_worth "€0",
+        "€2.4B",
+        "€2.8B",
+        "€3.5B" ;
+    ex:country "Spain" ;
+    ex:defence "82",
+        "83",
+        "84",
+        "85" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Holding",
+        "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "84",
+        "85",
+        "86" ;
+    ex:name "FC Barcelona" ;
+    ex:overall "84",
+        "85",
+        "86" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€100M",
+        "€187.9M",
+        "€92M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/242> a ex:FootballTeam ;
+    ex:attack "77",
+        "79" ;
+    ex:club_worth "€0",
+        "€100M",
+        "€90M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "76",
+        "77" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "74",
+        "77" ;
+    ex:name "RC Deportivo de La Coruña" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€5.1M",
+        "€9.3M",
+        "€9.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/243> a ex:FootballTeam ;
+    ex:attack "83",
+        "85",
+        "86",
+        "88" ;
+    ex:club_worth "€0",
+        "€2.7B",
+        "€3.5B",
+        "€3B" ;
+    ex:country "Spain" ;
+    ex:defence "83",
+        "85",
+        "86" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-3-3 Attack",
+        "4-3-3 False 9",
+        "4-3-3 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "86",
+        "87",
+        "88" ;
+    ex:name "Real Madrid" ;
+    ex:overall "84",
+        "86" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€100M",
+        "€188.5M",
+        "€99.8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/25> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76" ;
+    ex:club_worth "€125.3M",
+        "€61.4M",
+        "€88.3M" ;
+    ex:country "Germany" ;
+    ex:defence "72",
+        "73",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-4-2 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "72",
+        "73" ;
+    ex:name "SC Freiburg" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10.5M",
+        "€5.5M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/28> a ex:FootballTeam ;
+    ex:attack "73",
+        "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€279.4M",
+        "€289.4M" ;
+    ex:country "Germany" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "73",
+        "74",
+        "76" ;
+    ex:name "Hamburger SV" ;
+    ex:overall "74",
+        "75" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€30M",
+        "€6M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/294> a ex:FootballTeam ;
+    ex:attack "69",
+        "73" ;
+    ex:club_worth "€0",
+        "€12.5M" ;
+    ex:country "France" ;
+    ex:defence "67",
+        "68" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "68",
+        "70" ;
+    ex:name "ESTAC Troyes" ;
+    ex:overall "69",
+        "70" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2.2M",
+        "€2.3M" ;
+    ex:year "2016",
+        "2018" .
+
+<http://example.org/team/31> a ex:FootballTeam ;
+    ex:attack "74",
+        "75",
+        "76",
+        "78" ;
+    ex:club_worth "€0",
+        "€131.5M",
+        "€159.8M",
+        "€218.8M" ;
+    ex:country "Germany" ;
+    ex:defence "73",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "73",
+        "75",
+        "77" ;
+    ex:name "1. FC Köln" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€10M",
+        "€12.5M",
+        "€14.5M",
+        "€8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2020" .
+
+<http://example.org/team/32> a ex:FootballTeam ;
+    ex:attack "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€375.7M",
+        "€414.5M",
+        "€420.8M",
+        "€445.8M" ;
+    ex:country "Germany" ;
+    ex:defence "76",
+        "78",
+        "79" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "76",
+        "79",
+        "80",
+        "81" ;
+    ex:name "Bayer 04 Leverkusen" ;
+    ex:overall "79",
+        "80" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€25M",
+        "€32M",
+        "€39M",
+        "€40M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/34> a ex:FootballTeam ;
+    ex:attack "76",
+        "77",
+        "78",
+        "79" ;
+    ex:club_worth "€0",
+        "€510.7M",
+        "€691.1M",
+        "€692.1M" ;
+    ex:country "Germany" ;
+    ex:defence "76",
+        "78",
+        "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Wide",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "77",
+        "79" ;
+    ex:name "FC Schalke 04" ;
+    ex:overall "77",
+        "78",
+        "79" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€21.5M",
+        "€34M",
+        "€42M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/347> a ex:FootballTeam ;
+    ex:attack "72" ;
+    ex:club_worth "€25M" ;
+    ex:country "Italy" ;
+    ex:defence "72" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-3-1-2" ;
+    ex:league "Serie A" ;
+    ex:midfield "71" ;
+    ex:name "Lecce" ;
+    ex:overall "72" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€6M" ;
+    ex:year "2020" .
+
+<http://example.org/team/36> a ex:FootballTeam ;
+    ex:attack "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€219.7M",
+        "€273.1M" ;
+    ex:country "Germany" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Holding",
+        "5-3-2" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "75",
+        "76" ;
+    ex:name "VfB Stuttgart" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€11M",
+        "€20M" ;
+    ex:year "2016",
+        "2018",
+        "2019" .
+
+<http://example.org/team/378> a ex:FootballTeam ;
+    ex:attack "72" ;
+    ex:club_worth "€25.5M" ;
+    ex:country "France" ;
+    ex:defence "72" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-4-2 Flat" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "72" ;
+    ex:name "Stade Brestois 29" ;
+    ex:overall "72" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€4.6M" ;
+    ex:year "2020" .
+
+<http://example.org/team/379> a ex:FootballTeam ;
+    ex:attack "71",
+        "73" ;
+    ex:club_worth "€0",
+        "€25M",
+        "€30.5M" ;
+    ex:country "France" ;
+    ex:defence "70",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "5-2-1-2" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "70",
+        "73" ;
+    ex:name "Stade de Reims" ;
+    ex:overall "72",
+        "73",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€3M",
+        "€5.2M",
+        "€6.7M" ;
+    ex:year "2016",
+        "2019",
+        "2020" .
+
+<http://example.org/team/38> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77",
+        "78" ;
+    ex:club_worth "€0",
+        "€108.6M",
+        "€144.6M",
+        "€154.6M" ;
+    ex:country "Germany" ;
+    ex:defence "74",
+        "75",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-4-2-1",
+        "4-1-2-1-2 Narrow",
+        "4-1-4-1",
+        "4-3-3 Holding" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "70",
+        "75",
+        "76",
+        "77",
+        "78" ;
+    ex:name "SV Werder Bremen" ;
+    ex:overall "74",
+        "76",
+        "77" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€12M",
+        "€4.5M",
+        "€7M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/39> a ex:FootballTeam ;
+    ex:attack "74",
+        "76",
+        "78",
+        "82" ;
+    ex:club_worth "€0",
+        "€150M",
+        "€82M",
+        "€92M" ;
+    ex:country "Italy" ;
+    ex:defence "73",
+        "75",
+        "77",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-1-2",
+        "3-4-2-1",
+        "4-2-3-1 Narrow" ;
+    ex:league "Serie A" ;
+    ex:midfield "73",
+        "74",
+        "75",
+        "77",
+        "79" ;
+    ex:name "Atalanta" ;
+    ex:overall "74",
+        "75",
+        "76",
+        "77",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€12M",
+        "€6.8M",
+        "€8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/44> a ex:FootballTeam ;
+    ex:attack "78",
+        "82",
+        "83" ;
+    ex:club_worth "€0",
+        "€499M",
+        "€672M" ;
+    ex:country "Italy" ;
+    ex:defence "78",
+        "79",
+        "81",
+        "86" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-2-3-1 Narrow",
+        "4-2-3-1 Wide" ;
+    ex:league "Serie A" ;
+    ex:midfield "79",
+        "80",
+        "81",
+        "82" ;
+    ex:name "Inter" ;
+    ex:overall "79",
+        "80",
+        "81",
+        "82" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€37.5M",
+        "€39M",
+        "€53M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/448> a ex:FootballTeam ;
+    ex:attack "78",
+        "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€250M" ;
+    ex:country "Spain" ;
+    ex:defence "78",
+        "79" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Attack" ;
+    ex:league "La Liga" ;
+    ex:midfield "78",
+        "79",
+        "80",
+        "81" ;
+    ex:name "Athletic Club" ;
+    ex:overall "79" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€12M",
+        "€17.5M",
+        "€17M",
+        "€18.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/449> a ex:FootballTeam ;
+    ex:attack "77",
+        "79",
+        "81" ;
+    ex:club_worth "€0",
+        "€175M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "75",
+        "76",
+        "78",
+        "80" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-2-3-1 Wide",
+        "4-4-2 Holding",
+        "5-3-2",
+        "5-4-1 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "76",
+        "79",
+        "80",
+        "81" ;
+    ex:name "Real Betis Balompié" ;
+    ex:overall "76",
+        "78",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€15.3M",
+        "€16.1M",
+        "€6.4M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/45> a ex:FootballTeam ;
+    ex:attack "81",
+        "87",
+        "89" ;
+    ex:club_worth "€0",
+        "€1.2B",
+        "€1.6B" ;
+    ex:country "Italy" ;
+    ex:defence "83",
+        "84",
+        "85" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "4-2-3-1 Wide",
+        "4-3-1-2",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "79",
+        "84" ;
+    ex:name "Juventus" ;
+    ex:overall "82",
+        "85" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€60M",
+        "€90M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/450> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€110M" ;
+    ex:country "Spain" ;
+    ex:defence "75",
+        "76",
+        "78" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Attack",
+        "4-3-3 Flat",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "76",
+        "77",
+        "78",
+        "79" ;
+    ex:name "RC Celta" ;
+    ex:overall "76",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10.3M",
+        "€10.4M",
+        "€11.8M",
+        "€7M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/452> a ex:FootballTeam ;
+    ex:attack "76",
+        "77",
+        "78",
+        "79" ;
+    ex:club_worth "€0",
+        "€75M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-1-4-1",
+        "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "77",
+        "78" ;
+    ex:name "RCD Espanyol" ;
+    ex:overall "75",
+        "77",
+        "78" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€10.4M",
+        "€10M",
+        "€6.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/453> a ex:FootballTeam ;
+    ex:attack "76" ;
+    ex:club_worth "€5.3M" ;
+    ex:country "Spain" ;
+    ex:defence "72" ;
+    ex:dribbling "Little" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "73" ;
+    ex:name "RCD Mallorca" ;
+    ex:overall "73" ;
+    ex:passing "Short" ;
+    ex:shooting "Little" ;
+    ex:speed "Slow" ;
+    ex:transfer_budget "€2.3M" ;
+    ex:year "2020" .
+
+<http://example.org/team/457> a ex:FootballTeam ;
+    ex:attack "77",
+        "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€150M" ;
+    ex:country "Spain" ;
+    ex:defence "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Attack",
+        "4-3-3 Flat",
+        "4-3-3 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "77",
+        "78",
+        "80" ;
+    ex:name "Real Sociedad" ;
+    ex:overall "77",
+        "78",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€14.3M",
+        "€15.8M",
+        "€9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/459> a ex:FootballTeam ;
+    ex:attack "73",
+        "75" ;
+    ex:club_worth "€0",
+        "€17M" ;
+    ex:country "Spain" ;
+    ex:defence "73" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "Real Sporting de Gijón" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2.8M",
+        "€4.7M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/46> a ex:FootballTeam ;
+    ex:attack "78",
+        "81",
+        "82" ;
+    ex:club_worth "€0",
+        "€214M" ;
+    ex:country "Italy" ;
+    ex:defence "77",
+        "78",
+        "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-5-1-1",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "77",
+        "79",
+        "80",
+        "81" ;
+    ex:name "Lazio" ;
+    ex:overall "78",
+        "79",
+        "80",
+        "81" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€17.5M",
+        "€21M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/461> a ex:FootballTeam ;
+    ex:attack "78",
+        "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€613M" ;
+    ex:country "Spain" ;
+    ex:defence "79",
+        "80",
+        "81" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-3-3 Attack",
+        "4-3-3 Holding",
+        "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "79",
+        "80",
+        "81" ;
+    ex:name "Valencia CF" ;
+    ex:overall "78",
+        "80",
+        "81" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€54.1M",
+        "€54M",
+        "€66.3M",
+        "€70M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/462> a ex:FootballTeam ;
+    ex:attack "76" ;
+    ex:club_worth "€8.9M" ;
+    ex:country "Spain" ;
+    ex:defence "72",
+        "73" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "73",
+        "76" ;
+    ex:name "Real Valladolid CF" ;
+    ex:overall "74",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€3.1M" ;
+    ex:year "2019",
+        "2020" .
+
+<http://example.org/team/463> a ex:FootballTeam ;
+    ex:attack "73",
+        "76",
+        "77" ;
+    ex:club_worth "€10.2M",
+        "€13M" ;
+    ex:country "Spain" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "76",
+        "77" ;
+    ex:name "Deportivo Alavés" ;
+    ex:overall "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€3.5M",
+        "€4.4M" ;
+    ex:year "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/467> a ex:FootballTeam ;
+    ex:attack "74",
+        "77",
+        "78",
+        "79" ;
+    ex:club_worth "€0",
+        "€29M" ;
+    ex:country "Spain" ;
+    ex:defence "72",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-1-1 Attack" ;
+    ex:league "La Liga" ;
+    ex:midfield "73",
+        "77",
+        "78" ;
+    ex:name "SD Eibar" ;
+    ex:overall "73",
+        "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€2M",
+        "€5.3M",
+        "€5.4M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/47> a ex:FootballTeam ;
+    ex:attack "79",
+        "80",
+        "81",
+        "85" ;
+    ex:club_worth "€0",
+        "€583M",
+        "€627M",
+        "€740M" ;
+    ex:country "Italy" ;
+    ex:defence "76",
+        "77",
+        "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Flat",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "75",
+        "77",
+        "78",
+        "79",
+        "80" ;
+    ex:name "AC Milan" ;
+    ex:overall "78",
+        "79",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€39M",
+        "€40M",
+        "€44M",
+        "€52M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/472> a ex:FootballTeam ;
+    ex:attack "73",
+        "77" ;
+    ex:club_worth "€0",
+        "€38M" ;
+    ex:country "Spain" ;
+    ex:defence "70",
+        "75",
+        "76" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "71",
+        "74",
+        "79" ;
+    ex:name "UD Las Palmas" ;
+    ex:overall "72",
+        "75",
+        "77" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€3.5M",
+        "€5.6M",
+        "€5.7M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/479> a ex:FootballTeam ;
+    ex:attack "75",
+        "76" ;
+    ex:club_worth "€15M" ;
+    ex:country "Spain" ;
+    ex:defence "73",
+        "74" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-4-2 Flat",
+        "5-3-2" ;
+    ex:league "La Liga" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "CA Osasuna" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€4.3M",
+        "€4.4M" ;
+    ex:year "2017",
+        "2020" .
+
+<http://example.org/team/48> a ex:FootballTeam ;
+    ex:attack "82",
+        "83",
+        "84" ;
+    ex:club_worth "€0",
+        "€423M",
+        "€483M" ;
+    ex:country "Italy" ;
+    ex:defence "79",
+        "80",
+        "81" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-3-3 Flat",
+        "4-4-2 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "78",
+        "81",
+        "82",
+        "83" ;
+    ex:name "Napoli" ;
+    ex:overall "79",
+        "81",
+        "82" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€27.5M",
+        "€40M",
+        "€49.3M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/480> a ex:FootballTeam ;
+    ex:attack "75",
+        "78" ;
+    ex:club_worth "€0",
+        "€10M" ;
+    ex:country "Spain" ;
+    ex:defence "73",
+        "74" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide" ;
+    ex:league "La Liga" ;
+    ex:midfield "75" ;
+    ex:name "Rayo Vallecano" ;
+    ex:overall "74",
+        "75" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€3.3M",
+        "€4M" ;
+    ex:year "2016",
+        "2019" .
+
+<http://example.org/team/481> a ex:FootballTeam ;
+    ex:attack "79",
+        "80",
+        "81" ;
+    ex:club_worth "€0",
+        "€960M" ;
+    ex:country "Spain" ;
+    ex:defence "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-1-1 Midfield" ;
+    ex:league "La Liga" ;
+    ex:midfield "80",
+        "81" ;
+    ex:name "Sevilla FC" ;
+    ex:overall "79",
+        "80",
+        "81" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€34.1M",
+        "€34.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/483> a ex:FootballTeam ;
+    ex:attack "78",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€370M" ;
+    ex:country "Spain" ;
+    ex:defence "78",
+        "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Attack",
+        "4-4-2 Flat" ;
+    ex:league "La Liga" ;
+    ex:midfield "79",
+        "81" ;
+    ex:name "Villarreal CF" ;
+    ex:overall "79",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10M",
+        "€31.1M",
+        "€31M",
+        "€32.9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/485> a ex:FootballTeam ;
+    ex:attack "73",
+        "76" ;
+    ex:club_worth "€0",
+        "€113.1M",
+        "€158.1M" ;
+    ex:country "Germany" ;
+    ex:defence "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "3-4-1-2",
+        "4-2-3-1 Wide",
+        "5-2-3" ;
+    ex:league "Bundesliga" ;
+    ex:midfield "70",
+        "74" ;
+    ex:name "Hannover 96" ;
+    ex:overall "74",
+        "75" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€10M" ;
+    ex:year "2016",
+        "2018",
+        "2019" .
+
+<http://example.org/team/5> a ex:FootballTeam ;
+    ex:attack "80",
+        "81",
+        "84",
+        "85",
+        "86" ;
+    ex:club_worth "€0",
+        "€2.5B",
+        "€2B" ;
+    ex:country "England" ;
+    ex:defence "81",
+        "82" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Flat",
+        "4-3-3 Holding",
+        "5-2-3" ;
+    ex:league "Premier League" ;
+    ex:midfield "82",
+        "83",
+        "84",
+        "86" ;
+    ex:name "Chelsea" ;
+    ex:overall "81",
+        "83" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€85M",
+        "€91M",
+        "€93.4M",
+        "€95M",
+        "€99.2M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/50> a ex:FootballTeam ;
+    ex:attack "74",
+        "75" ;
+    ex:club_worth "€26M" ;
+    ex:country "Italy" ;
+    ex:defence "71",
+        "73" ;
+    ex:dribbling "Little",
+        "Lots" ;
+    ex:formation "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "Parma" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€4M",
+        "€8M" ;
+    ex:year "2019",
+        "2020" .
+
+<http://example.org/team/52> a ex:FootballTeam ;
+    ex:attack "79",
+        "80",
+        "81",
+        "82",
+        "84" ;
+    ex:club_worth "€0",
+        "€512M",
+        "€622M" ;
+    ex:country "Italy" ;
+    ex:defence "78",
+        "81" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-2-3-1 Wide",
+        "4-3-3 False 9",
+        "4-3-3 Holding" ;
+    ex:league "Serie A" ;
+    ex:midfield "78",
+        "79",
+        "81",
+        "82" ;
+    ex:name "Roma" ;
+    ex:overall "79",
+        "80",
+        "81" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€34M",
+        "€40M",
+        "€41M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/54> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "79",
+        "81" ;
+    ex:club_worth "€0",
+        "€117M",
+        "€147M" ;
+    ex:country "Italy" ;
+    ex:defence "75",
+        "77",
+        "78" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-4-2-1",
+        "4-3-3 Holding",
+        "5-3-2" ;
+    ex:league "Serie A" ;
+    ex:midfield "75",
+        "76",
+        "77",
+        "78" ;
+    ex:name "Torino" ;
+    ex:overall "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€12M",
+        "€14M",
+        "€15M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/55> a ex:FootballTeam ;
+    ex:attack "75",
+        "76" ;
+    ex:club_worth "€0",
+        "€102M" ;
+    ex:country "Italy" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-1-4-2",
+        "3-4-1-2",
+        "4-3-3 Flat" ;
+    ex:league "Serie A" ;
+    ex:midfield "74",
+        "75" ;
+    ex:name "Udinese" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€17.5M",
+        "€7M",
+        "€8M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/573> a ex:FootballTeam ;
+    ex:attack "75",
+        "77" ;
+    ex:club_worth "€0",
+        "€100M",
+        "€105M" ;
+    ex:country "Spain" ;
+    ex:defence "75",
+        "76" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-4-2 Holding" ;
+    ex:league "La Liga" ;
+    ex:midfield "75",
+        "76",
+        "77" ;
+    ex:name "Málaga CF" ;
+    ex:overall "75",
+        "76",
+        "77" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€7M",
+        "€9.4M",
+        "€9M" ;
+    ex:year "2016",
+        "2017",
+        "2018" .
+
+<http://example.org/team/58> a ex:FootballTeam ;
+    ex:attack "70",
+        "73" ;
+    ex:club_worth "€0",
+        "€29M" ;
+    ex:country "France" ;
+    ex:defence "71",
+        "72" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "72" ;
+    ex:name "Sporting Club Bastia" ;
+    ex:overall "71",
+        "72" ;
+    ex:passing "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced" ;
+    ex:transfer_budget "€2.8M" ;
+    ex:year "2016",
+        "2017" .
+
+<http://example.org/team/59> a ex:FootballTeam ;
+    ex:attack "75",
+        "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€65M",
+        "€70M",
+        "€95M" ;
+    ex:country "France" ;
+    ex:defence "73",
+        "74",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "3-4-2-1",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74",
+        "75",
+        "76" ;
+    ex:name "FC Girondins de Bordeaux" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€11.1M",
+        "€12.1M",
+        "€7M",
+        "€9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/62> a ex:FootballTeam ;
+    ex:attack "73",
+        "75",
+        "78" ;
+    ex:club_worth "€0",
+        "€26M",
+        "€27M",
+        "€30M" ;
+    ex:country "France" ;
+    ex:defence "72",
+        "73",
+        "74" ;
+    ex:dribbling "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-1-1 Midfield",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "En Avant Guingamp" ;
+    ex:overall "73",
+        "74" ;
+    ex:passing "Long",
+        "Mixed" ;
+    ex:shooting "Normal" ;
+    ex:speed "Balanced",
+        "Fast" ;
+    ex:transfer_budget "€2M",
+        "€3.3M",
+        "€4M",
+        "€5.2M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019" .
+
+<http://example.org/team/65> a ex:FootballTeam ;
+    ex:attack "71",
+        "75",
+        "77" ;
+    ex:club_worth "€0",
+        "€125M",
+        "€75M" ;
+    ex:country "France" ;
+    ex:defence "72",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74",
+        "75",
+        "76",
+        "77" ;
+    ex:name "Lille OSC" ;
+    ex:overall "74",
+        "75",
+        "76",
+        "77" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€10.4M",
+        "€10.5M",
+        "€14.4M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/66> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€200M",
+        "€240M",
+        "€275M" ;
+    ex:country "France" ;
+    ex:defence "76",
+        "77",
+        "78" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-3-3 Attack",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "77",
+        "78",
+        "79",
+        "81" ;
+    ex:name "Olympique Lyonnais" ;
+    ex:overall "77",
+        "78",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€17M",
+        "€24M",
+        "€36.4M",
+        "€40.3M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/68> a ex:FootballTeam ;
+    ex:attack "69",
+        "73",
+        "75" ;
+    ex:club_worth "€26M",
+        "€30M",
+        "€31M" ;
+    ex:country "France" ;
+    ex:defence "72" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "71",
+        "72",
+        "73" ;
+    ex:name "FC Metz" ;
+    ex:overall "72" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€2M",
+        "€3M",
+        "€4.9M" ;
+    ex:year "2017",
+        "2018",
+        "2020" .
+
+<http://example.org/team/69> a ex:FootballTeam ;
+    ex:attack "77",
+        "80",
+        "82" ;
+    ex:club_worth "€0",
+        "€250M",
+        "€480M",
+        "€500M" ;
+    ex:country "France" ;
+    ex:defence "76",
+        "77",
+        "78",
+        "79" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Wide",
+        "4-3-3 Attack",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "77",
+        "78",
+        "80",
+        "81" ;
+    ex:name "AS Monaco" ;
+    ex:overall "77",
+        "78",
+        "79",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€23M",
+        "€35M",
+        "€40.1M",
+        "€50M",
+        "€55M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/7> a ex:FootballTeam ;
+    ex:attack "77",
+        "78",
+        "80",
+        "85" ;
+    ex:club_worth "€0",
+        "€1.1B",
+        "€1.4B",
+        "€551.3M",
+        "€900M" ;
+    ex:country "England" ;
+    ex:defence "79",
+        "80" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "78",
+        "80" ;
+    ex:name "Everton" ;
+    ex:overall "78",
+        "79",
+        "80" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€25M",
+        "€51.4M",
+        "€51M",
+        "€64.4M",
+        "€75M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/70> a ex:FootballTeam ;
+    ex:attack "70",
+        "73",
+        "75",
+        "76",
+        "78" ;
+    ex:club_worth "€0",
+        "€43M",
+        "€49M",
+        "€64M" ;
+    ex:country "France" ;
+    ex:defence "73",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Wide",
+        "5-2-1-2",
+        "5-2-3" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "Montpellier HSC" ;
+    ex:overall "73",
+        "74",
+        "75" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€6.8M",
+        "€6M",
+        "€7.5M",
+        "€9.3M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/71> a ex:FootballTeam ;
+    ex:attack "73",
+        "74",
+        "75" ;
+    ex:club_worth "€0",
+        "€38M",
+        "€45M",
+        "€60M" ;
+    ex:country "France" ;
+    ex:defence "72",
+        "73",
+        "74",
+        "76" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "72",
+        "73",
+        "75" ;
+    ex:name "FC Nantes" ;
+    ex:overall "72",
+        "74",
+        "75" ;
+    ex:passing "Long",
+        "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Lots",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€5.5M",
+        "€5M",
+        "€6.5M",
+        "€7.2M",
+        "€7M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/72> a ex:FootballTeam ;
+    ex:attack "74",
+        "78",
+        "80" ;
+    ex:club_worth "€0",
+        "€47M",
+        "€50M",
+        "€60M",
+        "€75M" ;
+    ex:country "France" ;
+    ex:defence "74",
+        "76",
+        "77" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "5-2-3" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "75",
+        "76",
+        "77",
+        "78" ;
+    ex:name "OGC Nice" ;
+    ex:overall "74",
+        "75",
+        "77",
+        "78" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€10.4M",
+        "€4.5M",
+        "€6.5M",
+        "€8.6M",
+        "€9.5M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/73> a ex:FootballTeam ;
+    ex:attack "84",
+        "85",
+        "86",
+        "88" ;
+    ex:club_worth "€0",
+        "€1.6B",
+        "€2.6B",
+        "€2.8B",
+        "€2B" ;
+    ex:country "France" ;
+    ex:defence "81",
+        "82",
+        "83" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-2-2",
+        "4-2-4",
+        "4-3-3 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "82",
+        "83",
+        "84",
+        "85" ;
+    ex:name "Paris Saint-Germain" ;
+    ex:overall "83",
+        "84",
+        "85" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€100M",
+        "€130M",
+        "€184.4M",
+        "€190.9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/74> a ex:FootballTeam ;
+    ex:attack "76",
+        "77" ;
+    ex:club_worth "€0",
+        "€50M",
+        "€51M",
+        "€77M" ;
+    ex:country "France" ;
+    ex:defence "74",
+        "75",
+        "76" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-1-4-1",
+        "4-2-3-1 Wide",
+        "4-4-1-1 Attack",
+        "4-4-2 Flat",
+        "4-4-2 Holding" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74",
+        "75",
+        "77" ;
+    ex:name "Stade Rennais FC" ;
+    ex:overall "74",
+        "75",
+        "76" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€11.9M",
+        "€7.5M",
+        "€8.6M",
+        "€9M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/76> a ex:FootballTeam ;
+    ex:attack "70",
+        "74",
+        "75" ;
+    ex:club_worth "€12M",
+        "€30M",
+        "€41M" ;
+    ex:country "France" ;
+    ex:defence "71",
+        "74",
+        "75" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-1-2-1-2 Narrow",
+        "4-2-3-1 Narrow",
+        "5-3-2" ;
+    ex:league "Ligue 1" ;
+    ex:midfield "73",
+        "74" ;
+    ex:name "RC Strasbourg Alsace" ;
+    ex:overall "72",
+        "74" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€2M",
+        "€5.4M",
+        "€7.9M" ;
+    ex:year "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/9> a ex:FootballTeam ;
+    ex:attack "81",
+        "82",
+        "85",
+        "86",
+        "87" ;
+    ex:club_worth "€0",
+        "€1.9B",
+        "€2.1B",
+        "€2.2B",
+        "€2.4B" ;
+    ex:country "England" ;
+    ex:defence "79",
+        "80",
+        "81",
+        "82",
+        "85" ;
+    ex:dribbling "Little",
+        "Lots",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 False 9",
+        "4-3-3 Holding" ;
+    ex:league "Premier League" ;
+    ex:midfield "79",
+        "81",
+        "82",
+        "83" ;
+    ex:name "Liverpool" ;
+    ex:overall "79",
+        "81",
+        "83",
+        "85" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Slow" ;
+    ex:transfer_budget "€103M",
+        "€55M",
+        "€71.8M",
+        "€76M",
+        "€90M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+
+<http://example.org/team/95> a ex:FootballTeam ;
+    ex:attack "76",
+        "78",
+        "79",
+        "80" ;
+    ex:club_worth "€0",
+        "€1.1B",
+        "€441M",
+        "€900M",
+        "€979M" ;
+    ex:country "England" ;
+    ex:defence "75",
+        "76",
+        "79" ;
+    ex:dribbling "Little",
+        "Normal" ;
+    ex:formation "4-2-3-1 Wide",
+        "4-3-3 Holding",
+        "4-4-2 Flat" ;
+    ex:league "Premier League" ;
+    ex:midfield "76",
+        "77",
+        "78",
+        "79" ;
+    ex:name "Leicester City" ;
+    ex:overall "76",
+        "78",
+        "79" ;
+    ex:passing "Mixed",
+        "Short" ;
+    ex:shooting "Little",
+        "Normal" ;
+    ex:speed "Balanced",
+        "Fast",
+        "Slow" ;
+    ex:transfer_budget "€27M",
+        "€45M",
+        "€51.4M",
+        "€53.7M",
+        "€55M" ;
+    ex:year "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020" .
+

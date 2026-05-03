@@ -1,0 +1,796 @@
+@prefix vini: <http://vini-eii.org/> .
+
+<http://vini-eii.org/team/12> vini:wonCompetition <http://vini-eii.org/competitionWinner/12_12_2019> .
+
+<http://vini-eii.org/team/16> vini:wonCompetition <http://vini-eii.org/competitionWinner/18_16_2018> .
+
+<http://vini-eii.org/team/17> vini:wonCompetition <http://vini-eii.org/competitionWinner/14_17_2020> .
+
+<http://vini-eii.org/team/20> vini:wonCompetition <http://vini-eii.org/competitionWinner/13_20_2020> .
+
+<http://vini-eii.org/team/27> vini:wonCompetition <http://vini-eii.org/competitionWinner/15_27_2016> .
+
+<http://vini-eii.org/team/29> vini:wonCompetition <http://vini-eii.org/competitionWinner/1_29_2016> .
+
+<http://vini-eii.org/team/30> vini:wonCompetition <http://vini-eii.org/competitionWinner/5_30_2017> .
+
+<http://vini-eii.org/team/35> vini:wonCompetition <http://vini-eii.org/competitionWinner/12_35_2020> .
+
+<http://vini-eii.org/team/57> vini:wonCompetition <http://vini-eii.org/competitionWinner/16_57_2019> .
+
+<http://vini-eii.org/competitionWinner/10_7_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/10> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/10_7_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/10> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/10_7_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/10> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/10_7_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/10> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/10_9_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/10> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/9> .
+
+<http://vini-eii.org/competitionWinner/11_6_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/11> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/6> .
+
+<http://vini-eii.org/competitionWinner/11_6_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/11> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/6> .
+
+<http://vini-eii.org/competitionWinner/11_7_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/11> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/11_7_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/11> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/11_9_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/11> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/9> .
+
+<http://vini-eii.org/competitionWinner/12_12_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/12> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/12> .
+
+<http://vini-eii.org/competitionWinner/12_2_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/12> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/12_2_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/12> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/12_2_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/12> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/12_35_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/12> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/35> .
+
+<http://vini-eii.org/competitionWinner/13_20_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/13> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/20> .
+
+<http://vini-eii.org/competitionWinner/13_2_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/13> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/13_2_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/13> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/13_3_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/13> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/13_3_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/13> ;
+    vini:country <http://vini-eii.org/country/17> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/14_17_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/14> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/17> .
+
+<http://vini-eii.org/competitionWinner/14_26_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/14> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/26> .
+
+<http://vini-eii.org/competitionWinner/14_8_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/14> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/14_8_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/14> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/14_8_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/14> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/15_26_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/15> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/26> .
+
+<http://vini-eii.org/competitionWinner/15_26_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/15> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/26> .
+
+<http://vini-eii.org/competitionWinner/15_27_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/15> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/27> .
+
+<http://vini-eii.org/competitionWinner/15_8_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/15> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/15_8_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/15> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/16_57_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/16> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/57> .
+
+<http://vini-eii.org/competitionWinner/16_5_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/16> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/16_5_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/16> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/16_5_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/16> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/16_5_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/16> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/17_5_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/17> ;
+    vini:country <http://vini-eii.org/country/14> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/17_5_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/17> ;
+    vini:country <http://vini-eii.org/country/1> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/17_5_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/17> ;
+    vini:country <http://vini-eii.org/country/4> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/17_5_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/17> ;
+    vini:country <http://vini-eii.org/country/4> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/18_10_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/18> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/10> .
+
+<http://vini-eii.org/competitionWinner/18_16_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/18> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/16> .
+
+<http://vini-eii.org/competitionWinner/18_1_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/18> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/18_1_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/18> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/18_1_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/18> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/19_10_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/19> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/10> .
+
+<http://vini-eii.org/competitionWinner/19_1_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/19> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/19_1_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/19> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/19_1_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/19> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/19_1_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/19> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/1_13_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/1> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/13> .
+
+<http://vini-eii.org/competitionWinner/1_29_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/1> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/29> .
+
+<http://vini-eii.org/competitionWinner/1_4_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/1> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/4> .
+
+<http://vini-eii.org/competitionWinner/1_7_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/1> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/1_7_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/1> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/2_8_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/2> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/2_8_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/2> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/2_8_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/2> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/2_8_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/2> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/2_8_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/2> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/8> .
+
+<http://vini-eii.org/competitionWinner/3_1_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/3> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/3_1_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/3> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/3_1_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/3> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/3_1_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/3> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/3_1_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/3> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/4_2_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/4> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/4_2_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/4> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/4_2_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/4> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/2> .
+
+<http://vini-eii.org/competitionWinner/4_3_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/4> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/4_3_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/4> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/5_30_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/5> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/30> .
+
+<http://vini-eii.org/competitionWinner/5_5_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/5> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/5_5_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/5> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/5_5_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/5> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/5_5_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/5> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/5> .
+
+<http://vini-eii.org/competitionWinner/6_13_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/6> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/13> .
+
+<http://vini-eii.org/competitionWinner/6_1_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/6> ;
+    vini:country <http://vini-eii.org/country/16> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/6_3_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/6> ;
+    vini:country <http://vini-eii.org/country/13> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/6_3_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/6> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/6_3_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/6> ;
+    vini:country <http://vini-eii.org/country/8> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/7_11_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/7> ;
+    vini:country <http://vini-eii.org/country/2> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/11> .
+
+<http://vini-eii.org/competitionWinner/7_21_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/7> ;
+    vini:country <http://vini-eii.org/country/12> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/21> .
+
+<http://vini-eii.org/competitionWinner/7_21_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/7> ;
+    vini:country <http://vini-eii.org/country/5> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/21> .
+
+<http://vini-eii.org/competitionWinner/7_4_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/7> ;
+    vini:country <http://vini-eii.org/country/10> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/4> .
+
+<http://vini-eii.org/competitionWinner/7_9_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/7> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/9> .
+
+<http://vini-eii.org/competitionWinner/8_11_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/8> ;
+    vini:country <http://vini-eii.org/country/6> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/11> .
+
+<http://vini-eii.org/competitionWinner/8_13_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/8> ;
+    vini:country <http://vini-eii.org/country/15> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/13> .
+
+<http://vini-eii.org/competitionWinner/8_1_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/8> ;
+    vini:country <http://vini-eii.org/country/11> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/1> .
+
+<http://vini-eii.org/competitionWinner/8_3_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/8> ;
+    vini:country <http://vini-eii.org/country/7> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/8_3_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/8> ;
+    vini:country <http://vini-eii.org/country/9> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/3> .
+
+<http://vini-eii.org/competitionWinner/9_4_2018> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/9> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2018> ;
+    vini:winningTeam <http://vini-eii.org/team/4> .
+
+<http://vini-eii.org/competitionWinner/9_6_2017> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/9> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2017> ;
+    vini:winningTeam <http://vini-eii.org/team/6> .
+
+<http://vini-eii.org/competitionWinner/9_6_2020> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/9> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2020> ;
+    vini:winningTeam <http://vini-eii.org/team/6> .
+
+<http://vini-eii.org/competitionWinner/9_7_2019> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/9> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2019> ;
+    vini:winningTeam <http://vini-eii.org/team/7> .
+
+<http://vini-eii.org/competitionWinner/9_9_2016> a vini:CompetitionWinner ;
+    vini:competition <http://vini-eii.org/competition/9> ;
+    vini:country <http://vini-eii.org/country/3> ;
+    vini:season <http://vini-eii.org/season/2016> ;
+    vini:winningTeam <http://vini-eii.org/team/9> .
+
+<http://vini-eii.org/team/10> vini:wonCompetition <http://vini-eii.org/competitionWinner/18_10_2017>,
+        <http://vini-eii.org/competitionWinner/19_10_2019> .
+
+<http://vini-eii.org/team/11> vini:wonCompetition <http://vini-eii.org/competitionWinner/7_11_2018>,
+        <http://vini-eii.org/competitionWinner/8_11_2018> .
+
+<http://vini-eii.org/team/21> vini:wonCompetition <http://vini-eii.org/competitionWinner/7_21_2016>,
+        <http://vini-eii.org/competitionWinner/7_21_2020> .
+
+<http://vini-eii.org/team/13> vini:wonCompetition <http://vini-eii.org/competitionWinner/1_13_2020>,
+        <http://vini-eii.org/competitionWinner/6_13_2019>,
+        <http://vini-eii.org/competitionWinner/8_13_2019> .
+
+<http://vini-eii.org/team/26> vini:wonCompetition <http://vini-eii.org/competitionWinner/14_26_2019>,
+        <http://vini-eii.org/competitionWinner/15_26_2017>,
+        <http://vini-eii.org/competitionWinner/15_26_2019> .
+
+<http://vini-eii.org/team/4> vini:wonCompetition <http://vini-eii.org/competitionWinner/1_4_2017>,
+        <http://vini-eii.org/competitionWinner/7_4_2019>,
+        <http://vini-eii.org/competitionWinner/9_4_2018> .
+
+<http://vini-eii.org/competition/17> vini:wonBy <http://vini-eii.org/competitionWinner/17_5_2016>,
+        <http://vini-eii.org/competitionWinner/17_5_2017>,
+        <http://vini-eii.org/competitionWinner/17_5_2018>,
+        <http://vini-eii.org/competitionWinner/17_5_2019> .
+
+<http://vini-eii.org/team/6> vini:wonCompetition <http://vini-eii.org/competitionWinner/11_6_2017>,
+        <http://vini-eii.org/competitionWinner/11_6_2020>,
+        <http://vini-eii.org/competitionWinner/9_6_2017>,
+        <http://vini-eii.org/competitionWinner/9_6_2020> .
+
+<http://vini-eii.org/team/9> vini:wonCompetition <http://vini-eii.org/competitionWinner/10_9_2017>,
+        <http://vini-eii.org/competitionWinner/11_9_2016>,
+        <http://vini-eii.org/competitionWinner/7_9_2017>,
+        <http://vini-eii.org/competitionWinner/9_9_2016> .
+
+<http://vini-eii.org/competition/1> vini:wonBy <http://vini-eii.org/competitionWinner/1_13_2020>,
+        <http://vini-eii.org/competitionWinner/1_29_2016>,
+        <http://vini-eii.org/competitionWinner/1_4_2017>,
+        <http://vini-eii.org/competitionWinner/1_7_2018>,
+        <http://vini-eii.org/competitionWinner/1_7_2019> .
+
+<http://vini-eii.org/competition/10> vini:wonBy <http://vini-eii.org/competitionWinner/10_7_2016>,
+        <http://vini-eii.org/competitionWinner/10_7_2018>,
+        <http://vini-eii.org/competitionWinner/10_7_2019>,
+        <http://vini-eii.org/competitionWinner/10_7_2020>,
+        <http://vini-eii.org/competitionWinner/10_9_2017> .
+
+<http://vini-eii.org/competition/11> vini:wonBy <http://vini-eii.org/competitionWinner/11_6_2017>,
+        <http://vini-eii.org/competitionWinner/11_6_2020>,
+        <http://vini-eii.org/competitionWinner/11_7_2018>,
+        <http://vini-eii.org/competitionWinner/11_7_2019>,
+        <http://vini-eii.org/competitionWinner/11_9_2016> .
+
+<http://vini-eii.org/competition/12> vini:wonBy <http://vini-eii.org/competitionWinner/12_12_2019>,
+        <http://vini-eii.org/competitionWinner/12_2_2016>,
+        <http://vini-eii.org/competitionWinner/12_2_2017>,
+        <http://vini-eii.org/competitionWinner/12_2_2018>,
+        <http://vini-eii.org/competitionWinner/12_35_2020> .
+
+<http://vini-eii.org/competition/13> vini:wonBy <http://vini-eii.org/competitionWinner/13_20_2020>,
+        <http://vini-eii.org/competitionWinner/13_2_2016>,
+        <http://vini-eii.org/competitionWinner/13_2_2018>,
+        <http://vini-eii.org/competitionWinner/13_3_2017>,
+        <http://vini-eii.org/competitionWinner/13_3_2019> .
+
+<http://vini-eii.org/competition/14> vini:wonBy <http://vini-eii.org/competitionWinner/14_17_2020>,
+        <http://vini-eii.org/competitionWinner/14_26_2019>,
+        <http://vini-eii.org/competitionWinner/14_8_2016>,
+        <http://vini-eii.org/competitionWinner/14_8_2017>,
+        <http://vini-eii.org/competitionWinner/14_8_2018> .
+
+<http://vini-eii.org/competition/15> vini:wonBy <http://vini-eii.org/competitionWinner/15_26_2017>,
+        <http://vini-eii.org/competitionWinner/15_26_2019>,
+        <http://vini-eii.org/competitionWinner/15_27_2016>,
+        <http://vini-eii.org/competitionWinner/15_8_2018>,
+        <http://vini-eii.org/competitionWinner/15_8_2020> .
+
+<http://vini-eii.org/competition/16> vini:wonBy <http://vini-eii.org/competitionWinner/16_57_2019>,
+        <http://vini-eii.org/competitionWinner/16_5_2016>,
+        <http://vini-eii.org/competitionWinner/16_5_2017>,
+        <http://vini-eii.org/competitionWinner/16_5_2018>,
+        <http://vini-eii.org/competitionWinner/16_5_2020> .
+
+<http://vini-eii.org/competition/18> vini:wonBy <http://vini-eii.org/competitionWinner/18_10_2017>,
+        <http://vini-eii.org/competitionWinner/18_16_2018>,
+        <http://vini-eii.org/competitionWinner/18_1_2016>,
+        <http://vini-eii.org/competitionWinner/18_1_2019>,
+        <http://vini-eii.org/competitionWinner/18_1_2020> .
+
+<http://vini-eii.org/competition/19> vini:wonBy <http://vini-eii.org/competitionWinner/19_10_2019>,
+        <http://vini-eii.org/competitionWinner/19_1_2016>,
+        <http://vini-eii.org/competitionWinner/19_1_2017>,
+        <http://vini-eii.org/competitionWinner/19_1_2018>,
+        <http://vini-eii.org/competitionWinner/19_1_2020> .
+
+<http://vini-eii.org/competition/2> vini:wonBy <http://vini-eii.org/competitionWinner/2_8_2016>,
+        <http://vini-eii.org/competitionWinner/2_8_2017>,
+        <http://vini-eii.org/competitionWinner/2_8_2018>,
+        <http://vini-eii.org/competitionWinner/2_8_2019>,
+        <http://vini-eii.org/competitionWinner/2_8_2020> .
+
+<http://vini-eii.org/competition/3> vini:wonBy <http://vini-eii.org/competitionWinner/3_1_2016>,
+        <http://vini-eii.org/competitionWinner/3_1_2017>,
+        <http://vini-eii.org/competitionWinner/3_1_2018>,
+        <http://vini-eii.org/competitionWinner/3_1_2019>,
+        <http://vini-eii.org/competitionWinner/3_1_2020> .
+
+<http://vini-eii.org/competition/4> vini:wonBy <http://vini-eii.org/competitionWinner/4_2_2016>,
+        <http://vini-eii.org/competitionWinner/4_2_2018>,
+        <http://vini-eii.org/competitionWinner/4_2_2019>,
+        <http://vini-eii.org/competitionWinner/4_3_2017>,
+        <http://vini-eii.org/competitionWinner/4_3_2020> .
+
+<http://vini-eii.org/competition/5> vini:wonBy <http://vini-eii.org/competitionWinner/5_30_2017>,
+        <http://vini-eii.org/competitionWinner/5_5_2016>,
+        <http://vini-eii.org/competitionWinner/5_5_2018>,
+        <http://vini-eii.org/competitionWinner/5_5_2019>,
+        <http://vini-eii.org/competitionWinner/5_5_2020> .
+
+<http://vini-eii.org/competition/6> vini:wonBy <http://vini-eii.org/competitionWinner/6_13_2019>,
+        <http://vini-eii.org/competitionWinner/6_1_2020>,
+        <http://vini-eii.org/competitionWinner/6_3_2016>,
+        <http://vini-eii.org/competitionWinner/6_3_2017>,
+        <http://vini-eii.org/competitionWinner/6_3_2018> .
+
+<http://vini-eii.org/competition/7> vini:wonBy <http://vini-eii.org/competitionWinner/7_11_2018>,
+        <http://vini-eii.org/competitionWinner/7_21_2016>,
+        <http://vini-eii.org/competitionWinner/7_21_2020>,
+        <http://vini-eii.org/competitionWinner/7_4_2019>,
+        <http://vini-eii.org/competitionWinner/7_9_2017> .
+
+<http://vini-eii.org/competition/8> vini:wonBy <http://vini-eii.org/competitionWinner/8_11_2018>,
+        <http://vini-eii.org/competitionWinner/8_13_2019>,
+        <http://vini-eii.org/competitionWinner/8_1_2020>,
+        <http://vini-eii.org/competitionWinner/8_3_2016>,
+        <http://vini-eii.org/competitionWinner/8_3_2017> .
+
+<http://vini-eii.org/competition/9> vini:wonBy <http://vini-eii.org/competitionWinner/9_4_2018>,
+        <http://vini-eii.org/competitionWinner/9_6_2017>,
+        <http://vini-eii.org/competitionWinner/9_6_2020>,
+        <http://vini-eii.org/competitionWinner/9_7_2019>,
+        <http://vini-eii.org/competitionWinner/9_9_2016> .
+
+<http://vini-eii.org/team/2> vini:wonCompetition <http://vini-eii.org/competitionWinner/12_2_2016>,
+        <http://vini-eii.org/competitionWinner/12_2_2017>,
+        <http://vini-eii.org/competitionWinner/12_2_2018>,
+        <http://vini-eii.org/competitionWinner/13_2_2016>,
+        <http://vini-eii.org/competitionWinner/13_2_2018>,
+        <http://vini-eii.org/competitionWinner/4_2_2016>,
+        <http://vini-eii.org/competitionWinner/4_2_2018>,
+        <http://vini-eii.org/competitionWinner/4_2_2019> .
+
+<http://vini-eii.org/team/3> vini:wonCompetition <http://vini-eii.org/competitionWinner/13_3_2017>,
+        <http://vini-eii.org/competitionWinner/13_3_2019>,
+        <http://vini-eii.org/competitionWinner/4_3_2017>,
+        <http://vini-eii.org/competitionWinner/4_3_2020>,
+        <http://vini-eii.org/competitionWinner/6_3_2016>,
+        <http://vini-eii.org/competitionWinner/6_3_2017>,
+        <http://vini-eii.org/competitionWinner/6_3_2018>,
+        <http://vini-eii.org/competitionWinner/8_3_2016>,
+        <http://vini-eii.org/competitionWinner/8_3_2017> .
+
+<http://vini-eii.org/team/7> vini:wonCompetition <http://vini-eii.org/competitionWinner/10_7_2016>,
+        <http://vini-eii.org/competitionWinner/10_7_2018>,
+        <http://vini-eii.org/competitionWinner/10_7_2019>,
+        <http://vini-eii.org/competitionWinner/10_7_2020>,
+        <http://vini-eii.org/competitionWinner/11_7_2018>,
+        <http://vini-eii.org/competitionWinner/11_7_2019>,
+        <http://vini-eii.org/competitionWinner/1_7_2018>,
+        <http://vini-eii.org/competitionWinner/1_7_2019>,
+        <http://vini-eii.org/competitionWinner/9_7_2019> .
+
+<http://vini-eii.org/team/8> vini:wonCompetition <http://vini-eii.org/competitionWinner/14_8_2016>,
+        <http://vini-eii.org/competitionWinner/14_8_2017>,
+        <http://vini-eii.org/competitionWinner/14_8_2018>,
+        <http://vini-eii.org/competitionWinner/15_8_2018>,
+        <http://vini-eii.org/competitionWinner/15_8_2020>,
+        <http://vini-eii.org/competitionWinner/2_8_2016>,
+        <http://vini-eii.org/competitionWinner/2_8_2017>,
+        <http://vini-eii.org/competitionWinner/2_8_2018>,
+        <http://vini-eii.org/competitionWinner/2_8_2019>,
+        <http://vini-eii.org/competitionWinner/2_8_2020> .
+
+<http://vini-eii.org/team/5> vini:wonCompetition <http://vini-eii.org/competitionWinner/16_5_2016>,
+        <http://vini-eii.org/competitionWinner/16_5_2017>,
+        <http://vini-eii.org/competitionWinner/16_5_2018>,
+        <http://vini-eii.org/competitionWinner/16_5_2020>,
+        <http://vini-eii.org/competitionWinner/17_5_2016>,
+        <http://vini-eii.org/competitionWinner/17_5_2017>,
+        <http://vini-eii.org/competitionWinner/17_5_2018>,
+        <http://vini-eii.org/competitionWinner/17_5_2019>,
+        <http://vini-eii.org/competitionWinner/5_5_2016>,
+        <http://vini-eii.org/competitionWinner/5_5_2018>,
+        <http://vini-eii.org/competitionWinner/5_5_2019>,
+        <http://vini-eii.org/competitionWinner/5_5_2020> .
+
+<http://vini-eii.org/team/1> vini:wonCompetition <http://vini-eii.org/competitionWinner/18_1_2016>,
+        <http://vini-eii.org/competitionWinner/18_1_2019>,
+        <http://vini-eii.org/competitionWinner/18_1_2020>,
+        <http://vini-eii.org/competitionWinner/19_1_2016>,
+        <http://vini-eii.org/competitionWinner/19_1_2017>,
+        <http://vini-eii.org/competitionWinner/19_1_2018>,
+        <http://vini-eii.org/competitionWinner/19_1_2020>,
+        <http://vini-eii.org/competitionWinner/3_1_2016>,
+        <http://vini-eii.org/competitionWinner/3_1_2017>,
+        <http://vini-eii.org/competitionWinner/3_1_2018>,
+        <http://vini-eii.org/competitionWinner/3_1_2019>,
+        <http://vini-eii.org/competitionWinner/3_1_2020>,
+        <http://vini-eii.org/competitionWinner/6_1_2020>,
+        <http://vini-eii.org/competitionWinner/8_1_2020> .
+

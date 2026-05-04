@@ -1,12 +1,11 @@
 # Ignorar archivos CSV
 *.csv
 
-# Ignorar archivos TTL
-*.ttl
 
 # Carpetas a ignorar
-Aplicacion/.venv/
+Aplicacion/Apache Jena Fuseki/*
 
-Aplicacion/Apache Jena Fuseki/
+Aplicacion/Protege/*
 
-Aplicacion/Protege/
+.venv/
+.venv/

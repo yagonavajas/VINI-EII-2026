@@ -124,34 +124,64 @@ def addCompetitionsWikidata(graph):
             graph.add((competition_uri, VINI.wonBy, winner_uri))
 
 def addTeamStatsFBDB(graph):
-    # with open("./Aplicacion/Grafo/Archivos/teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
-    #     reader = csv.DictReader(file)
+    with open("./Aplicacion/Grafo/Archivos/teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
 
-    #     for row in reader:
-    #         id_team = obtener_id_equipo(idfbdb=row["teamID"])
-    #         id_country = obtener_id_country(nameSofifa=row["country"])
-    #         id_competition = obtener_id_competition(nameSofifa=row["league"])
+        count = 0
 
-    #         year = row["season"]
+        for row in reader:
+            id_game = row["gameID"]
 
-    #         team_season_id = f"{id_team}_{year}"
-    #         uri = URIRef("http://vini-eii.org/teamSeason/" + team_season_id)
+            id_team = obtener_id_equipo(idfbdb=row["teamID"])
+
+            year = row["season"]
+
+            team_season_id = f"{id_team}_{year}"
+
+            game_uri = URIRef("http://vini-eii.org/game/" + id_game)
             
-    #         team_uri = URIRef("http://vini-eii.org/team/" + id_team)
+            team_uri = URIRef("http://vini-eii.org/team/" + team_season_id)
             
-    #         country_uri = URIRef("http://vini-eii.org/country/" + id_country)
-    #         league_uri = URIRef("http://vini-eii.org/league/" + id_competition)
+            season_uri = URIRef("http://vini-eii.org/season/" + year)
+
+
+            graph.add((game_uri, RDF.type, VINI.Game))
+
+            graph.add((team_uri, VINI.playGame, game_uri))
+
+            graph.add((game_uri, VINI.season, season_uri))
+
+            graph.add((game_uri, VINI.date, Literal(row["date"])))
+            graph.add((game_uri, VINI.year, Literal(year)))
+
+
+            # Performance del equipo local
+            if row["location"] == "h":
+                team_stats_uri = URIRef("http://vini-eii.org/gameStats/" + id_game + "_home")
+            else:
+                team_stats_uri = URIRef("http://vini-eii.org/gameStats/" + id_game + "_away")
             
-    #         season_uri = URIRef("http://vini-eii.org/season/" + year)
+            graph.add((team_stats_uri, RDF.type, VINI.GameStats))
+            graph.add((team_stats_uri, VINI.game, game_uri))
+            graph.add((team_stats_uri, VINI.team, team_uri))
+            graph.add((team_uri, VINI.hasStats, team_stats_uri))
+            
+            graph.add((team_stats_uri, VINI.goals, Literal(row["goals"])))
+            graph.add((team_stats_uri, VINI.xGoals, Literal(row["xGoals"])))
+            graph.add((team_stats_uri, VINI.shots, Literal(row["shots"])))
+            graph.add((team_stats_uri, VINI.shotsOnTarget, Literal(row["shotsOnTarget"])))
+            graph.add((team_stats_uri, VINI.deep, Literal(row["deep"])))
+            graph.add((team_stats_uri, VINI.ppda, Literal(row["ppda"])))
+            graph.add((team_stats_uri, VINI.fouls, Literal(row["fouls"])))
+            graph.add((team_stats_uri, VINI.corners, Literal(row["corners"])))
+            graph.add((team_stats_uri, VINI.yellowCards, Literal(row["yellowCards"])))
+            graph.add((team_stats_uri, VINI.redCards, Literal(row["redCards"])))
+            graph.add((team_stats_uri, VINI.result, Literal(row["result"])))
 
+            count += 1
 
-    #         graph.add((uri, RDF.type, VINI.TeamSeason))
-
-    #         graph.add((team_uri, VINI.hasSeason, uri))
-
-    #         graph.add((uri, VINI.year, Literal(year)))
-
-    pass
+            if count % 1000 == 0:
+                print(f"Procesadas {count} filas")
 
 def addGamesFBDB(graph): 
     with open("./Aplicacion/Grafo/Archivos/games_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
@@ -166,10 +196,6 @@ def addGamesFBDB(graph):
             id_team_away = obtener_id_equipo(idfbdb=row["awayTeamID"])
             
             id_competition = obtener_id_competition(idFbdb=row["leagueID"])
-            
-            if id_team_home is None or id_team_away is None or id_competition is None:
-                print(f"Advertencia: No se pudo encontrar ID para el juego {id_game}. HomeTeamID: {row['homeTeamID']} -> {id_team_home}, AwayTeamID: {row['awayTeamID']} -> {id_team_away}, LeagueID: {row['leagueID']} -> {id_competition}")
-                continue
 
             year = row["season"]
 
@@ -375,15 +401,15 @@ def main():
     # addCompetitionsWikidata(competitionsWikidata)
     # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
 
-    # teamStatsFBDB = Graph()
-    # teamStatsFBDB.bind("vini", VINI)
-    # addTeamStatsFBDB(teamStatsFBDB)
-    # saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/team_stats_graph.ttl")
+    teamStatsFBDB = Graph()
+    teamStatsFBDB.bind("vini", VINI)
+    addTeamStatsFBDB(teamStatsFBDB)
+    saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
 
-    gamesFBDB = Graph()
-    gamesFBDB.bind("vini", VINI)
-    addGamesFBDB(gamesFBDB)
-    saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+    # gamesFBDB = Graph()
+    # gamesFBDB.bind("vini", VINI)
+    # addGamesFBDB(gamesFBDB)
+    # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
 
 
 

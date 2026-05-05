@@ -140,7 +140,7 @@ def addTeamStatsFBDB(graph):
 
             game_uri = URIRef("http://vini-eii.org/game/" + id_game)
             
-            team_uri = URIRef("http://vini-eii.org/team/" + team_season_id)
+            team_uri = URIRef("http://vini-eii.org/teamSeason/" + team_season_id)
             
             season_uri = URIRef("http://vini-eii.org/season/" + year)
 
@@ -204,8 +204,8 @@ def addGamesFBDB(graph):
 
             game_uri = URIRef("http://vini-eii.org/game/" + id_game)
             
-            team_home_uri = URIRef("http://vini-eii.org/team/" + team_home_season_id)
-            team_away_uri = URIRef("http://vini-eii.org/team/" + team_away_season_id)
+            team_home_uri = URIRef("http://vini-eii.org/teamSeason/" + team_home_season_id)
+            team_away_uri = URIRef("http://vini-eii.org/teamSeason/" + team_away_season_id)
             
             league_uri = URIRef("http://vini-eii.org/league/" + id_competition)
             
@@ -406,10 +406,10 @@ def main():
     addTeamStatsFBDB(teamStatsFBDB)
     saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
 
-    # gamesFBDB = Graph()
-    # gamesFBDB.bind("vini", VINI)
-    # addGamesFBDB(gamesFBDB)
-    # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+    gamesFBDB = Graph()
+    gamesFBDB.bind("vini", VINI)
+    addGamesFBDB(gamesFBDB)
+    saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
 
 
 

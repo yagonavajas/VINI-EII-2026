@@ -1,0 +1,232 @@
+===== Equipos con mejor ataque 2020 =====
+
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?name ?attack
+WHERE {
+  ?teamSeason a vini:TeamSeason .
+  ?teamSeason vini:year "2020" .
+  ?teamSeason vini:name ?name .
+  ?teamSeason vini:attack ?attack .
+}
+ORDER BY DESC(?attack)
+LIMIT 15
+
+===== Predicción de resultados: Análisis de apuestas vs resultados reales =====
+PREFIX vini: <http://vini-eii.org/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?house
+  (COUNT(*) AS ?total)
+  (SUM(?correct) AS ?aciertos)
+  (100.0 * SUM(?correct) / COUNT(*) AS ?porcentaje)
+WHERE {
+  {
+    SELECT ?game ?homeResult
+    WHERE {
+      ?stats a vini:GameStats ;
+             vini:game ?game ;
+             vini:result ?homeResult .
+      FILTER(STRENDS(STR(?stats), "_home"))
+    }
+  }
+
+  ?bet a vini:GameBet ;
+       vini:game ?game ;
+       vini:bettingHouse ?house ;
+       vini:homeOdds ?homeOdds ;
+       vini:drawOdds ?drawOdds ;
+       vini:awayOdds ?awayOdds .
+
+  BIND(xsd:decimal(?homeOdds) AS ?h)
+  BIND(xsd:decimal(?drawOdds) AS ?d)
+  BIND(xsd:decimal(?awayOdds) AS ?a)
+
+  # Pronostico = cuota mas baja (favorito)
+  BIND(
+    IF(?h <= ?d && ?h <= ?a, "HOME",
+      IF(?d <= ?a, "DRAW", "AWAY")
+    ) AS ?pred
+  )
+
+  BIND(
+    IF(?homeResult = "W", "HOME",
+      IF(?homeResult = "D", "DRAW", "AWAY")
+    ) AS ?real
+  )
+
+  BIND(IF(?pred = ?real, 1, 0) AS ?correct)
+}
+GROUP BY ?house
+ORDER BY DESC(?porcentaje)
+
+===== Evolución temporal: Crecimiento/decrecimiento de calidad de los equipos =====
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year ?overall ?passing ?dribbling ?positioning
+WHERE {
+  ?teamSeason a vini:TeamSeason .
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+  ?teamSeason vini:overall ?overall .
+  ?teamSeason vini:passing ?passing .
+  ?teamSeason vini:dribbling ?dribbling .
+  ?teamSeason vini:positioning ?positioning .
+}
+ORDER BY ?teamName ?year
+LIMIT 50
+
+==== Equipos con + de 80 de media y media de edad de menos de 23 años
+PREFIX vini: <http://vini-eii.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?teamName ?year ?avgAge ?overall ?players
+WHERE {
+  ?teamSeason a vini:TeamSeason .
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+  ?teamSeason vini:whole_team_avg_age ?avgAge .
+  ?teamSeason vini:overall ?overall .
+  ?teamSeason vini:players ?players .
+  
+  FILTER (xsd:float(?avgAge) < 23 && xsd:float(?overall) > 80)
+}
+ORDER BY ?year ASC(?avgAge)
+
+
+===== Análisis PPDA (Pressuring): Intensidad defensiva vs goles concedidos =====
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year
+       (AVG(xsd:float(?ppda)) as ?avgPPDA)
+       (AVG(xsd:float(?goals)) as ?avgGoals)
+       (AVG(xsd:float(?xGoals)) as ?avgxGoals)
+       (COUNT(?stats) as ?totalGames)
+WHERE {
+  ?stats a vini:GameStats .
+  ?stats vini:ppda ?ppda .
+  ?stats vini:goals ?goals .
+  ?stats vini:xGoals ?xGoals .
+  ?stats vini:team ?teamSeason .
+  
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+}
+GROUP BY ?teamName ?year
+ORDER BY ?year DESC(?avgPPDA)
+LIMIT 30
+
+===== Equipos que mejoraron de una temporada a otra =====
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year1 ?year2 ?overall1 ?overall2 
+       ((xsd:float(?overall2) - xsd:float(?overall1)) as ?mejora)
+WHERE {
+  ?t1 vini:name ?teamName .
+  ?t1 vini:year ?year1 .
+  ?t1 vini:overall ?overall1 .
+  
+  ?t2 vini:name ?teamName .
+  ?t2 vini:year ?year2 .
+  ?t2 vini:overall ?overall2 .
+  
+  FILTER (xsd:integer(?year2) = xsd:integer(?year1) + 1)
+  FILTER (xsd:float(?overall2) > xsd:float(?overall1))
+}
+ORDER BY DESC(?mejora)
+
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year
+       (SUM(IF(?location = "home", xsd:float(?goals), 0)) as ?goalsHome)
+       (SUM(IF(?location = "away", xsd:float(?goals), 0)) as ?goalsAway)
+       (COUNT(?stats) as ?totalGames)
+WHERE {
+  ?stats a vini:GameStats .
+  ?stats vini:goals ?goals .
+  ?stats vini:team ?teamSeason .
+  ?stats vini:game ?game .
+  
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+  
+  BIND(IF(CONTAINS(STR(?stats), "_home"), "home", "away") as ?location)
+}
+GROUP BY ?teamName ?year
+ORDER BY ?year DESC(?goalsHome)
+LIMIT 30
+
+===== Distribución de goles: Casa vs Fuera por equipo =====
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year
+       (SUM(IF(?location = "home", xsd:float(?goals), 0)) as ?goalsHome)
+       (SUM(IF(?location = "away", xsd:float(?goals), 0)) as ?goalsAway)
+       (COUNT(?stats) as ?totalGames)
+WHERE {
+  ?stats a vini:GameStats .
+  ?stats vini:goals ?goals .
+  ?stats vini:team ?teamSeason .
+  ?stats vini:game ?game .
+  
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+  
+  BIND(IF(CONTAINS(STR(?stats), "_home"), "home", "away") as ?location)
+}
+GROUP BY ?teamName ?year
+ORDER BY ?year DESC(?goalsHome)
+LIMIT 30
+
+===== Analisis de formacion de equipo =====
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT
+  ?formation
+  (ROUND(AVG(xsd:decimal(?overall)) * 100) / 100 AS ?avgOverall)
+  (ROUND(AVG(xsd:decimal(?attack)) * 100) / 100 AS ?avgAttack)
+  (ROUND(AVG(xsd:decimal(?defence)) * 100) / 100 AS ?avgDefence)
+  (COUNT(?ts) AS ?equiposConFormacion)
+WHERE {
+  ?ts a vini:TeamSeason ;
+      vini:formation ?formation ;
+      vini:overall ?overall ;
+      vini:attack ?attack ;
+      vini:defence ?defence .
+}
+GROUP BY ?formation
+HAVING (COUNT(?ts) > 10)
+ORDER BY DESC(?avgOverall)
+
+
+==== Equipos con mas goals con respecto a xGoals (Efectivos, si se invierte el orden inefectivos) =====
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT
+  ?teamName
+  ?year
+  (ROUND(AVG(xsd:decimal(?goals)) * 100) / 100 AS ?avgGoals)
+  (ROUND(AVG(xsd:decimal(?xGoals)) * 100) / 100 AS ?avgxGoals)
+  (ROUND((AVG(xsd:decimal(?goals)) - AVG(xsd:decimal(?xGoals))) * 100) / 100 AS ?diferencia)
+  (IF(
+      AVG(xsd:decimal(?goals)) > AVG(xsd:decimal(?xGoals)),
+      "Efectivo",
+      "Inefectivo"
+  ) AS ?eficacia)
+WHERE {
+  ?stats a vini:GameStats ;
+         vini:goals ?goals ;
+         vini:xGoals ?xGoals ;
+         vini:team ?teamSeason .
+
+  ?teamSeason vini:name ?teamName ;
+              vini:year ?year .
+}
+GROUP BY ?teamName ?year
+ORDER BY DESC(?diferencia)
+LIMIT 30

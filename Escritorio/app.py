@@ -10,7 +10,7 @@ class FootballGraphApp:
         self.root.geometry("900x600")
         
         # SPARQL endpoint - Cambiar según tu configuración de Fuseki
-        self.sparql_endpoint = "http://localhost:3030/teams/sparql"
+        self.sparql_endpoint = "http://localhost:3030/vini/sparql"
         
         # Crear notebook (pestañas)
         self.notebook = ttk.Notebook(root)

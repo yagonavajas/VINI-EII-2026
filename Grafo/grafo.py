@@ -1,4 +1,5 @@
 import csv
+import re
 import pandas as pd
 from urllib.parse import quote
 from pathlib import Path
@@ -279,7 +280,104 @@ def addGamesFBDB(graph):
             if count % 1000 == 0:
                 print(f"Procesadas {count} filas")
 
-def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None):
+def addPlayersSofifa(graph):
+    with open("./Aplicacion/Grafo/Archivos/players_16_20_sofifa.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+
+        count = 0
+
+        for row in reader:
+            #id falta unificar (idFinal)
+            id_player = row["id"] # obtener_id_player(idSofifa=row["id"])
+            id_team = obtener_id_equipo(nombreSofifa=row["team_contract"])
+            id_country = obtener_id_country(nameSofifa=row["nationality"])
+
+            year = row["year"]
+
+            player_season_id = f"{id_player}_{year}"
+            player_season_uri = URIRef("http://vini-eii.org/playerSeason/" + player_season_id)
+
+            player_uri = URIRef("http://vini-eii.org/player/" + id_player)
+
+            season_uri = URIRef("http://vini-eii.org/season/" + year)
+
+            graph.add((player_uri, RDF.type, VINI.Player))
+            graph.add((player_season_uri, RDF.type, VINI.PlayerSeason))
+
+            graph.add((player_uri, VINI.hasSeason, player_season_uri))
+            graph.add((player_season_uri, VINI.inSeason, season_uri))
+
+            country_uri = URIRef("http://vini-eii.org/country/" + id_country)
+            graph.add((player_uri, VINI.born, country_uri))
+
+            team_name = _extract_team_name(row.get("team_contract", ""))
+            id_team = obtener_id_equipo(nombreSofifa=team_name)
+
+            team_season_id = f"{id_team}_{year}"
+            team_season_uri = URIRef("http://vini-eii.org/teamSeason/" + team_season_id)
+            graph.add((player_season_uri, VINI.playsFor, team_season_uri))
+            graph.add((team_season_uri, VINI.hasPlayer, player_season_uri))
+
+            graph.add((player_uri, VINI.name, Literal(row["name"])))
+            graph.add((player_uri, VINI.player_id, Literal(row["player_id"])))
+            graph.add((player_uri, VINI.birth_year, Literal(row["birth_year"])))
+            graph.add((player_uri, VINI.preferred_foot, Literal(row["preferred_foot"])))
+
+            # Estadisticas de jugador en una temporada
+            graph.add((player_season_uri, VINI.positions, Literal(row["positions"])))
+            graph.add((player_season_uri, VINI.age, Literal(row["age"])))
+            graph.add((player_season_uri, VINI.overall_rating, Literal(row["overall_rating"])))
+            graph.add((player_season_uri, VINI.potential, Literal(row["potential"])))
+            graph.add((player_season_uri, VINI.team_contract, Literal(row["team_contract"])))
+            graph.add((player_season_uri, VINI.height, Literal(row["height"])))
+            graph.add((player_season_uri, VINI.weight, Literal(row["weight"])))            
+            graph.add((player_season_uri, VINI.best_overall, Literal(row["best_overall"])))
+            graph.add((player_season_uri, VINI.best_position, Literal(row["best_position"])))
+            graph.add((player_season_uri, VINI.growth, Literal(row["growth"])))
+            graph.add((player_season_uri, VINI.joined, Literal(row["joined"])))
+            graph.add((player_season_uri, VINI.loan_date_end, Literal(row["loan_date_end"])))
+            graph.add((player_season_uri, VINI.value, Literal(row["value"])))
+            graph.add((player_season_uri, VINI.wage, Literal(row["wage"])))
+            graph.add((player_season_uri, VINI.release_clause, Literal(row["release_clause"])))
+            graph.add((player_season_uri, VINI.total_attacking, Literal(row["total_attacking"])))
+            graph.add((player_season_uri, VINI.total_skill, Literal(row["total_skill"])))
+            graph.add((player_season_uri, VINI.total_movement, Literal(row["total_movement"])))
+            graph.add((player_season_uri, VINI.total_goalkeeping, Literal(row["total_goalkeeping"])))
+            graph.add((player_season_uri, VINI.total_stats, Literal(row["total_stats"])))
+            graph.add((player_season_uri, VINI.base_stats, Literal(row["base_stats"])))
+            graph.add((player_season_uri, VINI.weak_foot, Literal(row["weak_foot"])))
+            graph.add((player_season_uri, VINI.skill_moves, Literal(row["skill_moves"])))
+            graph.add((player_season_uri, VINI.attacking_work_rate, Literal(row["attacking_work_rate"])))
+            graph.add((player_season_uri, VINI.defensive_work_rate, Literal(row["defensive_work_rate"])))
+            graph.add((player_season_uri, VINI.international_reputation, Literal(row["international_reputation"])))
+            graph.add((player_season_uri, VINI.physical_positioning, Literal(row["physical_positioning"])))
+            graph.add((player_season_uri, VINI.club_kit_number, Literal(row["club_kit_number"])))
+            graph.add((player_season_uri, VINI.body_type, Literal(row["body_type"])))
+            graph.add((player_season_uri, VINI.real_face, Literal(row["real_face"])))            
+            graph.add((player_season_uri, VINI.year, Literal(year)))
+
+            count += 1
+
+            if count % 1000 == 0:
+                print(f"Procesadas {count} filas")
+
+
+def _extract_team_name(team_contract):
+    if not team_contract:
+        return ""
+
+    name = team_contract
+    if "~" in name:
+        name = name.split("~", 1)[0].strip()
+
+    name = name.replace("On loan", "").strip()
+    name = re.sub(r"\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b.*$", "", name).strip()
+    name = re.sub(r"\b\d{4}\b.*$", "", name).strip()
+
+    return name
+            
+
+def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None, nombreSofifa=None):
     global _equipos_cache
     if _equipos_cache is None:
         df = pd.read_csv(EQUIPOS_UNIFICADOS_PATH, encoding='utf-8')
@@ -296,6 +394,15 @@ def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None):
     if idSofifa and str(idSofifa).strip():
         try:
             resultado = df[df['idSofifa'] == int(idSofifa)]
+            if not resultado.empty:
+                return str(int(resultado['idFinal'].values[0]))
+        except (ValueError, TypeError):
+            pass
+
+    # Luego buscar por nombreSofifa
+    if nombreSofifa and str(nombreSofifa).strip():
+        try:
+            resultado = df[df['nombreSofifa'] == str(nombreSofifa)]
             if not resultado.empty:
                 return str(int(resultado['idFinal'].values[0]))
         except (ValueError, TypeError):
@@ -401,15 +508,20 @@ def main():
     # addCompetitionsWikidata(competitionsWikidata)
     # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
 
-    teamStatsFBDB = Graph()
-    teamStatsFBDB.bind("vini", VINI)
-    addTeamStatsFBDB(teamStatsFBDB)
-    saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
+    # teamStatsFBDB = Graph()
+    # teamStatsFBDB.bind("vini", VINI)
+    # addTeamStatsFBDB(teamStatsFBDB)
+    # saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
 
-    gamesFBDB = Graph()
-    gamesFBDB.bind("vini", VINI)
-    addGamesFBDB(gamesFBDB)
-    saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+    # gamesFBDB = Graph()
+    # gamesFBDB.bind("vini", VINI)
+    # addGamesFBDB(gamesFBDB)
+    # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+
+    playersSofifa = Graph()
+    playersSofifa.bind("vini", VINI)
+    addPlayersSofifa(playersSofifa)
+    saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
 
 
 

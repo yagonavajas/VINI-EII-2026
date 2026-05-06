@@ -2,39 +2,223 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from SPARQLWrapper import SPARQLWrapper, JSON
 import threading
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
 
 class FootballGraphApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Football Graph - Consultas")
+        self.root.title("VINI - Consultas")
+        
+        icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
+        self.root.iconbitmap(str(icon_path))
+
+        
         self.root.geometry("900x600")
+        self.root.withdraw()
+        self.root.protocol("WM_DELETE_WINDOW", self._confirm_close)
         
         # SPARQL endpoint - Cambiar según tu configuración de Fuseki
         self.sparql_endpoint = "http://localhost:3030/vini/sparql"
+
+        self._fuseki_process = None
+        self._loading_step = 0
+        self._loading_steps_total = 4
+        self._boot_cancelled = False
+
+        self._show_loading_screen()
+        boot_thread = threading.Thread(target=self._boot_app, daemon=True)
+        boot_thread.start()
+
+    def _show_loading_screen(self):
+        self.loading_window = tk.Toplevel(self.root)
+        self.loading_window.title("VINI - Cargando...")
+        self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
         
+        icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
+        self.loading_window.iconbitmap(str(icon_path))
+        
+        self.loading_window.geometry("420x180")
+        self.loading_window.resizable(False, False)
+        self.loading_window.grab_set()
+
+        frame = ttk.Frame(self.loading_window, padding=20)
+        frame.pack(fill=tk.BOTH, expand=True)
+
+        title = ttk.Label(frame, text="Iniciando la aplicacion", font=("Arial", 14, "bold"))
+        title.pack(pady=(10, 8))
+
+        self.loading_status = ttk.Label(frame, text="Preparando servidor...", foreground="blue")
+        self.loading_status.pack(pady=(0, 15))
+
+        self.loading_progress = ttk.Progressbar(frame, mode="determinate", maximum=self._loading_steps_total)
+        self.loading_progress.pack(fill=tk.X)
+
+    def _boot_app(self):
+        try:
+            self._update_loading_status("Arrancando Fuseki...")
+            if self._boot_cancelled:
+                return
+            if not self._is_fuseki_running():
+                self._start_fuseki()
+            else:
+                self._update_loading_status("Fuseki ya esta activo...")
+            self._advance_loading_step()
+
+            if self._boot_cancelled:
+                return
+            self._update_loading_status("Esperando a Fuseki...")
+            if not self._wait_for_fuseki_ready():
+                raise RuntimeError("Fuseki no responde en el tiempo esperado")
+            self._advance_loading_step()
+
+            if self._boot_cancelled:
+                return
+            self._update_loading_status("Verificando dataset vini...")
+            self._ensure_dataset("vini")
+            self._advance_loading_step()
+
+            if self._boot_cancelled:
+                return
+            self._update_loading_status("Cargando grafos...")
+            self._run_carga_grafos()
+            self._advance_loading_step()
+
+            if self._boot_cancelled:
+                return
+            self.root.after(0, self._finish_boot)
+        except Exception as exc:
+            self.root.after(0, self._boot_failed, str(exc))
+
+    def _finish_boot(self):
+        self.loading_window.destroy()
+        self.root.deiconify()
+        self._setup_ui()
+
+    def _boot_failed(self, message):
+        self.loading_window.destroy()
+        messagebox.showerror("Error", f"No se pudo iniciar la aplicacion:\n{message}")
+        self.root.destroy()
+
+    def _update_loading_status(self, message):
+        self.root.after(0, lambda: self.loading_status.config(text=message))
+
+    def _advance_loading_step(self):
+        self._loading_step += 1
+        self.root.after(0, lambda: self.loading_progress.config(value=self._loading_step))
+
+    def _confirm_close(self):
+        if messagebox.askyesno("Confirmar", "¿Seguro que quieres cerrar la aplicacion?"):
+            self.root.destroy()
+
+    def _on_loading_window_close(self):
+        """Manejador para cuando se cierra la ventana de carga"""
+        self._boot_cancelled = True
+        self.root.destroy()
+
+    def _start_fuseki(self):
+        fuseki_dir = Path(__file__).resolve().parents[1] / "Apache Jena Fuseki" / "apache-jena-fuseki-6.0.0"
+        fuseki_bat = fuseki_dir / "fuseki-server.bat"
+
+        if not fuseki_bat.exists():
+            raise FileNotFoundError(f"No se encontro {fuseki_bat}")
+
+        self._fuseki_process = subprocess.Popen(
+            ["cmd", "/c", str(fuseki_bat)],
+            cwd=str(fuseki_dir),
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+
+    def _wait_for_fuseki_ready(self, timeout_seconds=60):
+        deadline = time.time() + timeout_seconds
+        while time.time() < deadline:
+            try:
+                with urllib.request.urlopen("http://localhost:3030/$/ping", timeout=2) as response:
+                    if response.status == 200:
+                        return True
+            except urllib.error.URLError:
+                time.sleep(1)
+        return False
+
+    def _is_fuseki_running(self):
+        try:
+            with urllib.request.urlopen("http://localhost:3030/$/ping", timeout=2) as response:
+                return response.status == 200
+        except urllib.error.URLError:
+            return False
+
+    def _ensure_dataset(self, dataset_name):
+        datasets_url = "http://localhost:3030/$/datasets"
+        try:
+            with urllib.request.urlopen(datasets_url, timeout=5) as response:
+                payload = response.read().decode("utf-8")
+        except urllib.error.URLError as exc:
+            raise RuntimeError(f"No se pudo consultar datasets: {exc}")
+
+        if f'"{dataset_name}"' in payload:
+            return
+
+        data = urllib.parse.urlencode({
+            "dbName": dataset_name,
+            "dbType": "tdb2",
+        }).encode("utf-8")
+
+        request = urllib.request.Request(datasets_url, data=data, method="POST")
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                if response.status not in (200, 201):
+                    raise RuntimeError(f"No se pudo crear el dataset {dataset_name}")
+        except urllib.error.HTTPError as exc:
+            if exc.code == 409:
+                return
+            raise
+
+    def _run_carga_grafos(self):
+        carga_path = Path(__file__).resolve().parents[1] / "Grafo" / "cargaGrafos.py"
+        if not carga_path.exists():
+            raise FileNotFoundError(f"No se encontro {carga_path}")
+
+        result = subprocess.run(
+            [sys.executable, str(carga_path)],
+            cwd=str(carga_path.parent),
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(result.stderr.strip() or "Error ejecutando cargaGrafos.py")
+
+    def _setup_ui(self):
         # Crear notebook (pestañas)
-        self.notebook = ttk.Notebook(root)
+        self.notebook = ttk.Notebook(self.root)
         self.notebook.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-        
+
         # Crear pestañas
         self.tab_players = ttk.Frame(self.notebook)
         self.tab_teams = ttk.Frame(self.notebook)
         self.tab_games = ttk.Frame(self.notebook)
         self.tab_competitions = ttk.Frame(self.notebook)
         self.tab_custom_queries = ttk.Frame(self.notebook)
-        
+
         self.notebook.add(self.tab_players, text="Jugadores")
         self.notebook.add(self.tab_teams, text="Equipos")
         self.notebook.add(self.tab_games, text="Partidos")
         self.notebook.add(self.tab_competitions, text="Competiciones")
         self.notebook.add(self.tab_custom_queries, text="Consultas personalizadas")
-        
+
         # Configurar pestañas
         self.setup_players_tab()
         self.setup_teams_tab()
         self.setup_games_tab()
         self.setup_competitions_tab()
         self.setup_custom_queries_tab()
+        
+        
     
     def setup_query_tab(self, tab, title, buttons_config):
         """Configura una pestaña con botones de consulta"""
@@ -287,7 +471,7 @@ ORDER BY ?year ?teamName
         
         except Exception as e:
             self.teams_status.config(
-                text=f"✗ Error: {str(e)}",
+                text=f"Error: {str(e)}",
                 foreground="red"
             )
             messagebox.showerror("Error", f"Error al ejecutar la consulta:\n{str(e)}")
@@ -301,14 +485,9 @@ ORDER BY ?year ?teamName
             
             results = sparql.query().convert()
             
-            # Limpiar tabla
+            # Limpiar tabla (eliminar todos los items/filas)
             for item in self.custom_tree.get_children():
                 self.custom_tree.delete(item)
-            
-            # Eliminar columnas previas
-            for col in self.custom_tree['columns']:
-                self.custom_tree.delete(col)
-            self.custom_tree['columns'] = ()
             
             # Obtener variables de la consulta
             if results['results']['bindings']:

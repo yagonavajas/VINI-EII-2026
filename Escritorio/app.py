@@ -15,16 +15,31 @@ class FootballGraphApp:
         self.root = root
         self.root.title("VINI - Consultas")
         
-        icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
-        self.root.iconbitmap(str(icon_path))
-
+        # Cargar icono una sola vez
+        self.icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
+        self.root.iconbitmap(str(self.icon_path))
         
         self.root.geometry("900x600")
         self.root.withdraw()
         self.root.protocol("WM_DELETE_WINDOW", self._confirm_close)
         
-        # SPARQL endpoint - Cambiar según tu configuración de Fuseki
-        self.sparql_endpoint = "http://localhost:3030/vini/sparql"
+        # Definir consultas disponibles
+        self.queries = {
+            "champions": {
+                "name": "Ganadores de la UEFA Champions League",
+                "columns": ("Año", "Equipo", "Overall", "Formación"),
+                "vars": ("year", "teamName", "overall", "formation")
+            },
+            "eficacia": {
+                "name": "Eficacia de Goles vs Expected Goals",
+                "columns": ("Equipo", "Año", "Goles Promedio", "xG Promedio", "Diferencia", "Eficacia"),
+                "vars": ("teamName", "year", "avgGoals", "avgxGoals", "diferencia", "eficacia")
+            }
+        }
+        
+        # Puerto del servidor Fuseki
+        self.fuseki_port = None
+        self.sparql_endpoint = None
 
         self._fuseki_process = None
         self._loading_step = 0
@@ -39,9 +54,7 @@ class FootballGraphApp:
         self.loading_window = tk.Toplevel(self.root)
         self.loading_window.title("VINI - Cargando...")
         self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
-        
-        icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
-        self.loading_window.iconbitmap(str(icon_path))
+        self.loading_window.iconbitmap(str(self.icon_path))
         
         self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
@@ -61,11 +74,19 @@ class FootballGraphApp:
 
     def _boot_app(self):
         try:
-            self._update_loading_status("Arrancando Fuseki...")
+            self._update_loading_status("Iniciando Fuseki...")
+            if self._boot_cancelled:
+                return
+            
+            # Usar puerto 3030 por defecto
+            self.fuseki_port = 3030
+            self.sparql_endpoint = f"http://localhost:{self.fuseki_port}/vini/sparql"
+            
             if self._boot_cancelled:
                 return
             if not self._is_fuseki_running():
-                self._start_fuseki()
+                self._update_loading_status("Arrancando Fuseki en puerto 3030...")
+                self._start_fuseki(self.fuseki_port)
             else:
                 self._update_loading_status("Fuseki ya esta activo...")
             self._advance_loading_step()
@@ -98,11 +119,13 @@ class FootballGraphApp:
     def _finish_boot(self):
         self.loading_window.destroy()
         self.root.deiconify()
+        self.root.lift()
         self._setup_ui()
 
     def _boot_failed(self, message):
         self.loading_window.destroy()
         messagebox.showerror("Error", f"No se pudo iniciar la aplicacion:\n{message}")
+        self._stop_fuseki()
         self.root.destroy()
 
     def _update_loading_status(self, message):
@@ -114,32 +137,38 @@ class FootballGraphApp:
 
     def _confirm_close(self):
         if messagebox.askyesno("Confirmar", "¿Seguro que quieres cerrar la aplicacion?"):
+            self._stop_fuseki()
             self.root.destroy()
 
     def _on_loading_window_close(self):
         """Manejador para cuando se cierra la ventana de carga"""
         self._boot_cancelled = True
+        self._stop_fuseki()
         self.root.destroy()
 
-    def _start_fuseki(self):
+
+    def _start_fuseki(self, port=3030):
+        """Inicia el servidor Fuseki en el puerto especificado"""
         fuseki_dir = Path(__file__).resolve().parents[1] / "Apache Jena Fuseki" / "apache-jena-fuseki-6.0.0"
         fuseki_bat = fuseki_dir / "fuseki-server.bat"
 
         if not fuseki_bat.exists():
             raise FileNotFoundError(f"No se encontro {fuseki_bat}")
 
+        # Ejecutar el .bat en una nueva consola
         self._fuseki_process = subprocess.Popen(
-            ["cmd", "/c", str(fuseki_bat)],
+            [str(fuseki_bat)],
             cwd=str(fuseki_dir),
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            creationflags=subprocess.CREATE_NEW_CONSOLE,
         )
 
     def _wait_for_fuseki_ready(self, timeout_seconds=60):
+        """Espera a que Fuseki esté listo en el puerto configurado"""
         deadline = time.time() + timeout_seconds
+        ping_url = f"http://localhost:{self.fuseki_port}/$/ping"
         while time.time() < deadline:
             try:
-                with urllib.request.urlopen("http://localhost:3030/$/ping", timeout=2) as response:
+                with urllib.request.urlopen(ping_url, timeout=2) as response:
                     if response.status == 200:
                         return True
             except urllib.error.URLError:
@@ -147,14 +176,61 @@ class FootballGraphApp:
         return False
 
     def _is_fuseki_running(self):
+        """Verifica si Fuseki está ejecutándose en el puerto configurado"""
+        if self.fuseki_port is None:
+            return False
         try:
-            with urllib.request.urlopen("http://localhost:3030/$/ping", timeout=2) as response:
+            ping_url = f"http://localhost:{self.fuseki_port}/$/ping"
+            with urllib.request.urlopen(ping_url, timeout=2) as response:
                 return response.status == 200
         except urllib.error.URLError:
             return False
+    
+    def _stop_fuseki(self):
+        """Detiene el proceso Fuseki si está ejecutándose"""
+        # Primero intentar terminar el proceso guardado
+        if self._fuseki_process is not None:
+            try:
+                self._fuseki_process.terminate()
+                try:
+                    self._fuseki_process.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    self._fuseki_process.kill()
+            except Exception as e:
+                print(f"Error al terminar proceso: {e}")
+            self._fuseki_process = None
+        
+        # Luego, matar cualquier proceso que esté usando el puerto 3030
+        try:
+            # Usar netstat para encontrar el PID usando el puerto 3030
+            result = subprocess.run(
+                ["netstat", "-ano"],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            for line in result.stdout.split('\n'):
+                if ':3030' in line and 'LISTENING' in line:
+                    # Extraer el PID (último campo)
+                    parts = line.split()
+                    if len(parts) > 0:
+                        pid = parts[-1]
+                        if pid.isdigit():
+                            try:
+                                subprocess.run(
+                                    ["taskkill", "/F", "/PID", pid],
+                                    capture_output=True,
+                                    timeout=5
+                                )
+                                print(f"Proceso {pid} matado")
+                            except Exception as e:
+                                print(f"Error matando PID {pid}: {e}")
+        except Exception as e:
+            print(f"Error al limpiar puerto 3030: {e}")
 
     def _ensure_dataset(self, dataset_name):
-        datasets_url = "http://localhost:3030/$/datasets"
+        datasets_url = f"http://localhost:{self.fuseki_port}/$/datasets"
         try:
             with urllib.request.urlopen(datasets_url, timeout=5) as response:
                 payload = response.read().decode("utf-8")
@@ -279,8 +355,8 @@ class FootballGraphApp:
     def setup_teams_tab(self):
         """Configura la pestaña de Equipos"""
         buttons_config = [
-            {'name': 'Ganadores de la UEFA Champions League', 'command': self.execute_champions_query},
-            {'name': 'Botón 2', 'command': self.placeholder_query},
+            {'name': self.queries["champions"]["name"], 'command': lambda: self.execute_query("champions", self.teams_tree, self.teams_status)},
+            {'name': self.queries["eficacia"]["name"], 'command': lambda: self.execute_query("eficacia", self.teams_tree, self.teams_status)},
             {'name': 'Botón 3', 'command': self.placeholder_query}
         ]
         self.teams_tree, self.teams_status = self.setup_query_tab(
@@ -391,22 +467,22 @@ class FootballGraphApp:
         thread = threading.Thread(target=self._fetch_custom_results, args=(query,))
         thread.start()
     
-    def execute_champions_query(self):
-        """Ejecuta la consulta de ganadores de la UEFA Champions League"""
-        self.teams_status.config(text="Ejecutando consulta...", foreground="blue")
+    def execute_query(self, query_key, tree, status_label):
+        """Ejecuta una consulta parametrizada"""
+        status_label.config(text="Ejecutando consulta...", foreground="blue")
         self.root.update()
         
-        # Ejecutar en thread separado para no bloquear la UI
-        thread = threading.Thread(target=self._fetch_champions_results)
+        thread = threading.Thread(
+            target=self._fetch_query_results,
+            args=(query_key, tree, status_label)
+        )
         thread.start()
     
-    def _fetch_champions_results(self):
-        """Obtiene los resultados de ganadores de Champions (en thread)"""
-        try:
-            sparql = SPARQLWrapper(self.sparql_endpoint)
-            
-            query = """
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    def _fetch_query_results(self, query_key, tree, status_label):
+        """Obtiene los resultados de una consulta parametrizada"""
+        # Diccionario de consultas SPARQL
+        sparql_queries = {
+            "champions": """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vini: <http://vini-eii.org/>
 
@@ -425,55 +501,74 @@ WHERE {
   
   BIND(SUBSTR(STR(?season), STRLEN(STR(?season)) - 3) AS ?year)
 }
-ORDER BY ?year ?teamName
-            """
-            
-            sparql.setQuery(query)
+ORDER BY ?year ?teamName""",
+            "eficacia": """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT
+  ?teamName
+  ?year
+  (ROUND(AVG(xsd:decimal(?goals)) * 100) / 100 AS ?avgGoals)
+  (ROUND(AVG(xsd:decimal(?xGoals)) * 100) / 100 AS ?avgxGoals)
+  (ROUND((AVG(xsd:decimal(?goals)) - AVG(xsd:decimal(?xGoals))) * 100) / 100 AS ?diferencia)
+  (IF(
+      AVG(xsd:decimal(?goals)) > AVG(xsd:decimal(?xGoals)),
+      "Efectivo",
+      "Inefectivo"
+  ) AS ?eficacia)
+WHERE {
+  ?stats a vini:GameStats ;
+         vini:goals ?goals ;
+         vini:xGoals ?xGoals ;
+         vini:team ?teamSeason .
+
+  ?teamSeason vini:name ?teamName ;
+              vini:year ?year .
+}
+GROUP BY ?teamName ?year
+ORDER BY DESC(?diferencia)
+LIMIT 30"""
+        }
+        
+        try:
+            query_info = self.queries[query_key]
+            sparql = SPARQLWrapper(self.sparql_endpoint)
+            sparql.setQuery(sparql_queries[query_key])
             sparql.setReturnFormat(JSON)
             
             results = sparql.query().convert()
             
             # Limpiar tabla
-            for item in self.teams_tree.get_children():
-                self.teams_tree.delete(item)
+            for item in tree.get_children():
+                tree.delete(item)
             
-            # Configurar columnas si es necesario
-            if self.teams_tree['columns'] != ('Año', 'Equipo', 'Overall', 'Formación'):
-                self.teams_tree['columns'] = ('Año', 'Equipo', 'Overall', 'Formación')
-                self.teams_tree.column('#0', width=0, stretch=tk.NO)
-                self.teams_tree.column('Año', anchor=tk.CENTER, width=80)
-                self.teams_tree.column('Equipo', anchor=tk.W, width=250)
-                self.teams_tree.column('Overall', anchor=tk.CENTER, width=80)
-                self.teams_tree.column('Formación', anchor=tk.CENTER, width=150)
+            # Configurar columnas
+            if tree['columns'] != query_info["columns"]:
+                tree['columns'] = query_info["columns"]
+                tree.column('#0', width=0, stretch=tk.NO)
                 
-                self.teams_tree.heading('#0', text='', anchor=tk.W)
-                self.teams_tree.heading('Año', text='Año', anchor=tk.CENTER)
-                self.teams_tree.heading('Equipo', text='Equipo', anchor=tk.W)
-                self.teams_tree.heading('Overall', text='Overall', anchor=tk.CENTER)
-                self.teams_tree.heading('Formación', text='Formación', anchor=tk.CENTER)
+                for col in query_info["columns"]:
+                    tree.column(col, anchor=tk.W, width=150)
+                    tree.heading(col, text=col, anchor=tk.W)
             
             # Agregar resultados
             if results['results']['bindings']:
-                for idx, binding in enumerate(results['results']['bindings']):
-                    year = binding.get('year', {}).get('value', 'N/A')
-                    team_name = binding.get('teamName', {}).get('value', 'N/A')
-                    overall = binding.get('overall', {}).get('value', 'N/A')
-                    formation = binding.get('formation', {}).get('value', 'N/A')
-                    
-                    self.teams_tree.insert('', 'end', values=(year, team_name, overall, formation))
+                for binding in results['results']['bindings']:
+                    row = []
+                    for var in query_info["vars"]:
+                        value = binding.get(var, {}).get('value', 'N/A')
+                        row.append(value)
+                    tree.insert('', 'end', values=tuple(row))
                 
-                self.teams_status.config(
-                    text=f" Se cargaron {len(results['results']['bindings'])} resultados",
+                status_label.config(
+                    text=f"Se cargaron {len(results['results']['bindings'])} resultados",
                     foreground="green"
                 )
             else:
-                self.teams_status.config(text="No se encontraron resultados", foreground="orange")
+                status_label.config(text="No se encontraron resultados", foreground="orange")
         
         except Exception as e:
-            self.teams_status.config(
-                text=f"Error: {str(e)}",
-                foreground="red"
-            )
+            status_label.config(text=f"Error: {str(e)}", foreground="red")
             messagebox.showerror("Error", f"Error al ejecutar la consulta:\n{str(e)}")
     
     def _fetch_custom_results(self, query):

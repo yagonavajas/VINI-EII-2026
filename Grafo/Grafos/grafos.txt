@@ -5,7 +5,7 @@ teamstats fbdb -
 
 
 ========== Jugadores ==========
-apariciones fbdb
+apariciones fbdb -
 players sofifa -
 shots fbdb
 

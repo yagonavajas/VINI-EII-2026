@@ -361,6 +361,55 @@ def addPlayersSofifa(graph):
             if count % 1000 == 0:
                 print(f"Procesadas {count} filas")
 
+def addPlayersAppearancesFBDB(graph):
+    with open("./Aplicacion/Grafo/Archivos/appearances_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+
+        count = 0
+
+        for row in reader: 
+            id_game = row["gameID"]
+            id_player = row["playerID"]
+
+            # Crear identificador único para la aparición (jugador + partido)
+            appearance_id = f"{id_player}_{id_game}"
+            
+            # URIs principales
+            appearance_uri = URIRef("http://vini-eii.org/playerAppearance/" + appearance_id)
+            game_uri = URIRef("http://vini-eii.org/game/" + id_game)
+            player_uri = URIRef("http://vini-eii.org/player/" + id_player)
+
+            graph.add((appearance_uri, RDF.type, VINI.PlayerAppearance))
+
+            graph.add((appearance_uri, VINI.player, player_uri))
+            graph.add((appearance_uri, VINI.game, game_uri))
+            
+            graph.add((player_uri, VINI.appearsIn, appearance_uri))
+            graph.add((game_uri, VINI.hasPlayerAppearance, appearance_uri))
+
+            graph.add((appearance_uri, VINI.goals, Literal(row["goals"])))
+            graph.add((appearance_uri, VINI.ownGoals, Literal(row["ownGoals"])))
+            graph.add((appearance_uri, VINI.shots, Literal(row["shots"])))
+            graph.add((appearance_uri, VINI.xGoals, Literal(row["xGoals"])))
+            graph.add((appearance_uri, VINI.xGoalsChain, Literal(row["xGoalsChain"])))
+            graph.add((appearance_uri, VINI.xGoalsBuildup, Literal(row["xGoalsBuildup"])))
+            graph.add((appearance_uri, VINI.assists, Literal(row["assists"])))
+            graph.add((appearance_uri, VINI.keyPasses, Literal(row["keyPasses"])))
+            graph.add((appearance_uri, VINI.xAssists, Literal(row["xAssists"])))
+            graph.add((appearance_uri, VINI.position, Literal(row["position"])))
+            graph.add((appearance_uri, VINI.positionOrder, Literal(row["positionOrder"])))
+            graph.add((appearance_uri, VINI.yellowCard, Literal(row["yellowCard"])))
+            graph.add((appearance_uri, VINI.redCard, Literal(row["redCard"])))
+            graph.add((appearance_uri, VINI.time, Literal(row["time"])))
+
+            count += 1
+
+            if count % 1000 == 0:
+                print(f"Procesadas {count} filas")
+
+def addShotsFBDB(graph):
+    
+    pass
 
 def _extract_team_name(team_contract):
     if not team_contract:
@@ -518,10 +567,17 @@ def main():
     # addGamesFBDB(gamesFBDB)
     # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
 
-    playersSofifa = Graph()
-    playersSofifa.bind("vini", VINI)
-    addPlayersSofifa(playersSofifa)
-    saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+    # playersSofifa = Graph()
+    # playersSofifa.bind("vini", VINI)
+    # addPlayersSofifa(playersSofifa)
+    # saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+
+    appearancesFBDB = Graph()
+    appearancesFBDB.bind("vini", VINI)
+    addPlayersAppearancesFBDB(appearancesFBDB)
+    saveGraph(appearancesFBDB, "./Aplicacion/Grafo/Grafos/appearances_graph.ttl")
+
+
 
 
 

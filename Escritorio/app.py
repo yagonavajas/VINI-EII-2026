@@ -9,6 +9,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+import re
+from io import BytesIO
+from PIL import Image, ImageTk
+import gzip
 
 class FootballGraphApp:
     def __init__(self, root):
@@ -34,6 +38,11 @@ class FootballGraphApp:
                 "name": "Eficacia de Goles vs Expected Goals",
                 "columns": ("Equipo", "Año", "Goles Promedio", "xG Promedio", "Diferencia", "Eficacia"),
                 "vars": ("teamName", "year", "avgGoals", "avgxGoals", "diferencia", "eficacia")
+            },
+            "team_urls": {
+                "name": "URLs de equipos (Sofifa)",
+                "columns": ("Equipo", "Temporada", "URL"),
+                "vars": ("teamName", "year", "url")
             }
         }
         
@@ -238,11 +247,11 @@ class FootballGraphApp:
             raise RuntimeError(f"No se pudo consultar datasets: {exc}")
 
         if f'"{dataset_name}"' in payload:
-            return
+            self._delete_dataset(dataset_name)
 
         data = urllib.parse.urlencode({
             "dbName": dataset_name,
-            "dbType": "tdb2",
+            "dbType": "mem",
         }).encode("utf-8")
 
         request = urllib.request.Request(datasets_url, data=data, method="POST")
@@ -254,6 +263,19 @@ class FootballGraphApp:
             if exc.code == 409:
                 return
             raise
+
+    def _delete_dataset(self, dataset_name):
+        delete_url = f"http://localhost:{self.fuseki_port}/$/datasets/{dataset_name}"
+        request = urllib.request.Request(delete_url, method="DELETE")
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                if response.status not in (200, 204):
+                    raise RuntimeError(f"No se pudo borrar el dataset {dataset_name}")
+        except urllib.error.HTTPError as exc:
+            if exc.code in (404, 409):
+                return
+            raise
+
 
     def _run_carga_grafos(self):
         carga_path = Path(__file__).resolve().parents[1] / "Grafo" / "cargaGrafos.py"
@@ -279,12 +301,14 @@ class FootballGraphApp:
         self.tab_teams = ttk.Frame(self.notebook)
         self.tab_games = ttk.Frame(self.notebook)
         self.tab_competitions = ttk.Frame(self.notebook)
+        self.tab_special = ttk.Frame(self.notebook)
         self.tab_custom_queries = ttk.Frame(self.notebook)
 
         self.notebook.add(self.tab_players, text="Jugadores")
         self.notebook.add(self.tab_teams, text="Equipos")
         self.notebook.add(self.tab_games, text="Partidos")
         self.notebook.add(self.tab_competitions, text="Competiciones")
+        self.notebook.add(self.tab_special, text="Especial")
         self.notebook.add(self.tab_custom_queries, text="Consultas personalizadas")
 
         # Configurar pestañas
@@ -292,6 +316,7 @@ class FootballGraphApp:
         self.setup_teams_tab()
         self.setup_games_tab()
         self.setup_competitions_tab()
+        self.setup_special_tab()
         self.setup_custom_queries_tab()
         
         
@@ -384,6 +409,42 @@ class FootballGraphApp:
         self.competitions_tree, self.competitions_status = self.setup_query_tab(
             self.tab_competitions, "Consultas de Competiciones", buttons_config
         )
+
+    def setup_special_tab(self):
+        """Configura la pestaña Especial"""
+        frame = ttk.Frame(self.tab_special, padding="20")
+        frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Título
+        title_label = ttk.Label(frame, text="Consultas Especiales", font=("Arial", 14, "bold"))
+        title_label.pack(pady=10)
+        
+        # Frame para selector
+        selector_frame = ttk.Frame(frame)
+        selector_frame.pack(pady=10, fill=tk.X)
+        
+        label = ttk.Label(selector_frame, text="Selecciona un equipo:")
+        label.pack(side=tk.LEFT, padx=5)
+        
+        self.team_combobox = ttk.Combobox(selector_frame, state="readonly", width=40)
+        self.team_combobox.pack(side=tk.LEFT, padx=5, fill=tk.X, expand=True)
+        
+        btn_load = ttk.Button(selector_frame, text="Cargar Equipos",
+                             command=self._load_teams_combobox)
+        btn_load.pack(side=tk.LEFT, padx=5)
+        
+        btn_show = ttk.Button(selector_frame, text="Ver Equipaciones",
+                             command=self._show_kit_from_combo)
+        btn_show.pack(side=tk.LEFT, padx=5)
+        
+        # Label para estado
+        self.special_status = ttk.Label(frame, text="Haz clic en 'Cargar Equipos' para comenzar",
+                                foreground="blue")
+        self.special_status.pack(pady=10)
+        
+        # Label para loading
+        self.special_loading = ttk.Label(frame, text="", foreground="gray")
+        self.special_loading.pack(pady=5)
     
     def setup_custom_queries_tab(self):
         """Configura la pestaña de consultas personalizadas"""
@@ -527,7 +588,16 @@ WHERE {
 }
 GROUP BY ?teamName ?year
 ORDER BY DESC(?diferencia)
-LIMIT 30"""
+LIMIT 30""",
+                        "team_urls": """PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year ?url
+WHERE {
+    ?teamSeason vini:name ?teamName ;
+                            vini:year ?year ;
+                            vini:url ?url .
+}
+ORDER BY ?teamName ?year"""
         }
         
         try:
@@ -615,13 +685,254 @@ LIMIT 30"""
         
         except Exception as e:
             self.custom_status_label.config(
-                text=f"✗ Error: {str(e)}",
+                text=f"Error: {str(e)}",
                 foreground="red"
             )
             messagebox.showerror("Error", f"Error al ejecutar la consulta:\n{str(e)}")
         
         finally:
             self.btn_custom_execute.config(state=tk.NORMAL)
+    
+    def _load_teams_combobox(self):
+        """Carga la lista de equipos en el combobox"""
+        self.special_status.config(text="Cargando equipos...", foreground="blue")
+        self.special_loading.config(text="Obteniendo datos de la base de datos...")
+        self.root.update()
+        
+        thread = threading.Thread(target=self._fetch_teams_for_combobox)
+        thread.start()
+    
+    def _fetch_teams_for_combobox(self):
+        """Obtiene todos los equipos y años disponibles"""
+        try:
+            sparql = SPARQLWrapper(self.sparql_endpoint)
+            query = """PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year ?url
+WHERE {
+    ?teamSeason vini:name ?teamName ;
+                vini:year ?year ;
+                vini:url ?url .
+}
+ORDER BY ?teamName ?year"""
+            
+            sparql.setQuery(query)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            
+            if results['results']['bindings']:
+                teams_data = []
+                team_items = []
+                
+                for binding in results['results']['bindings']:
+                    team_name = binding.get('teamName', {}).get('value', 'N/A')
+                    year = binding.get('year', {}).get('value', 'N/A')
+                    url = binding.get('url', {}).get('value', 'N/A')
+                    
+                    display_text = f"{team_name} - {year}"
+                    team_items.append(display_text)
+                    teams_data.append({
+                        'team_name': team_name,
+                        'year': year,
+                        'url': url,
+                        'display': display_text
+                    })
+                
+                self.teams_data = teams_data
+                self.root.after(0, lambda: self._update_combobox_items(team_items))
+            else:
+                self.root.after(0, lambda: messagebox.showwarning(
+                    "Aviso",
+                    "No se encontraron equipos en la base de datos"
+                ))
+                self.root.after(0, lambda: self.special_status.config(
+                    text="No hay equipos disponibles",
+                    foreground="orange"
+                ))
+        
+        except Exception as e:
+            self.root.after(0, lambda: messagebox.showerror(
+                "Error",
+                f"Error cargando equipos:\n{str(e)}"
+            ))
+            self.root.after(0, lambda: self.special_status.config(
+                text=f"Error: {str(e)}",
+                foreground="red"
+            ))
+        
+        finally:
+            self.root.after(0, lambda: self.special_loading.config(text=""))
+    
+    def _update_combobox_items(self, items):
+        """Actualiza los items del combobox"""
+        self.team_combobox['values'] = items
+        self.special_status.config(
+            text=f"Se cargaron {len(items)} equipos. Selecciona uno para ver equipaciones.",
+            foreground="green"
+        )
+    
+    def _on_team_selected(self, event):
+        """Evento cuando se selecciona un equipo del combobox (ahora sin acción automática)"""
+        pass
+    
+    def _show_kit_from_combo(self):
+        """Muestra equipaciones del equipo seleccionado en el combobox"""
+        selected_index = self.team_combobox.current()
+        if selected_index < 0 or not hasattr(self, 'teams_data'):
+            messagebox.showwarning("Advertencia", "Por favor selecciona un equipo del desplegable")
+            return
+        
+        team_info = self.teams_data[selected_index]
+        self.special_status.config(text="Descargando equipaciones...", foreground="blue")
+        self.special_loading.config(text="Obteniendo imagen...")
+        self.root.update()
+        
+        # Ejecutar en thread separado
+        thread = threading.Thread(
+            target=self._fetch_and_show_kit,
+            args=(team_info['url'], team_info['team_name'])
+        )
+        thread.start()
+    
+    def _fetch_and_show_kit(self, url, team_name):
+        """Descarga la página y extrae la imagen de equipaciones"""
+        try:
+            # Headers mejorados para evitar 403
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                'Referer': 'https://sofifa.com/',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive'
+            }
+            
+            # Descargar página HTML
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=10) as response:
+                html_data = response.read()
+            
+            # Descomprimir si está comprimido con gzip
+            if html_data[:2] == b'\x1f\x8b':  # Firma de gzip
+                html_data = gzip.decompress(html_data)
+            
+            html = html_data.decode('utf-8')
+            
+            # Buscar URLs de imágenes de equipaciones
+            kit_patterns = [
+                r'class="[^"]*kit[^"]*"[^>]*(?:src|data-src)="([^"]+\.(?:png|jpg|jpeg|gif|webp))"',
+                r'<img[^>]*kit[^>]*(?:src|data-src)="([^"]+\.(?:png|jpg|jpeg|gif|webp))"',
+                r'<img[^>]*(?:src|data-src)="([^"]*kit[^"]*\.(?:png|jpg|jpeg|gif|webp))"',
+                r'class="[^"]*uniform[^"]*"[^>]*(?:src|data-src)="([^"]+\.(?:png|jpg|jpeg|gif|webp))"',
+                r'player-kit[^>]*src="([^"]+\.(?:png|jpg|jpeg|gif|webp))"',
+                r'sofifa\.com/img/kits/[^\s"]+\.(?:png|jpg|jpeg|gif|webp)',
+                r'https://sofifa\.com[^\s"]*(?:kit|uniform)[^\s"]*\.(?:png|jpg|jpeg|gif|webp)'
+            ]
+            
+            img_urls = []
+            for pattern in kit_patterns:
+                matches = re.findall(pattern, html, re.IGNORECASE)
+                if matches:
+                    if isinstance(matches[0], tuple):
+                        img_urls.extend([m for m in matches if isinstance(m, str) and m])
+                    else:
+                        img_urls.extend([m for m in matches if m])
+            
+            # Filtrar URLs para evitar escudos (badges) y logos
+            filtered_urls = []
+            for url_candidate in img_urls:
+                url_lower = url_candidate.lower()
+                # Evitar escudos, logos y otras imágenes que no sean equipaciones
+                if not any(x in url_lower for x in ['badge', 'logo', 'crest', 'emblem', 'shield', 'coat', 'flag', 'icon', 'avatar', '_a', '_l', 'default']):
+                    if url_candidate not in filtered_urls:  # Evitar duplicados
+                        filtered_urls.append(url_candidate)
+            
+            # Si no encontramos con filtro, usar todas
+            img_urls = filtered_urls if filtered_urls else img_urls
+            
+            if not img_urls:
+                self.root.after(0, lambda: messagebox.showinfo(
+                    "Información",
+                    f"No se encontraron equipaciones para {team_name}.\n\nPrueba visitando directamente:\n{url}"
+                ))
+                self.root.after(0, lambda: self.special_status.config(
+                    text="No se encontraron equipaciones",
+                    foreground="orange"
+                ))
+                return
+            
+            # Procesar primera imagen encontrada
+            img_url = img_urls[0]
+            
+            # Asegurar que la URL sea absoluta
+            if img_url.startswith('/'):
+                base_url = 'https://sofifa.com'
+                img_url = base_url + img_url
+            elif not img_url.startswith('http'):
+                img_url = 'https://sofifa.com/' + img_url
+            
+            # Descargar imagen con headers
+            img_req = urllib.request.Request(img_url, headers=headers)
+            with urllib.request.urlopen(img_req, timeout=10) as img_response:
+                img_data = img_response.read()
+            
+            # Descomprimir imagen si está comprimida con gzip
+            if img_data[:2] == b'\x1f\x8b':
+                img_data = gzip.decompress(img_data)
+            
+            # Procesar imagen con PIL
+            img = Image.open(BytesIO(img_data))
+            
+            # Mostrar en nueva ventana
+            self.root.after(0, lambda: self._display_kit_window(img, team_name))
+            self.root.after(0, lambda: self.special_status.config(
+                text=f"Equipaciones de {team_name} mostradas",
+                foreground="green"
+            ))
+            self.root.after(0, lambda: self.special_loading.config(text=""))
+        
+        except urllib.error.HTTPError as e:
+            self.root.after(0, lambda: messagebox.showerror(
+                "Error HTTP",
+                f"Error {e.code} al descargar equipaciones:\n{e.reason}\n\nSofifa puede requerir verificación."
+            ))
+            self.root.after(0, lambda: self.special_status.config(
+                text=f"Error HTTP {e.code}",
+                foreground="red"
+            ))
+        except Exception as e:
+            self.root.after(0, lambda: messagebox.showerror(
+                "Error",
+                f"Error descargando equipaciones:\n{str(e)}"
+            ))
+            self.root.after(0, lambda: self.special_status.config(
+                text=f"Error: {str(e)}",
+                foreground="red"
+            ))
+        
+        finally:
+            self.root.after(0, lambda: self.special_loading.config(text=""))
+    
+    def _display_kit_window(self, img, team_name):
+        """Muestra la imagen en una nueva ventana"""
+        kit_window = tk.Toplevel(self.root)
+        kit_window.title(f"Equipaciones - {team_name}")
+        kit_window.iconbitmap(str(self.icon_path))
+        
+        # Redimensionar imagen si es muy grande
+        max_width = 800
+        max_height = 600
+        img.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
+        
+        # Convertir a PhotoImage
+        photo = ImageTk.PhotoImage(img)
+        
+        # Mostrar imagen
+        label = tk.Label(kit_window, image=photo)
+        label.image = photo  # Mantener referencia
+        label.pack(padx=10, pady=10)
+        
+        kit_window.geometry(f"{img.width + 20}x{img.height + 20}")
 
 
 if __name__ == "__main__":

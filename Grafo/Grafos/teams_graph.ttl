@@ -651,6 +651,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.1M" ;
+    vini:url "https://sofifa.com/team/100888/cd-leganes/170099/" ;
     vini:whole_team_avg_age "24.7" ;
     vini:year "2017" .
 
@@ -680,6 +681,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€3.8M" ;
+    vini:url "https://sofifa.com/team/100888/cd-leganes/180084/" ;
     vini:whole_team_avg_age "26.17" ;
     vini:year "2018" .
 
@@ -709,6 +711,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.2M" ;
+    vini:url "https://sofifa.com/team/100888/cd-leganes/190075/" ;
     vini:whole_team_avg_age "24.9" ;
     vini:year "2019" .
 
@@ -738,6 +741,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.2M" ;
+    vini:url "https://sofifa.com/team/100888/cd-leganes/200061/" ;
     vini:whole_team_avg_age "24.77" ;
     vini:year "2020" .
 
@@ -767,6 +771,7 @@
     vini:starting_xi_avg_age "23.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/112172/rb-leipzig/170099/" ;
     vini:whole_team_avg_age "22.17" ;
     vini:year "2017" .
 
@@ -796,6 +801,7 @@
     vini:starting_xi_avg_age "22.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/112172/rb-leipzig/180084/" ;
     vini:whole_team_avg_age "22.1" ;
     vini:year "2018" .
 
@@ -825,6 +831,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/112172/rb-leipzig/190075/" ;
     vini:whole_team_avg_age "21.69" ;
     vini:year "2019" .
 
@@ -854,6 +861,7 @@
     vini:starting_xi_avg_age "23.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/112172/rb-leipzig/200061/" ;
     vini:whole_team_avg_age "21.88" ;
     vini:year "2020" .
 
@@ -883,6 +891,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€22.9M" ;
+    vini:url "https://sofifa.com/team/1952/hull-city/170099/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2017" .
 
@@ -912,6 +921,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.5M" ;
+    vini:url "https://sofifa.com/team/463/deportivo-alaves/170099/" ;
     vini:whole_team_avg_age "23.96" ;
     vini:year "2017" .
 
@@ -941,6 +951,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€4.4M" ;
+    vini:url "https://sofifa.com/team/463/deportivo-alaves/180084/" ;
     vini:whole_team_avg_age "24.13" ;
     vini:year "2018" .
 
@@ -970,6 +981,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.4M" ;
+    vini:url "https://sofifa.com/team/463/deportivo-alaves/190075/" ;
     vini:whole_team_avg_age "24.37" ;
     vini:year "2019" .
 
@@ -999,6 +1011,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.4M" ;
+    vini:url "https://sofifa.com/team/463/deportivo-alaves/200061/" ;
     vini:whole_team_avg_age "24.73" ;
     vini:year "2020" .
 
@@ -1028,6 +1041,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€31M" ;
+    vini:url "https://sofifa.com/team/1796/burnley/170099/" ;
     vini:whole_team_avg_age "23.33" ;
     vini:year "2017" .
 
@@ -1057,6 +1071,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€40.7M" ;
+    vini:url "https://sofifa.com/team/1796/burnley/180084/" ;
     vini:whole_team_avg_age "25.82" ;
     vini:year "2018" .
 
@@ -1086,6 +1101,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€45M" ;
+    vini:url "https://sofifa.com/team/1796/burnley/190075/" ;
     vini:whole_team_avg_age "24.88" ;
     vini:year "2019" .
 
@@ -1115,6 +1131,7 @@
     vini:starting_xi_avg_age "27.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/1796/burnley/200061/" ;
     vini:whole_team_avg_age "25.72" ;
     vini:year "2020" .
 
@@ -1144,6 +1161,7 @@
     vini:starting_xi_avg_age "28.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1842/cagliari/170099/" ;
     vini:whole_team_avg_age "24.71" ;
     vini:year "2017" .
 
@@ -1173,6 +1191,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1842/cagliari/180084/" ;
     vini:whole_team_avg_age "25.42" ;
     vini:year "2018" .
 
@@ -1202,6 +1221,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1842/cagliari/190075/" ;
     vini:whole_team_avg_age "26.39" ;
     vini:year "2019" .
 
@@ -1231,6 +1251,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/1842/cagliari/200061/" ;
     vini:whole_team_avg_age "27.36" ;
     vini:year "2020" .
 
@@ -1260,6 +1281,7 @@
     vini:starting_xi_avg_age "23.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/25/sc-freiburg/170099/" ;
     vini:whole_team_avg_age "24.81" ;
     vini:year "2017" .
 
@@ -1289,6 +1311,7 @@
     vini:starting_xi_avg_age "23.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/25/sc-freiburg/180084/" ;
     vini:whole_team_avg_age "24.36" ;
     vini:year "2018" .
 
@@ -1318,6 +1341,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/25/sc-freiburg/190075/" ;
     vini:whole_team_avg_age "23.9" ;
     vini:year "2019" .
 
@@ -1347,6 +1371,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/25/sc-freiburg/200061/" ;
     vini:whole_team_avg_age "24.71" ;
     vini:year "2020" .
 
@@ -1376,6 +1401,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€4.3M" ;
+    vini:url "https://sofifa.com/team/479/ca-osasuna/170099/" ;
     vini:whole_team_avg_age "24.97" ;
     vini:year "2017" .
 
@@ -1405,6 +1431,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.4M" ;
+    vini:url "https://sofifa.com/team/479/ca-osasuna/200061/" ;
     vini:whole_team_avg_age "25.73" ;
     vini:year "2020" .
 
@@ -1434,6 +1461,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3M" ;
+    vini:url "https://sofifa.com/team/68/fc-metz/170099/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2017" .
 
@@ -1463,6 +1491,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/68/fc-metz/180084/" ;
     vini:whole_team_avg_age "24.42" ;
     vini:year "2018" .
 
@@ -1492,6 +1521,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.9M" ;
+    vini:url "https://sofifa.com/team/68/fc-metz/200061/" ;
     vini:whole_team_avg_age "23.5" ;
     vini:year "2020" .
 
@@ -1521,6 +1551,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/200/pescara/170099/" ;
     vini:whole_team_avg_age "24.16" ;
     vini:year "2017" .
 
@@ -1550,6 +1581,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€30M" ;
+    vini:url "https://sofifa.com/team/22/borussia-dortmund/160058/" ;
     vini:whole_team_avg_age "23.33" ;
     vini:year "2016" .
 
@@ -1579,6 +1611,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/22/borussia-dortmund/170099/" ;
     vini:whole_team_avg_age "23.34" ;
     vini:year "2017" .
 
@@ -1608,6 +1641,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/22/borussia-dortmund/180084/" ;
     vini:whole_team_avg_age "23.23" ;
     vini:year "2018" .
 
@@ -1637,6 +1671,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/22/borussia-dortmund/190075/" ;
     vini:whole_team_avg_age "22.52" ;
     vini:year "2019" .
 
@@ -1666,6 +1701,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/22/borussia-dortmund/200061/" ;
     vini:whole_team_avg_age "23.35" ;
     vini:year "2020" .
 
@@ -1695,6 +1731,7 @@
     vini:starting_xi_avg_age "27.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.5M" ;
+    vini:url "https://sofifa.com/team/110569/dijon-fco/170099/" ;
     vini:whole_team_avg_age "25.81" ;
     vini:year "2017" .
 
@@ -1724,6 +1761,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/110569/dijon-fco/180084/" ;
     vini:whole_team_avg_age "25.38" ;
     vini:year "2018" .
 
@@ -1753,6 +1791,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.1M" ;
+    vini:url "https://sofifa.com/team/110569/dijon-fco/190075/" ;
     vini:whole_team_avg_age "25.19" ;
     vini:year "2019" .
 
@@ -1782,6 +1821,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.3M" ;
+    vini:url "https://sofifa.com/team/110569/dijon-fco/200061/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2020" .
 
@@ -1811,6 +1851,7 @@
     vini:starting_xi_avg_age "28.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3M" ;
+    vini:url "https://sofifa.com/team/1823/as-nancy-lorraine/170099/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2017" .
 
@@ -1840,6 +1881,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/110734/crotone/170099/" ;
     vini:whole_team_avg_age "24.16" ;
     vini:year "2017" .
 
@@ -1869,6 +1911,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/110734/crotone/180084/" ;
     vini:whole_team_avg_age "23.71" ;
     vini:year "2018" .
 
@@ -1898,6 +1941,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€31.6M" ;
+    vini:url "https://sofifa.com/team/1808/brighton-hove-albion/180084/" ;
     vini:whole_team_avg_age "25.27" ;
     vini:year "2018" .
 
@@ -1927,6 +1971,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€36.5M" ;
+    vini:url "https://sofifa.com/team/1808/brighton-hove-albion/190075/" ;
     vini:whole_team_avg_age "24.67" ;
     vini:year "2019" .
 
@@ -1956,6 +2001,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€32M" ;
+    vini:url "https://sofifa.com/team/1808/brighton-hove-albion/200061/" ;
     vini:whole_team_avg_age "24.3" ;
     vini:year "2020" .
 
@@ -1985,6 +2031,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€2.6M" ;
+    vini:url "https://sofifa.com/team/110062/girona-fc/180084/" ;
     vini:whole_team_avg_age "23.9" ;
     vini:year "2018" .
 
@@ -2014,6 +2061,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€3.9M" ;
+    vini:url "https://sofifa.com/team/110062/girona-fc/190075/" ;
     vini:whole_team_avg_age "24.27" ;
     vini:year "2019" .
 
@@ -2043,6 +2091,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€32.4M" ;
+    vini:url "https://sofifa.com/team/1939/huddersfield-town/180084/" ;
     vini:whole_team_avg_age "23.64" ;
     vini:year "2018" .
 
@@ -2072,6 +2121,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€37.5M" ;
+    vini:url "https://sofifa.com/team/1939/huddersfield-town/190075/" ;
     vini:whole_team_avg_age "23.73" ;
     vini:year "2019" .
 
@@ -2101,6 +2151,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/1816/amiens-sc/180084/" ;
     vini:whole_team_avg_age "26.83" ;
     vini:year "2018" .
 
@@ -2130,6 +2181,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.9M" ;
+    vini:url "https://sofifa.com/team/1816/amiens-sc/190075/" ;
     vini:whole_team_avg_age "24.07" ;
     vini:year "2019" .
 
@@ -2159,6 +2211,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/1816/amiens-sc/200061/" ;
     vini:whole_team_avg_age "24.14" ;
     vini:year "2020" .
 
@@ -2188,6 +2241,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.5M" ;
+    vini:url "https://sofifa.com/team/112791/spal/180084/" ;
     vini:whole_team_avg_age "25.86" ;
     vini:year "2018" .
 
@@ -2217,6 +2271,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.5M" ;
+    vini:url "https://sofifa.com/team/112791/spal/190075/" ;
     vini:whole_team_avg_age "26.72" ;
     vini:year "2019" .
 
@@ -2246,6 +2301,7 @@
     vini:starting_xi_avg_age "28.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/112791/spal/200061/" ;
     vini:whole_team_avg_age "26.88" ;
     vini:year "2020" .
 
@@ -2275,6 +2331,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/76/rc-strasbourg-alsace/180084/" ;
     vini:whole_team_avg_age "25.33" ;
     vini:year "2018" .
 
@@ -2304,6 +2361,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/76/rc-strasbourg-alsace/190075/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2019" .
 
@@ -2333,6 +2391,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7.9M" ;
+    vini:url "https://sofifa.com/team/76/rc-strasbourg-alsace/200061/" ;
     vini:whole_team_avg_age "24.81" ;
     vini:year "2020" .
 
@@ -2362,6 +2421,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/112026/benevento/180084/" ;
     vini:whole_team_avg_age "25.35" ;
     vini:year "2018" .
 
@@ -2391,6 +2451,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/240/atletico-madrid/160058/" ;
     vini:whole_team_avg_age "23.42" ;
     vini:year "2016" .
 
@@ -2420,6 +2481,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/240/atletico-madrid/170099/" ;
     vini:whole_team_avg_age "23.79" ;
     vini:year "2017" .
 
@@ -2449,6 +2511,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/240/atletico-madrid/180084/" ;
     vini:whole_team_avg_age "23.06" ;
     vini:year "2018" .
 
@@ -2478,6 +2541,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€68.6M" ;
+    vini:url "https://sofifa.com/team/240/atletico-madrid/190075/" ;
     vini:whole_team_avg_age "23.39" ;
     vini:year "2019" .
 
@@ -2507,6 +2571,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€68.6M" ;
+    vini:url "https://sofifa.com/team/240/atletico-madrid/200061/" ;
     vini:whole_team_avg_age "23.91" ;
     vini:year "2020" .
 
@@ -2536,6 +2601,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/110/wolverhampton-wanderers/190075/" ;
     vini:whole_team_avg_age "22.27" ;
     vini:year "2019" .
 
@@ -2565,6 +2631,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€42M" ;
+    vini:url "https://sofifa.com/team/110/wolverhampton-wanderers/200061/" ;
     vini:whole_team_avg_age "22.52" ;
     vini:year "2020" .
 
@@ -2594,6 +2661,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€45M" ;
+    vini:url "https://sofifa.com/team/144/fulham-fc/190075/" ;
     vini:whole_team_avg_age "23.85" ;
     vini:year "2019" .
 
@@ -2623,6 +2691,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.1M" ;
+    vini:url "https://sofifa.com/team/462/real-valladolid-cf/190075/" ;
     vini:whole_team_avg_age "24.06" ;
     vini:year "2019" .
 
@@ -2652,6 +2721,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€3.1M" ;
+    vini:url "https://sofifa.com/team/462/real-valladolid-cf/200061/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2020" .
 
@@ -2681,6 +2751,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/110636/fortuna-dusseldorf/190075/" ;
     vini:whole_team_avg_age "25.33" ;
     vini:year "2019" .
 
@@ -2710,6 +2781,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/110636/fortuna-dusseldorf/200061/" ;
     vini:whole_team_avg_age "25.67" ;
     vini:year "2020" .
 
@@ -2739,6 +2811,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/50/parma/190075/" ;
     vini:whole_team_avg_age "26.58" ;
     vini:year "2019" .
 
@@ -2768,6 +2841,7 @@
     vini:starting_xi_avg_age "28.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/50/parma/200061/" ;
     vini:whole_team_avg_age "27.5" ;
     vini:year "2020" .
 
@@ -2797,6 +2871,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€35M" ;
+    vini:url "https://sofifa.com/team/1961/cardiff-city/190075/" ;
     vini:whole_team_avg_age "25.97" ;
     vini:year "2019" .
 
@@ -2826,6 +2901,7 @@
     vini:starting_xi_avg_age "23.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.1M" ;
+    vini:url "https://sofifa.com/team/224/nimes-olympique/190075/" ;
     vini:whole_team_avg_age "24.26" ;
     vini:year "2019" .
 
@@ -2855,6 +2931,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.8M" ;
+    vini:url "https://sofifa.com/team/224/nimes-olympique/200061/" ;
     vini:whole_team_avg_age "23.29" ;
     vini:year "2020" .
 
@@ -2884,6 +2961,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/171/1-fc-nurnberg/190075/" ;
     vini:whole_team_avg_age "24.03" ;
     vini:year "2019" .
 
@@ -2913,6 +2991,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.1M" ;
+    vini:url "https://sofifa.com/team/110839/sd-huesca/190075/" ;
     vini:whole_team_avg_age "25.63" ;
     vini:year "2019" .
 
@@ -2942,6 +3021,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€18M" ;
+    vini:url "https://sofifa.com/team/1794/sheffield-united/200061/" ;
     vini:whole_team_avg_age "25.27" ;
     vini:year "2020" .
 
@@ -2971,6 +3051,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€70M" ;
+    vini:url "https://sofifa.com/team/461/valencia-cf/160058/" ;
     vini:whole_team_avg_age "22.76" ;
     vini:year "2016" .
 
@@ -3000,6 +3081,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€54M" ;
+    vini:url "https://sofifa.com/team/461/valencia-cf/170099/" ;
     vini:whole_team_avg_age "23.25" ;
     vini:year "2017" .
 
@@ -3029,6 +3111,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€54.1M" ;
+    vini:url "https://sofifa.com/team/461/valencia-cf/180084/" ;
     vini:whole_team_avg_age "22.48" ;
     vini:year "2018" .
 
@@ -3058,6 +3141,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€66.3M" ;
+    vini:url "https://sofifa.com/team/461/valencia-cf/190075/" ;
     vini:whole_team_avg_age "23.27" ;
     vini:year "2019" .
 
@@ -3087,6 +3171,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€66.3M" ;
+    vini:url "https://sofifa.com/team/461/valencia-cf/200061/" ;
     vini:whole_team_avg_age "24.61" ;
     vini:year "2020" .
 
@@ -3116,6 +3201,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€2.3M" ;
+    vini:url "https://sofifa.com/team/453/rcd-mallorca/200061/" ;
     vini:whole_team_avg_age "26.46" ;
     vini:year "2020" .
 
@@ -3145,6 +3231,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/1831/1-fc-union-berlin/200061/" ;
     vini:whole_team_avg_age "24.91" ;
     vini:year "2020" .
 
@@ -3174,6 +3261,7 @@
     vini:starting_xi_avg_age "28.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/347/lecce/200061/" ;
     vini:whole_team_avg_age "27.13" ;
     vini:year "2020" .
 
@@ -3203,6 +3291,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€4.6M" ;
+    vini:url "https://sofifa.com/team/378/stade-brestois-29/200061/" ;
     vini:whole_team_avg_age "25.19" ;
     vini:year "2020" .
 
@@ -3232,6 +3321,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.2M" ;
+    vini:url "https://sofifa.com/team/190/brescia/200061/" ;
     vini:whole_team_avg_age "24.72" ;
     vini:year "2020" .
 
@@ -3261,6 +3351,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/10030/sc-paderborn-07/200061/" ;
     vini:whole_team_avg_age "23.58" ;
     vini:year "2020" .
 
@@ -3290,6 +3381,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€55M" ;
+    vini:url "https://sofifa.com/team/9/liverpool/160058/" ;
     vini:whole_team_avg_age "23.67" ;
     vini:year "2016" .
 
@@ -3319,6 +3411,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€71.8M" ;
+    vini:url "https://sofifa.com/team/9/liverpool/170099/" ;
     vini:whole_team_avg_age "22.39" ;
     vini:year "2017" .
 
@@ -3348,6 +3441,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€76M" ;
+    vini:url "https://sofifa.com/team/9/liverpool/180084/" ;
     vini:whole_team_avg_age "23.15" ;
     vini:year "2018" .
 
@@ -3377,6 +3471,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/9/liverpool/190075/" ;
     vini:whole_team_avg_age "23.09" ;
     vini:year "2019" .
 
@@ -3406,6 +3501,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€103M" ;
+    vini:url "https://sofifa.com/team/9/liverpool/200061/" ;
     vini:whole_team_avg_age "24.39" ;
     vini:year "2020" .
 
@@ -3435,6 +3531,7 @@
     vini:starting_xi_avg_age "24.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€45M" ;
+    vini:url "https://sofifa.com/team/18/tottenham-hotspur/160058/" ;
     vini:whole_team_avg_age "21.76" ;
     vini:year "2016" .
 
@@ -3464,6 +3561,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€69.1M" ;
+    vini:url "https://sofifa.com/team/18/tottenham-hotspur/170099/" ;
     vini:whole_team_avg_age "22.42" ;
     vini:year "2017" .
 
@@ -3493,6 +3591,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€71.4M" ;
+    vini:url "https://sofifa.com/team/18/tottenham-hotspur/180084/" ;
     vini:whole_team_avg_age "23.27" ;
     vini:year "2018" .
 
@@ -3522,6 +3621,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€85M" ;
+    vini:url "https://sofifa.com/team/18/tottenham-hotspur/190075/" ;
     vini:whole_team_avg_age "23.91" ;
     vini:year "2019" .
 
@@ -3551,6 +3651,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€76M" ;
+    vini:url "https://sofifa.com/team/18/tottenham-hotspur/200061/" ;
     vini:whole_team_avg_age "23.0" ;
     vini:year "2020" .
 
@@ -3580,6 +3681,7 @@
     vini:starting_xi_avg_age "24.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/32/bayer-04-leverkusen/160058/" ;
     vini:whole_team_avg_age "23.34" ;
     vini:year "2016" .
 
@@ -3609,6 +3711,7 @@
     vini:starting_xi_avg_age "23.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/32/bayer-04-leverkusen/170099/" ;
     vini:whole_team_avg_age "23.36" ;
     vini:year "2017" .
 
@@ -3638,6 +3741,7 @@
     vini:starting_xi_avg_age "23.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€32M" ;
+    vini:url "https://sofifa.com/team/32/bayer-04-leverkusen/180084/" ;
     vini:whole_team_avg_age "23.13" ;
     vini:year "2018" .
 
@@ -3667,6 +3771,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/32/bayer-04-leverkusen/190075/" ;
     vini:whole_team_avg_age "24.56" ;
     vini:year "2019" .
 
@@ -3696,6 +3801,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/32/bayer-04-leverkusen/200061/" ;
     vini:whole_team_avg_age "24.96" ;
     vini:year "2020" .
 
@@ -3725,6 +3831,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€37.5M" ;
+    vini:url "https://sofifa.com/team/44/inter/160058/" ;
     vini:whole_team_avg_age "25.28" ;
     vini:year "2016" .
 
@@ -3754,6 +3861,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/44/inter/170099/" ;
     vini:whole_team_avg_age "25.62" ;
     vini:year "2017" .
 
@@ -3783,6 +3891,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/44/inter/180084/" ;
     vini:whole_team_avg_age "26.22" ;
     vini:year "2018" .
 
@@ -3812,6 +3921,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/44/inter/190075/" ;
     vini:whole_team_avg_age "26.8" ;
     vini:year "2019" .
 
@@ -3841,6 +3951,7 @@
     vini:starting_xi_avg_age "27.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€53M" ;
+    vini:url "https://sofifa.com/team/44/inter/200061/" ;
     vini:whole_team_avg_age "27.35" ;
     vini:year "2020" .
 
@@ -3870,6 +3981,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€27.5M" ;
+    vini:url "https://sofifa.com/team/48/napoli/160058/" ;
     vini:whole_team_avg_age "25.04" ;
     vini:year "2016" .
 
@@ -3899,6 +4011,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/48/napoli/170099/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2017" .
 
@@ -3928,6 +4041,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/48/napoli/180084/" ;
     vini:whole_team_avg_age "26.21" ;
     vini:year "2018" .
 
@@ -3957,6 +4071,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/48/napoli/190075/" ;
     vini:whole_team_avg_age "25.58" ;
     vini:year "2019" .
 
@@ -3986,6 +4101,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€49.3M" ;
+    vini:url "https://sofifa.com/team/48/napoli/200061/" ;
     vini:whole_team_avg_age "26.65" ;
     vini:year "2020" .
 
@@ -4015,6 +4131,7 @@
     vini:starting_xi_avg_age "24.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34M" ;
+    vini:url "https://sofifa.com/team/52/roma/160058/" ;
     vini:whole_team_avg_age "25.12" ;
     vini:year "2016" .
 
@@ -4044,6 +4161,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/52/roma/170099/" ;
     vini:whole_team_avg_age "25.33" ;
     vini:year "2017" .
 
@@ -4073,6 +4191,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/52/roma/180084/" ;
     vini:whole_team_avg_age "24.68" ;
     vini:year "2018" .
 
@@ -4102,6 +4221,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/52/roma/190075/" ;
     vini:whole_team_avg_age "25.35" ;
     vini:year "2019" .
 
@@ -4131,6 +4251,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€41M" ;
+    vini:url "https://sofifa.com/team/52/roma/200061/" ;
     vini:whole_team_avg_age "25.19" ;
     vini:year "2020" .
 
@@ -4160,6 +4281,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/175/vfl-wolfsburg/160058/" ;
     vini:whole_team_avg_age "24.07" ;
     vini:year "2016" .
 
@@ -4189,6 +4311,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/175/vfl-wolfsburg/170099/" ;
     vini:whole_team_avg_age "23.52" ;
     vini:year "2017" .
 
@@ -4218,6 +4341,7 @@
     vini:starting_xi_avg_age "24.36" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€42M" ;
+    vini:url "https://sofifa.com/team/175/vfl-wolfsburg/180084/" ;
     vini:whole_team_avg_age "22.94" ;
     vini:year "2018" .
 
@@ -4247,6 +4371,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/175/vfl-wolfsburg/190075/" ;
     vini:whole_team_avg_age "23.58" ;
     vini:year "2019" .
 
@@ -4276,6 +4401,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/175/vfl-wolfsburg/200061/" ;
     vini:whole_team_avg_age "24.07" ;
     vini:year "2020" .
 
@@ -4305,6 +4431,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€80M" ;
+    vini:url "https://sofifa.com/team/21/fc-bayern-munchen/160058/" ;
     vini:whole_team_avg_age "25.17" ;
     vini:year "2016" .
 
@@ -4334,6 +4461,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/21/fc-bayern-munchen/170099/" ;
     vini:whole_team_avg_age "23.96" ;
     vini:year "2017" .
 
@@ -4363,6 +4491,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/21/fc-bayern-munchen/180084/" ;
     vini:whole_team_avg_age "24.06" ;
     vini:year "2018" .
 
@@ -4392,6 +4521,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/21/fc-bayern-munchen/190075/" ;
     vini:whole_team_avg_age "23.76" ;
     vini:year "2019" .
 
@@ -4421,6 +4551,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/21/fc-bayern-munchen/200061/" ;
     vini:whole_team_avg_age "25.13" ;
     vini:year "2020" .
 
@@ -4450,6 +4581,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/448/athletic-club/160058/" ;
     vini:whole_team_avg_age "26.04" ;
     vini:year "2016" .
 
@@ -4479,6 +4611,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17M" ;
+    vini:url "https://sofifa.com/team/448/athletic-club/170099/" ;
     vini:whole_team_avg_age "25.35" ;
     vini:year "2017" .
 
@@ -4508,6 +4641,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/448/athletic-club/180084/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2018" .
 
@@ -4537,6 +4671,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€18.5M" ;
+    vini:url "https://sofifa.com/team/448/athletic-club/190075/" ;
     vini:whole_team_avg_age "24.85" ;
     vini:year "2019" .
 
@@ -4566,6 +4701,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€18.5M" ;
+    vini:url "https://sofifa.com/team/448/athletic-club/200061/" ;
     vini:whole_team_avg_age "24.87" ;
     vini:year "2020" .
 
@@ -4595,6 +4731,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34.5M" ;
+    vini:url "https://sofifa.com/team/481/sevilla-fc/160058/" ;
     vini:whole_team_avg_age "25.12" ;
     vini:year "2016" .
 
@@ -4624,6 +4761,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34.1M" ;
+    vini:url "https://sofifa.com/team/481/sevilla-fc/170099/" ;
     vini:whole_team_avg_age "25.18" ;
     vini:year "2017" .
 
@@ -4653,6 +4791,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34.1M" ;
+    vini:url "https://sofifa.com/team/481/sevilla-fc/180084/" ;
     vini:whole_team_avg_age "25.93" ;
     vini:year "2018" .
 
@@ -4682,6 +4821,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34.5M" ;
+    vini:url "https://sofifa.com/team/481/sevilla-fc/190075/" ;
     vini:whole_team_avg_age "24.42" ;
     vini:year "2019" .
 
@@ -4711,6 +4851,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€34.5M" ;
+    vini:url "https://sofifa.com/team/481/sevilla-fc/200061/" ;
     vini:whole_team_avg_age "24.55" ;
     vini:year "2020" .
 
@@ -4740,6 +4881,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/483/villarreal-cf/160058/" ;
     vini:whole_team_avg_age "23.55" ;
     vini:year "2016" .
 
@@ -4769,6 +4911,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€31M" ;
+    vini:url "https://sofifa.com/team/483/villarreal-cf/170099/" ;
     vini:whole_team_avg_age "24.55" ;
     vini:year "2017" .
 
@@ -4798,6 +4941,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€31.1M" ;
+    vini:url "https://sofifa.com/team/483/villarreal-cf/180084/" ;
     vini:whole_team_avg_age "25.0" ;
     vini:year "2018" .
 
@@ -4827,6 +4971,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€32.9M" ;
+    vini:url "https://sofifa.com/team/483/villarreal-cf/190075/" ;
     vini:whole_team_avg_age "25.24" ;
     vini:year "2019" .
 
@@ -4856,6 +5001,7 @@
     vini:starting_xi_avg_age "28.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€32.9M" ;
+    vini:url "https://sofifa.com/team/483/villarreal-cf/200061/" ;
     vini:whole_team_avg_age "24.85" ;
     vini:year "2020" .
 
@@ -4885,6 +5031,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/7/everton/160058/" ;
     vini:whole_team_avg_age "24.36" ;
     vini:year "2016" .
 
@@ -4914,6 +5061,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€51.4M" ;
+    vini:url "https://sofifa.com/team/7/everton/170099/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2017" .
 
@@ -4943,6 +5091,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€64.4M" ;
+    vini:url "https://sofifa.com/team/7/everton/180084/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2018" .
 
@@ -4972,6 +5121,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€75M" ;
+    vini:url "https://sofifa.com/team/7/everton/190075/" ;
     vini:whole_team_avg_age "23.61" ;
     vini:year "2019" .
 
@@ -5001,6 +5151,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€51M" ;
+    vini:url "https://sofifa.com/team/7/everton/200061/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2020" .
 
@@ -5030,6 +5181,7 @@
     vini:starting_xi_avg_age "24.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€20M" ;
+    vini:url "https://sofifa.com/team/23/borussia-monchengladbach/160058/" ;
     vini:whole_team_avg_age "23.44" ;
     vini:year "2016" .
 
@@ -5059,6 +5211,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/23/borussia-monchengladbach/170099/" ;
     vini:whole_team_avg_age "23.67" ;
     vini:year "2017" .
 
@@ -5088,6 +5241,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/23/borussia-monchengladbach/180084/" ;
     vini:whole_team_avg_age "23.24" ;
     vini:year "2018" .
 
@@ -5117,6 +5271,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/23/borussia-monchengladbach/190075/" ;
     vini:whole_team_avg_age "24.38" ;
     vini:year "2019" .
 
@@ -5146,6 +5301,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/23/borussia-monchengladbach/200061/" ;
     vini:whole_team_avg_age "25.33" ;
     vini:year "2020" .
 
@@ -5175,6 +5331,7 @@
     vini:starting_xi_avg_age "23.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€21.5M" ;
+    vini:url "https://sofifa.com/team/34/fc-schalke-04/160058/" ;
     vini:whole_team_avg_age "23.61" ;
     vini:year "2016" .
 
@@ -5204,6 +5361,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34M" ;
+    vini:url "https://sofifa.com/team/34/fc-schalke-04/170099/" ;
     vini:whole_team_avg_age "23.88" ;
     vini:year "2017" .
 
@@ -5233,6 +5391,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€34M" ;
+    vini:url "https://sofifa.com/team/34/fc-schalke-04/180084/" ;
     vini:whole_team_avg_age "24.23" ;
     vini:year "2018" .
 
@@ -5262,6 +5421,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€42M" ;
+    vini:url "https://sofifa.com/team/34/fc-schalke-04/190075/" ;
     vini:whole_team_avg_age "23.53" ;
     vini:year "2019" .
 
@@ -5291,6 +5451,7 @@
     vini:starting_xi_avg_age "23.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€42M" ;
+    vini:url "https://sofifa.com/team/34/fc-schalke-04/200061/" ;
     vini:whole_team_avg_age "23.35" ;
     vini:year "2020" .
 
@@ -5320,6 +5481,7 @@
     vini:starting_xi_avg_age "29.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/46/lazio/160058/" ;
     vini:whole_team_avg_age "25.62" ;
     vini:year "2016" .
 
@@ -5349,6 +5511,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/46/lazio/170099/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2017" .
 
@@ -5378,6 +5541,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/46/lazio/180084/" ;
     vini:whole_team_avg_age "25.48" ;
     vini:year "2018" .
 
@@ -5407,6 +5571,7 @@
     vini:starting_xi_avg_age "27.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/46/lazio/190075/" ;
     vini:whole_team_avg_age "26.3" ;
     vini:year "2019" .
 
@@ -5436,6 +5601,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€21M" ;
+    vini:url "https://sofifa.com/team/46/lazio/200061/" ;
     vini:whole_team_avg_age "26.12" ;
     vini:year "2020" .
 
@@ -5465,6 +5631,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/47/ac-milan/160058/" ;
     vini:whole_team_avg_age "25.32" ;
     vini:year "2016" .
 
@@ -5494,6 +5661,7 @@
     vini:starting_xi_avg_age "23.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€44M" ;
+    vini:url "https://sofifa.com/team/47/ac-milan/170099/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2017" .
 
@@ -5523,6 +5691,7 @@
     vini:starting_xi_avg_age "24.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€52M" ;
+    vini:url "https://sofifa.com/team/47/ac-milan/180084/" ;
     vini:whole_team_avg_age "24.81" ;
     vini:year "2018" .
 
@@ -5552,6 +5721,7 @@
     vini:starting_xi_avg_age "22.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€52M" ;
+    vini:url "https://sofifa.com/team/47/ac-milan/190075/" ;
     vini:whole_team_avg_age "25.25" ;
     vini:year "2019" .
 
@@ -5581,6 +5751,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€39M" ;
+    vini:url "https://sofifa.com/team/47/ac-milan/200061/" ;
     vini:whole_team_avg_age "24.64" ;
     vini:year "2020" .
 
@@ -5610,6 +5781,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€35M" ;
+    vini:url "https://sofifa.com/team/13/newcastle-united/160058/" ;
     vini:whole_team_avg_age "23.94" ;
     vini:year "2016" .
 
@@ -5639,6 +5811,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€34.1M" ;
+    vini:url "https://sofifa.com/team/13/newcastle-united/180084/" ;
     vini:whole_team_avg_age "23.97" ;
     vini:year "2018" .
 
@@ -5668,6 +5841,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€40M" ;
+    vini:url "https://sofifa.com/team/13/newcastle-united/190075/" ;
     vini:whole_team_avg_age "24.27" ;
     vini:year "2019" .
 
@@ -5697,6 +5871,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25.5M" ;
+    vini:url "https://sofifa.com/team/13/newcastle-united/200061/" ;
     vini:whole_team_avg_age "25.82" ;
     vini:year "2020" .
 
@@ -5726,6 +5901,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€30M" ;
+    vini:url "https://sofifa.com/team/1806/stoke-city/160058/" ;
     vini:whole_team_avg_age "24.91" ;
     vini:year "2016" .
 
@@ -5755,6 +5931,7 @@
     vini:starting_xi_avg_age "28.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€49.3M" ;
+    vini:url "https://sofifa.com/team/1806/stoke-city/170099/" ;
     vini:whole_team_avg_age "25.52" ;
     vini:year "2017" .
 
@@ -5784,6 +5961,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€48.3M" ;
+    vini:url "https://sofifa.com/team/1806/stoke-city/180084/" ;
     vini:whole_team_avg_age "25.24" ;
     vini:year "2018" .
 
@@ -5813,6 +5991,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/241/fc-barcelona/160058/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2016" .
 
@@ -5842,6 +6021,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€92M" ;
+    vini:url "https://sofifa.com/team/241/fc-barcelona/170099/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2017" .
 
@@ -5871,6 +6051,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€92M" ;
+    vini:url "https://sofifa.com/team/241/fc-barcelona/180084/" ;
     vini:whole_team_avg_age "25.73" ;
     vini:year "2018" .
 
@@ -5900,6 +6081,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€187.9M" ;
+    vini:url "https://sofifa.com/team/241/fc-barcelona/190075/" ;
     vini:whole_team_avg_age "23.64" ;
     vini:year "2019" .
 
@@ -5929,6 +6111,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€187.9M" ;
+    vini:url "https://sofifa.com/team/241/fc-barcelona/200061/" ;
     vini:whole_team_avg_age "24.55" ;
     vini:year "2020" .
 
@@ -5958,6 +6141,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€32M" ;
+    vini:url "https://sofifa.com/team/17/southampton/160058/" ;
     vini:whole_team_avg_age "23.21" ;
     vini:year "2016" .
 
@@ -5987,6 +6171,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€49.8M" ;
+    vini:url "https://sofifa.com/team/17/southampton/170099/" ;
     vini:whole_team_avg_age "24.3" ;
     vini:year "2017" .
 
@@ -6016,6 +6201,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50.5M" ;
+    vini:url "https://sofifa.com/team/17/southampton/180084/" ;
     vini:whole_team_avg_age "23.88" ;
     vini:year "2018" .
 
@@ -6045,6 +6231,7 @@
     vini:starting_xi_avg_age "24.36" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/17/southampton/190075/" ;
     vini:whole_team_avg_age "23.03" ;
     vini:year "2019" .
 
@@ -6074,6 +6261,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€35M" ;
+    vini:url "https://sofifa.com/team/17/southampton/200061/" ;
     vini:whole_team_avg_age "22.52" ;
     vini:year "2020" .
 
@@ -6103,6 +6291,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€30M" ;
+    vini:url "https://sofifa.com/team/19/west-ham-united/160058/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2016" .
 
@@ -6132,6 +6321,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€63.2M" ;
+    vini:url "https://sofifa.com/team/19/west-ham-united/170099/" ;
     vini:whole_team_avg_age "23.82" ;
     vini:year "2017" .
 
@@ -6161,6 +6351,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€63.2M" ;
+    vini:url "https://sofifa.com/team/19/west-ham-united/180084/" ;
     vini:whole_team_avg_age "24.21" ;
     vini:year "2018" .
 
@@ -6190,6 +6381,7 @@
     vini:starting_xi_avg_age "28.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€74M" ;
+    vini:url "https://sofifa.com/team/19/west-ham-united/190075/" ;
     vini:whole_team_avg_age "25.55" ;
     vini:year "2019" .
 
@@ -6219,6 +6411,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€51.5M" ;
+    vini:url "https://sofifa.com/team/19/west-ham-united/200061/" ;
     vini:whole_team_avg_age "25.36" ;
     vini:year "2020" .
 
@@ -6248,6 +6441,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€19.5M" ;
+    vini:url "https://sofifa.com/team/110374/fiorentina/160058/" ;
     vini:whole_team_avg_age "26.25" ;
     vini:year "2016" .
 
@@ -6277,6 +6471,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€19.5M" ;
+    vini:url "https://sofifa.com/team/110374/fiorentina/170099/" ;
     vini:whole_team_avg_age "23.93" ;
     vini:year "2017" .
 
@@ -6306,6 +6501,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€19.5M" ;
+    vini:url "https://sofifa.com/team/110374/fiorentina/180084/" ;
     vini:whole_team_avg_age "23.07" ;
     vini:year "2018" .
 
@@ -6335,6 +6531,7 @@
     vini:starting_xi_avg_age "23.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€19.5M" ;
+    vini:url "https://sofifa.com/team/110374/fiorentina/190075/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2019" .
 
@@ -6364,6 +6561,7 @@
     vini:starting_xi_avg_age "23.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€23M" ;
+    vini:url "https://sofifa.com/team/110374/fiorentina/200061/" ;
     vini:whole_team_avg_age "24.38" ;
     vini:year "2020" .
 
@@ -6393,6 +6591,7 @@
     vini:starting_xi_avg_age "24.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17M" ;
+    vini:url "https://sofifa.com/team/66/olympique-lyonnais/160058/" ;
     vini:whole_team_avg_age "23.27" ;
     vini:year "2016" .
 
@@ -6422,6 +6621,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17M" ;
+    vini:url "https://sofifa.com/team/66/olympique-lyonnais/170099/" ;
     vini:whole_team_avg_age "22.61" ;
     vini:year "2017" .
 
@@ -6451,6 +6651,7 @@
     vini:starting_xi_avg_age "23.91" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€24M" ;
+    vini:url "https://sofifa.com/team/66/olympique-lyonnais/180084/" ;
     vini:whole_team_avg_age "22.03" ;
     vini:year "2018" .
 
@@ -6480,6 +6681,7 @@
     vini:starting_xi_avg_age "23.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€36.4M" ;
+    vini:url "https://sofifa.com/team/66/olympique-lyonnais/190075/" ;
     vini:whole_team_avg_age "22.52" ;
     vini:year "2019" .
 
@@ -6509,6 +6711,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€40.3M" ;
+    vini:url "https://sofifa.com/team/66/olympique-lyonnais/200061/" ;
     vini:whole_team_avg_age "23.15" ;
     vini:year "2020" .
 
@@ -6538,6 +6741,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€55M" ;
+    vini:url "https://sofifa.com/team/69/as-monaco/160058/" ;
     vini:whole_team_avg_age "22.94" ;
     vini:year "2016" .
 
@@ -6567,6 +6771,7 @@
     vini:starting_xi_avg_age "23.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€23M" ;
+    vini:url "https://sofifa.com/team/69/as-monaco/170099/" ;
     vini:whole_team_avg_age "22.76" ;
     vini:year "2017" .
 
@@ -6596,6 +6801,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€35M" ;
+    vini:url "https://sofifa.com/team/69/as-monaco/180084/" ;
     vini:whole_team_avg_age "22.61" ;
     vini:year "2018" .
 
@@ -6625,6 +6831,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/69/as-monaco/190075/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2019" .
 
@@ -6654,6 +6861,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€40.1M" ;
+    vini:url "https://sofifa.com/team/69/as-monaco/200061/" ;
     vini:whole_team_avg_age "23.39" ;
     vini:year "2020" .
 
@@ -6683,6 +6891,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/457/real-sociedad/160058/" ;
     vini:whole_team_avg_age "23.88" ;
     vini:year "2016" .
 
@@ -6712,6 +6921,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14.3M" ;
+    vini:url "https://sofifa.com/team/457/real-sociedad/170099/" ;
     vini:whole_team_avg_age "24.3" ;
     vini:year "2017" .
 
@@ -6741,6 +6951,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14.3M" ;
+    vini:url "https://sofifa.com/team/457/real-sociedad/180084/" ;
     vini:whole_team_avg_age "24.0" ;
     vini:year "2018" .
 
@@ -6770,6 +6981,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€15.8M" ;
+    vini:url "https://sofifa.com/team/457/real-sociedad/190075/" ;
     vini:whole_team_avg_age "23.12" ;
     vini:year "2019" .
 
@@ -6799,6 +7011,7 @@
     vini:starting_xi_avg_age "24.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€15.8M" ;
+    vini:url "https://sofifa.com/team/457/real-sociedad/200061/" ;
     vini:whole_team_avg_age "22.87" ;
     vini:year "2020" .
 
@@ -6828,6 +7041,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€23.5M" ;
+    vini:url "https://sofifa.com/team/1799/crystal-palace/160058/" ;
     vini:whole_team_avg_age "25.79" ;
     vini:year "2016" .
 
@@ -6857,6 +7071,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€37.5M" ;
+    vini:url "https://sofifa.com/team/1799/crystal-palace/170099/" ;
     vini:whole_team_avg_age "26.0" ;
     vini:year "2017" .
 
@@ -6886,6 +7101,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€45.8M" ;
+    vini:url "https://sofifa.com/team/1799/crystal-palace/180084/" ;
     vini:whole_team_avg_age "25.0" ;
     vini:year "2018" .
 
@@ -6915,6 +7131,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€50M" ;
+    vini:url "https://sofifa.com/team/1799/crystal-palace/190075/" ;
     vini:whole_team_avg_age "25.18" ;
     vini:year "2019" .
 
@@ -6944,6 +7161,7 @@
     vini:starting_xi_avg_age "29.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€34.5M" ;
+    vini:url "https://sofifa.com/team/1799/crystal-palace/200061/" ;
     vini:whole_team_avg_age "25.21" ;
     vini:year "2020" .
 
@@ -6973,6 +7191,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/1819/as-saint-etienne/160058/" ;
     vini:whole_team_avg_age "24.7" ;
     vini:year "2016" .
 
@@ -7002,6 +7221,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/1819/as-saint-etienne/170099/" ;
     vini:whole_team_avg_age "24.47" ;
     vini:year "2017" .
 
@@ -7031,6 +7251,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/1819/as-saint-etienne/180084/" ;
     vini:whole_team_avg_age "24.2" ;
     vini:year "2018" .
 
@@ -7060,6 +7281,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.7M" ;
+    vini:url "https://sofifa.com/team/1819/as-saint-etienne/190075/" ;
     vini:whole_team_avg_age "23.78" ;
     vini:year "2019" .
 
@@ -7089,6 +7311,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€10.9M" ;
+    vini:url "https://sofifa.com/team/1819/as-saint-etienne/200061/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2020" .
 
@@ -7118,6 +7341,7 @@
     vini:starting_xi_avg_age "22.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€15M" ;
+    vini:url "https://sofifa.com/team/10029/tsg-1899-hoffenheim/160058/" ;
     vini:whole_team_avg_age "23.83" ;
     vini:year "2016" .
 
@@ -7147,6 +7371,7 @@
     vini:starting_xi_avg_age "24.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€18M" ;
+    vini:url "https://sofifa.com/team/10029/tsg-1899-hoffenheim/170099/" ;
     vini:whole_team_avg_age "24.08" ;
     vini:year "2017" .
 
@@ -7176,6 +7401,7 @@
     vini:starting_xi_avg_age "24.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€22M" ;
+    vini:url "https://sofifa.com/team/10029/tsg-1899-hoffenheim/180084/" ;
     vini:whole_team_avg_age "23.13" ;
     vini:year "2018" .
 
@@ -7205,6 +7431,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€28M" ;
+    vini:url "https://sofifa.com/team/10029/tsg-1899-hoffenheim/190075/" ;
     vini:whole_team_avg_age "23.39" ;
     vini:year "2019" .
 
@@ -7234,6 +7461,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€28M" ;
+    vini:url "https://sofifa.com/team/10029/tsg-1899-hoffenheim/200061/" ;
     vini:whole_team_avg_age "25.44" ;
     vini:year "2020" .
 
@@ -7263,6 +7491,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/54/torino/160058/" ;
     vini:whole_team_avg_age "25.74" ;
     vini:year "2016" .
 
@@ -7292,6 +7521,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/54/torino/170099/" ;
     vini:whole_team_avg_age "25.37" ;
     vini:year "2017" .
 
@@ -7321,6 +7551,7 @@
     vini:starting_xi_avg_age "28.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/54/torino/180084/" ;
     vini:whole_team_avg_age "25.52" ;
     vini:year "2018" .
 
@@ -7350,6 +7581,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/54/torino/190075/" ;
     vini:whole_team_avg_age "25.14" ;
     vini:year "2019" .
 
@@ -7379,6 +7611,7 @@
     vini:starting_xi_avg_age "27.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€15M" ;
+    vini:url "https://sofifa.com/team/54/torino/200061/" ;
     vini:whole_team_avg_age "25.74" ;
     vini:year "2020" .
 
@@ -7408,6 +7641,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/243/real-madrid/160058/" ;
     vini:whole_team_avg_age "23.36" ;
     vini:year "2016" .
 
@@ -7437,6 +7671,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€99.8M" ;
+    vini:url "https://sofifa.com/team/243/real-madrid/170099/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2017" .
 
@@ -7466,6 +7701,7 @@
     vini:starting_xi_avg_age "28.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€99.8M" ;
+    vini:url "https://sofifa.com/team/243/real-madrid/180084/" ;
     vini:whole_team_avg_age "23.24" ;
     vini:year "2018" .
 
@@ -7495,6 +7731,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€188.5M" ;
+    vini:url "https://sofifa.com/team/243/real-madrid/190075/" ;
     vini:whole_team_avg_age "23.67" ;
     vini:year "2019" .
 
@@ -7524,6 +7761,7 @@
     vini:starting_xi_avg_age "28.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€188.5M" ;
+    vini:url "https://sofifa.com/team/243/real-madrid/200061/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2020" .
 
@@ -7553,6 +7791,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/573/malaga-cf/160058/" ;
     vini:whole_team_avg_age "24.67" ;
     vini:year "2016" .
 
@@ -7582,6 +7821,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/573/malaga-cf/170099/" ;
     vini:whole_team_avg_age "23.82" ;
     vini:year "2017" .
 
@@ -7611,6 +7851,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.4M" ;
+    vini:url "https://sofifa.com/team/573/malaga-cf/180084/" ;
     vini:whole_team_avg_age "24.97" ;
     vini:year "2018" .
 
@@ -7640,6 +7881,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€27M" ;
+    vini:url "https://sofifa.com/team/95/leicester-city/160058/" ;
     vini:whole_team_avg_age "24.7" ;
     vini:year "2016" .
 
@@ -7669,6 +7911,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€51.4M" ;
+    vini:url "https://sofifa.com/team/95/leicester-city/170099/" ;
     vini:whole_team_avg_age "24.45" ;
     vini:year "2017" .
 
@@ -7698,6 +7941,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€53.7M" ;
+    vini:url "https://sofifa.com/team/95/leicester-city/180084/" ;
     vini:whole_team_avg_age "24.52" ;
     vini:year "2018" .
 
@@ -7727,6 +7971,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€55M" ;
+    vini:url "https://sofifa.com/team/95/leicester-city/190075/" ;
     vini:whole_team_avg_age "24.21" ;
     vini:year "2019" .
 
@@ -7756,6 +8001,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€45M" ;
+    vini:url "https://sofifa.com/team/95/leicester-city/200061/" ;
     vini:whole_team_avg_age "24.45" ;
     vini:year "2020" .
 
@@ -7785,6 +8031,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/1960/swansea-city/160058/" ;
     vini:whole_team_avg_age "24.27" ;
     vini:year "2016" .
 
@@ -7814,6 +8061,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€41.7M" ;
+    vini:url "https://sofifa.com/team/1960/swansea-city/170099/" ;
     vini:whole_team_avg_age "25.36" ;
     vini:year "2017" .
 
@@ -7843,6 +8091,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€45M" ;
+    vini:url "https://sofifa.com/team/1960/swansea-city/180084/" ;
     vini:whole_team_avg_age "24.82" ;
     vini:year "2018" .
 
@@ -7872,6 +8121,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.4M" ;
+    vini:url "https://sofifa.com/team/449/real-betis-balompie/160058/" ;
     vini:whole_team_avg_age "25.39" ;
     vini:year "2016" .
 
@@ -7901,6 +8151,7 @@
     vini:starting_xi_avg_age "24.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€15.3M" ;
+    vini:url "https://sofifa.com/team/449/real-betis-balompie/170099/" ;
     vini:whole_team_avg_age "25.35" ;
     vini:year "2017" .
 
@@ -7930,6 +8181,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€15.3M" ;
+    vini:url "https://sofifa.com/team/449/real-betis-balompie/180084/" ;
     vini:whole_team_avg_age "24.5" ;
     vini:year "2018" .
 
@@ -7959,6 +8211,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€16.1M" ;
+    vini:url "https://sofifa.com/team/449/real-betis-balompie/190075/" ;
     vini:whole_team_avg_age "23.94" ;
     vini:year "2019" .
 
@@ -7988,6 +8241,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€16.1M" ;
+    vini:url "https://sofifa.com/team/449/real-betis-balompie/200061/" ;
     vini:whole_team_avg_age "24.73" ;
     vini:year "2020" .
 
@@ -8017,6 +8271,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/450/rc-celta/160058/" ;
     vini:whole_team_avg_age "23.06" ;
     vini:year "2016" .
 
@@ -8046,6 +8301,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.3M" ;
+    vini:url "https://sofifa.com/team/450/rc-celta/170099/" ;
     vini:whole_team_avg_age "23.79" ;
     vini:year "2017" .
 
@@ -8075,6 +8331,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.4M" ;
+    vini:url "https://sofifa.com/team/450/rc-celta/180084/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2018" .
 
@@ -8104,6 +8361,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€11.8M" ;
+    vini:url "https://sofifa.com/team/450/rc-celta/190075/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2019" .
 
@@ -8133,6 +8391,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€11.8M" ;
+    vini:url "https://sofifa.com/team/450/rc-celta/200061/" ;
     vini:whole_team_avg_age "23.76" ;
     vini:year "2020" .
 
@@ -8162,6 +8421,7 @@
     vini:starting_xi_avg_age "24.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€18M" ;
+    vini:url "https://sofifa.com/team/219/olympique-de-marseille/160058/" ;
     vini:whole_team_avg_age "23.34" ;
     vini:year "2016" .
 
@@ -8191,6 +8451,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€11M" ;
+    vini:url "https://sofifa.com/team/219/olympique-de-marseille/170099/" ;
     vini:whole_team_avg_age "24.03" ;
     vini:year "2017" .
 
@@ -8220,6 +8481,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/219/olympique-de-marseille/180084/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2018" .
 
@@ -8249,6 +8511,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€21.2M" ;
+    vini:url "https://sofifa.com/team/219/olympique-de-marseille/190075/" ;
     vini:whole_team_avg_age "25.14" ;
     vini:year "2019" .
 
@@ -8278,6 +8541,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€17.9M" ;
+    vini:url "https://sofifa.com/team/219/olympique-de-marseille/200061/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2020" .
 
@@ -8307,6 +8571,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€29M" ;
+    vini:url "https://sofifa.com/team/2/aston-villa/160058/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2016" .
 
@@ -8336,6 +8601,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€37.5M" ;
+    vini:url "https://sofifa.com/team/2/aston-villa/200061/" ;
     vini:whole_team_avg_age "24.36" ;
     vini:year "2020" .
 
@@ -8365,6 +8631,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€19M" ;
+    vini:url "https://sofifa.com/team/1795/watford/160058/" ;
     vini:whole_team_avg_age "24.97" ;
     vini:year "2016" .
 
@@ -8394,6 +8661,7 @@
     vini:starting_xi_avg_age "28.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€33M" ;
+    vini:url "https://sofifa.com/team/1795/watford/170099/" ;
     vini:whole_team_avg_age "25.73" ;
     vini:year "2017" .
 
@@ -8423,6 +8691,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€44.8M" ;
+    vini:url "https://sofifa.com/team/1795/watford/180084/" ;
     vini:whole_team_avg_age "25.67" ;
     vini:year "2018" .
 
@@ -8452,6 +8721,7 @@
     vini:starting_xi_avg_age "28.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€48M" ;
+    vini:url "https://sofifa.com/team/1795/watford/190075/" ;
     vini:whole_team_avg_age "25.32" ;
     vini:year "2019" .
 
@@ -8481,6 +8751,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€38.5M" ;
+    vini:url "https://sofifa.com/team/1795/watford/200061/" ;
     vini:whole_team_avg_age "25.64" ;
     vini:year "2020" .
 
@@ -8510,6 +8781,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/28/hamburger-sv/160058/" ;
     vini:whole_team_avg_age "24.33" ;
     vini:year "2016" .
 
@@ -8539,6 +8811,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€30M" ;
+    vini:url "https://sofifa.com/team/28/hamburger-sv/170099/" ;
     vini:whole_team_avg_age "23.09" ;
     vini:year "2017" .
 
@@ -8568,6 +8841,7 @@
     vini:starting_xi_avg_age "24.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€30M" ;
+    vini:url "https://sofifa.com/team/28/hamburger-sv/180084/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2018" .
 
@@ -8597,6 +8871,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/31/1-fc-koln/160058/" ;
     vini:whole_team_avg_age "24.25" ;
     vini:year "2016" .
 
@@ -8626,6 +8901,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/31/1-fc-koln/170099/" ;
     vini:whole_team_avg_age "24.31" ;
     vini:year "2017" .
 
@@ -8655,6 +8931,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14.5M" ;
+    vini:url "https://sofifa.com/team/31/1-fc-koln/180084/" ;
     vini:whole_team_avg_age "23.7" ;
     vini:year "2018" .
 
@@ -8684,6 +8961,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12.5M" ;
+    vini:url "https://sofifa.com/team/31/1-fc-koln/200061/" ;
     vini:whole_team_avg_age "24.74" ;
     vini:year "2020" .
 
@@ -8713,6 +8991,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€85M" ;
+    vini:url "https://sofifa.com/team/5/chelsea/160058/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2016" .
 
@@ -8742,6 +9021,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€99.2M" ;
+    vini:url "https://sofifa.com/team/5/chelsea/170099/" ;
     vini:whole_team_avg_age "23.33" ;
     vini:year "2017" .
 
@@ -8771,6 +9051,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€93.4M" ;
+    vini:url "https://sofifa.com/team/5/chelsea/180084/" ;
     vini:whole_team_avg_age "23.85" ;
     vini:year "2018" .
 
@@ -8800,6 +9081,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€95M" ;
+    vini:url "https://sofifa.com/team/5/chelsea/190075/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2019" .
 
@@ -8829,6 +9111,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€91M" ;
+    vini:url "https://sofifa.com/team/5/chelsea/200061/" ;
     vini:whole_team_avg_age "23.39" ;
     vini:year "2020" .
 
@@ -8858,6 +9141,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1824/eintracht-frankfurt/160058/" ;
     vini:whole_team_avg_age "24.1" ;
     vini:year "2016" .
 
@@ -8887,6 +9171,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/1824/eintracht-frankfurt/170099/" ;
     vini:whole_team_avg_age "23.33" ;
     vini:year "2017" .
 
@@ -8916,6 +9201,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€12.5M" ;
+    vini:url "https://sofifa.com/team/1824/eintracht-frankfurt/180084/" ;
     vini:whole_team_avg_age "24.21" ;
     vini:year "2018" .
 
@@ -8945,6 +9231,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14.5M" ;
+    vini:url "https://sofifa.com/team/1824/eintracht-frankfurt/190075/" ;
     vini:whole_team_avg_age "24.15" ;
     vini:year "2019" .
 
@@ -8974,6 +9261,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/1824/eintracht-frankfurt/200061/" ;
     vini:whole_team_avg_age "25.38" ;
     vini:year "2020" .
 
@@ -9003,6 +9291,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€11M" ;
+    vini:url "https://sofifa.com/team/36/vfb-stuttgart/160058/" ;
     vini:whole_team_avg_age "23.81" ;
     vini:year "2016" .
 
@@ -9032,6 +9321,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€11M" ;
+    vini:url "https://sofifa.com/team/36/vfb-stuttgart/180084/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2018" .
 
@@ -9061,6 +9351,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€20M" ;
+    vini:url "https://sofifa.com/team/36/vfb-stuttgart/190075/" ;
     vini:whole_team_avg_age "24.71" ;
     vini:year "2019" .
 
@@ -9090,6 +9381,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/1837/sampdoria/160058/" ;
     vini:whole_team_avg_age "25.73" ;
     vini:year "2016" .
 
@@ -9119,6 +9411,7 @@
     vini:starting_xi_avg_age "25.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/1837/sampdoria/170099/" ;
     vini:whole_team_avg_age "24.68" ;
     vini:year "2017" .
 
@@ -9148,6 +9441,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/1837/sampdoria/180084/" ;
     vini:whole_team_avg_age "24.88" ;
     vini:year "2018" .
 
@@ -9177,6 +9471,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/1837/sampdoria/190075/" ;
     vini:whole_team_avg_age "25.5" ;
     vini:year "2019" .
 
@@ -9206,6 +9501,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€14M" ;
+    vini:url "https://sofifa.com/team/1837/sampdoria/200061/" ;
     vini:whole_team_avg_age "25.14" ;
     vini:year "2020" .
 
@@ -9235,6 +9531,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€17.5M" ;
+    vini:url "https://sofifa.com/team/55/udinese/160058/" ;
     vini:whole_team_avg_age "25.62" ;
     vini:year "2016" .
 
@@ -9264,6 +9561,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/55/udinese/170099/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2017" .
 
@@ -9293,6 +9591,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/55/udinese/180084/" ;
     vini:whole_team_avg_age "24.38" ;
     vini:year "2018" .
 
@@ -9322,6 +9621,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/55/udinese/190075/" ;
     vini:whole_team_avg_age "24.68" ;
     vini:year "2019" .
 
@@ -9351,6 +9651,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/55/udinese/200061/" ;
     vini:whole_team_avg_age "26.0" ;
     vini:year "2020" .
 
@@ -9380,6 +9681,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/100409/fc-augsburg/160058/" ;
     vini:whole_team_avg_age "25.24" ;
     vini:year "2016" .
 
@@ -9409,6 +9711,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/100409/fc-augsburg/170099/" ;
     vini:whole_team_avg_age "25.27" ;
     vini:year "2017" .
 
@@ -9438,6 +9741,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/100409/fc-augsburg/180084/" ;
     vini:whole_team_avg_age "25.07" ;
     vini:year "2018" .
 
@@ -9467,6 +9771,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/100409/fc-augsburg/190075/" ;
     vini:whole_team_avg_age "24.06" ;
     vini:year "2019" .
 
@@ -9496,6 +9801,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/100409/fc-augsburg/200061/" ;
     vini:whole_team_avg_age "23.76" ;
     vini:year "2020" .
 
@@ -9525,6 +9831,7 @@
     vini:starting_xi_avg_age "29.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/1853/levante-ud/160058/" ;
     vini:whole_team_avg_age "25.71" ;
     vini:year "2016" .
 
@@ -9554,6 +9861,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/1853/levante-ud/180084/" ;
     vini:whole_team_avg_age "24.09" ;
     vini:year "2018" .
 
@@ -9583,6 +9891,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€8.2M" ;
+    vini:url "https://sofifa.com/team/1853/levante-ud/190075/" ;
     vini:whole_team_avg_age "24.36" ;
     vini:year "2019" .
 
@@ -9612,6 +9921,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8.2M" ;
+    vini:url "https://sofifa.com/team/1853/levante-ud/200061/" ;
     vini:whole_team_avg_age "25.72" ;
     vini:year "2020" .
 
@@ -9641,6 +9951,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/65/lille-osc/160058/" ;
     vini:whole_team_avg_age "24.77" ;
     vini:year "2016" .
 
@@ -9670,6 +9981,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/65/lille-osc/170099/" ;
     vini:whole_team_avg_age "23.07" ;
     vini:year "2017" .
 
@@ -9699,6 +10011,7 @@
     vini:starting_xi_avg_age "22.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.5M" ;
+    vini:url "https://sofifa.com/team/65/lille-osc/180084/" ;
     vini:whole_team_avg_age "21.4" ;
     vini:year "2018" .
 
@@ -9728,6 +10041,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.4M" ;
+    vini:url "https://sofifa.com/team/65/lille-osc/190075/" ;
     vini:whole_team_avg_age "22.67" ;
     vini:year "2019" .
 
@@ -9757,6 +10071,7 @@
     vini:starting_xi_avg_age "24.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€14.4M" ;
+    vini:url "https://sofifa.com/team/65/lille-osc/200061/" ;
     vini:whole_team_avg_age "22.38" ;
     vini:year "2020" .
 
@@ -9786,6 +10101,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/74/stade-rennais-fc/160058/" ;
     vini:whole_team_avg_age "23.36" ;
     vini:year "2016" .
 
@@ -9815,6 +10131,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/74/stade-rennais-fc/170099/" ;
     vini:whole_team_avg_age "23.5" ;
     vini:year "2017" .
 
@@ -9844,6 +10161,7 @@
     vini:starting_xi_avg_age "22.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/74/stade-rennais-fc/180084/" ;
     vini:whole_team_avg_age "23.2" ;
     vini:year "2018" .
 
@@ -9873,6 +10191,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8.6M" ;
+    vini:url "https://sofifa.com/team/74/stade-rennais-fc/190075/" ;
     vini:whole_team_avg_age "23.53" ;
     vini:year "2019" .
 
@@ -9902,6 +10221,7 @@
     vini:starting_xi_avg_age "24.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€11.9M" ;
+    vini:url "https://sofifa.com/team/74/stade-rennais-fc/200061/" ;
     vini:whole_team_avg_age "23.61" ;
     vini:year "2020" .
 
@@ -9931,6 +10251,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€28M" ;
+    vini:url "https://sofifa.com/team/106/sunderland/160058/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2016" .
 
@@ -9960,6 +10281,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€38.1M" ;
+    vini:url "https://sofifa.com/team/106/sunderland/170099/" ;
     vini:whole_team_avg_age "24.67" ;
     vini:year "2017" .
 
@@ -9989,6 +10311,7 @@
     vini:starting_xi_avg_age "27.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€22M" ;
+    vini:url "https://sofifa.com/team/109/west-bromwich-albion/160058/" ;
     vini:whole_team_avg_age "24.7" ;
     vini:year "2016" .
 
@@ -10018,6 +10341,7 @@
     vini:starting_xi_avg_age "28.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€35.1M" ;
+    vini:url "https://sofifa.com/team/109/west-bromwich-albion/170099/" ;
     vini:whole_team_avg_age "23.91" ;
     vini:year "2017" .
 
@@ -10047,6 +10371,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€41.1M" ;
+    vini:url "https://sofifa.com/team/109/west-bromwich-albion/180084/" ;
     vini:whole_team_avg_age "25.42" ;
     vini:year "2018" .
 
@@ -10076,6 +10401,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/73/paris-saint-germain/160058/" ;
     vini:whole_team_avg_age "23.64" ;
     vini:year "2016" .
 
@@ -10105,6 +10431,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/73/paris-saint-germain/170099/" ;
     vini:whole_team_avg_age "22.9" ;
     vini:year "2017" .
 
@@ -10134,6 +10461,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€130M" ;
+    vini:url "https://sofifa.com/team/73/paris-saint-germain/180084/" ;
     vini:whole_team_avg_age "23.79" ;
     vini:year "2018" .
 
@@ -10163,6 +10491,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€190.9M" ;
+    vini:url "https://sofifa.com/team/73/paris-saint-germain/190075/" ;
     vini:whole_team_avg_age "23.0" ;
     vini:year "2019" .
 
@@ -10192,6 +10521,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€184.4M" ;
+    vini:url "https://sofifa.com/team/73/paris-saint-germain/200061/" ;
     vini:whole_team_avg_age "24.5" ;
     vini:year "2020" .
 
@@ -10221,6 +10551,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/166/hertha-bsc/160058/" ;
     vini:whole_team_avg_age "24.6" ;
     vini:year "2016" .
 
@@ -10250,6 +10581,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/166/hertha-bsc/170099/" ;
     vini:whole_team_avg_age "23.67" ;
     vini:year "2017" .
 
@@ -10279,6 +10611,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/166/hertha-bsc/180084/" ;
     vini:whole_team_avg_age "23.55" ;
     vini:year "2018" .
 
@@ -10308,6 +10641,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/166/hertha-bsc/190075/" ;
     vini:whole_team_avg_age "23.69" ;
     vini:year "2019" .
 
@@ -10337,6 +10671,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/166/hertha-bsc/200061/" ;
     vini:whole_team_avg_age "24.33" ;
     vini:year "2020" .
 
@@ -10366,6 +10701,7 @@
     vini:starting_xi_avg_age "23.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/169/1-fsv-mainz-05/160058/" ;
     vini:whole_team_avg_age "23.58" ;
     vini:year "2016" .
 
@@ -10395,6 +10731,7 @@
     vini:starting_xi_avg_age "23.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/169/1-fsv-mainz-05/170099/" ;
     vini:whole_team_avg_age "23.53" ;
     vini:year "2017" .
 
@@ -10424,6 +10761,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.1M" ;
+    vini:url "https://sofifa.com/team/169/1-fsv-mainz-05/180084/" ;
     vini:whole_team_avg_age "24.35" ;
     vini:year "2018" .
 
@@ -10453,6 +10791,7 @@
     vini:starting_xi_avg_age "23.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.2M" ;
+    vini:url "https://sofifa.com/team/169/1-fsv-mainz-05/190075/" ;
     vini:whole_team_avg_age "23.13" ;
     vini:year "2019" .
 
@@ -10482,6 +10821,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€9.2M" ;
+    vini:url "https://sofifa.com/team/169/1-fsv-mainz-05/200061/" ;
     vini:whole_team_avg_age "22.88" ;
     vini:year "2020" .
 
@@ -10511,6 +10851,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/452/rcd-espanyol/160058/" ;
     vini:whole_team_avg_age "24.03" ;
     vini:year "2016" .
 
@@ -10540,6 +10881,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/452/rcd-espanyol/170099/" ;
     vini:whole_team_avg_age "25.36" ;
     vini:year "2017" .
 
@@ -10569,6 +10911,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/452/rcd-espanyol/180084/" ;
     vini:whole_team_avg_age "25.3" ;
     vini:year "2018" .
 
@@ -10598,6 +10941,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10.4M" ;
+    vini:url "https://sofifa.com/team/452/rcd-espanyol/190075/" ;
     vini:whole_team_avg_age "25.03" ;
     vini:year "2019" .
 
@@ -10627,6 +10971,7 @@
     vini:starting_xi_avg_age "28.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€10.4M" ;
+    vini:url "https://sofifa.com/team/452/rcd-espanyol/200061/" ;
     vini:whole_team_avg_age "25.09" ;
     vini:year "2020" .
 
@@ -10656,6 +11001,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/110556/genoa/160058/" ;
     vini:whole_team_avg_age "24.13" ;
     vini:year "2016" .
 
@@ -10685,6 +11031,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/110556/genoa/170099/" ;
     vini:whole_team_avg_age "25.32" ;
     vini:year "2017" .
 
@@ -10714,6 +11061,7 @@
     vini:starting_xi_avg_age "28.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/110556/genoa/180084/" ;
     vini:whole_team_avg_age "26.57" ;
     vini:year "2018" .
 
@@ -10743,6 +11091,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€8.6M" ;
+    vini:url "https://sofifa.com/team/110556/genoa/190075/" ;
     vini:whole_team_avg_age "24.61" ;
     vini:year "2019" .
 
@@ -10772,6 +11121,7 @@
     vini:starting_xi_avg_age "28.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8.5M" ;
+    vini:url "https://sofifa.com/team/110556/genoa/200061/" ;
     vini:whole_team_avg_age "26.26" ;
     vini:year "2020" .
 
@@ -10801,6 +11151,7 @@
     vini:starting_xi_avg_age "27.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/480/rayo-vallecano/160058/" ;
     vini:whole_team_avg_age "26.94" ;
     vini:year "2016" .
 
@@ -10830,6 +11181,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.3M" ;
+    vini:url "https://sofifa.com/team/480/rayo-vallecano/190075/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2019" .
 
@@ -10859,6 +11211,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.1M" ;
+    vini:url "https://sofifa.com/team/242/rc-deportivo-de-la-coruna/160058/" ;
     vini:whole_team_avg_age "25.21" ;
     vini:year "2016" .
 
@@ -10888,6 +11241,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.3M" ;
+    vini:url "https://sofifa.com/team/242/rc-deportivo-de-la-coruna/170099/" ;
     vini:whole_team_avg_age "25.12" ;
     vini:year "2017" .
 
@@ -10917,6 +11271,7 @@
     vini:starting_xi_avg_age "29.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/242/rc-deportivo-de-la-coruna/180084/" ;
     vini:whole_team_avg_age "25.09" ;
     vini:year "2018" .
 
@@ -10946,6 +11301,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€22M" ;
+    vini:url "https://sofifa.com/team/1792/norwich-city/160058/" ;
     vini:whole_team_avg_age "24.97" ;
     vini:year "2016" .
 
@@ -10975,6 +11331,7 @@
     vini:starting_xi_avg_age "25.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€25M" ;
+    vini:url "https://sofifa.com/team/1792/norwich-city/200061/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2020" .
 
@@ -11004,6 +11361,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€4.5M" ;
+    vini:url "https://sofifa.com/team/38/sv-werder-bremen/160058/" ;
     vini:whole_team_avg_age "23.61" ;
     vini:year "2016" .
 
@@ -11033,6 +11391,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/38/sv-werder-bremen/170099/" ;
     vini:whole_team_avg_age "24.56" ;
     vini:year "2017" .
 
@@ -11062,6 +11421,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/38/sv-werder-bremen/180084/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2018" .
 
@@ -11091,6 +11451,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/38/sv-werder-bremen/190075/" ;
     vini:whole_team_avg_age "24.47" ;
     vini:year "2019" .
 
@@ -11120,6 +11481,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/38/sv-werder-bremen/200061/" ;
     vini:whole_team_avg_age "24.61" ;
     vini:year "2020" .
 
@@ -11149,6 +11511,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.8M" ;
+    vini:url "https://sofifa.com/team/39/atalanta/160058/" ;
     vini:whole_team_avg_age "26.75" ;
     vini:year "2016" .
 
@@ -11178,6 +11541,7 @@
     vini:starting_xi_avg_age "24.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/39/atalanta/170099/" ;
     vini:whole_team_avg_age "23.74" ;
     vini:year "2017" .
 
@@ -11207,6 +11571,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/39/atalanta/180084/" ;
     vini:whole_team_avg_age "23.58" ;
     vini:year "2018" .
 
@@ -11236,6 +11601,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/39/atalanta/190075/" ;
     vini:whole_team_avg_age "24.25" ;
     vini:year "2019" .
 
@@ -11265,6 +11631,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/39/atalanta/200061/" ;
     vini:whole_team_avg_age "24.72" ;
     vini:year "2020" .
 
@@ -11294,6 +11661,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/59/fc-girondins-de-bordeaux/160058/" ;
     vini:whole_team_avg_age "23.18" ;
     vini:year "2016" .
 
@@ -11323,6 +11691,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/59/fc-girondins-de-bordeaux/170099/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2017" .
 
@@ -11352,6 +11721,7 @@
     vini:starting_xi_avg_age "23.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/59/fc-girondins-de-bordeaux/180084/" ;
     vini:whole_team_avg_age "22.88" ;
     vini:year "2018" .
 
@@ -11381,6 +11751,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€11.1M" ;
+    vini:url "https://sofifa.com/team/59/fc-girondins-de-bordeaux/190075/" ;
     vini:whole_team_avg_age "22.26" ;
     vini:year "2019" .
 
@@ -11410,6 +11781,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€12.1M" ;
+    vini:url "https://sofifa.com/team/59/fc-girondins-de-bordeaux/200061/" ;
     vini:whole_team_avg_age "24.52" ;
     vini:year "2020" .
 
@@ -11439,6 +11811,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€70M" ;
+    vini:url "https://sofifa.com/team/1/arsenal/160058/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2016" .
 
@@ -11468,6 +11841,7 @@
     vini:starting_xi_avg_age "26.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€90.7M" ;
+    vini:url "https://sofifa.com/team/1/arsenal/170099/" ;
     vini:whole_team_avg_age "24.42" ;
     vini:year "2017" .
 
@@ -11497,6 +11871,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€90.7M" ;
+    vini:url "https://sofifa.com/team/1/arsenal/180084/" ;
     vini:whole_team_avg_age "23.24" ;
     vini:year "2018" .
 
@@ -11526,6 +11901,7 @@
     vini:starting_xi_avg_age "26.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€92.5M" ;
+    vini:url "https://sofifa.com/team/1/arsenal/190075/" ;
     vini:whole_team_avg_age "24.09" ;
     vini:year "2019" .
 
@@ -11555,6 +11931,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€74M" ;
+    vini:url "https://sofifa.com/team/1/arsenal/200061/" ;
     vini:whole_team_avg_age "23.18" ;
     vini:year "2020" .
 
@@ -11584,6 +11961,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.2M" ;
+    vini:url "https://sofifa.com/team/1860/getafe-cf/160058/" ;
     vini:whole_team_avg_age "23.66" ;
     vini:year "2016" .
 
@@ -11613,6 +11991,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.9M" ;
+    vini:url "https://sofifa.com/team/1860/getafe-cf/180084/" ;
     vini:whole_team_avg_age "24.42" ;
     vini:year "2018" .
 
@@ -11642,6 +12021,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/1860/getafe-cf/190075/" ;
     vini:whole_team_avg_age "25.68" ;
     vini:year "2019" .
 
@@ -11671,6 +12051,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/1860/getafe-cf/200061/" ;
     vini:whole_team_avg_age "25.21" ;
     vini:year "2020" .
 
@@ -11700,6 +12081,7 @@
     vini:starting_xi_avg_age "23.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.5M" ;
+    vini:url "https://sofifa.com/team/72/ogc-nice/160058/" ;
     vini:whole_team_avg_age "22.36" ;
     vini:year "2016" .
 
@@ -11729,6 +12111,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/72/ogc-nice/170099/" ;
     vini:whole_team_avg_age "22.55" ;
     vini:year "2017" .
 
@@ -11758,6 +12141,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9.5M" ;
+    vini:url "https://sofifa.com/team/72/ogc-nice/180084/" ;
     vini:whole_team_avg_age "22.63" ;
     vini:year "2018" .
 
@@ -11787,6 +12171,7 @@
     vini:starting_xi_avg_age "24.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8.6M" ;
+    vini:url "https://sofifa.com/team/72/ogc-nice/190075/" ;
     vini:whole_team_avg_age "21.97" ;
     vini:year "2019" .
 
@@ -11816,6 +12201,7 @@
     vini:starting_xi_avg_age "23.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€10.4M" ;
+    vini:url "https://sofifa.com/team/72/ogc-nice/200061/" ;
     vini:whole_team_avg_age "22.15" ;
     vini:year "2020" .
 
@@ -11845,6 +12231,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/111974/sassuolo/160058/" ;
     vini:whole_team_avg_age "25.68" ;
     vini:year "2016" .
 
@@ -11874,6 +12261,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€13M" ;
+    vini:url "https://sofifa.com/team/111974/sassuolo/170099/" ;
     vini:whole_team_avg_age "25.89" ;
     vini:year "2017" .
 
@@ -11903,6 +12291,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€13M" ;
+    vini:url "https://sofifa.com/team/111974/sassuolo/180084/" ;
     vini:whole_team_avg_age "24.62" ;
     vini:year "2018" .
 
@@ -11932,6 +12321,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€13M" ;
+    vini:url "https://sofifa.com/team/111974/sassuolo/190075/" ;
     vini:whole_team_avg_age "24.12" ;
     vini:year "2019" .
 
@@ -11961,6 +12351,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€16M" ;
+    vini:url "https://sofifa.com/team/111974/sassuolo/200061/" ;
     vini:whole_team_avg_age "24.37" ;
     vini:year "2020" .
 
@@ -11990,6 +12381,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12M" ;
+    vini:url "https://sofifa.com/team/189/bologna/160058/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2016" .
 
@@ -12019,6 +12411,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€13M" ;
+    vini:url "https://sofifa.com/team/189/bologna/170099/" ;
     vini:whole_team_avg_age "23.54" ;
     vini:year "2017" .
 
@@ -12048,6 +12441,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€13M" ;
+    vini:url "https://sofifa.com/team/189/bologna/180084/" ;
     vini:whole_team_avg_age "24.93" ;
     vini:year "2018" .
 
@@ -12077,6 +12471,7 @@
     vini:starting_xi_avg_age "26.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€12.7M" ;
+    vini:url "https://sofifa.com/team/189/bologna/190075/" ;
     vini:whole_team_avg_age "25.07" ;
     vini:year "2019" .
 
@@ -12106,6 +12501,7 @@
     vini:starting_xi_avg_age "27.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€15M" ;
+    vini:url "https://sofifa.com/team/189/bologna/200061/" ;
     vini:whole_team_avg_age "24.65" ;
     vini:year "2020" .
 
@@ -12135,6 +12531,7 @@
     vini:starting_xi_avg_age "30.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.6M" ;
+    vini:url "https://sofifa.com/team/192/ac-chievoverona/160058/" ;
     vini:whole_team_avg_age "28.59" ;
     vini:year "2016" .
 
@@ -12164,6 +12561,7 @@
     vini:starting_xi_avg_age "31.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.6M" ;
+    vini:url "https://sofifa.com/team/192/ac-chievoverona/170099/" ;
     vini:whole_team_avg_age "29.23" ;
     vini:year "2017" .
 
@@ -12193,6 +12591,7 @@
     vini:starting_xi_avg_age "30.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.6M" ;
+    vini:url "https://sofifa.com/team/192/ac-chievoverona/180084/" ;
     vini:whole_team_avg_age "26.78" ;
     vini:year "2018" .
 
@@ -12222,6 +12621,7 @@
     vini:starting_xi_avg_age "28.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.6M" ;
+    vini:url "https://sofifa.com/team/192/ac-chievoverona/190075/" ;
     vini:whole_team_avg_age "25.57" ;
     vini:year "2019" .
 
@@ -12251,6 +12651,7 @@
     vini:starting_xi_avg_age "24.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/485/hannover-96/160058/" ;
     vini:whole_team_avg_age "23.61" ;
     vini:year "2016" .
 
@@ -12280,6 +12681,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/485/hannover-96/180084/" ;
     vini:whole_team_avg_age "24.31" ;
     vini:year "2018" .
 
@@ -12309,6 +12711,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€10M" ;
+    vini:url "https://sofifa.com/team/485/hannover-96/190075/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2019" .
 
@@ -12338,6 +12741,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.1M" ;
+    vini:url "https://sofifa.com/team/110832/granada-cf/160058/" ;
     vini:whole_team_avg_age "24.36" ;
     vini:year "2016" .
 
@@ -12367,6 +12771,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/110832/granada-cf/170099/" ;
     vini:whole_team_avg_age "22.84" ;
     vini:year "2017" .
 
@@ -12396,6 +12801,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/110832/granada-cf/200061/" ;
     vini:whole_team_avg_age "25.12" ;
     vini:year "2020" .
 
@@ -12425,6 +12831,7 @@
     vini:starting_xi_avg_age "22.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/1809/toulouse-fc/160058/" ;
     vini:whole_team_avg_age "22.91" ;
     vini:year "2016" .
 
@@ -12454,6 +12861,7 @@
     vini:starting_xi_avg_age "22.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1809/toulouse-fc/170099/" ;
     vini:whole_team_avg_age "22.66" ;
     vini:year "2017" .
 
@@ -12483,6 +12891,7 @@
     vini:starting_xi_avg_age "23.45" ;
     vini:team_width "Wide" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/1809/toulouse-fc/180084/" ;
     vini:whole_team_avg_age "23.46" ;
     vini:year "2018" .
 
@@ -12512,6 +12921,7 @@
     vini:starting_xi_avg_age "24.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7.2M" ;
+    vini:url "https://sofifa.com/team/1809/toulouse-fc/190075/" ;
     vini:whole_team_avg_age "23.65" ;
     vini:year "2019" .
 
@@ -12541,6 +12951,7 @@
     vini:starting_xi_avg_age "25.18" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7.8M" ;
+    vini:url "https://sofifa.com/team/1809/toulouse-fc/200061/" ;
     vini:whole_team_avg_age "22.53" ;
     vini:year "2020" .
 
@@ -12570,6 +12981,7 @@
     vini:starting_xi_avg_age "28.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.3M" ;
+    vini:url "https://sofifa.com/team/62/en-avant-guingamp/160058/" ;
     vini:whole_team_avg_age "26.24" ;
     vini:year "2016" .
 
@@ -12599,6 +13011,7 @@
     vini:starting_xi_avg_age "27.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/62/en-avant-guingamp/170099/" ;
     vini:whole_team_avg_age "25.61" ;
     vini:year "2017" .
 
@@ -12628,6 +13041,7 @@
     vini:starting_xi_avg_age "27.91" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/62/en-avant-guingamp/180084/" ;
     vini:whole_team_avg_age "25.37" ;
     vini:year "2018" .
 
@@ -12657,6 +13071,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.2M" ;
+    vini:url "https://sofifa.com/team/62/en-avant-guingamp/190075/" ;
     vini:whole_team_avg_age "24.31" ;
     vini:year "2019" .
 
@@ -12686,6 +13101,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/70/montpellier-hsc/160058/" ;
     vini:whole_team_avg_age "24.61" ;
     vini:year "2016" .
 
@@ -12715,6 +13131,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7.5M" ;
+    vini:url "https://sofifa.com/team/70/montpellier-hsc/170099/" ;
     vini:whole_team_avg_age "24.37" ;
     vini:year "2017" .
 
@@ -12744,6 +13161,7 @@
     vini:starting_xi_avg_age "25.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/70/montpellier-hsc/180084/" ;
     vini:whole_team_avg_age "24.35" ;
     vini:year "2018" .
 
@@ -12773,6 +13191,7 @@
     vini:starting_xi_avg_age "27.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.8M" ;
+    vini:url "https://sofifa.com/team/70/montpellier-hsc/190075/" ;
     vini:whole_team_avg_age "24.57" ;
     vini:year "2019" .
 
@@ -12802,6 +13221,7 @@
     vini:starting_xi_avg_age "29.09" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€9.3M" ;
+    vini:url "https://sofifa.com/team/70/montpellier-hsc/200061/" ;
     vini:whole_team_avg_age "24.58" ;
     vini:year "2020" .
 
@@ -12831,6 +13251,7 @@
     vini:starting_xi_avg_age "28.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€100M" ;
+    vini:url "https://sofifa.com/team/10/manchester-city/160058/" ;
     vini:whole_team_avg_age "24.42" ;
     vini:year "2016" .
 
@@ -12860,6 +13281,7 @@
     vini:starting_xi_avg_age "28.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€117.9M" ;
+    vini:url "https://sofifa.com/team/10/manchester-city/170099/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2017" .
 
@@ -12889,6 +13311,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€150M" ;
+    vini:url "https://sofifa.com/team/10/manchester-city/180084/" ;
     vini:whole_team_avg_age "23.09" ;
     vini:year "2018" .
 
@@ -12918,6 +13341,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€170M" ;
+    vini:url "https://sofifa.com/team/10/manchester-city/190075/" ;
     vini:whole_team_avg_age "23.88" ;
     vini:year "2019" .
 
@@ -12947,6 +13371,7 @@
     vini:starting_xi_avg_age "27.45" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€176M" ;
+    vini:url "https://sofifa.com/team/10/manchester-city/200061/" ;
     vini:whole_team_avg_age "24.3" ;
     vini:year "2020" .
 
@@ -12976,6 +13401,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€16M" ;
+    vini:url "https://sofifa.com/team/1943/afc-bournemouth/160058/" ;
     vini:whole_team_avg_age "25.09" ;
     vini:year "2016" .
 
@@ -13005,6 +13431,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€33.4M" ;
+    vini:url "https://sofifa.com/team/1943/afc-bournemouth/170099/" ;
     vini:whole_team_avg_age "23.64" ;
     vini:year "2017" .
 
@@ -13034,6 +13461,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€41.3M" ;
+    vini:url "https://sofifa.com/team/1943/afc-bournemouth/180084/" ;
     vini:whole_team_avg_age "24.48" ;
     vini:year "2018" .
 
@@ -13063,6 +13491,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€47M" ;
+    vini:url "https://sofifa.com/team/1943/afc-bournemouth/190075/" ;
     vini:whole_team_avg_age "24.0" ;
     vini:year "2019" .
 
@@ -13092,6 +13521,7 @@
     vini:starting_xi_avg_age "24.55" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€36.5M" ;
+    vini:url "https://sofifa.com/team/1943/afc-bournemouth/200061/" ;
     vini:whole_team_avg_age "24.24" ;
     vini:year "2020" .
 
@@ -13121,6 +13551,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.8M" ;
+    vini:url "https://sofifa.com/team/459/real-sporting-de-gijon/160058/" ;
     vini:whole_team_avg_age "23.24" ;
     vini:year "2016" .
 
@@ -13150,6 +13581,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.7M" ;
+    vini:url "https://sofifa.com/team/459/real-sporting-de-gijon/170099/" ;
     vini:whole_team_avg_age "24.3" ;
     vini:year "2017" .
 
@@ -13179,6 +13611,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.4M" ;
+    vini:url "https://sofifa.com/team/1746/empoli/160058/" ;
     vini:whole_team_avg_age "24.72" ;
     vini:year "2016" .
 
@@ -13208,6 +13641,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/1746/empoli/170099/" ;
     vini:whole_team_avg_age "24.65" ;
     vini:year "2017" .
 
@@ -13237,6 +13671,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/1746/empoli/190075/" ;
     vini:whole_team_avg_age "25.21" ;
     vini:year "2019" .
 
@@ -13266,6 +13701,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/467/sd-eibar/160058/" ;
     vini:whole_team_avg_age "24.28" ;
     vini:year "2016" .
 
@@ -13295,6 +13731,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.3M" ;
+    vini:url "https://sofifa.com/team/467/sd-eibar/170099/" ;
     vini:whole_team_avg_age "24.45" ;
     vini:year "2017" .
 
@@ -13324,6 +13761,7 @@
     vini:starting_xi_avg_age "28.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/467/sd-eibar/180084/" ;
     vini:whole_team_avg_age "25.78" ;
     vini:year "2018" .
 
@@ -13353,6 +13791,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/467/sd-eibar/190075/" ;
     vini:whole_team_avg_age "26.1" ;
     vini:year "2019" .
 
@@ -13382,6 +13821,7 @@
     vini:starting_xi_avg_age "29.36" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.4M" ;
+    vini:url "https://sofifa.com/team/467/sd-eibar/200061/" ;
     vini:whole_team_avg_age "27.04" ;
     vini:year "2020" .
 
@@ -13411,6 +13851,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€1.9M" ;
+    vini:url "https://sofifa.com/team/112409/carpi/160058/" ;
     vini:whole_team_avg_age "24.29" ;
     vini:year "2016" .
 
@@ -13440,6 +13881,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€9M" ;
+    vini:url "https://sofifa.com/team/1843/palermo-fc/160058/" ;
     vini:whole_team_avg_age "24.04" ;
     vini:year "2016" .
 
@@ -13469,6 +13911,7 @@
     vini:starting_xi_avg_age "27.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/1843/palermo-fc/170099/" ;
     vini:whole_team_avg_age "24.18" ;
     vini:year "2017" .
 
@@ -13498,6 +13941,7 @@
     vini:starting_xi_avg_age "24.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5M" ;
+    vini:url "https://sofifa.com/team/71/fc-nantes/160058/" ;
     vini:whole_team_avg_age "23.16" ;
     vini:year "2016" .
 
@@ -13527,6 +13971,7 @@
     vini:starting_xi_avg_age "24.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6.5M" ;
+    vini:url "https://sofifa.com/team/71/fc-nantes/170099/" ;
     vini:whole_team_avg_age "22.94" ;
     vini:year "2017" .
 
@@ -13556,6 +14001,7 @@
     vini:starting_xi_avg_age "25.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.5M" ;
+    vini:url "https://sofifa.com/team/71/fc-nantes/180084/" ;
     vini:whole_team_avg_age "23.48" ;
     vini:year "2018" .
 
@@ -13585,6 +14031,7 @@
     vini:starting_xi_avg_age "26.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/71/fc-nantes/190075/" ;
     vini:whole_team_avg_age "23.59" ;
     vini:year "2019" .
 
@@ -13614,6 +14061,7 @@
     vini:starting_xi_avg_age "24.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7.2M" ;
+    vini:url "https://sofifa.com/team/71/fc-nantes/200061/" ;
     vini:whole_team_avg_age "23.91" ;
     vini:year "2020" .
 
@@ -13643,6 +14091,7 @@
     vini:starting_xi_avg_age "25.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3M" ;
+    vini:url "https://sofifa.com/team/379/stade-de-reims/160058/" ;
     vini:whole_team_avg_age "24.7" ;
     vini:year "2016" .
 
@@ -13672,6 +14121,7 @@
     vini:starting_xi_avg_age "26.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.2M" ;
+    vini:url "https://sofifa.com/team/379/stade-de-reims/190075/" ;
     vini:whole_team_avg_age "24.03" ;
     vini:year "2019" .
 
@@ -13701,6 +14151,7 @@
     vini:starting_xi_avg_age "25.64" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€6.7M" ;
+    vini:url "https://sofifa.com/team/379/stade-de-reims/200061/" ;
     vini:whole_team_avg_age "22.63" ;
     vini:year "2020" .
 
@@ -13730,6 +14181,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/111239/fc-ingolstadt-04/160058/" ;
     vini:whole_team_avg_age "24.07" ;
     vini:year "2016" .
 
@@ -13759,6 +14211,7 @@
     vini:starting_xi_avg_age "26.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€6M" ;
+    vini:url "https://sofifa.com/team/111239/fc-ingolstadt-04/170099/" ;
     vini:whole_team_avg_age "23.93" ;
     vini:year "2017" .
 
@@ -13788,6 +14241,7 @@
     vini:starting_xi_avg_age "24.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.3M" ;
+    vini:url "https://sofifa.com/team/206/hellas-verona-fc/160058/" ;
     vini:whole_team_avg_age "25.0" ;
     vini:year "2016" .
 
@@ -13817,6 +14271,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€8.5M" ;
+    vini:url "https://sofifa.com/team/206/hellas-verona-fc/180084/" ;
     vini:whole_team_avg_age "24.4" ;
     vini:year "2018" .
 
@@ -13846,6 +14301,7 @@
     vini:starting_xi_avg_age "25.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€8M" ;
+    vini:url "https://sofifa.com/team/206/hellas-verona-fc/200061/" ;
     vini:whole_team_avg_age "25.22" ;
     vini:year "2020" .
 
@@ -13875,6 +14331,7 @@
     vini:starting_xi_avg_age "29.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€60M" ;
+    vini:url "https://sofifa.com/team/45/juventus/160058/" ;
     vini:whole_team_avg_age "25.09" ;
     vini:year "2016" .
 
@@ -13904,6 +14361,7 @@
     vini:starting_xi_avg_age "29.0" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/45/juventus/170099/" ;
     vini:whole_team_avg_age "26.21" ;
     vini:year "2017" .
 
@@ -13933,6 +14391,7 @@
     vini:starting_xi_avg_age "28.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/45/juventus/180084/" ;
     vini:whole_team_avg_age "27.8" ;
     vini:year "2018" .
 
@@ -13962,6 +14421,7 @@
     vini:starting_xi_avg_age "28.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/45/juventus/190075/" ;
     vini:whole_team_avg_age "26.75" ;
     vini:year "2019" .
 
@@ -13991,6 +14451,7 @@
     vini:starting_xi_avg_age "29.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€90M" ;
+    vini:url "https://sofifa.com/team/45/juventus/200061/" ;
     vini:whole_team_avg_age "28.3" ;
     vini:year "2020" .
 
@@ -14020,6 +14481,7 @@
     vini:starting_xi_avg_age "26.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.5M" ;
+    vini:url "https://sofifa.com/team/472/ud-las-palmas/160058/" ;
     vini:whole_team_avg_age "25.31" ;
     vini:year "2016" .
 
@@ -14049,6 +14511,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.6M" ;
+    vini:url "https://sofifa.com/team/472/ud-las-palmas/170099/" ;
     vini:whole_team_avg_age "24.61" ;
     vini:year "2017" .
 
@@ -14078,6 +14541,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.7M" ;
+    vini:url "https://sofifa.com/team/472/ud-las-palmas/180084/" ;
     vini:whole_team_avg_age "25.33" ;
     vini:year "2018" .
 
@@ -14107,6 +14571,7 @@
     vini:starting_xi_avg_age "24.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.7M" ;
+    vini:url "https://sofifa.com/team/217/fc-lorient/160058/" ;
     vini:whole_team_avg_age "24.07" ;
     vini:year "2016" .
 
@@ -14136,6 +14601,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.8M" ;
+    vini:url "https://sofifa.com/team/217/fc-lorient/170099/" ;
     vini:whole_team_avg_age "24.56" ;
     vini:year "2017" .
 
@@ -14165,6 +14631,7 @@
     vini:starting_xi_avg_age "29.0" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.8M" ;
+    vini:url "https://sofifa.com/team/58/sporting-club-bastia/160058/" ;
     vini:whole_team_avg_age "24.71" ;
     vini:year "2016" .
 
@@ -14194,6 +14661,7 @@
     vini:starting_xi_avg_age "27.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.8M" ;
+    vini:url "https://sofifa.com/team/58/sporting-club-bastia/170099/" ;
     vini:whole_team_avg_age "25.11" ;
     vini:year "2017" .
 
@@ -14223,6 +14691,7 @@
     vini:starting_xi_avg_age "27.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.2M" ;
+    vini:url "https://sofifa.com/team/110502/sv-darmstadt-98/160058/" ;
     vini:whole_team_avg_age "26.3" ;
     vini:year "2016" .
 
@@ -14252,6 +14721,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.5M" ;
+    vini:url "https://sofifa.com/team/110502/sv-darmstadt-98/170099/" ;
     vini:whole_team_avg_age "25.71" ;
     vini:year "2017" .
 
@@ -14281,6 +14751,7 @@
     vini:starting_xi_avg_age "28.18" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.5M" ;
+    vini:url "https://sofifa.com/team/210/stade-malherbe-caen/160058/" ;
     vini:whole_team_avg_age "24.69" ;
     vini:year "2016" .
 
@@ -14310,6 +14781,7 @@
     vini:starting_xi_avg_age "28.09" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/210/stade-malherbe-caen/170099/" ;
     vini:whole_team_avg_age "25.37" ;
     vini:year "2017" .
 
@@ -14339,6 +14811,7 @@
     vini:starting_xi_avg_age "25.73" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4M" ;
+    vini:url "https://sofifa.com/team/210/stade-malherbe-caen/180084/" ;
     vini:whole_team_avg_age "24.18" ;
     vini:year "2018" .
 
@@ -14368,6 +14841,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€5.7M" ;
+    vini:url "https://sofifa.com/team/210/stade-malherbe-caen/190075/" ;
     vini:whole_team_avg_age "24.19" ;
     vini:year "2019" .
 
@@ -14397,6 +14871,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.4M" ;
+    vini:url "https://sofifa.com/team/1530/angers-sco/160058/" ;
     vini:whole_team_avg_age "25.28" ;
     vini:year "2016" .
 
@@ -14426,6 +14901,7 @@
     vini:starting_xi_avg_age "26.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€3.5M" ;
+    vini:url "https://sofifa.com/team/1530/angers-sco/170099/" ;
     vini:whole_team_avg_age "25.45" ;
     vini:year "2017" .
 
@@ -14455,6 +14931,7 @@
     vini:starting_xi_avg_age "27.73" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€3.5M" ;
+    vini:url "https://sofifa.com/team/1530/angers-sco/180084/" ;
     vini:whole_team_avg_age "24.79" ;
     vini:year "2018" .
 
@@ -14484,6 +14961,7 @@
     vini:starting_xi_avg_age "27.36" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€4.7M" ;
+    vini:url "https://sofifa.com/team/1530/angers-sco/190075/" ;
     vini:whole_team_avg_age "25.21" ;
     vini:year "2019" .
 
@@ -14513,6 +14991,7 @@
     vini:starting_xi_avg_age "28.27" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€5.6M" ;
+    vini:url "https://sofifa.com/team/1530/angers-sco/200061/" ;
     vini:whole_team_avg_age "24.5" ;
     vini:year "2020" .
 
@@ -14542,6 +15021,7 @@
     vini:starting_xi_avg_age "26.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2.2M" ;
+    vini:url "https://sofifa.com/team/294/estac-troyes/160058/" ;
     vini:whole_team_avg_age "25.36" ;
     vini:year "2016" .
 
@@ -14571,6 +15051,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€2.3M" ;
+    vini:url "https://sofifa.com/team/294/estac-troyes/180084/" ;
     vini:whole_team_avg_age "25.24" ;
     vini:year "2018" .
 
@@ -14600,6 +15081,7 @@
     vini:starting_xi_avg_age "25.45" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€1.8M" ;
+    vini:url "https://sofifa.com/team/111657/frosinone/160058/" ;
     vini:whole_team_avg_age "25.68" ;
     vini:year "2016" .
 
@@ -14629,6 +15111,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€7M" ;
+    vini:url "https://sofifa.com/team/111657/frosinone/190075/" ;
     vini:whole_team_avg_age "25.93" ;
     vini:year "2019" .
 
@@ -14658,6 +15141,7 @@
     vini:starting_xi_avg_age "27.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€2M" ;
+    vini:url "https://sofifa.com/team/110316/gfc-ajaccio/160058/" ;
     vini:whole_team_avg_age "24.29" ;
     vini:year "2016" .
 
@@ -14687,6 +15171,7 @@
     vini:starting_xi_avg_age "26.27" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€28.3M" ;
+    vini:url "https://sofifa.com/team/12/middlesbrough/170099/" ;
     vini:whole_team_avg_age "24.18" ;
     vini:year "2017" .
 
@@ -14716,6 +15201,7 @@
     vini:starting_xi_avg_age "23.64" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€80M" ;
+    vini:url "https://sofifa.com/team/11/manchester-united/160058/" ;
     vini:whole_team_avg_age "23.45" ;
     vini:year "2016" .
 
@@ -14745,6 +15231,7 @@
     vini:starting_xi_avg_age "24.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€120M" ;
+    vini:url "https://sofifa.com/team/11/manchester-united/170099/" ;
     vini:whole_team_avg_age "23.58" ;
     vini:year "2017" .
 
@@ -14774,6 +15261,7 @@
     vini:starting_xi_avg_age "26.55" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€169.2M" ;
+    vini:url "https://sofifa.com/team/11/manchester-united/180084/" ;
     vini:whole_team_avg_age "23.39" ;
     vini:year "2018" .
 
@@ -14803,6 +15291,7 @@
     vini:starting_xi_avg_age "25.82" ;
     vini:team_width "Normal" ;
     vini:transfer_budget "€175M" ;
+    vini:url "https://sofifa.com/team/11/manchester-united/190075/" ;
     vini:whole_team_avg_age "24.03" ;
     vini:year "2019" .
 
@@ -14832,6 +15321,7 @@
     vini:starting_xi_avg_age "23.91" ;
     vini:team_width "Narrow" ;
     vini:transfer_budget "€177M" ;
+    vini:url "https://sofifa.com/team/11/manchester-united/200061/" ;
     vini:whole_team_avg_age "23.27" ;
     vini:year "2020" .
 

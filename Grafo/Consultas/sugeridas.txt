@@ -178,7 +178,7 @@ WHERE {
   BIND(IF(CONTAINS(STR(?stats), "_home"), "home", "away") as ?location)
 }
 GROUP BY ?teamName ?year
-ORDER BY ?year DESC(?goalsHome)
+ORDER BY DESC(?goalsHome - ?goalsAway)
 LIMIT 30
 
 ===== Analisis de formacion de equipo =====
@@ -230,3 +230,53 @@ WHERE {
 GROUP BY ?teamName ?year
 ORDER BY DESC(?diferencia)
 LIMIT 30
+
+
+===== Precio de cada gol =====
+PREFIX vini: <http://vini-eii.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?playerName
+       (CONCAT(STR(ROUND(?wageYear * 100) / 100), "€") AS ?wageYearFmt)
+       (COUNT(?shot) AS ?totalGoals)
+       (CONCAT(
+          STR(ROUND(
+              (IF(COUNT(?shot) > 0, (?wageYear / COUNT(?shot)), 0)) * 100
+          ) / 100),
+          "€"
+       ) AS ?costPerGoalFmt)
+WHERE {
+  {
+    SELECT ?player ?playerName (MAX(?wageParsed) AS ?wageWeek)
+    WHERE {
+      ?player vini:name ?playerName ;
+              vini:hasSeason ?season .
+      ?season vini:wage ?wageStr .
+
+      BIND(REPLACE(STR(?wageStr), "[^0-9\\.KM]", "") AS ?wageClean)
+      FILTER(STRLEN(?wageClean) > 0)
+
+      BIND(
+        IF(CONTAINS(?wageClean, "M"),
+           xsd:decimal(REPLACE(?wageClean, "M", "")) * 1000000,
+           IF(CONTAINS(?wageClean, "K"),
+              xsd:decimal(REPLACE(?wageClean, "K", "")) * 1000,
+              xsd:decimal(?wageClean)
+           )
+        ) AS ?wageParsed
+      )
+    }
+    GROUP BY ?player ?playerName
+    ORDER BY DESC(?wageWeek)
+    LIMIT 10
+  }
+
+  OPTIONAL {
+    ?shot vini:shooter ?player ;
+          vini:shotResult "Goal" .
+  }
+
+  BIND(?wageWeek * 52 AS ?wageYear)
+}
+GROUP BY ?playerName ?wageYear
+ORDER BY DESC(?wageYear)

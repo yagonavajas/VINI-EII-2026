@@ -12,10 +12,11 @@ VINI = Namespace("http://vini-eii.org/")
 EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/equipos_unificados_v3.csv"
 COUNTRIES_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/paises_unificados.csv"
 COMPETITIONS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/competiciones_unificadas.csv"
+PLAYERS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/jugadores_unificados_v1.csv"
 _equipos_cache = None
 _countries_cache = None
 _competitions_cache = None
-
+_players_cache = None
 
 def addTeamsSofifa(graph):
     with open("./Aplicacion/Grafo/Archivos/teams_16_20_sofifa.csv", newline='', encoding='utf-8') as teams_file:
@@ -42,6 +43,8 @@ def addTeamsSofifa(graph):
             graph.add((uri, RDF.type, VINI.TeamSeason))
 
             graph.add((team_uri, VINI.hasSeason, uri))
+            
+
             graph.add((uri, VINI.inSeason, season_uri))
 
             graph.add((uri, VINI.hasCountry, country_uri))
@@ -49,8 +52,7 @@ def addTeamsSofifa(graph):
 
             # datos del equipo EN una temporada
             graph.add((uri, VINI.name, Literal(row["name"])))
-            #g.add((uri, VINI.country, Literal(row["country"])))
-            #g.add((uri, VINI.league, Literal(row["league"])))
+            graph.add((uri, VINI.url, Literal(row["url"])))
             graph.add((uri, VINI.formation, Literal(row["formation"])))
 
             graph.add((uri, VINI.overall, Literal(row["overall"])))
@@ -288,7 +290,15 @@ def addPlayersSofifa(graph):
 
         for row in reader:
             #id falta unificar (idFinal)
-            id_player = row["id"] # obtener_id_player(idSofifa=row["id"])
+            id_player = obtener_id_player(idSofifa=row["id"])
+            #print(id_player)
+
+            if id_player == "2":
+                print(row["name"])
+
+            if id_player is None:
+                continue
+
             id_team = obtener_id_equipo(nombreSofifa=row["team_contract"])
             id_country = obtener_id_country(nameSofifa=row["nationality"])
 
@@ -319,11 +329,12 @@ def addPlayersSofifa(graph):
             graph.add((team_season_uri, VINI.hasPlayer, player_season_uri))
 
             graph.add((player_uri, VINI.name, Literal(row["name"])))
-            graph.add((player_uri, VINI.player_id, Literal(row["player_id"])))
             graph.add((player_uri, VINI.birth_year, Literal(row["birth_year"])))
             graph.add((player_uri, VINI.preferred_foot, Literal(row["preferred_foot"])))
+            
 
             # Estadisticas de jugador en una temporada
+            graph.add((player_season_uri, VINI.url, Literal(row["url"])))
             graph.add((player_season_uri, VINI.positions, Literal(row["positions"])))
             graph.add((player_season_uri, VINI.age, Literal(row["age"])))
             graph.add((player_season_uri, VINI.overall_rating, Literal(row["overall_rating"])))
@@ -369,9 +380,11 @@ def addPlayersAppearancesFBDB(graph):
 
         for row in reader: 
             id_game = row["gameID"]
-            id_player = row["playerID"]
+            id_player = obtener_id_player(idfbdb=row["playerID"])
 
-            # Crear identificador único para la aparición (jugador + partido)
+            if id_player is None:
+                continue            
+            
             appearance_id = f"{id_player}_{id_game}"
             
             # URIs principales
@@ -408,8 +421,53 @@ def addPlayersAppearancesFBDB(graph):
                 print(f"Procesadas {count} filas")
 
 def addShotsFBDB(graph):
-    
-    pass
+    with open("./Aplicacion/Grafo/Archivos/shots_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+
+        count = 0
+
+        for row in reader:
+            # minute,situation,lastAction,shotType,shotResult,xGoal,positionX,positionY
+            id_game = row["gameID"]
+            id_shooter = obtener_id_player(idfbdb=row["shooterID"])
+
+            assister = row["assisterID"]
+            id_assister = None
+
+            if assister != "":
+                id_assister = obtener_id_player(idfbdb=int(float(row["assisterID"])))
+            
+            
+            shot_id = f"{id_game}_{count}"
+            shot_uri = URIRef("http://vini-eii.org/shot/" + shot_id)
+            game_uri = URIRef("http://vini-eii.org/game/" + id_game)
+            
+            graph.add((shot_uri, RDF.type, VINI.Shot))
+            graph.add((shot_uri, VINI.game, game_uri))
+            graph.add((game_uri, VINI.hasShot, shot_uri))
+
+            if id_shooter:
+                shooter_uri = URIRef("http://vini-eii.org/player/" + id_shooter)
+                graph.add((shot_uri, VINI.shooter, shooter_uri))
+                graph.add((shooter_uri, VINI.hasShot, shot_uri))
+            if id_assister:
+                assister_uri = URIRef("http://vini-eii.org/player/" + id_assister)
+                graph.add((shot_uri, VINI.assister, assister_uri))
+                graph.add((assister_uri, VINI.assistedShot, shot_uri))
+            
+            graph.add((shot_uri, VINI.minute, Literal(row.get("minute"))))
+            graph.add((shot_uri, VINI.situation, Literal(row.get("situation"))))
+            graph.add((shot_uri, VINI.lastAction, Literal(row.get("lastAction"))))
+            graph.add((shot_uri, VINI.shotType, Literal(row.get("shotType"))))
+            graph.add((shot_uri, VINI.shotResult, Literal(row.get("shotResult"))))
+            graph.add((shot_uri, VINI.xGoal, Literal(row.get("xGoal"))))
+            graph.add((shot_uri, VINI.positionX, Literal(row.get("positionX"))))
+            graph.add((shot_uri, VINI.positionY, Literal(row.get("positionY"))))
+            
+            count += 1
+            
+            if count % 1000 == 0:
+                print(f"Procesadas {count} filas")
 
 def _extract_team_name(team_contract):
     if not team_contract:
@@ -466,7 +524,34 @@ def obtener_id_equipo(idSofifa=None, idfbdb=None, idWikidata=None, nombreSofifa=
         except (ValueError, TypeError):
             pass
     
-    return None                  
+    return None
+
+def obtener_id_player(idSofifa=None, idfbdb=None):
+    global _players_cache
+    if _players_cache is None:
+        df = pd.read_csv(PLAYERS_UNIFICADOS_PATH, encoding='utf-8')
+        _players_cache = df
+    df = _players_cache
+    
+    
+    # Buscar por idSofifa
+    if idSofifa and str(idSofifa).strip():
+        try:
+            resultado = df[df['idSofifa'] == int(idSofifa)]
+            if not resultado.empty:
+                return str(int(resultado['idFinal'].values[0]))
+        except (ValueError, TypeError):
+            pass
+
+    # Buscar por idfbdb
+    if idfbdb and str(idfbdb).strip():
+        try:
+            resultado = df[df['idfbdb'] == int(idfbdb)]
+            if not resultado.empty:
+                return str(int(resultado['idFinal'].values[0]))
+        except (ValueError, TypeError):
+            pass
+    return None                     
             
 def obtener_id_country(idWikidata=None, nameSofifa=None, nameWikidata=None):
     global _countries_cache
@@ -551,31 +636,43 @@ def main():
     # teamsSofifa.bind("vini", VINI)
     # addTeamsSofifa(teamsSofifa)
     # saveGraph(teamsSofifa, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
+    # print("(1) Grafo de equipos creado ")
 
     # competitionsWikidata = Graph()
     # competitionsWikidata.bind("vini", VINI)
     # addCompetitionsWikidata(competitionsWikidata)
     # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+    # print("(2) Grafo de competiciones creado")
 
     # teamStatsFBDB = Graph()
     # teamStatsFBDB.bind("vini", VINI)
     # addTeamStatsFBDB(teamStatsFBDB)
     # saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
+    # print("(3) Grafo de esatdisticasd e equipos creado")
 
     # gamesFBDB = Graph()
     # gamesFBDB.bind("vini", VINI)
     # addGamesFBDB(gamesFBDB)
     # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+    # print("(4) Grafo de partidos creado")   
 
-    # playersSofifa = Graph()
-    # playersSofifa.bind("vini", VINI)
-    # addPlayersSofifa(playersSofifa)
-    # saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+    playersSofifa = Graph()
+    playersSofifa.bind("vini", VINI)
+    addPlayersSofifa(playersSofifa)
+    saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+    print("(5) Grafo de jugadores creado")       
 
-    appearancesFBDB = Graph()
-    appearancesFBDB.bind("vini", VINI)
-    addPlayersAppearancesFBDB(appearancesFBDB)
-    saveGraph(appearancesFBDB, "./Aplicacion/Grafo/Grafos/appearances_graph.ttl")
+    # appearancesFBDB = Graph()
+    # appearancesFBDB.bind("vini", VINI)
+    # addPlayersAppearancesFBDB(appearancesFBDB)
+    # saveGraph(appearancesFBDB, "./Aplicacion/Grafo/Grafos/appearances_graph.ttl")
+    # print("(6) Grafo de apariciones creado")
+
+    # shotsFBDB = Graph()
+    # shotsFBDB.bind("vini", VINI)
+    # addShotsFBDB(shotsFBDB)
+    # saveGraph(shotsFBDB, "./Aplicacion/Grafo/Grafos/shots_graph.ttl")
+    # print("(7) Grafo de tiros creado")
 
 
 

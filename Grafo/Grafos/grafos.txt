@@ -7,7 +7,7 @@ teamstats fbdb -
 ========== Jugadores ==========
 apariciones fbdb -
 players sofifa -
-shots fbdb
+shots fbdb -
 
 
 ========== Competiciones ==========

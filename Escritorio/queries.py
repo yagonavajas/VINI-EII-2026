@@ -23,6 +23,11 @@ QUERIES_INFO = {
         "columns": ("Equipo", "Año", "Goles en Casa", "Goles Fuera", "Total Partidos"),
         "vars": ("teamName", "year", "goalsHome", "goalsAway", "totalGames")
     },
+    "pctgApuestas": {
+        "name": "Porcentaje de Aciertos por casa de Apuestas",
+        "columns": ("Casa", "Apuestas", "Aciertos", "Porcentaje"),
+        "vars": ("house", "total", "aciertos", "porcentaje")
+    },
     "precio_goles": {
         "name": "Precio de Goles",
         "columns": ("Jugador", "Salario Anual", "Goles Totales", "Coste por Gol"),
@@ -105,6 +110,54 @@ WHERE {
 GROUP BY ?teamName ?year
 ORDER BY DESC(?goalsHome - ?goalsAway)
 LIMIT 30""",
+
+"pctgApuestas": """PREFIX vini: <http://vini-eii.org/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?house
+  (COUNT(*) AS ?total)
+  (SUM(?correct) AS ?aciertos)
+  (xsd:float(100.0 * SUM(?correct) / COUNT(*)) AS ?porcentaje))
+WHERE {
+  {
+    SELECT ?game ?homeResult
+    WHERE {
+      ?stats a vini:GameStats ;
+             vini:game ?game ;
+             vini:result ?homeResult .
+      FILTER(STRENDS(STR(?stats), "_home"))
+    }
+  }
+
+  ?bet a vini:GameBet ;
+       vini:game ?game ;
+       vini:bettingHouse ?house ;
+       vini:homeOdds ?homeOdds ;
+       vini:drawOdds ?drawOdds ;
+       vini:awayOdds ?awayOdds .
+
+  BIND(xsd:decimal(?homeOdds) AS ?h)
+  BIND(xsd:decimal(?drawOdds) AS ?d)
+  BIND(xsd:decimal(?awayOdds) AS ?a)
+
+  # Pronostico = cuota mas baja (favorito)
+  BIND(
+    IF(?h <= ?d && ?h <= ?a, "HOME",
+      IF(?d <= ?a, "DRAW", "AWAY")
+    ) AS ?pred
+  )
+
+  BIND(
+    IF(?homeResult = "W", "HOME",
+      IF(?homeResult = "D", "DRAW", "AWAY")
+    ) AS ?real
+  )
+
+  BIND(IF(?pred = ?real, 1, 0) AS ?correct)
+}
+GROUP BY ?house
+ORDER BY DESC(?porcentaje)""",
 
     "precio_goles": r"""PREFIX vini: <http://vini-eii.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

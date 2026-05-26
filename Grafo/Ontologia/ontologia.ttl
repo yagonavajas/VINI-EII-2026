@@ -5,131 +5,733 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://vini-eii.org/> .
 
-<http://vini-eii.org/> rdf:type owl:Ontology .
+<http://vini-eii.org/> rdf:type owl:Ontology ;
+    rdfs:label "VINI Ontology - Football Knowledge Graph" ;
+    rdfs:comment "Ontology for representing football/soccer data including teams, players, games, competitions, and related statistics" .
 
 #################################################################
-#    Classes
+#    Classes (Entidades Principales)
 #################################################################
 
-:CompetitionWinner rdf:type owl:Class .
-:Country rdf:type owl:Class .
-:League rdf:type owl:Class .
-:Player rdf:type owl:Class .
-:PlayerSeason rdf:type owl:Class .
-:Season rdf:type owl:Class .
-:Team rdf:type owl:Class .
-:TeamSeason rdf:type owl:Class .
-:Game rdf:type owl:Class .
-:GameStats rdf:type owl:Class .
-:GamePerformance rdf:type owl:Class .
-:GameBet rdf:type owl:Class .
+:Team rdf:type owl:Class ;
+    rdfs:label "Team" ;
+    rdfs:comment "Representa un equipo de fútbol" .
+
+:TeamSeason rdf:type owl:Class ;
+    rdfs:label "Team Season" ;
+    rdfs:comment "Representa un equipo en una temporada específica con sus estadísticas" .
+
+:Player rdf:type owl:Class ;
+    rdfs:label "Player" ;
+    rdfs:comment "Representa un jugador de fútbol" .
+
+:PlayerSeason rdf:type owl:Class ;
+    rdfs:label "Player Season" ;
+    rdfs:comment "Representa un jugador en una temporada específica con sus estadísticas" .
+
+:Season rdf:type owl:Class ;
+    rdfs:label "Season" ;
+    rdfs:comment "Representa una temporada deportiva" .
+
+:Country rdf:type owl:Class ;
+    rdfs:label "Country" ;
+    rdfs:comment "Representa un país" .
+
+:League rdf:type owl:Class ;
+    rdfs:label "League" ;
+    rdfs:comment "Representa una liga o competición de equipos" .
+
+:Competition rdf:type owl:Class ;
+    rdfs:label "Competition" ;
+    rdfs:comment "Representa una competición (torneo, copa)" .
+
+:CompetitionWinner rdf:type owl:Class ;
+    rdfs:label "Competition Winner" ;
+    rdfs:comment "Representa el evento de un equipo ganando una competición en una temporada" .
+
+:Game rdf:type owl:Class ;
+    rdfs:label "Game" ;
+    rdfs:comment "Representa un partido de fútbol" .
+
+:GameStats rdf:type owl:Class ;
+    rdfs:label "Game Stats" ;
+    rdfs:comment "Representa las estadísticas de un equipo en un partido específico" .
+
+:GamePerformance rdf:type owl:Class ;
+    rdfs:label "Game Performance" ;
+    rdfs:comment "Representa el rendimiento de un equipo en un partido" .
+
+:GameBet rdf:type owl:Class ;
+    rdfs:label "Game Bet" ;
+    rdfs:comment "Representa las cuotas de apuestas de una casa de apuestas para un partido" .
+
+:PlayerAppearance rdf:type owl:Class ;
+    rdfs:label "Player Appearance" ;
+    rdfs:comment "Representa la aparición de un jugador en un partido con sus estadísticas individuales" .
+
+:Shot rdf:type owl:Class ;
+    rdfs:label "Shot" ;
+    rdfs:comment "Representa un tiro a puerta en un partido" .
 
 #################################################################
-#    Object Properties
+#    Object Properties (Relaciones entre Entidades)
 #################################################################
 
-:hasSeason rdf:type owl:ObjectProperty .
-:inSeason rdf:type owl:ObjectProperty .
-:hasCountry rdf:type owl:ObjectProperty .
-:playsInLeague rdf:type owl:ObjectProperty .
-:competition rdf:type owl:ObjectProperty .
-:winningTeam rdf:type owl:ObjectProperty .
-:country rdf:type owl:ObjectProperty .
-:season rdf:type owl:ObjectProperty .
-:wonCompetition rdf:type owl:ObjectProperty .
-:wonBy rdf:type owl:ObjectProperty .
-:playGame rdf:type owl:ObjectProperty .
-:hasStats rdf:type owl:ObjectProperty .
-:game rdf:type owl:ObjectProperty .
-:team rdf:type owl:ObjectProperty .
-:hasPerformance rdf:type owl:ObjectProperty .
-:hasBet rdf:type owl:ObjectProperty .
-:born rdf:type owl:ObjectProperty .
-:playsFor rdf:type owl:ObjectProperty .
-:hasPlayer rdf:type owl:ObjectProperty .
-:player rdf:type owl:ObjectProperty .
+# Team and TeamSeason relationships
+:hasSeason rdf:type owl:ObjectProperty ;
+    rdfs:label "has Season" ;
+    rdfs:comment "Un equipo tiene registros en múltiples temporadas" ;
+    rdfs:domain :Team ;
+    rdfs:range :TeamSeason .
+
+:inSeason rdf:type owl:ObjectProperty ;
+    rdfs:label "in Season" ;
+    rdfs:comment "Una entidad está asociada a una temporada específica" ;
+    rdfs:range :Season .
+
+# TeamSeason relationships
+:hasCountry rdf:type owl:ObjectProperty ;
+    rdfs:label "has Country" ;
+    rdfs:comment "Un equipo en una temporada está asociado a un país" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :Country .
+
+:playsInLeague rdf:type owl:ObjectProperty ;
+    rdfs:label "plays in League" ;
+    rdfs:comment "Un equipo en una temporada juega en una liga específica" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :League .
+
+:playGame rdf:type owl:ObjectProperty ;
+    rdfs:label "plays Game" ;
+    rdfs:comment "Un equipo en una temporada participa en un partido" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :Game .
+
+:hasStats rdf:type owl:ObjectProperty ;
+    rdfs:label "has Stats" ;
+    rdfs:comment "Un equipo en una temporada tiene estadísticas en un partido" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :GameStats .
+
+:hasPerformance rdf:type owl:ObjectProperty ;
+    rdfs:label "has Performance" ;
+    rdfs:comment "Un equipo en una temporada tiene rendimiento en un partido" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :GamePerformance .
+
+:hasPlayer rdf:type owl:ObjectProperty ;
+    rdfs:label "has Player" ;
+    rdfs:comment "Un equipo en una temporada tiene jugadores" ;
+    rdfs:domain :TeamSeason ;
+    rdfs:range :PlayerSeason .
+
+# Game relationships
+:season rdf:type owl:ObjectProperty ;
+    rdfs:label "season" ;
+    rdfs:comment "Una entidad está asociada a una temporada" ;
+    rdfs:range :Season .
+
+:hasGame rdf:type owl:ObjectProperty ;
+    rdfs:label "has Game" ;
+    rdfs:comment "Una liga tiene partidos" ;
+    rdfs:domain :League ;
+    rdfs:range :Game .
+
+:hasBet rdf:type owl:ObjectProperty ;
+    rdfs:label "has Bet" ;
+    rdfs:comment "Un partido tiene cuotas de apuestas de diferentes casas" ;
+    rdfs:domain :Game ;
+    rdfs:range :GameBet .
+
+:hasPlayerAppearance rdf:type owl:ObjectProperty ;
+    rdfs:label "has Player Appearance" ;
+    rdfs:comment "Un partido tiene apariciones de jugadores" ;
+    rdfs:domain :Game ;
+    rdfs:range :PlayerAppearance .
+
+:hasShot rdf:type owl:ObjectProperty ;
+    rdfs:label "has Shot" ;
+    rdfs:comment "Un partido tiene tiros a puerta registrados" ;
+    rdfs:domain :Game ;
+    rdfs:range :Shot .
+
+# GameStats and GamePerformance relationships
+:game rdf:type owl:ObjectProperty ;
+    rdfs:label "game" ;
+    rdfs:comment "Una estadística o rendimiento está asociado a un partido específico" ;
+    rdfs:range :Game .
+
+:team rdf:type owl:ObjectProperty ;
+    rdfs:label "team" ;
+    rdfs:comment "Una estadística o rendimiento está asociado a un equipo en una temporada" ;
+    rdfs:range :TeamSeason .
+
+# Competition relationships
+:competition rdf:type owl:ObjectProperty ;
+    rdfs:label "competition" ;
+    rdfs:comment "Un ganador de competición está asociado a una competición específica" ;
+    rdfs:domain :CompetitionWinner ;
+    rdfs:range :Competition .
+
+:winningTeam rdf:type owl:ObjectProperty ;
+    rdfs:label "winning Team" ;
+    rdfs:comment "Un ganador de competición está asociado al equipo ganador" ;
+    rdfs:domain :CompetitionWinner ;
+    rdfs:range :Team .
+
+:country rdf:type owl:ObjectProperty ;
+    rdfs:label "country" ;
+    rdfs:comment "Una entidad está asociada a un país" ;
+    rdfs:range :Country .
+
+:wonCompetition rdf:type owl:ObjectProperty ;
+    rdfs:label "won Competition" ;
+    rdfs:comment "Un equipo ha ganado una competición" ;
+    rdfs:domain :Team ;
+    rdfs:range :CompetitionWinner .
+
+:wonBy rdf:type owl:ObjectProperty ;
+    rdfs:label "won by" ;
+    rdfs:comment "Una competición fue ganada por un equipo" ;
+    rdfs:domain :Competition ;
+    rdfs:range :CompetitionWinner .
+
+# Player relationships
+:born rdf:type owl:ObjectProperty ;
+    rdfs:label "born" ;
+    rdfs:comment "Un jugador nació en un país" ;
+    rdfs:domain :Player ;
+    rdfs:range :Country .
+
+:playsFor rdf:type owl:ObjectProperty ;
+    rdfs:label "plays for" ;
+    rdfs:comment "Un jugador en una temporada juega para un equipo en esa temporada" ;
+    rdfs:domain :PlayerSeason ;
+    rdfs:range :TeamSeason .
+
+:appearsIn rdf:type owl:ObjectProperty ;
+    rdfs:label "appears in" ;
+    rdfs:comment "Un jugador aparece en partidos" ;
+    rdfs:domain :Player ;
+    rdfs:range :PlayerAppearance .
+
+# PlayerAppearance relationships
+:player rdf:type owl:ObjectProperty ;
+    rdfs:label "player" ;
+    rdfs:comment "Una aparición está asociada a un jugador específico" ;
+    rdfs:range :Player .
+
+# Shot relationships
+:shooter rdf:type owl:ObjectProperty ;
+    rdfs:label "shooter" ;
+    rdfs:comment "Un tiro fue realizado por un jugador" ;
+    rdfs:domain :Shot ;
+    rdfs:range :Player .
+
+:assister rdf:type owl:ObjectProperty ;
+    rdfs:label "assister" ;
+    rdfs:comment "Un tiro fue asistido por un jugador" ;
+    rdfs:domain :Shot ;
+    rdfs:range :Player .
+
+:assistedShot rdf:type owl:ObjectProperty ;
+    rdfs:label "assisted Shot" ;
+    rdfs:comment "Un jugador asistió un tiro" ;
+    rdfs:domain :Player ;
+    rdfs:range :Shot .
 
 #################################################################
-#    Datatype Properties
+#    Datatype Properties (Propiedades de Valores)
 #################################################################
 
-:name rdf:type owl:DatatypeProperty .
-:formation rdf:type owl:DatatypeProperty .
-:overall rdf:type owl:DatatypeProperty .
-:attack rdf:type owl:DatatypeProperty .
-:midfield rdf:type owl:DatatypeProperty .
-:defence rdf:type owl:DatatypeProperty .
-:transfer_budget rdf:type owl:DatatypeProperty .
-:club_worth rdf:type owl:DatatypeProperty .
-:speed rdf:type owl:DatatypeProperty .
-:dribbling rdf:type owl:DatatypeProperty .
-:passing rdf:type owl:DatatypeProperty .
-:positioning rdf:type owl:DatatypeProperty .
-:crossing rdf:type owl:DatatypeProperty .
-:shooting rdf:type owl:DatatypeProperty .
-:aggression rdf:type owl:DatatypeProperty .
-:pressure rdf:type owl:DatatypeProperty .
-:team_width rdf:type owl:DatatypeProperty .
-:defender_line rdf:type owl:DatatypeProperty .
-:domestic_prestige rdf:type owl:DatatypeProperty .
-:international_prestige rdf:type owl:DatatypeProperty .
-:players rdf:type owl:DatatypeProperty .
-:starting_xi_avg_age rdf:type owl:DatatypeProperty .
-:whole_team_avg_age rdf:type owl:DatatypeProperty .
-:year rdf:type owl:DatatypeProperty .
+# Team and TeamSeason properties
+:name rdf:type owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Nombre de una entidad" ;
+    rdfs:range xsd:string .
 
-:date rdf:type owl:DatatypeProperty .
-:goals rdf:type owl:DatatypeProperty .
-:xGoals rdf:type owl:DatatypeProperty .
-:shots rdf:type owl:DatatypeProperty .
-:shotsOnTarget rdf:type owl:DatatypeProperty .
-:deep rdf:type owl:DatatypeProperty .
-:ppda rdf:type owl:DatatypeProperty .
-:fouls rdf:type owl:DatatypeProperty .
-:corners rdf:type owl:DatatypeProperty .
-:yellowCards rdf:type owl:DatatypeProperty .
-:redCards rdf:type owl:DatatypeProperty .
-:result rdf:type owl:DatatypeProperty .
-:probability rdf:type owl:DatatypeProperty .
-:goalsHalfTime rdf:type owl:DatatypeProperty .
-:drawProbability rdf:type owl:DatatypeProperty .
-:bettingHouse rdf:type owl:DatatypeProperty .
-:homeOdds rdf:type owl:DatatypeProperty .
-:drawOdds rdf:type owl:DatatypeProperty .
-:awayOdds rdf:type owl:DatatypeProperty .
+:url rdf:type owl:DatatypeProperty ;
+    rdfs:label "url" ;
+    rdfs:comment "URL asociada a una entidad" ;
+    rdfs:range xsd:string .
 
-:nationality rdf:type owl:DatatypeProperty .
-:positions rdf:type owl:DatatypeProperty .
-:url rdf:type owl:DatatypeProperty .
-:age rdf:type owl:DatatypeProperty .
-:overall_rating rdf:type owl:DatatypeProperty .
-:potential rdf:type owl:DatatypeProperty .
-:team_contract rdf:type owl:DatatypeProperty .
-:player_id rdf:type owl:DatatypeProperty .
-:birth_year rdf:type owl:DatatypeProperty .
-:height rdf:type owl:DatatypeProperty .
-:weight rdf:type owl:DatatypeProperty .
-:preferred_foot rdf:type owl:DatatypeProperty .
-:best_overall rdf:type owl:DatatypeProperty .
-:best_position rdf:type owl:DatatypeProperty .
-:growth rdf:type owl:DatatypeProperty .
-:joined rdf:type owl:DatatypeProperty .
-:loan_date_end rdf:type owl:DatatypeProperty .
-:value rdf:type owl:DatatypeProperty .
-:wage rdf:type owl:DatatypeProperty .
-:release_clause rdf:type owl:DatatypeProperty .
-:total_attacking rdf:type owl:DatatypeProperty .
-:total_skill rdf:type owl:DatatypeProperty .
-:total_movement rdf:type owl:DatatypeProperty .
-:total_goalkeeping rdf:type owl:DatatypeProperty .
-:total_stats rdf:type owl:DatatypeProperty .
-:base_stats rdf:type owl:DatatypeProperty .
-:weak_foot rdf:type owl:DatatypeProperty .
-:skill_moves rdf:type owl:DatatypeProperty .
-:attacking_work_rate rdf:type owl:DatatypeProperty .
-:defensive_work_rate rdf:type owl:DatatypeProperty .
-:international_reputation rdf:type owl:DatatypeProperty .
-:body_type rdf:type owl:DatatypeProperty .
-:real_face rdf:type owl:DatatypeProperty .
-:physical_positioning rdf:type owl:DatatypeProperty .
-:club_kit_number rdf:type owl:DatatypeProperty .
+:year rdf:type owl:DatatypeProperty ;
+    rdfs:label "year" ;
+    rdfs:comment "Año asociado a una temporada o evento" ;
+    rdfs:range xsd:gYear .
+
+# TeamSeason tactical properties
+:formation rdf:type owl:DatatypeProperty ;
+    rdfs:label "formation" ;
+    rdfs:comment "Formación táctica del equipo" ;
+    rdfs:range xsd:string .
+
+# TeamSeason overall statistics
+:overall rdf:type owl:DatatypeProperty ;
+    rdfs:label "overall" ;
+    rdfs:comment "Calificación general del equipo" ;
+    rdfs:range xsd:integer .
+
+:attack rdf:type owl:DatatypeProperty ;
+    rdfs:label "attack" ;
+    rdfs:comment "Calificación de ataque del equipo" ;
+    rdfs:range xsd:integer .
+
+:midfield rdf:type owl:DatatypeProperty ;
+    rdfs:label "midfield" ;
+    rdfs:comment "Calificación de centrocampo del equipo" ;
+    rdfs:range xsd:integer .
+
+:defence rdf:type owl:DatatypeProperty ;
+    rdfs:label "defence" ;
+    rdfs:comment "Calificación de defensa del equipo" ;
+    rdfs:range xsd:integer .
+
+# TeamSeason economic properties
+:transfer_budget rdf:type owl:DatatypeProperty ;
+    rdfs:label "transfer budget" ;
+    rdfs:comment "Presupuesto de transferencias del equipo" ;
+    rdfs:range xsd:string .
+
+:club_worth rdf:type owl:DatatypeProperty ;
+    rdfs:label "club worth" ;
+    rdfs:comment "Valor total del club" ;
+    rdfs:range xsd:string .
+
+# TeamSeason tactical metrics
+:speed rdf:type owl:DatatypeProperty ;
+    rdfs:label "speed" ;
+    rdfs:comment "Métrica de velocidad del equipo" ;
+    rdfs:range xsd:integer .
+
+:dribbling rdf:type owl:DatatypeProperty ;
+    rdfs:label "dribbling" ;
+    rdfs:comment "Métrica de regate del equipo" ;
+    rdfs:range xsd:integer .
+
+:passing rdf:type owl:DatatypeProperty ;
+    rdfs:label "passing" ;
+    rdfs:comment "Métrica de pase del equipo" ;
+    rdfs:range xsd:integer .
+
+:positioning rdf:type owl:DatatypeProperty ;
+    rdfs:label "positioning" ;
+    rdfs:comment "Métrica de posicionamiento del equipo" ;
+    rdfs:range xsd:integer .
+
+:crossing rdf:type owl:DatatypeProperty ;
+    rdfs:label "crossing" ;
+    rdfs:comment "Métrica de centros del equipo" ;
+    rdfs:range xsd:integer .
+
+:shooting rdf:type owl:DatatypeProperty ;
+    rdfs:label "shooting" ;
+    rdfs:comment "Métrica de disparo del equipo" ;
+    rdfs:range xsd:integer .
+
+:aggression rdf:type owl:DatatypeProperty ;
+    rdfs:label "aggression" ;
+    rdfs:comment "Métrica de agresividad del equipo" ;
+    rdfs:range xsd:integer .
+
+:pressure rdf:type owl:DatatypeProperty ;
+    rdfs:label "pressure" ;
+    rdfs:comment "Métrica de presión del equipo" ;
+    rdfs:range xsd:integer .
+
+# TeamSeason defensive structure
+:team_width rdf:type owl:DatatypeProperty ;
+    rdfs:label "team width" ;
+    rdfs:comment "Amplitud defensiva del equipo" ;
+    rdfs:range xsd:integer .
+
+:defender_line rdf:type owl:DatatypeProperty ;
+    rdfs:label "defender line" ;
+    rdfs:comment "Línea defensiva del equipo" ;
+    rdfs:range xsd:integer .
+
+# TeamSeason prestige
+:domestic_prestige rdf:type owl:DatatypeProperty ;
+    rdfs:label "domestic prestige" ;
+    rdfs:comment "Prestigio del equipo a nivel doméstico" ;
+    rdfs:range xsd:integer .
+
+:international_prestige rdf:type owl:DatatypeProperty ;
+    rdfs:label "international prestige" ;
+    rdfs:comment "Prestigio del equipo a nivel internacional" ;
+    rdfs:range xsd:integer .
+
+# TeamSeason squad information
+:players rdf:type owl:DatatypeProperty ;
+    rdfs:label "players" ;
+    rdfs:comment "Número de jugadores en la plantilla" ;
+    rdfs:range xsd:integer .
+
+:starting_xi_avg_age rdf:type owl:DatatypeProperty ;
+    rdfs:label "starting XI avg age" ;
+    rdfs:comment "Edad promedio del once inicial" ;
+    rdfs:range xsd:decimal .
+
+:whole_team_avg_age rdf:type owl:DatatypeProperty ;
+    rdfs:label "whole team avg age" ;
+    rdfs:comment "Edad promedio de toda la plantilla" ;
+    rdfs:range xsd:decimal .
+
+# Game properties
+:date rdf:type owl:DatatypeProperty ;
+    rdfs:label "date" ;
+    rdfs:comment "Fecha de un partido" ;
+    rdfs:range xsd:date .
+
+:drawProbability rdf:type owl:DatatypeProperty ;
+    rdfs:label "draw probability" ;
+    rdfs:comment "Probabilidad de empate en un partido" ;
+    rdfs:range xsd:decimal .
+
+# GameStats properties
+:goals rdf:type owl:DatatypeProperty ;
+    rdfs:label "goals" ;
+    rdfs:comment "Número de goles" ;
+    rdfs:range xsd:integer .
+
+:xGoals rdf:type owl:DatatypeProperty ;
+    rdfs:label "xGoals" ;
+    rdfs:comment "Goles esperados (Expected Goals)" ;
+    rdfs:range xsd:decimal .
+
+:shots rdf:type owl:DatatypeProperty ;
+    rdfs:label "shots" ;
+    rdfs:comment "Número total de disparos" ;
+    rdfs:range xsd:integer .
+
+:shotsOnTarget rdf:type owl:DatatypeProperty ;
+    rdfs:label "shots on target" ;
+    rdfs:comment "Disparos a puerta" ;
+    rdfs:range xsd:integer .
+
+:deep rdf:type owl:DatatypeProperty ;
+    rdfs:label "deep" ;
+    rdfs:comment "Pases profundos" ;
+    rdfs:range xsd:integer .
+
+:ppda rdf:type owl:DatatypeProperty ;
+    rdfs:label "ppda" ;
+    rdfs:comment "Presiones por acción defensiva" ;
+    rdfs:range xsd:decimal .
+
+:fouls rdf:type owl:DatatypeProperty ;
+    rdfs:label "fouls" ;
+    rdfs:comment "Número de faltas cometidas" ;
+    rdfs:range xsd:integer .
+
+:corners rdf:type owl:DatatypeProperty ;
+    rdfs:label "corners" ;
+    rdfs:comment "Número de saques de esquina" ;
+    rdfs:range xsd:integer .
+
+:yellowCards rdf:type owl:DatatypeProperty ;
+    rdfs:label "yellow cards" ;
+    rdfs:comment "Número de tarjetas amarillas" ;
+    rdfs:range xsd:integer .
+
+:redCards rdf:type owl:DatatypeProperty ;
+    rdfs:label "red cards" ;
+    rdfs:comment "Número de tarjetas rojas" ;
+    rdfs:range xsd:integer .
+
+:result rdf:type owl:DatatypeProperty ;
+    rdfs:label "result" ;
+    rdfs:comment "Resultado del partido (W/D/L)" ;
+    rdfs:range xsd:string .
+
+# GamePerformance properties
+:probability rdf:type owl:DatatypeProperty ;
+    rdfs:label "probability" ;
+    rdfs:comment "Probabilidad de victoria" ;
+    rdfs:range xsd:decimal .
+
+:goalsHalfTime rdf:type owl:DatatypeProperty ;
+    rdfs:label "goals half time" ;
+    rdfs:comment "Goles en el primer tiempo" ;
+    rdfs:range xsd:integer .
+
+# GameBet properties
+:bettingHouse rdf:type owl:DatatypeProperty ;
+    rdfs:label "betting house" ;
+    rdfs:comment "Nombre de la casa de apuestas" ;
+    rdfs:range xsd:string .
+
+:homeOdds rdf:type owl:DatatypeProperty ;
+    rdfs:label "home odds" ;
+    rdfs:comment "Cuota para victoria local" ;
+    rdfs:range xsd:decimal .
+
+:drawOdds rdf:type owl:DatatypeProperty ;
+    rdfs:label "draw odds" ;
+    rdfs:comment "Cuota para empate" ;
+    rdfs:range xsd:decimal .
+
+:awayOdds rdf:type owl:DatatypeProperty ;
+    rdfs:label "away odds" ;
+    rdfs:comment "Cuota para victoria visitante" ;
+    rdfs:range xsd:decimal .
+
+# Player properties
+:birth_year rdf:type owl:DatatypeProperty ;
+    rdfs:label "birth year" ;
+    rdfs:comment "Año de nacimiento del jugador" ;
+    rdfs:range xsd:gYear .
+
+:preferred_foot rdf:type owl:DatatypeProperty ;
+    rdfs:label "preferred foot" ;
+    rdfs:comment "Pie preferente del jugador (Left/Right)" ;
+    rdfs:range xsd:string .
+
+# PlayerSeason properties
+:positions rdf:type owl:DatatypeProperty ;
+    rdfs:label "positions" ;
+    rdfs:comment "Posiciones que puede jugar" ;
+    rdfs:range xsd:string .
+
+:age rdf:type owl:DatatypeProperty ;
+    rdfs:label "age" ;
+    rdfs:comment "Edad del jugador" ;
+    rdfs:range xsd:integer .
+
+:overall_rating rdf:type owl:DatatypeProperty ;
+    rdfs:label "overall rating" ;
+    rdfs:comment "Calificación general del jugador" ;
+    rdfs:range xsd:integer .
+
+:potential rdf:type owl:DatatypeProperty ;
+    rdfs:label "potential" ;
+    rdfs:comment "Potencial del jugador" ;
+    rdfs:range xsd:integer .
+
+:team_contract rdf:type owl:DatatypeProperty ;
+    rdfs:label "team contract" ;
+    rdfs:comment "Información del contrato con el equipo" ;
+    rdfs:range xsd:string .
+
+:height rdf:type owl:DatatypeProperty ;
+    rdfs:label "height" ;
+    rdfs:comment "Altura del jugador" ;
+    rdfs:range xsd:string .
+
+:weight rdf:type owl:DatatypeProperty ;
+    rdfs:label "weight" ;
+    rdfs:comment "Peso del jugador" ;
+    rdfs:range xsd:string .
+
+:best_overall rdf:type owl:DatatypeProperty ;
+    rdfs:label "best overall" ;
+    rdfs:comment "Mejor calificación general alcanzada" ;
+    rdfs:range xsd:integer .
+
+:best_position rdf:type owl:DatatypeProperty ;
+    rdfs:label "best position" ;
+    rdfs:comment "Mejor posición del jugador" ;
+    rdfs:range xsd:string .
+
+:growth rdf:type owl:DatatypeProperty ;
+    rdfs:label "growth" ;
+    rdfs:comment "Crecimiento del jugador" ;
+    rdfs:range xsd:integer .
+
+:joined rdf:type owl:DatatypeProperty ;
+    rdfs:label "joined" ;
+    rdfs:comment "Fecha de incorporación al equipo" ;
+    rdfs:range xsd:string .
+
+:loan_date_end rdf:type owl:DatatypeProperty ;
+    rdfs:label "loan date end" ;
+    rdfs:comment "Fecha de fin del préstamo" ;
+    rdfs:range xsd:string .
+
+:value rdf:type owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:comment "Valor de mercado del jugador" ;
+    rdfs:range xsd:string .
+
+:wage rdf:type owl:DatatypeProperty ;
+    rdfs:label "wage" ;
+    rdfs:comment "Salario del jugador" ;
+    rdfs:range xsd:string .
+
+:release_clause rdf:type owl:DatatypeProperty ;
+    rdfs:label "release clause" ;
+    rdfs:comment "Cláusula de rescisión" ;
+    rdfs:range xsd:string .
+
+:total_attacking rdf:type owl:DatatypeProperty ;
+    rdfs:label "total attacking" ;
+    rdfs:comment "Puntuación total en habilidades de ataque" ;
+    rdfs:range xsd:integer .
+
+:total_skill rdf:type owl:DatatypeProperty ;
+    rdfs:label "total skill" ;
+    rdfs:comment "Puntuación total en habilidades" ;
+    rdfs:range xsd:integer .
+
+:total_movement rdf:type owl:DatatypeProperty ;
+    rdfs:label "total movement" ;
+    rdfs:comment "Puntuación total en movimiento" ;
+    rdfs:range xsd:integer .
+
+:total_goalkeeping rdf:type owl:DatatypeProperty ;
+    rdfs:label "total goalkeeping" ;
+    rdfs:comment "Puntuación total en portería" ;
+    rdfs:range xsd:integer .
+
+:total_stats rdf:type owl:DatatypeProperty ;
+    rdfs:label "total stats" ;
+    rdfs:comment "Puntuación total de estadísticas" ;
+    rdfs:range xsd:integer .
+
+:base_stats rdf:type owl:DatatypeProperty ;
+    rdfs:label "base stats" ;
+    rdfs:comment "Estadísticas base del jugador" ;
+    rdfs:range xsd:integer .
+
+:weak_foot rdf:type owl:DatatypeProperty ;
+    rdfs:label "weak foot" ;
+    rdfs:comment "Calificación del pie débil (1-5)" ;
+    rdfs:range xsd:integer .
+
+:skill_moves rdf:type owl:DatatypeProperty ;
+    rdfs:label "skill moves" ;
+    rdfs:comment "Número de movimientos de habilidad (1-5)" ;
+    rdfs:range xsd:integer .
+
+:attacking_work_rate rdf:type owl:DatatypeProperty ;
+    rdfs:label "attacking work rate" ;
+    rdfs:comment "Ritmo de trabajo en ataque" ;
+    rdfs:range xsd:string .
+
+:defensive_work_rate rdf:type owl:DatatypeProperty ;
+    rdfs:label "defensive work rate" ;
+    rdfs:comment "Ritmo de trabajo en defensa" ;
+    rdfs:range xsd:string .
+
+:international_reputation rdf:type owl:DatatypeProperty ;
+    rdfs:label "international reputation" ;
+    rdfs:comment "Reputación internacional del jugador" ;
+    rdfs:range xsd:integer .
+
+:physical_positioning rdf:type owl:DatatypeProperty ;
+    rdfs:label "physical positioning" ;
+    rdfs:comment "Posicionamiento físico del jugador" ;
+    rdfs:range xsd:string .
+
+:club_kit_number rdf:type owl:DatatypeProperty ;
+    rdfs:label "club kit number" ;
+    rdfs:comment "Número de camiseta del jugador" ;
+    rdfs:range xsd:integer .
+
+:body_type rdf:type owl:DatatypeProperty ;
+    rdfs:label "body type" ;
+    rdfs:comment "Tipo de complexión del jugador" ;
+    rdfs:range xsd:string .
+
+:real_face rdf:type owl:DatatypeProperty ;
+    rdfs:label "real face" ;
+    rdfs:comment "Indicador de si tiene cara real" ;
+    rdfs:range xsd:boolean .
+
+# PlayerAppearance properties
+:ownGoals rdf:type owl:DatatypeProperty ;
+    rdfs:label "own goals" ;
+    rdfs:comment "Goles en propia puerta" ;
+    rdfs:range xsd:integer .
+
+:xGoalsChain rdf:type owl:DatatypeProperty ;
+    rdfs:label "xGoals chain" ;
+    rdfs:comment "Goles esperados en cadena de juego" ;
+    rdfs:range xsd:decimal .
+
+:xGoalsBuildup rdf:type owl:DatatypeProperty ;
+    rdfs:label "xGoals buildup" ;
+    rdfs:comment "Goles esperados en construcción" ;
+    rdfs:range xsd:decimal .
+
+:assists rdf:type owl:DatatypeProperty ;
+    rdfs:label "assists" ;
+    rdfs:comment "Número de asistencias" ;
+    rdfs:range xsd:integer .
+
+:keyPasses rdf:type owl:DatatypeProperty ;
+    rdfs:label "key passes" ;
+    rdfs:comment "Pases clave dados" ;
+    rdfs:range xsd:integer .
+
+:xAssists rdf:type owl:DatatypeProperty ;
+    rdfs:label "xAssists" ;
+    rdfs:comment "Asistencias esperadas" ;
+    rdfs:range xsd:decimal .
+
+:position rdf:type owl:DatatypeProperty ;
+    rdfs:label "position" ;
+    rdfs:comment "Posición del jugador en el partido" ;
+    rdfs:range xsd:string .
+
+:positionOrder rdf:type owl:DatatypeProperty ;
+    rdfs:label "position order" ;
+    rdfs:comment "Orden de posición" ;
+    rdfs:range xsd:integer .
+
+:yellowCard rdf:type owl:DatatypeProperty ;
+    rdfs:label "yellow card" ;
+    rdfs:comment "Indicador de tarjeta amarilla recibida" ;
+    rdfs:range xsd:boolean .
+
+:redCard rdf:type owl:DatatypeProperty ;
+    rdfs:label "red card" ;
+    rdfs:comment "Indicador de tarjeta roja recibida" ;
+    rdfs:range xsd:boolean .
+
+:time rdf:type owl:DatatypeProperty ;
+    rdfs:label "time" ;
+    rdfs:comment "Tiempo de juego del jugador en minutos" ;
+    rdfs:range xsd:integer .
+
+# Shot properties
+:minute rdf:type owl:DatatypeProperty ;
+    rdfs:label "minute" ;
+    rdfs:comment "Minuto en que se realizó el tiro" ;
+    rdfs:range xsd:integer .
+
+:situation rdf:type owl:DatatypeProperty ;
+    rdfs:label "situation" ;
+    rdfs:comment "Situación del tiro (Open Play, Penalty, etc)" ;
+    rdfs:range xsd:string .
+
+:lastAction rdf:type owl:DatatypeProperty ;
+    rdfs:label "last action" ;
+    rdfs:comment "Última acción antes del tiro" ;
+    rdfs:range xsd:string .
+
+:shotType rdf:type owl:DatatypeProperty ;
+    rdfs:label "shot type" ;
+    rdfs:comment "Tipo de tiro (Head, Foot, etc)" ;
+    rdfs:range xsd:string .
+
+:shotResult rdf:type owl:DatatypeProperty ;
+    rdfs:label "shot result" ;
+    rdfs:comment "Resultado del tiro (Goal, OnTarget, etc)" ;
+    rdfs:range xsd:string .
+
+:xGoal rdf:type owl:DatatypeProperty ;
+    rdfs:label "xGoal" ;
+    rdfs:comment "Valor esperado de gol para este tiro" ;
+    rdfs:range xsd:decimal .
+
+:positionX rdf:type owl:DatatypeProperty ;
+    rdfs:label "position X" ;
+    rdfs:comment "Posición X del tiro en el campo" ;
+    rdfs:range xsd:decimal .
+
+:positionY rdf:type owl:DatatypeProperty ;
+    rdfs:label "position Y" ;
+    rdfs:comment "Posición Y del tiro en el campo" ;
+    rdfs:range xsd:decimal .

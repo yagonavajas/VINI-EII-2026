@@ -57,10 +57,7 @@ class FootballGraphApp:
         self.loading_window.title("VINI - Cargando...")
         self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
         
-        try:
-            self.loading_window.iconbitmap(str(self.icon_path))
-        except:
-            pass
+        self.loading_window.iconbitmap(str(self.icon_path))
         
         self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
@@ -71,7 +68,7 @@ class FootballGraphApp:
         frame.pack(fill="both", expand=True, padx=20, pady=20)
 
         title = ctk.CTkLabel(frame, text="Iniciando la aplicación", 
-                            font=("Segoe UI", 14, "bold"), text_color=Colors.ACCENT_GOLD)
+                            font=("Segoe UI", FontSizes.TITLE, "bold"), text_color=Colors.ACCENT_GOLD)
         title.pack(pady=(10, 8))
 
         self.loading_status = ctk.CTkLabel(frame, text="Preparando servidor...", 
@@ -333,7 +330,7 @@ class FootballGraphApp:
         
         # Frame principal
         main_frame = ctk.CTkFrame(self.root, fg_color="transparent")
-        main_frame.pack(fill="both", expand=True, padx=10, pady=10)
+        main_frame.pack(fill="both", expand=True, padx=0, pady=0)
         
         # Crear tabs modernas
         self.notebook = ModernTabview(main_frame)
@@ -396,7 +393,7 @@ class FootballGraphApp:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         
         text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set, 
-                             font=("Courier", 10))
+                             font=("Courier", FontSizes.TEXT_SMALL))
         text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=text_widget.yview)
         
@@ -424,7 +421,7 @@ class FootballGraphApp:
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
         
         text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set,
-                             font=("Courier", 10))
+                             font=("Courier", FontSizes.TEXT_SMALL))
         text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=text_widget.yview)
         
@@ -454,15 +451,15 @@ class FootballGraphApp:
         
         # Frame principal con scroll
         scroll_frame = ctk.CTkScrollableFrame(tab, fg_color="transparent")
-        scroll_frame.pack(fill="both", expand=True, padx=15, pady=15)
+        scroll_frame.pack(fill="both", expand=True, padx=0, pady=0)
         
         # Título
-        title_label = ModernLabel(scroll_frame, text=title, variant="accent", font=("Segoe UI", 16, "bold"))
+        title_label = ModernLabel(scroll_frame, text=title, variant="accent", font=("Segoe UI", FontSizes.TITLE_LARGE, "bold"))
         title_label.pack(anchor="w", pady=(0, 15))
         
         # Frame para botones
         btn_frame = ctk.CTkFrame(scroll_frame, fg_color="transparent")
-        btn_frame.pack(fill="x", pady=10)
+        btn_frame.pack(fill="x", pady=0)
         
         for btn_config in buttons_config:
             btn = ModernButton(btn_frame, text=btn_config['name'], variant="primary",
@@ -482,7 +479,7 @@ class FootballGraphApp:
     
     def setup_players_tab(self):
         """Configura la pestaña de Jugadores"""
-        columns = ["Jugador", "Equipo", "Goles", "Salario", "€/Gol"]
+        columns = self.queries["precio_goles"]["columns"]
         buttons_config = [
             {'name': self.queries["precio_goles"]["name"], 'command': lambda: self.execute_query("precio_goles", self.players_tree, self.players_status)},
             {'name': 'Consulta 2', 'command': self.placeholder_query},
@@ -495,7 +492,7 @@ class FootballGraphApp:
     
     def setup_teams_tab(self):
         """Configura la pestaña de Equipos"""
-        columns = ["Equipo", "Overall", "Formación", "Goles", "xG", "Eficacia"]
+        columns = self.queries["champions"]["columns"]
         buttons_config = [
             {'name': self.queries["champions"]["name"], 'command': lambda: self.execute_query("champions", self.teams_tree, self.teams_status)},
             {'name': self.queries["eficacia"]["name"], 'command': lambda: self.execute_query("eficacia", self.teams_tree, self.teams_status)},
@@ -519,11 +516,11 @@ class FootballGraphApp:
     
     def setup_competitions_tab(self):
         """Configura la pestaña de Competiciones"""
-        columns = ["Competición", "Temporada", "Campeón", "Equipo Runner-up", "Goles Totales"]
+        columns = self.queries["pctgApuestas"]["columns"]
         buttons_config = [
             {'name': 'Consulta 1', 'command': self.placeholder_query},
             {'name': 'Consulta 2', 'command': self.placeholder_query},
-            {'name': 'Consulta 3', 'command': self.placeholder_query}
+            {'name': self.queries["pctgApuestas"]["name"], 'command': lambda: self.execute_query("pctgApuestas", self.competitions_tree, self.competitions_status)}
         ]
         self.competitions_tree, self.competitions_status = self.setup_query_tab(
             self.tab_competitions, "Consultas de Competiciones", buttons_config, columns=columns
@@ -535,14 +532,14 @@ class FootballGraphApp:
         scroll_frame.pack(fill="both", expand=True, padx=15, pady=15)
         
         # Título
-        title_label = ModernLabel(scroll_frame, text="Consultas Especiales", variant="accent", font=("Segoe UI", 16, "bold"))
+        title_label = ModernLabel(scroll_frame, text="Consultas Especiales", variant="accent", font=("Segoe UI", FontSizes.TITLE_LARGE, "bold"))
         title_label.pack(anchor="w", pady=(0, 20))
         
         # === SECCIÓN DE EQUIPOS ===
         teams_section = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8)
         teams_section.pack(fill="x", pady=10, padx=5)
         
-        teams_title = ModernLabel(teams_section, text="Búsqueda de Equipos", variant="accent", font=("Segoe UI", 12, "bold"))
+        teams_title = ModernLabel(teams_section, text="Búsqueda de Equipos", variant="accent", font=("Segoe UI", FontSizes.TITLE_SMALL, "bold"))
         teams_title.pack(anchor="w", padx=15, pady=(15, 10))
         
         selector_frame_teams = ctk.CTkFrame(teams_section, fg_color="transparent")
@@ -558,14 +555,14 @@ class FootballGraphApp:
         
         ModernButton(button_frame_teams, text="Ver Equipaciones", variant="primary",
                     command=self._show_kit_from_combo).pack(side="left", padx=5)
-        ModernButton(button_frame_teams, text="Mostrar Plantilla", variant="secondary",
+        ModernButton(button_frame_teams, text="Mostrar Plantilla", variant="primary",
                     command=self._show_squad_from_combo).pack(side="left", padx=5)
         
         # === SECCIÓN DE JUGADORES ===
         players_section = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8)
         players_section.pack(fill="x", pady=10, padx=5)
         
-        players_title = ModernLabel(players_section, text="Búsqueda de Jugadores", variant="accent", font=("Segoe UI", 12, "bold"))
+        players_title = ModernLabel(players_section, text="Búsqueda de Jugadores", variant="accent", font=("Segoe UI", FontSizes.TITLE_SMALL, "bold"))
         players_title.pack(anchor="w", padx=15, pady=(15, 10))
         
         selector_frame_players = ctk.CTkFrame(players_section, fg_color="transparent")
@@ -602,18 +599,22 @@ class FootballGraphApp:
         scroll_frame.pack(fill="both", expand=True, padx=15, pady=15)
         
         # Título
-        title = ModernLabel(scroll_frame, text="Crear Consulta SPARQL", variant="accent", font=("Segoe UI", 16, "bold"))
+        title = ModernLabel(scroll_frame, text="Crear Consulta SPARQL", variant="accent", font=("Segoe UI", FontSizes.TITLE_LARGE, "bold"))
         title.pack(anchor="w", pady=(0, 15))
         
         # Label para la consulta
         label = ModernLabel(scroll_frame, text="Escribe tu consulta SPARQL:", variant="secondary")
         label.pack(anchor="w", pady=(0, 10))
         
-        # Frame para el área de texto
+        # Frame para el área de texto CON SCROLLBAR
         text_frame = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8, border_width=1, border_color=Colors.BORDER_COLOR)
         text_frame.pack(fill="both", expand=True, pady=10)
         
-        # Area de texto
+        # Scrollbar para el área de texto
+        text_scrollbar = ttk.Scrollbar(text_frame)
+        text_scrollbar.pack(side="right", fill="y")
+        
+        # Area de texto con scrollbar
         self.query_text = tk.Text(
             text_frame,
             height=10,
@@ -621,10 +622,12 @@ class FootballGraphApp:
             bg=Colors.BG_TERTIARY,
             fg=Colors.TEXT_PRIMARY,
             insertbackground=Colors.ACCENT_GOLD,
-            font=("Courier", 10),
+            font=("Courier", FontSizes.TEXT_SMALL),
             relief="flat",
-            border=0
+            border=0,
+            yscrollcommand=text_scrollbar.set
         )
+        text_scrollbar.config(command=self.query_text.yview)
         self.query_text.pack(fill="both", expand=True, padx=2, pady=2)
         
         # Botón para ejecutar
@@ -633,42 +636,88 @@ class FootballGraphApp:
         self.btn_custom_execute.pack(pady=15)
         
         # Label para resultados
-        result_label = ModernLabel(scroll_frame, text="Resultados:", variant="accent", font=("Segoe UI", 12, "bold"))
+        result_label = ModernLabel(scroll_frame, text="Resultados:", variant="accent", font=("Segoe UI", FontSizes.TITLE_SMALL, "bold"))
         result_label.pack(anchor="w", pady=(10, 5))
         
-        # Frame para tabla sin paginación
+        # Frame para tabla sin paginación (sin scrollbars)
         table_frame = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8, border_width=1, border_color=Colors.BORDER_COLOR)
         table_frame.pack(fill="both", expand=True, pady=10)
         
-        # Scrollbars para tabla
-        scroll_y = ttk.Scrollbar(table_frame)
-        scroll_y.pack(side="right", fill="y")
-        
-        scroll_x = ttk.Scrollbar(table_frame, orient="horizontal")
-        scroll_x.pack(side="bottom", fill="x")
-        
-        # Treeview sin paginación
+        # Treeview sin scrollbars
         self.custom_tree = ttk.Treeview(
             table_frame,
             columns=["Resultado"],
             height=15,
-            yscrollcommand=scroll_y.set,
-            xscrollcommand=scroll_x.set,
             show="headings"
         )
         
-        scroll_y.config(command=self.custom_tree.yview)
-        scroll_x.config(command=self.custom_tree.xview)
-        
         # Configurar columna inicial
-        self.custom_tree.column("Resultado", width=300, anchor="w")
+        self.custom_tree.column("Resultado", width=300, anchor="center", stretch=True)
         self.custom_tree.heading("Resultado", text="Resultado")
         
         self.custom_tree.pack(fill="both", expand=True, padx=1, pady=1)
+        
+        # Vincular evento de redimensionamiento para ajustar columnas
+        table_frame.bind("<Configure>", lambda e: self._adjust_custom_tree_columns(e))
     
     def placeholder_query(self):
         """Placeholder para consultas no implementadas"""
         ModernNotification(self.root, message="Esta consulta aún no ha sido implementada", notification_type="info")
+    
+    def _adjust_custom_tree_columns(self, event):
+        """Ajusta el ancho de las columnas de la tabla personalizada cuando se redimensiona"""
+        if event.width <= 1:
+            return
+        
+        # Obtener columnas válidas
+        try:
+            columns = self.custom_tree.cget('columns')
+            if not columns or '#all' in str(columns):
+                return
+            
+            # Filtrar solo columnas válidas (evitar pseudo-columnas como '#all')
+            valid_columns = [col for col in columns if col and not col.startswith('#')]
+            if not valid_columns:
+                return
+            
+            # Calcular ancho disponible
+            available_width = event.width
+            
+            # Distribuir el ancho equitativamente
+            column_width = max(50, available_width // len(valid_columns))
+            
+            # Aplicar ancho a cada columna
+            for col in valid_columns:
+                self.custom_tree.column(col, width=column_width, anchor="center", stretch=True)
+        except Exception:
+            pass
+    
+    def _adjust_custom_tree_columns_deferred(self):
+        """Ajusta dinámicamente el ancho de las columnas después de cargar datos"""
+        try:
+            # Obtener las columnas válidas
+            columns = self.custom_tree.cget('columns')
+            if not columns or '#all' in str(columns):
+                return
+            
+            # Filtrar solo columnas válidas
+            valid_columns = [col for col in columns if col and not col.startswith('#')]
+            if not valid_columns:
+                return
+            
+            # Obtener el ancho disponible del widget
+            width = self.custom_tree.winfo_width()
+            if width <= 1:
+                return
+            
+            # Distribuir el ancho equitativamente
+            column_width = max(50, width // len(valid_columns))
+            
+            # Aplicar ancho a cada columna
+            for col in valid_columns:
+                self.custom_tree.column(col, width=column_width, anchor="center", stretch=True)
+        except Exception:
+            pass
     
     
     def execute_custom_query(self):
@@ -688,6 +737,32 @@ class FootballGraphApp:
     
     def execute_query(self, query_key, table, status_label):
         """Ejecuta una consulta parametrizada"""
+        # Obtener columnas de la consulta
+        query_columns = self.queries[query_key]["columns"]
+        
+        # Limpiar todos los items del treeview primero
+        for item in table.tree.get_children():
+            table.tree.delete(item)
+        
+        # Desregistrar columnas antiguas estableciendo displaycolumns vacío
+        table.tree.configure(displaycolumns=())
+        
+        # Ahora configurar las nuevas columnas
+        table.columns = list(query_columns)
+        table.visible_columns = list(query_columns)
+        table.tree.configure(columns=tuple(query_columns))
+        
+        # Configurar headers de las nuevas columnas
+        for col in query_columns:
+            table.tree.column(col, width=120, anchor="center", stretch=True)
+            table.tree.heading(col, text=col)
+        
+        # Establecer las nuevas columnas como visibles
+        table.tree.configure(displaycolumns=tuple(query_columns))
+        
+        # Limpiar la tabla
+        table.clear()
+        
         status_label.configure(text="Ejecutando consulta...", text_color=Colors.TEXT_SECONDARY)
         self.root.update()
         
@@ -772,9 +847,9 @@ class FootballGraphApp:
                     # Actualizar columnas del Treeview eliminando las antiguas
                     self.custom_tree.configure(columns=tuple(variables))
                     
-                    # Limpiar headers antiguos y agregar nuevos
+                    # Limpiar headers antiguos y agregar nuevos con contenido CENTRADO
                     for col in self.custom_tree['columns']:
-                        self.custom_tree.column(col, width=120, anchor="w")
+                        self.custom_tree.column(col, width=120, anchor="center", stretch=True)
                         self.custom_tree.heading(col, text=col)
                     
                     # Agregar datos
@@ -782,6 +857,9 @@ class FootballGraphApp:
                         self.custom_tree.insert("", "end", values=row)
                     
                     self.btn_custom_execute.configure(state="normal")
+                    
+                    # Ajustar dinámicamente el ancho de las columnas después de cargar datos
+                    self.root.after(10, self._adjust_custom_tree_columns_deferred)
                 
                 self.root.after(0, update_ui)
             else:
@@ -1253,7 +1331,7 @@ class FootballGraphApp:
         info_frame = ttk.Frame(photo_window)
         info_frame.pack(padx=10, pady=10)
         
-        info_label = ttk.Label(info_frame, text=player_name, font=("Arial", 12, "bold"))
+        info_label = ttk.Label(info_frame, text=player_name, font=("Arial", FontSizes.TITLE_SMALL, "bold"))
         info_label.pack()
         
         photo_window.geometry(f"{img_copy.width + 20}x{img_copy.height + 60}")
@@ -1484,52 +1562,148 @@ class FootballGraphApp:
             self.root.after(0, lambda: self.special_loading.configure(text=""))
     
     def _display_squad_table(self, players_data, team_name, year):
-        """Muestra la plantilla en una tabla"""
+        """Muestra la plantilla en una tabla con paginación"""
         # Limpiar frame anterior
         for widget in self.squad_frame.winfo_children():
             widget.destroy()
         
-        # Crear scrollbars
-        scrollbar_y = ttk.Scrollbar(self.squad_frame)
-        scrollbar_y.pack(side=tk.RIGHT, fill=tk.Y)
+        # Inicializar estado de paginación
+        pagination_key = f"{team_name}_{year}"
+        if not hasattr(self, 'squad_pagination'):
+            self.squad_pagination = {}
+        self.squad_pagination[pagination_key] = {
+            'current_page': 0,
+            'rows_per_page': 10,
+            'data': players_data
+        }
         
-        scrollbar_x = ttk.Scrollbar(self.squad_frame, orient=tk.HORIZONTAL)
-        scrollbar_x.pack(side=tk.BOTTOM, fill=tk.X)
+        # Frame para la tabla
+        table_frame = ctk.CTkFrame(self.squad_frame, fg_color="transparent")
+        table_frame.pack(fill="both", expand=True)
         
-        # Crear tabla
+        # Crear tabla SIN scrollbars (usa el scroll del contenedor principal)
         columns = ("Nombre", "Posición", "Overall", "Edad", "Potencial", "Valor", "Salario", "Dorsal")
         squad_tree = ttk.Treeview(
-            self.squad_frame,
+            table_frame,
             columns=columns,
-            height=15,
-            yscrollcommand=scrollbar_y.set,
-            xscrollcommand=scrollbar_x.set
+            height=10,
+            show="headings"
         )
         
-        scrollbar_y.config(command=squad_tree.yview)
-        scrollbar_x.config(command=squad_tree.xview)
-        
-        # Configurar columnas
+        # Configurar columnas con contenido CENTRADO
         squad_tree.column('#0', width=0, stretch=tk.NO)
         for i, col in enumerate(columns):
-            squad_tree.column(col, anchor=tk.W, width=120)
-            squad_tree.heading(col, text=col, anchor=tk.W)
+            squad_tree.column(col, anchor="center", width=120, stretch=True)
+            squad_tree.heading(col, text=col, anchor="center")
         
-        # Agregar datos
-        for i, player in enumerate(players_data):
-            values = (
-                player['name'],
-                player['position'],
-                player['overall'],
-                player['age'],
-                player['potential'],
-                player['value'],
-                player['wage'],
-                player['kit_number']
-            )
-            squad_tree.insert('', 'end', values=values)
+        squad_tree.pack(fill=tk.BOTH, expand=True, padx=1, pady=1)
         
-        squad_tree.pack(fill=tk.BOTH, expand=True)
+        # Vincular evento de redimensionamiento para ajustar columnas dinámicamente
+        table_frame.bind("<Configure>", lambda e: self._adjust_squad_tree_columns(e, squad_tree))
+        
+        # Frame para paginación
+        pagination_frame = ctk.CTkFrame(self.squad_frame, fg_color="transparent")
+        pagination_frame.pack(fill="x", pady=(10, 0))
+        
+        # Label de información
+        info_label = ctk.CTkLabel(
+            pagination_frame,
+            text="",
+            font=("Segoe UI", FontSizes.TEXT_SMALL),
+            text_color=Colors.TEXT_SECONDARY
+        )
+        info_label.pack(side="left", padx=5)
+        
+        # Botones de paginación
+        btn_frame = ctk.CTkFrame(pagination_frame, fg_color="transparent")
+        btn_frame.pack(side="right", padx=5)
+        
+        btn_prev = ModernButton(btn_frame, text="← Anterior", variant="secondary",
+                               width=100, height=28)
+        btn_prev.pack(side="left", padx=5)
+        
+        btn_next = ModernButton(btn_frame, text="Siguiente →", variant="secondary",
+                               width=100, height=28)
+        btn_next.pack(side="left", padx=5)
+        
+        # Función para actualizar la tabla
+        def refresh_squad_display():
+            # Limpiar tabla
+            for item in squad_tree.get_children():
+                squad_tree.delete(item)
+            
+            # Obtener página actual
+            state = self.squad_pagination[pagination_key]
+            start = state['current_page'] * state['rows_per_page']
+            end = start + state['rows_per_page']
+            
+            # Agregar datos de la página actual
+            for player in players_data[start:end]:
+                values = (
+                    player['name'],
+                    player['position'],
+                    player['overall'],
+                    player['age'],
+                    player['potential'],
+                    player['value'],
+                    player['wage'],
+                    player['kit_number']
+                )
+                squad_tree.insert('', 'end', values=values)
+            
+            # Actualizar información y botones
+            total_pages = (len(players_data) + state['rows_per_page'] - 1) // state['rows_per_page']
+            page_display = f"Página {state['current_page'] + 1} de {max(1, total_pages)} ({len(players_data)} jugadores)"
+            info_label.configure(text=page_display)
+            
+            btn_prev.configure(state="normal" if state['current_page'] > 0 else "disabled")
+            btn_next.configure(state="normal" if state['current_page'] < total_pages - 1 else "disabled")
+        
+        # Funciones para navegación
+        def prev_page():
+            state = self.squad_pagination[pagination_key]
+            if state['current_page'] > 0:
+                state['current_page'] -= 1
+                refresh_squad_display()
+        
+        def next_page():
+            state = self.squad_pagination[pagination_key]
+            total_pages = (len(players_data) + state['rows_per_page'] - 1) // state['rows_per_page']
+            if state['current_page'] < total_pages - 1:
+                state['current_page'] += 1
+                refresh_squad_display()
+        
+        # Vincular botones
+        btn_prev.configure(command=prev_page)
+        btn_next.configure(command=next_page)
+        
+        # Mostrar primera página
+        refresh_squad_display()
+    
+    def _adjust_squad_tree_columns(self, event, squad_tree):
+        """Ajusta dinámicamente el ancho de las columnas de la tabla de plantilla"""
+        if event.width <= 1:
+            return
+        
+        try:
+            # Obtener columnas válidas
+            columns = squad_tree.cget('columns')
+            if not columns or '#all' in str(columns):
+                return
+            
+            # Filtrar solo columnas válidas
+            valid_columns = [col for col in columns if col and not col.startswith('#')]
+            if not valid_columns:
+                return
+            
+            # Distribuir el ancho equitativamente
+            column_width = max(50, event.width // len(valid_columns))
+            
+            # Aplicar ancho a cada columna
+            for col in valid_columns:
+                squad_tree.column(col, width=column_width, anchor="center", stretch=True)
+        except Exception:
+            pass
     
     def _display_kit_gallery(self, images, team_name):
         """Muestra una galería de equipaciones con navegación"""

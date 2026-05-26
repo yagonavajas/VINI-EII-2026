@@ -17,28 +17,41 @@ from pathlib import Path
 class Colors:
     """Paleta de colores del sistema"""
     # Colores primarios
-    PRIMARY_DARK = "#1a1a2e"  # Azul muy oscuro (fondo)
+    PRIMARY_DARK = "#1e1e2e"  # Azul muy oscuro (fondo)
     PRIMARY = "#16213e"  # Azul oscuro (componentes)
     PRIMARY_LIGHT = "#0f3460"  # Azul claro
     
     # Colores de acentos
-    ACCENT_GOLD = "#00d4aa"  # Verde vibrante (acentos, botones importantes)
-    ACCENT_RED = "#e94560"  # Rojo (alertas, errores)
-    ACCENT_GREEN = "#2dcc71"  # Verde (éxito)
+    ACCENT_GOLD = "#a6e3a1"  # Verde vibrante (acentos, botones importantes)
+    ACCENT_RED = "#f38ba8"  # Rojo (alertas, errores)
+    ACCENT_GREEN = "#a6e3a1"  # Verde (éxito)
     
     # Colores neutrales
-    TEXT_PRIMARY = "#ffffff"  # Texto principal
-    TEXT_SECONDARY = "#a0a0a0"  # Texto secundario
-    TEXT_MUTED = "#5a5a5a"  # Texto deshabilitado
+    TEXT_PRIMARY = "#cdd6f4"  # Texto principal
+    TEXT_SECONDARY = "#bac2de"  # Texto secundario
+    TEXT_MUTED = "#a6adc8"  # Texto deshabilitado
     
     # Fondos
-    BG_PRIMARY = "#0f0f1e"  # Fondo principal
-    BG_SECONDARY = "#1a1f3a"  # Fondo secundario
-    BG_TERTIARY = "#252d48"  # Fondo terciario
+    BG_PRIMARY = "#1e1e2e"  # Fondo principal
+    BG_SECONDARY = "#181825"  # Fondo secundario
+    BG_TERTIARY = "#11111b"  # Fondo terciario
     
     # Bordes
-    BORDER_COLOR = "#2a2f48"  # Color de bordes
-    BORDER_LIGHT = "#3a3f58"  # Borde claro
+    BORDER_COLOR = "#9399b2"  # Color de bordes
+    BORDER_LIGHT = "#7f849c"  # Borde claro
+
+
+class FontSizes:
+    """Tamaños de fuente del sistema"""
+    # Títulos
+    TITLE_EXTRA_LARGE = 30  # Títulos muy grandes (headers principales)
+    TITLE_LARGE = 20  # Títulos grandes (títulos de secciones)
+    TITLE = 18  # Títulos medianos (títulos de cards)
+    TITLE_SMALL = 16  # Títulos pequeños (subtítulos)
+    
+    # Texto regular
+    TEXT_NORMAL = 15  # Texto normal (contenido principal)
+    TEXT_SMALL = 14  # Texto pequeño (etiquetas, información secundaria)
 
 
 # ============================================================================
@@ -68,7 +81,7 @@ class ModernCard(ctk.CTkFrame):
             title_label = ctk.CTkLabel(
                 inner_frame,
                 text=title,
-                font=("Segoe UI", 14, "bold"),
+                font=("Segoe UI", FontSizes.TITLE, "bold"),
                 text_color=Colors.TEXT_PRIMARY
             )
             title_label.pack(anchor="w", pady=(0, 8))
@@ -78,7 +91,7 @@ class ModernCard(ctk.CTkFrame):
             desc_label = ctk.CTkLabel(
                 inner_frame,
                 text=description,
-                font=("Segoe UI", 11),
+                font=("Segoe UI", FontSizes.TEXT_NORMAL),
                 text_color=Colors.TEXT_SECONDARY,
                 wraplength=250
             )
@@ -93,7 +106,7 @@ class ModernCard(ctk.CTkFrame):
                 fg_color=Colors.ACCENT_GOLD,
                 text_color=Colors.PRIMARY_DARK,
                 hover_color="#ffc700",
-                font=("Segoe UI", 11, "bold"),
+                font=("Segoe UI", FontSizes.TEXT_NORMAL, "bold"),
                 height=32,
                 corner_radius=6
             )
@@ -118,7 +131,7 @@ class ModernButton(ctk.CTkButton):
         fg_color, hover_color, text_color = color_map.get(variant, color_map["primary"])
         
         # Permitir que font, height y corner_radius sean sobrescritos en kwargs
-        font = kwargs.pop("font", ("Segoe UI", 11, "bold"))
+        font = kwargs.pop("font", ("Segoe UI", FontSizes.TEXT_NORMAL, "bold"))
         height = kwargs.pop("height", 32)
         corner_radius = kwargs.pop("corner_radius", 6)
         
@@ -140,7 +153,7 @@ class ModernEntry(ctk.CTkEntry):
     
     def __init__(self, master, placeholder: str = "", **kwargs):
         # Permitir que font sea sobrescrito en kwargs
-        font = kwargs.pop("font", ("Segoe UI", 11))
+        font = kwargs.pop("font", ("Segoe UI", FontSizes.TEXT_NORMAL))
         
         super().__init__(
             master,
@@ -160,7 +173,7 @@ class ModernCombobox(ctk.CTkComboBox):
     
     def __init__(self, master, values: List[str] = None, **kwargs):
         # Permitir que font sea sobrescrito en kwargs
-        font = kwargs.pop("font", ("Segoe UI", 11))
+        font = kwargs.pop("font", ("Segoe UI", FontSizes.TEXT_NORMAL))
         
         super().__init__(
             master,
@@ -270,6 +283,7 @@ class ModernTable(ctk.CTkFrame):
         super().__init__(master, fg_color="transparent", **kwargs)
         
         self.columns = columns or []
+        self.visible_columns = self.columns  # Columnas visibles (dinámicas)
         self.data = []
         self.current_page = 0
         self.rows_per_page = 10
@@ -288,7 +302,7 @@ class ModernTable(ctk.CTkFrame):
         self.tree_frame = ctk.CTkFrame(self.table_frame, fg_color="transparent")
         self.tree_frame.pack(fill="both", expand=True, padx=1, pady=1)
         
-        # Crear Treeview
+        # Crear Treeview sin scrollbars
         style = ttk.Style()
         style.theme_use('clam')
         style.configure(
@@ -298,14 +312,14 @@ class ModernTable(ctk.CTkFrame):
             fieldbackground=Colors.BG_SECONDARY,
             borderwidth=0,
             rowheight=32,
-            font=("Segoe UI", 10)
+            font=("Segoe UI", FontSizes.TEXT_SMALL)
         )
         style.configure(
             "Treeview.Heading",
             background=Colors.PRIMARY_LIGHT,
             foreground=Colors.TEXT_PRIMARY,
             borderwidth=0,
-            font=("Segoe UI", 10, "bold")
+            font=("Segoe UI", FontSizes.TEXT_SMALL, "bold")
         )
         style.map(
             "Treeview",
@@ -313,31 +327,22 @@ class ModernTable(ctk.CTkFrame):
             foreground=[("selected", Colors.TEXT_PRIMARY)]
         )
         
-        # Scrollbars
-        scroll_y = ttk.Scrollbar(self.tree_frame)
-        scroll_y.pack(side="right", fill="y")
-        
-        scroll_x = ttk.Scrollbar(self.tree_frame, orient="horizontal")
-        scroll_x.pack(side="bottom", fill="x")
-        
         self.tree = ttk.Treeview(
             self.tree_frame,
             columns=self.columns,
             height=10,
-            yscrollcommand=scroll_y.set,
-            xscrollcommand=scroll_x.set,
             show="headings"
         )
         
-        scroll_y.config(command=self.tree.yview)
-        scroll_x.config(command=self.tree.xview)
-        
-        # Configurar columnas
+        # Configurar columnas (centradas con ancho dinámico)
         for col in self.columns:
-            self.tree.column(col, width=100, anchor="w")
+            self.tree.column(col, width=100, anchor="center", stretch=True)
             self.tree.heading(col, text=col)
         
         self.tree.pack(fill="both", expand=True)
+        
+        # Vincular evento de redimensionamiento para ajustar columnas
+        self.tree_frame.bind("<Configure>", self._on_frame_resize)
         
         # Frame de paginación
         self.pagination_frame = ctk.CTkFrame(self, fg_color="transparent")
@@ -346,7 +351,7 @@ class ModernTable(ctk.CTkFrame):
         self.info_label = ctk.CTkLabel(
             self.pagination_frame,
             text="",
-            font=("Segoe UI", 10),
+            font=("Segoe UI", FontSizes.TEXT_SMALL),
             text_color=Colors.TEXT_SECONDARY
         )
         self.info_label.pack(side="left", padx=5)
@@ -363,11 +368,74 @@ class ModernTable(ctk.CTkFrame):
                                      command=self._next_page, width=100, height=28)
         self.btn_next.pack(side="left", padx=5)
     
+    def _on_frame_resize(self, event):
+        """Ajusta el ancho de las columnas cuando el frame se redimensiona"""
+        if not self.visible_columns or event.width <= 1:
+            return
+        
+        # Calcular ancho disponible
+        available_width = event.width
+        
+        # Distribuir el ancho equitativamente entre columnas visibles
+        column_width = max(50, available_width // len(self.visible_columns))
+        
+        # Aplicar ancho a cada columna visible
+        for col in self.visible_columns:
+            self.tree.column(col, width=column_width, anchor="center", stretch=True)
+    
+    def _on_frame_resize_deferred(self):
+        """Ajusta el ancho de las columnas de forma diferida después de actualizar datos"""
+        if not self.visible_columns:
+            return
+        
+        # Obtener ancho actual del frame
+        width = self.tree_frame.winfo_width()
+        if width <= 1:
+            return
+        
+        # Distribuir el ancho equitativamente entre columnas visibles
+        column_width = max(50, width // len(self.visible_columns))
+        
+        # Aplicar ancho a cada columna visible
+        for col in self.visible_columns:
+            self.tree.column(col, width=column_width, anchor="center", stretch=True)
+    
     def set_data(self, data: List[List[Any]]):
         """Establece los datos de la tabla"""
         self.data = data
         self.current_page = 0
+        
+        # Detectar qué columnas tienen datos reales (no "N/A")
+        if data:
+            columns_with_data = []
+            for i, col in enumerate(self.columns):
+                # Verificar si esta columna tiene algún dato que no sea N/A
+                has_data = False
+                for row in data:
+                    if i < len(row):
+                        value = row[i]
+                        # Considerar que hay dato si no es "N/A" y no está vacío
+                        if value != "N/A" and (not isinstance(value, str) or value.strip()):
+                            has_data = True
+                            break
+                if has_data:
+                    columns_with_data.append(col)
+            
+            # Si no hay columnas con datos, mostrar todas
+            if not columns_with_data:
+                columns_with_data = self.columns
+            
+            # Actualizar columnas visibles
+            self.visible_columns = columns_with_data
+            self.tree.configure(displaycolumns=columns_with_data)
+        else:
+            self.visible_columns = self.columns
+            self.tree.configure(displaycolumns=self.columns)
+        
         self._refresh_display()
+        
+        # Forzar ajuste de columnas después de actualizar datos
+        self.tree_frame.after(10, lambda: self._on_frame_resize_deferred())
     
     def add_row(self, row_data: List[Any]):
         """Agrega una fila a la tabla"""
@@ -379,6 +447,8 @@ class ModernTable(ctk.CTkFrame):
         for item in self.tree.get_children():
             self.tree.delete(item)
         self.data = []
+        self.visible_columns = self.columns
+        self.tree.configure(displaycolumns=self.columns)
         self._refresh_display()
     
     def _refresh_display(self):
@@ -455,18 +525,20 @@ class ModernSearchBar(ctk.CTkFrame):
 
 
 class ModernScrollableFrame(ctk.CTkScrollableFrame):
-    """Frame con scroll personalizado"""
+    """Frame con scroll personalizado - scroll solo visible cuando sea necesario"""
     
     def __init__(self, master, **kwargs):
         super().__init__(
             master,
             fg_color=Colors.BG_PRIMARY,
+            scrollbar_button_color=Colors.ACCENT_GOLD,
+            scrollbar_button_hover_color="#ffc700",
             **kwargs
         )
 
 
 class ModernTabview(ctk.CTkTabview):
-    """Tabs moderno con estilo SoFIFA"""
+    """Tabs moderno"""
     
     def __init__(self, master, **kwargs):
         super().__init__(
@@ -500,7 +572,7 @@ class ModernLabel(ctk.CTkLabel):
         text_color = color_map.get(variant, Colors.TEXT_PRIMARY)
         
         # Permitir que font sea sobrescrito en kwargs
-        font = kwargs.pop("font", ("Segoe UI", 11))
+        font = kwargs.pop("font", ("Segoe UI", FontSizes.TEXT_NORMAL))
         
         super().__init__(
             master,
@@ -553,7 +625,7 @@ class ModernStatusBar(ctk.CTkFrame):
         self.status_label = ctk.CTkLabel(
             self,
             text="Listo",
-            font=("Segoe UI", 10),
+            font=("Segoe UI", FontSizes.TEXT_SMALL),
             text_color=Colors.TEXT_SECONDARY
         )
         self.status_label.pack(side="left", padx=10, pady=8)
@@ -606,7 +678,7 @@ class ModernHeader(ctk.CTkFrame):
         title_label = ctk.CTkLabel(
             inner_frame,
             text=title,
-            font=("Segoe UI", 24, "bold"),
+            font=("Segoe UI", FontSizes.TITLE_EXTRA_LARGE, "bold"),
             text_color=Colors.ACCENT_GOLD
         )
         title_label.pack(anchor="w")
@@ -616,7 +688,7 @@ class ModernHeader(ctk.CTkFrame):
             subtitle_label = ctk.CTkLabel(
                 inner_frame,
                 text=subtitle,
-                font=("Segoe UI", 12),
+                font=("Segoe UI", FontSizes.TITLE_SMALL),
                 text_color=Colors.TEXT_SECONDARY
             )
             subtitle_label.pack(anchor="w", pady=(2, 0))
@@ -642,7 +714,7 @@ class ModernFilterPanel(ctk.CTkFrame):
         title = ctk.CTkLabel(
             self,
             text="Filtros",
-            font=("Segoe UI", 12, "bold"),
+            font=("Segoe UI", FontSizes.TITLE_SMALL, "bold"),
             text_color=Colors.TEXT_PRIMARY
         )
         title.pack(anchor="w", padx=15, pady=(15, 10))
@@ -657,7 +729,7 @@ class ModernFilterPanel(ctk.CTkFrame):
             filter_label = ctk.CTkLabel(
                 scroll_frame,
                 text=filter_name,
-                font=("Segoe UI", 10, "bold"),
+                font=("Segoe UI", FontSizes.TEXT_SMALL, "bold"),
                 text_color=Colors.TEXT_PRIMARY
             )
             filter_label.pack(anchor="w", pady=(10, 5))
@@ -725,7 +797,7 @@ class ModernNotification(ctk.CTkToplevel):
         label = ctk.CTkLabel(
             frame,
             text=message,
-            font=("Segoe UI", 11),
+            font=("Segoe UI", FontSizes.TEXT_NORMAL),
             text_color=Colors.TEXT_PRIMARY,
             wraplength=320
         )

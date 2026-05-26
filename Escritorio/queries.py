@@ -18,6 +18,11 @@ QUERIES_INFO = {
         "columns": ("Equipo", "Año", "Goles Promedio", "xG Promedio", "Diferencia", "Eficacia"),
         "vars": ("teamName", "year", "avgGoals", "avgxGoals", "diferencia", "eficacia")
     },
+    "casaVsFuera": {
+        "name": "Goles en Casa vs Fuera",
+        "columns": ("Equipo", "Año", "Goles en Casa", "Goles Fuera", "Total Partidos"),
+        "vars": ("teamName", "year", "goalsHome", "goalsAway", "totalGames")
+    },
     "precio_goles": {
         "name": "Precio de Goles",
         "columns": ("Jugador", "Salario Anual", "Goles Totales", "Coste por Gol"),
@@ -77,6 +82,28 @@ WHERE {
 }
 GROUP BY ?teamName ?year
 ORDER BY DESC(?diferencia)
+LIMIT 30""",
+
+    "casaVsFuera": """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT ?teamName ?year
+       (SUM(IF(?location = "home", xsd:float(?goals), 0)) as ?goalsHome)
+       (SUM(IF(?location = "away", xsd:float(?goals), 0)) as ?goalsAway)
+       (COUNT(?stats) as ?totalGames)
+WHERE {
+  ?stats a vini:GameStats .
+  ?stats vini:goals ?goals .
+  ?stats vini:team ?teamSeason .
+  ?stats vini:game ?game .
+  
+  ?teamSeason vini:name ?teamName .
+  ?teamSeason vini:year ?year .
+  
+  BIND(IF(CONTAINS(STR(?stats), "_home"), "home", "away") as ?location)
+}
+GROUP BY ?teamName ?year
+ORDER BY DESC(?goalsHome - ?goalsAway)
 LIMIT 30""",
 
     "precio_goles": r"""PREFIX vini: <http://vini-eii.org/>

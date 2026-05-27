@@ -30,7 +30,11 @@ class FootballGraphApp:
         
         # Cargar icono una sola vez
         self.icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
-        self.root.iconbitmap(str(self.icon_path))
+        try:
+            self.root.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono: {e}")
+            print(f"Ruta intentada: {self.icon_path}")
         
         self.root.geometry("1200x700")
         self.root.withdraw()
@@ -57,7 +61,11 @@ class FootballGraphApp:
         self.loading_window.title("VINI - Cargando...")
         self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
         
-        self.loading_window.iconbitmap(str(self.icon_path))
+        try:
+            self.loading_window.iconbitmap(str(self.icon_path))
+            print(f"Icono de carga establecido correctamente: {self.icon_path}")
+        except tk.TclError as e:
+            print(f"Error cargando icono en loading_window: {e}")
         
         self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
@@ -132,12 +140,17 @@ class FootballGraphApp:
     def _finish_boot(self):
         self.loading_window.destroy()
         self.root.deiconify()
+        # Volver a establecer el icono después de deiconify (Windows a veces lo pierde)
+        try:
+            self.root.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error re-estableciendo icono: {e}")
         self.root.lift()
         self._setup_ui()
 
     def _boot_failed(self, message):
         self.loading_window.destroy()
-        messagebox.showerror("Error", f"No se pudo iniciar la aplicacion:\n{message}")
+        messagebox.showerror("VINI - Error", f"No se pudo iniciar la aplicacion:\n{message}")
         self._stop_fuseki()
         self.root.destroy()
 
@@ -150,7 +163,7 @@ class FootballGraphApp:
         self.root.after(0, lambda: self.loading_progress.set(progress_value))
 
     def _confirm_close(self):
-        if messagebox.askyesno("Confirmar", "¿Seguro que quieres cerrar la aplicacion?"):
+        if messagebox.askyesno("VINI - Confirmar", "¿Seguro que quieres cerrar la aplicacion?"):
             self._stop_fuseki()
             self.root.destroy()
 
@@ -383,7 +396,10 @@ class FootballGraphApp:
         help_window = tk.Toplevel(self.root)
         help_window.title("Ayuda - VINI")
         help_window.geometry("700x600")
-        help_window.iconbitmap(str(self.icon_path))
+        try:
+            help_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en help_window: {e}")
         
         # Frame con scrollbar
         text_frame = ttk.Frame(help_window)
@@ -411,7 +427,10 @@ class FootballGraphApp:
         tabs_window = tk.Toplevel(self.root)
         tabs_window.title("Ayuda - Pestañas")
         tabs_window.geometry("800x700")
-        tabs_window.iconbitmap(str(self.icon_path))
+        try:
+            tabs_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en tabs_window: {e}")
         
         # Frame con scrollbar
         text_frame = ttk.Frame(tabs_window)
@@ -437,7 +456,7 @@ class FootballGraphApp:
     def _show_about(self):
         """Muestra el diálogo de acerca de"""
         messagebox.showinfo(
-            "Acerca de VINI",
+            "VINI - Acerca de",
             "VINI - Consultas de Fútbol\nv1.0\n\n"
             "Aplicación de escritorio para consultar datos de fútbol "
             "en un triple store RDF usando SPARQL.\n\n"
@@ -496,7 +515,7 @@ class FootballGraphApp:
         buttons_config = [
             {'name': self.queries["champions"]["name"], 'command': lambda: self.execute_query("champions", self.teams_tree, self.teams_status)},
             {'name': self.queries["eficacia"]["name"], 'command': lambda: self.execute_query("eficacia", self.teams_tree, self.teams_status)},
-            {'name': self.queries["casaVsFuera"]["name"], 'command': lambda: self.execute_query("casaVsFuera", self.teams_tree, self.teams_status)}
+            {'name': self.queries["formaciones"]["name"], 'command': lambda: self.execute_query("formaciones", self.teams_tree, self.teams_status)},
         ]
         self.teams_tree, self.teams_status = self.setup_query_tab(
             self.tab_teams, "Consultas de Equipos", buttons_config, columns=columns
@@ -506,9 +525,9 @@ class FootballGraphApp:
         """Configura la pestaña de Partidos"""
         columns = ["Partido", "Resultado", "Fecha", "Estadio", "Espectadores"]
         buttons_config = [
-            {'name': 'Consulta 1', 'command': self.placeholder_query},
-            {'name': 'Consulta 2', 'command': self.placeholder_query},
-            {'name': 'Consulta 3', 'command': self.placeholder_query}
+            {'name': self.queries["casaVsFuera"]["name"], 'command': lambda: self.execute_query("casaVsFuera", self.games_tree, self.games_status)},
+            {'name': self.queries["rojas"]["name"], 'command': lambda: self.execute_query("rojas", self.games_tree, self.games_status)},
+            {'name': self.queries["diferencias"]["name"], 'command': lambda: self.execute_query("diferencias", self.games_tree, self.games_status)},
         ]
         self.games_tree, self.games_status = self.setup_query_tab(
             self.tab_games, "Consultas de Partidos", buttons_config, columns=columns
@@ -608,7 +627,7 @@ class FootballGraphApp:
         
         # Frame para el área de texto CON SCROLLBAR
         text_frame = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8, border_width=1, border_color=Colors.BORDER_COLOR)
-        text_frame.pack(fill="both", expand=True, pady=10)
+        text_frame.pack(fill="both", expand=False, pady=10, ipady=50)
         
         # Scrollbar para el área de texto
         text_scrollbar = ttk.Scrollbar(text_frame)
@@ -639,15 +658,19 @@ class FootballGraphApp:
         result_label = ModernLabel(scroll_frame, text="Resultados:", variant="accent", font=("Segoe UI", FontSizes.TITLE_SMALL, "bold"))
         result_label.pack(anchor="w", pady=(10, 5))
         
+        # Frame para tabla con paginación
+        table_container = ctk.CTkFrame(scroll_frame, fg_color="transparent")
+        table_container.pack(fill="both", expand=True, pady=10)
+        
         # Frame para tabla sin paginación (sin scrollbars)
-        table_frame = ctk.CTkFrame(scroll_frame, fg_color=Colors.BG_SECONDARY, corner_radius=8, border_width=1, border_color=Colors.BORDER_COLOR)
-        table_frame.pack(fill="both", expand=True, pady=10)
+        table_frame = ctk.CTkFrame(table_container, fg_color=Colors.BG_SECONDARY, corner_radius=8, border_width=1, border_color=Colors.BORDER_COLOR)
+        table_frame.pack(fill="both", expand=True)
         
         # Treeview sin scrollbars
         self.custom_tree = ttk.Treeview(
             table_frame,
             columns=["Resultado"],
-            height=15,
+            height=10,
             show="headings"
         )
         
@@ -659,10 +682,35 @@ class FootballGraphApp:
         
         # Vincular evento de redimensionamiento para ajustar columnas
         table_frame.bind("<Configure>", lambda e: self._adjust_custom_tree_columns(e))
+        
+        # Frame para paginación
+        pagination_frame = ctk.CTkFrame(table_container, fg_color="transparent")
+        pagination_frame.pack(fill="x", pady=(10, 0))
+        
+        # Label de información
+        self.custom_info_label = ctk.CTkLabel(
+            pagination_frame,
+            text="",
+            font=("Segoe UI", FontSizes.TEXT_SMALL),
+            text_color=Colors.TEXT_SECONDARY
+        )
+        self.custom_info_label.pack(side="left", padx=5)
+        
+        # Botones de paginación
+        btn_frame = ctk.CTkFrame(pagination_frame, fg_color="transparent")
+        btn_frame.pack(side="right", padx=5)
+        
+        self.custom_btn_prev = ModernButton(btn_frame, text="← Anterior", variant="secondary",
+                                           width=100, height=28)
+        self.custom_btn_prev.pack(side="left", padx=5)
+        
+        self.custom_btn_next = ModernButton(btn_frame, text="Siguiente →", variant="secondary",
+                                           width=100, height=28)
+        self.custom_btn_next.pack(side="left", padx=5)
     
     def placeholder_query(self):
         """Placeholder para consultas no implementadas"""
-        ModernNotification(self.root, message="Esta consulta aún no ha sido implementada", notification_type="info")
+        ModernNotification(self.root, message="Esta consulta aún no ha sido implementada", notification_type="info", icon_path=self.icon_path)
     
     def _adjust_custom_tree_columns(self, event):
         """Ajusta el ancho de las columnas de la tabla personalizada cuando se redimensiona"""
@@ -725,7 +773,7 @@ class FootballGraphApp:
         query = self.query_text.get("1.0", tk.END).strip()
         
         if not query:
-            ModernNotification(self.root, message="Por favor, escribe una consulta SPARQL", notification_type="warning")
+            ModernNotification(self.root, message="Por favor, escribe una consulta SPARQL", notification_type="warning", icon_path=self.icon_path)
             return
         
         self.btn_custom_execute.configure(state="disabled")
@@ -812,7 +860,7 @@ class FootballGraphApp:
         except Exception as e:
             def update_ui():
                 status_label.configure(text=f"Error: {str(e)}", text_color=Colors.ACCENT_RED)
-                ModernNotification(self.root, message=f"Error: {str(e)}", notification_type="error")
+                ModernNotification(self.root, message=f"Error: {str(e)}", notification_type="error", icon_path=self.icon_path)
             
             self.root.after(0, update_ui)
     
@@ -839,26 +887,38 @@ class FootballGraphApp:
                         row.append(value)
                     data.append(row)
                 
+                # Actualizar tabla con paginación
                 def update_ui():
                     # Limpiar tabla anterior
                     for item in self.custom_tree.get_children():
                         self.custom_tree.delete(item)
                     
-                    # Actualizar columnas del Treeview eliminando las antiguas
+                    # Configurar columnas dinámicamente
                     self.custom_tree.configure(columns=tuple(variables))
-                    
-                    # Limpiar headers antiguos y agregar nuevos con contenido CENTRADO
-                    for col in self.custom_tree['columns']:
-                        self.custom_tree.column(col, width=120, anchor="center", stretch=True)
+                    for col in variables:
+                        self.custom_tree.column(col, width=150, anchor="center", stretch=True)
                         self.custom_tree.heading(col, text=col)
                     
-                    # Agregar datos
-                    for row in data:
-                        self.custom_tree.insert("", "end", values=row)
+                    # Inicializar estado de paginación
+                    if not hasattr(self, 'custom_pagination'):
+                        self.custom_pagination = {}
+                    self.custom_pagination['current'] = {
+                        'current_page': 0,
+                        'rows_per_page': 10,
+                        'data': data,
+                        'variables': variables
+                    }
+                    
+                    # Mostrar primera página
+                    self._refresh_custom_display()
+                    
+                    # Conectar botones
+                    self.custom_btn_prev.configure(command=self._custom_prev_page)
+                    self.custom_btn_next.configure(command=self._custom_next_page)
                     
                     self.btn_custom_execute.configure(state="normal")
                     
-                    # Ajustar dinámicamente el ancho de las columnas después de cargar datos
+                    # Ajustar columnas automáticamente
                     self.root.after(10, self._adjust_custom_tree_columns_deferred)
                 
                 self.root.after(0, update_ui)
@@ -866,20 +926,76 @@ class FootballGraphApp:
                 def update_ui():
                     for item in self.custom_tree.get_children():
                         self.custom_tree.delete(item)
-                    
+                    self.custom_info_label.configure(text="No hay resultados", text_color=Colors.TEXT_SECONDARY)
+                    self.custom_btn_prev.configure(state="disabled")
+                    self.custom_btn_next.configure(state="disabled")
                     self.btn_custom_execute.configure(state="normal")
                 
                 self.root.after(0, update_ui)
         
         except Exception as e:
+            error_msg = str(e)
             def update_ui():
                 for item in self.custom_tree.get_children():
                     self.custom_tree.delete(item)
-                
+                self.custom_info_label.configure(text=f"Error: {error_msg}", text_color=Colors.ACCENT_RED)
+                self.custom_btn_prev.configure(state="disabled")
+                self.custom_btn_next.configure(state="disabled")
                 self.btn_custom_execute.configure(state="normal")
-                ModernNotification(self.root, message=f"Error: {str(e)}", notification_type="error")
+                ModernNotification(self.root, message=f"Error: {error_msg}", notification_type="error", icon_path=self.icon_path)
             
             self.root.after(0, update_ui)
+    
+    def _refresh_custom_display(self):
+        """Actualiza la visualización de la tabla de consultas personalizadas"""
+        if not hasattr(self, 'custom_pagination') or 'current' not in self.custom_pagination:
+            return
+        
+        state = self.custom_pagination['current']
+        data = state['data']
+        
+        # Limpiar tabla
+        for item in self.custom_tree.get_children():
+            self.custom_tree.delete(item)
+        
+        # Calcular página actual
+        start = state['current_page'] * state['rows_per_page']
+        end = start + state['rows_per_page']
+        
+        # Agregar datos de la página actual
+        for row in data[start:end]:
+            self.custom_tree.insert('', 'end', values=row)
+        
+        # Actualizar información y botones
+        total_pages = (len(data) + state['rows_per_page'] - 1) // state['rows_per_page']
+        page_display = f"Página {state['current_page'] + 1} de {max(1, total_pages)} ({len(data)} resultados)"
+        self.custom_info_label.configure(text=page_display)
+        
+        self.custom_btn_prev.configure(state="normal" if state['current_page'] > 0 else "disabled")
+        self.custom_btn_next.configure(state="normal" if state['current_page'] < total_pages - 1 else "disabled")
+    
+    def _custom_prev_page(self):
+        """Navega a la página anterior en consultas personalizadas"""
+        if not hasattr(self, 'custom_pagination') or 'current' not in self.custom_pagination:
+            return
+        
+        state = self.custom_pagination['current']
+        if state['current_page'] > 0:
+            state['current_page'] -= 1
+            self._refresh_custom_display()
+    
+    def _custom_next_page(self):
+        """Navega a la página siguiente en consultas personalizadas"""
+        if not hasattr(self, 'custom_pagination') or 'current' not in self.custom_pagination:
+            return
+        
+        state = self.custom_pagination['current']
+        data = state['data']
+        total_pages = (len(data) + state['rows_per_page'] - 1) // state['rows_per_page']
+        
+        if state['current_page'] < total_pages - 1:
+            state['current_page'] += 1
+            self._refresh_custom_display()
     
     def _load_teams_combobox(self):
         """Carga la lista de equipos en el combobox"""
@@ -922,7 +1038,8 @@ class FootballGraphApp:
                 self.root.after(0, lambda: ModernNotification(
                     self.root,
                     message="No se encontraron equipos en la base de datos",
-                    notification_type="warning"
+                    notification_type="warning",
+                    icon_path=self.icon_path
                 ))
                 self.root.after(0, lambda: self.special_status.configure(
                     text="No hay equipos disponibles",
@@ -933,7 +1050,8 @@ class FootballGraphApp:
             self.root.after(0, lambda: ModernNotification(
                 self.root,
                 message=f"Error cargando equipos:\n{str(e)}",
-                notification_type="error"
+                notification_type="error",
+                icon_path=self.icon_path
             ))
             self.root.after(0, lambda: self.special_status.configure(
                 text=f"Error: {str(e)}",
@@ -996,7 +1114,8 @@ class FootballGraphApp:
             self.root.after(0, lambda: ModernNotification(
                 self.root,
                 message=f"Error cargando jugadores:\n{str(e)}",
-                notification_type="error"
+                notification_type="error",
+                icon_path=self.icon_path
             ))
             self.root.after(0, lambda: self.special_status.configure(
                 text=f"Error: {str(e)}",
@@ -1083,7 +1202,7 @@ class FootballGraphApp:
         placeholder = "Escribe el equipo..."
         
         if not selected_text or selected_text == placeholder or not hasattr(self, 'teams_data'):
-            ModernNotification(self.root, message="Por favor selecciona un equipo del desplegable", notification_type="warning")
+            ModernNotification(self.root, message="Por favor selecciona un equipo del desplegable", notification_type="warning", icon_path=self.icon_path)
             return
         
         # Buscar el equipo en teams_data por el texto seleccionado
@@ -1094,7 +1213,7 @@ class FootballGraphApp:
                 break
         
         if team_info is None:
-            ModernNotification(self.root, message="Equipo no encontrado. Selecciona uno del desplegable.", notification_type="warning")
+            ModernNotification(self.root, message="Equipo no encontrado. Selecciona uno del desplegable.", notification_type="warning", icon_path=self.icon_path)
             return
         
         self.special_status.configure(text="Descargando equipaciones...", text_color=Colors.TEXT_SECONDARY)
@@ -1114,7 +1233,7 @@ class FootballGraphApp:
         placeholder = "Escribe el equipo..."
         
         if not selected_text or selected_text == placeholder or not hasattr(self, 'teams_data'):
-            ModernNotification(self.root, message="Por favor selecciona un equipo del desplegable", notification_type="warning")
+            ModernNotification(self.root, message="Por favor selecciona un equipo del desplegable", notification_type="warning", icon_path=self.icon_path)
             return
         
         # Buscar el equipo en teams_data por el texto seleccionado
@@ -1125,7 +1244,7 @@ class FootballGraphApp:
                 break
         
         if team_info is None:
-            ModernNotification(self.root, message="Equipo no encontrado. Selecciona uno del desplegable.", notification_type="warning")
+            ModernNotification(self.root, message="Equipo no encontrado. Selecciona uno del desplegable.", notification_type="warning", icon_path=self.icon_path)
             return
         
         self.special_status.configure(text="Cargando plantilla...", text_color=Colors.TEXT_SECONDARY)
@@ -1145,7 +1264,7 @@ class FootballGraphApp:
         placeholder = "Escribe el jugador..."
         
         if not selected_text or selected_text == placeholder or not hasattr(self, 'players_data'):
-            ModernNotification(self.root, message="Por favor selecciona un jugador del desplegable", notification_type="warning")
+            ModernNotification(self.root, message="Por favor selecciona un jugador del desplegable", notification_type="warning", icon_path=self.icon_path)
             return
         
         # Buscar el jugador en players_data por el display seleccionado
@@ -1156,7 +1275,7 @@ class FootballGraphApp:
                 break
         
         if player_info is None:
-            ModernNotification(self.root, message="Jugador no encontrado. Selecciona uno del desplegable.", notification_type="warning")
+            ModernNotification(self.root, message="Jugador no encontrado. Selecciona uno del desplegable.", notification_type="warning", icon_path=self.icon_path)
             return
         
         self.special_status.configure(text="Descargando foto del jugador...", text_color=Colors.TEXT_SECONDARY)
@@ -1230,7 +1349,8 @@ class FootballGraphApp:
                 self.root.after(0, lambda: ModernNotification(
                     self.root,
                     message=f"No se encontró foto para {player_name}.",
-                    notification_type="warning"
+                    notification_type="warning",
+                    icon_path=self.icon_path
                 ))
                 self.root.after(0, lambda: self.special_status.configure(
                     text="No se encontró foto del jugador",
@@ -1293,7 +1413,8 @@ class FootballGraphApp:
             self.root.after(0, lambda: ModernNotification(
                 self.root,
                 message=f"Error descargando foto:\n{str(e)}",
-                notification_type="error"
+                notification_type="error",
+                icon_path=self.icon_path
             ))
             self.root.after(0, lambda: self.special_status.configure(
                 text=f"Error: {str(e)}",
@@ -1307,7 +1428,10 @@ class FootballGraphApp:
         """Muestra la foto del jugador en una nueva ventana"""
         photo_window = tk.Toplevel(self.root)
         photo_window.title(f"Foto - {player_name}")
-        photo_window.iconbitmap(str(self.icon_path))
+        try:
+            photo_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en photo_window: {e}")
         
         # Redimensionar imagen si es muy grande
         max_width = 600
@@ -1429,7 +1553,8 @@ class FootballGraphApp:
                 self.root.after(0, lambda: ModernNotification(
                     self.root,
                     message=f"No se encontraron equipaciones para {team_name}.\n\nPrueba visitando directamente:\n{url}",
-                    notification_type="warning"
+                    notification_type="warning",
+                    icon_path=self.icon_path
                 ))
                 self.root.after(0, lambda: self.special_status.configure(
                     text="No se encontraron equipaciones",
@@ -1488,7 +1613,8 @@ class FootballGraphApp:
             self.root.after(0, lambda: ModernNotification(
                 self.root,
                 message=f"Error {e.code} al descargar equipaciones:\n{e.reason}\n\nSofifa puede requerir verificación.",
-                notification_type="error"
+                notification_type="error",
+                icon_path=self.icon_path
             ))
             self.root.after(0, lambda: self.special_status.configure(
                 text=f"Error HTTP {e.code}",
@@ -1498,7 +1624,8 @@ class FootballGraphApp:
             self.root.after(0, lambda: ModernNotification(
                 self.root,
                 message=f"Error descargando equipaciones:\n{str(e)}",
-                notification_type="error"
+                notification_type="error",
+                icon_path=self.icon_path
             ))
             self.root.after(0, lambda: self.special_status.configure(
                 text=f"Error: {str(e)}",
@@ -1709,7 +1836,10 @@ class FootballGraphApp:
         """Muestra una galería de equipaciones con navegación"""
         gallery_window = tk.Toplevel(self.root)
         gallery_window.title(f"Equipaciones - {team_name}")
-        gallery_window.iconbitmap(str(self.icon_path))
+        try:
+            gallery_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en gallery_window: {e}")
         
         # Variables para navegación
         current_index = [0]
@@ -1775,7 +1905,10 @@ class FootballGraphApp:
         """Muestra la imagen en una nueva ventana"""
         kit_window = tk.Toplevel(self.root)
         kit_window.title(f"Equipaciones - {team_name}")
-        kit_window.iconbitmap(str(self.icon_path))
+        try:
+            kit_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en kit_window: {e}")
         
         # Redimensionar imagen si es muy grande
         max_width = 400

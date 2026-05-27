@@ -766,11 +766,20 @@ class ModernFilterPanel(ctk.CTkFrame):
 class ModernNotification(ctk.CTkToplevel):
     """Notificación emergente"""
     
-    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 3000):
+    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 3000, icon_path=None):
         super().__init__(master)
         
+        self.title("VINI - Notificación")
         self.geometry("350x100")
         self.configure(fg_color=Colors.BG_SECONDARY, border_width=1, border_color=Colors.BORDER_COLOR)
+        
+        # Intentar establecer icono
+        if icon_path:
+            try:
+                import tkinter as tk
+                self.iconbitmap(str(icon_path))
+            except tk.TclError as e:
+                pass  # Ignorar silenciosamente si falla
         
         # Sin decoración de ventana
         self.attributes("-topmost", True)

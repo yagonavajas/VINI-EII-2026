@@ -18,6 +18,22 @@ QUERIES_INFO = {
         "columns": ("Equipo", "Año", "Goles Promedio", "xG Promedio", "Diferencia", "Eficacia"),
         "vars": ("teamName", "year", "avgGoals", "avgxGoals", "diferencia", "eficacia")
     },
+    "formaciones": {
+        "name": "Análisis de Formaciones Tácticas",
+        "columns": ("Formación", "Media", "Media Ataque", "Media Defensa", "Equipos"),
+        "vars": ("formation", "avgOverall", "avgAttack", "avgDefense", "equiposConFOrmacion")
+    },
+    "rojas": {
+        "name": "Partidos con más Tarjetas Rojas",
+        "columns": ("Fecha", "Equipo Local", "Equipo Visitante", "Faltas totales", "Tarjetas Rojas"),
+        "vars": ("date", "homeTeam", "awayTeam", "totalFouls", "totalRedCards")
+    },
+    "diferencias": {
+        "name": "Partidos con mayor diferencia de cuotas y sorpresa en el resultado",
+        "columns": ("Fecha", "Equipo Local", "Equipo Visitante", "Goles Local", "Goles Visitante", "Cuota Local", "Cuota Visitante", "Diferencia de Cuotas"),
+        "vars": ("date", "homeTeam", "awayTeam", "homeGoals", "awayGoals", "whHomeOdds", "whAwayOdds", "oddsDifference")
+    },
+
     "casaVsFuera": {
         "name": "Goles en Casa vs Fuera",
         "columns": ("Equipo", "Año", "Goles en Casa", "Goles Fuera", "Total Partidos"),
@@ -89,6 +105,26 @@ GROUP BY ?teamName ?year
 ORDER BY DESC(?diferencia)
 LIMIT 30""",
 
+  "formaciones": """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vini: <http://vini-eii.org/>
+
+SELECT
+  ?formation
+  (ROUND(AVG(xsd:decimal(?overall)) * 100) / 100 AS ?avgOverall)
+  (ROUND(AVG(xsd:decimal(?attack)) * 100) / 100 AS ?avgAttack)
+  (ROUND(AVG(xsd:decimal(?defence)) * 100) / 100 AS ?avgDefence)
+  (COUNT(?ts) AS ?equiposConFormacion)
+WHERE {
+  ?ts a vini:TeamSeason ;
+      vini:formation ?formation ;
+      vini:overall ?overall ;
+      vini:attack ?attack ;
+      vini:defence ?defence .
+}
+GROUP BY ?formation
+HAVING (COUNT(?ts) > 10)
+ORDER BY DESC(?avgOverall)""",
+
     "casaVsFuera": """PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vini: <http://vini-eii.org/>
 
@@ -111,6 +147,84 @@ GROUP BY ?teamName ?year
 ORDER BY DESC(?goalsHome - ?goalsAway)
 LIMIT 30""",
 
+"rojas": """PREFIX vini: <http://vini-eii.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?date ?homeTeam ?awayTeam 
+       (?hFouls + ?aFouls AS ?totalFouls) 
+       (?hRed + ?aRed AS ?totalRedCards)   
+WHERE {
+  ?game rdf:type vini:Game ;
+        vini:date ?date .
+
+  BIND(IRI(CONCAT("http://vini-eii.org/gameStats/", STRAFTER(STR(?game), "http://vini-eii.org/game/"), "_home")) AS ?statsHomeURI)
+  BIND(IRI(CONCAT("http://vini-eii.org/gameStats/", STRAFTER(STR(?game), "http://vini-eii.org/game/"), "_away")) AS ?statsAwayURI)
+
+  ?statsHomeURI rdf:type vini:GameStats ;
+                vini:team ?tsHome ;
+                vini:fouls ?homeFouls ;
+                vini:redCards ?homeRed .
+  ?tsHome vini:name ?homeTeam .
+
+  ?statsAwayURI rdf:type vini:GameStats ;
+                vini:team ?tsAway ;
+                vini:fouls ?awayFouls ;
+                vini:redCards ?awayRed .
+  ?tsAway vini:name ?awayTeam .
+
+  BIND(xsd:integer(?homeFouls) AS ?hFouls)
+  BIND(xsd:integer(?awayFouls) AS ?aFouls)
+  
+  BIND(xsd:integer(?homeRed) AS ?hRed)
+  BIND(xsd:integer(?awayRed) AS ?aRed)
+}
+ORDER BY DESC(?totalRedCards)
+LIMIT 30""",
+
+"diferencias": """PREFIX vini: <http://vini-eii.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?date ?homeTeam ?awayTeam ?homeGoals ?awayGoals ?whHomeOdds ?whAwayOdds ?oddsDifference
+WHERE {
+  ?game rdf:type vini:Game ;
+        vini:date ?date .
+
+  BIND(IRI(CONCAT("http://vini-eii.org/gameStats/", STRAFTER(STR(?game), "http://vini-eii.org/game/"), "_home")) AS ?statsHomeURI)
+  BIND(IRI(CONCAT("http://vini-eii.org/gameStats/", STRAFTER(STR(?game), "http://vini-eii.org/game/"), "_away")) AS ?statsAwayURI)
+
+  ?statsHomeURI vini:team ?tsHome ; 
+                vini:goals ?rawHomeGoals .
+  ?tsHome vini:name ?homeTeam .
+
+  ?statsAwayURI vini:team ?tsAway ; 
+                vini:goals ?rawAwayGoals .
+  ?tsAway vini:name ?awayTeam .
+
+  BIND(IRI(CONCAT("http://vini-eii.org/gameBet/", STRAFTER(STR(?game), "http://vini-eii.org/game/"), "_WH")) AS ?betURI)
+  ?betURI vini:homeOdds ?rawHomeOdds ; 
+          vini:awayOdds ?rawAwayOdds . 
+  
+  BIND(xsd:integer(?rawHomeGoals) AS ?homeGoals)
+  BIND(xsd:integer(?rawAwayGoals) AS ?awayGoals)
+  BIND(xsd:float(?rawHomeOdds) AS ?whHomeOdds)
+  BIND(xsd:float(?rawAwayOdds) AS ?whAwayOdds)
+
+  BIND(ABS(?whHomeOdds - ?whAwayOdds) AS ?oddsDifference)
+
+  # FILTROS: El equipo con la cuota más alta debe haber ganado el partido
+  # Caso A: El visitante era el menos favorito (awayOdds > homeOdds) pero metió más goles (awayGoals > homeGoals)
+  # Caso B: El local era el menos favorito (homeOdds > awayOdds) pero metió más goles (homeGoals > awayGoals)
+  FILTER(
+    (?whAwayOdds > ?whHomeOdds && ?awayGoals > ?homeGoals) ||
+    (?whHomeOdds > ?whAwayOdds && ?homeGoals > ?awayGoals)
+  )
+}
+ORDER BY DESC(?oddsDifference)
+LIMIT 20
+""",
+
 "pctgApuestas": """PREFIX vini: <http://vini-eii.org/>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
@@ -118,7 +232,7 @@ SELECT
   ?house
   (COUNT(*) AS ?total)
   (SUM(?correct) AS ?aciertos)
-  (xsd:float(100.0 * SUM(?correct) / COUNT(*)) AS ?porcentaje))
+  (100.0 * SUM(?correct) / COUNT(*) AS ?porcentaje)
 WHERE {
   {
     SELECT ?game ?homeResult

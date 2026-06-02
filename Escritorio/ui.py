@@ -1,14 +1,13 @@
 """
 Módulo UI - Componentes reutilizables con CustomTkinter
-Estilo inspirado en SoFIFA con diseño moderno y profesional
+Estilo inspirado en SoFIFA
 """
 
 import customtkinter as ctk
 from tkinter import ttk
 import tkinter as tk
-from typing import Callable, List, Dict, Any, Optional, Tuple
+from typing import Callable, List, Dict, Any, Tuple
 from PIL import Image, ImageTk
-from pathlib import Path
 
 # ============================================================================
 # PALETA DE COLORES - Inspirada en SoFIFA
@@ -17,14 +16,15 @@ from pathlib import Path
 class Colors:
     """Paleta de colores del sistema"""
     # Colores primarios
-    PRIMARY_DARK = "#1e1e2e"  # Azul muy oscuro (fondo)
-    PRIMARY = "#16213e"  # Azul oscuro (componentes)
+    PRIMARY_DARK = "#1e1e2e"  # Azul muy oscuro
+    PRIMARY = "#16213e"  # Azul oscuro
     PRIMARY_LIGHT = "#0f3460"  # Azul claro
     
     # Colores de acentos
-    ACCENT_GOLD = "#a6e3a1"  # Verde vibrante (acentos, botones importantes)
-    ACCENT_RED = "#f38ba8"  # Rojo (alertas, errores)
-    ACCENT_GREEN = "#a6e3a1"  # Verde (éxito)
+    ACCENT_GOLD = "#df8e1d"  # Dorado
+    ACCENT_RED = "#d20f39"  # Rojo
+    ACCENT_GREEN = "#11953A"  # Verde
+    HOVER_COLOR = "#000000"  # Color de hover
     
     # Colores neutrales
     TEXT_PRIMARY = "#cdd6f4"  # Texto principal
@@ -103,9 +103,9 @@ class ModernCard(ctk.CTkFrame):
                 inner_frame,
                 text="Ejecutar",
                 command=command,
-                fg_color=Colors.ACCENT_GOLD,
+                fg_color=Colors.ACCENT_GREEN,
                 text_color=Colors.PRIMARY_DARK,
-                hover_color="#ffc700",
+                hover_color=Colors.HOVER_COLOR,
                 font=("Segoe UI", FontSizes.TEXT_NORMAL, "bold"),
                 height=32,
                 corner_radius=6
@@ -122,7 +122,7 @@ class ModernButton(ctk.CTkButton):
         """
         
         color_map = {
-            "primary": (Colors.ACCENT_GOLD, "#ffc700", Colors.PRIMARY_DARK),
+            "primary": (Colors.ACCENT_GREEN, Colors.ACCENT_GREEN, Colors.PRIMARY_DARK),
             "secondary": (Colors.PRIMARY_LIGHT, Colors.PRIMARY, Colors.TEXT_PRIMARY),
             "danger": (Colors.ACCENT_RED, "#d23456", Colors.TEXT_PRIMARY),
             "success": (Colors.ACCENT_GREEN, "#2bb85d", Colors.TEXT_PRIMARY)
@@ -182,8 +182,8 @@ class ModernCombobox(ctk.CTkComboBox):
             border_color=Colors.BORDER_COLOR,
             border_width=1,
             text_color=Colors.TEXT_PRIMARY,
-            button_color=Colors.ACCENT_GOLD,
-            button_hover_color="#ffc700",
+            button_color=Colors.ACCENT_GREEN,
+            button_hover_color=Colors.ACCENT_GOLD,
             dropdown_fg_color=Colors.BG_SECONDARY,
             dropdown_text_color=Colors.TEXT_PRIMARY,
             font=font,
@@ -201,6 +201,15 @@ class ModernCombobox(ctk.CTkComboBox):
         self.bind('<Down>', self._on_arrow_down, add=True)        # Flecha abajo
         self.bind('<Prior>', self._on_page_up, add=True)          # Page Up
         self.bind('<Next>', self._on_page_down, add=True)         # Page Down
+        self.bind('<Return>', self._on_return, add=True)          # Enter para desplegar
+    
+    def _on_return(self, event):
+        """Abre el dropdown al presionar Enter"""
+        try:
+            self._open_dropdown_menu()
+        except:
+            pass
+        return 'break'
     
     def _on_arrow_up(self, event):
         """Navega hacia arriba"""
@@ -323,7 +332,7 @@ class ModernTable(ctk.CTkFrame):
         )
         style.map(
             "Treeview",
-            background=[("selected", Colors.ACCENT_GOLD)],
+            background=[("selected", Colors.HOVER_COLOR)],
             foreground=[("selected", Colors.TEXT_PRIMARY)]
         )
         
@@ -532,7 +541,7 @@ class ModernScrollableFrame(ctk.CTkScrollableFrame):
             master,
             fg_color=Colors.BG_PRIMARY,
             scrollbar_button_color=Colors.ACCENT_GOLD,
-            scrollbar_button_hover_color="#ffc700",
+            scrollbar_button_hover_color=Colors.HOVER_COLOR,
             **kwargs
         )
 
@@ -544,11 +553,12 @@ class ModernTabview(ctk.CTkTabview):
         super().__init__(
             master,
             fg_color=Colors.BG_SECONDARY,
-            segmented_button_fg_color=Colors.BG_TERTIARY,
+            segmented_button_unselected_color=Colors.ACCENT_GREEN,
             segmented_button_selected_color=Colors.ACCENT_GOLD,
-            segmented_button_selected_hover_color="#ffc700",
-            text_color=Colors.TEXT_PRIMARY,
-            text_color_disabled=Colors.TEXT_MUTED,
+            segmented_button_selected_hover_color=Colors.ACCENT_GOLD,
+            #segmented_button_unselected_hover_color=Colors.HOVER_COLOR,
+            text_color=Colors.PRIMARY_DARK,
+            text_color_disabled=Colors.PRIMARY_DARK,
             **kwargs
         )
 
@@ -564,7 +574,7 @@ class ModernLabel(ctk.CTkLabel):
         color_map = {
             "primary": Colors.TEXT_PRIMARY,
             "secondary": Colors.TEXT_SECONDARY,
-            "accent": Colors.ACCENT_GOLD,
+            "accent": Colors.ACCENT_GREEN,
             "error": Colors.ACCENT_RED,
             "success": Colors.ACCENT_GREEN
         }
@@ -636,7 +646,7 @@ class ModernStatusBar(ctk.CTkFrame):
             self,
             variable=self.progress_var,
             fg_color=Colors.BG_TERTIARY,
-            progress_color=Colors.ACCENT_GOLD,
+            progress_color=Colors.ACCENT_GREEN,
             width=200,
             height=6
         )
@@ -679,7 +689,7 @@ class ModernHeader(ctk.CTkFrame):
             inner_frame,
             text=title,
             font=("Segoe UI", FontSizes.TITLE_EXTRA_LARGE, "bold"),
-            text_color=Colors.ACCENT_GOLD
+            text_color=Colors.ACCENT_GREEN
         )
         title_label.pack(anchor="w")
         

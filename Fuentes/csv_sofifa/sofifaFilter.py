@@ -1,5 +1,4 @@
 import pandas as pd
-import sys
 from pathlib import Path
 
 def combine_team_files(start_year, end_year):

@@ -1,10 +1,8 @@
 import csv
 import re
 import pandas as pd
-from urllib.parse import quote
-from pathlib import Path
 from rdflib import Graph, Namespace, Literal, URIRef
-from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
+from rdflib.namespace import RDF
 
 VINI = Namespace("http://vini-eii.org/")
 
@@ -125,6 +123,7 @@ def addCompetitionsWikidata(graph):
             
             # Relación inversa: la competición fue ganada por este equipo
             graph.add((competition_uri, VINI.wonBy, winner_uri))
+            graph.add((competition_uri, VINI.competitionName, Literal(row["competitionLabel"])))
 
 def addTeamStatsFBDB(graph):
     with open("./Aplicacion/Grafo/Archivos/teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
@@ -638,11 +637,11 @@ def main():
     # saveGraph(teamsSofifa, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
     # print("(1) Grafo de equipos creado ")
 
-    # competitionsWikidata = Graph()
-    # competitionsWikidata.bind("vini", VINI)
-    # addCompetitionsWikidata(competitionsWikidata)
-    # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
-    # print("(2) Grafo de competiciones creado")
+    competitionsWikidata = Graph()
+    competitionsWikidata.bind("vini", VINI)
+    addCompetitionsWikidata(competitionsWikidata)
+    saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+    print("(2) Grafo de competiciones creado")
 
     # teamStatsFBDB = Graph()
     # teamStatsFBDB.bind("vini", VINI)
@@ -656,11 +655,11 @@ def main():
     # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
     # print("(4) Grafo de partidos creado")   
 
-    playersSofifa = Graph()
-    playersSofifa.bind("vini", VINI)
-    addPlayersSofifa(playersSofifa)
-    saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
-    print("(5) Grafo de jugadores creado")       
+    # playersSofifa = Graph()
+    # playersSofifa.bind("vini", VINI)
+    # addPlayersSofifa(playersSofifa)
+    # saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+    # print("(5) Grafo de jugadores creado")       
 
     # appearancesFBDB = Graph()
     # appearancesFBDB.bind("vini", VINI)

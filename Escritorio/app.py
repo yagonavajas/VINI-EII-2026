@@ -9,8 +9,8 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from pathlib import Path
 import re
+from pathlib import Path
 from io import BytesIO
 from PIL import Image, ImageTk
 import gzip
@@ -76,7 +76,7 @@ class FootballGraphApp:
         frame.pack(fill="both", expand=True, padx=20, pady=20)
 
         title = ctk.CTkLabel(frame, text="Iniciando la aplicación", 
-                            font=("Segoe UI", FontSizes.TITLE, "bold"), text_color=Colors.ACCENT_GOLD)
+                            font=("Segoe UI", FontSizes.TITLE, "bold"), text_color=Colors.ACCENT_GREEN)
         title.pack(pady=(10, 8))
 
         self.loading_status = ctk.CTkLabel(frame, text="Preparando servidor...", 
@@ -87,7 +87,7 @@ class FootballGraphApp:
             frame, 
             mode="determinate", 
             fg_color=Colors.BG_TERTIARY,
-            progress_color=Colors.ACCENT_GOLD,
+            progress_color=Colors.ACCENT_GREEN,
             height=8
         )
         self.loading_progress.set(0)
@@ -373,7 +373,7 @@ class FootballGraphApp:
             self.root,
             bg=Colors.BG_SECONDARY,
             fg=Colors.TEXT_PRIMARY,
-            activebackground=Colors.ACCENT_GOLD,
+            activebackground=Colors.ACCENT_GREEN,
             activeforeground=Colors.PRIMARY_DARK
         )
         self.root.config(menu=menubar)
@@ -501,7 +501,7 @@ class FootballGraphApp:
         columns = self.queries["precio_goles"]["columns"]
         buttons_config = [
             {'name': self.queries["precio_goles"]["name"], 'command': lambda: self.execute_query("precio_goles", self.players_tree, self.players_status)},
-            {'name': 'Consulta 2', 'command': self.placeholder_query},
+            {'name': self.queries["masGoles"]["name"], 'command': lambda: self.execute_query("masGoles", self.players_tree, self.players_status)},
             {'name': 'Consulta 3', 'command': self.placeholder_query}
         ]
         self.players_tree, self.players_status = self.setup_query_tab(
@@ -538,8 +538,8 @@ class FootballGraphApp:
         columns = self.queries["pctgApuestas"]["columns"]
         buttons_config = [
             {'name': 'Consulta 1', 'command': self.placeholder_query},
-            {'name': 'Consulta 2', 'command': self.placeholder_query},
-            {'name': self.queries["pctgApuestas"]["name"], 'command': lambda: self.execute_query("pctgApuestas", self.competitions_tree, self.competitions_status)}
+            {'name': self.queries["pctgApuestas"]["name"], 'command': lambda: self.execute_query("pctgApuestas", self.competitions_tree, self.competitions_status)},
+            {'name': self.queries["cambiosGanadores"]["name"], 'command': lambda: self.execute_query("cambiosGanadores", self.competitions_tree, self.competitions_status)}
         ]
         self.competitions_tree, self.competitions_status = self.setup_query_tab(
             self.tab_competitions, "Consultas de Competiciones", buttons_config, columns=columns
@@ -597,6 +597,8 @@ class FootballGraphApp:
         
         ModernButton(button_frame_players, text="Ver Foto", variant="primary",
                     command=self._show_player_photo_from_combo).pack(side="left", padx=5)
+        ModernButton(button_frame_players, text="Ver Estadísticas", variant="primary",
+                    command=self._show_player_stats_from_combo).pack(side="left", padx=5)
         
         # Estado
         self.special_status = ModernLabel(scroll_frame, text="Cargando datos...", variant="secondary")
@@ -640,7 +642,7 @@ class FootballGraphApp:
             wrap="word",
             bg=Colors.BG_TERTIARY,
             fg=Colors.TEXT_PRIMARY,
-            insertbackground=Colors.ACCENT_GOLD,
+            insertbackground=Colors.ACCENT_GREEN,
             font=("Courier", FontSizes.TEXT_SMALL),
             relief="flat",
             border=0,
@@ -853,7 +855,7 @@ class FootballGraphApp:
             else:
                 def update_ui():
                     table.clear()
-                    status_label.configure(text="No se encontraron resultados", text_color=Colors.ACCENT_GOLD)
+                    status_label.configure(text="No se encontraron resultados", text_color=Colors.ACCENT_GREEN)
                 
                 self.root.after(0, update_ui)
         
@@ -1258,6 +1260,297 @@ class FootballGraphApp:
         )
         thread.start()
     
+    def _show_player_stats_from_combo(self):
+        """Muestra las estadísticas del jugador seleccionado en el combobox"""
+        selected_text = self.player_combobox.get()
+        placeholder = "Escribe el jugador..."
+        
+        if not selected_text or selected_text == placeholder or not hasattr(self, 'players_data'):
+            ModernNotification(self.root, message="Por favor selecciona un jugador del desplegable", notification_type="warning", icon_path=self.icon_path)
+            return
+        
+        # Buscar el jugador en players_data por el texto seleccionado
+        player_info = None
+        for player in self.players_data:
+            if player['display'] == selected_text:
+                player_info = player
+                break
+        
+        if player_info is None:
+            ModernNotification(self.root, message="Jugador no encontrado. Selecciona uno del desplegable.", notification_type="warning", icon_path=self.icon_path)
+            return
+        
+        self.special_status.configure(text="Cargando estadísticas...", text_color=Colors.TEXT_SECONDARY)
+        self.special_loading.configure(text="Obteniendo datos del jugador...")
+        self.root.update()
+        
+        # Ejecutar en thread separado
+        thread = threading.Thread(
+            target=self._fetch_stats_for_player,
+            args=(player_info['url'], player_info['name'])
+        )
+        thread.start()
+
+    def _fetch_stats_for_player(self, url, player_name):
+        """Obtiene las estadísticas del jugador desde el grafo SPARQL"""
+        try:
+            self.special_status.configure(text="Obteniendo estadísticas desde el grafo...", text_color=Colors.TEXT_SECONDARY)
+            self.root.update()
+            
+            # Obtener estadísticas desde SPARQL
+            sparql = SPARQLWrapper(self.sparql_endpoint)
+            sparql.setQuery(get_player_stats_query(player_name))
+            sparql.setReturnFormat(JSON)
+            
+            results = sparql.query().convert()
+
+            
+            if results['results']['bindings']:
+                # Procesar resultados SPARQL
+                stats = self._extract_player_stats_from_sparql(results['results']['bindings'], player_name)
+                
+                # Mostrar en la UI
+                self.root.after(0, lambda: self._display_player_stats(stats, player_name))
+                self.root.after(0, lambda: self.special_status.configure(
+                    text=f"Estadísticas de {player_name} cargadas",
+                    text_color=Colors.ACCENT_GREEN
+                ))
+            else:
+                self.root.after(0, lambda: ModernNotification(
+                    self.root,
+                    message=f"No se encontraron estadísticas para {player_name}",
+                    notification_type="warning",
+                    icon_path=self.icon_path
+                ))
+                self.root.after(0, lambda: self.special_status.configure(
+                    text="Sin estadísticas disponibles",
+                    text_color=Colors.ACCENT_ORANGE
+                ))
+        
+        except Exception as e:
+            self.root.after(0, lambda: ModernNotification(
+                self.root,
+                message=f"Error obteniendo estadísticas:\n{str(e)}",
+                notification_type="error",
+                icon_path=self.icon_path
+            ))
+            self.root.after(0, lambda: self.special_status.configure(
+                text=f"Error: {str(e)}",
+                text_color=Colors.ACCENT_RED
+            ))
+        
+        finally:
+            self.root.after(0, lambda: self.special_loading.configure(text=""))
+    
+    def _extract_player_stats_from_sparql(self, bindings, player_name):
+        """Extrae las estadísticas del jugador desde los resultados de SPARQL"""
+        stats = {
+            'name': player_name,
+            'overall': 'N/A',
+            'potential': 'N/A',
+            'age': 'N/A',
+            'position': 'N/A',
+            'year': 'N/A',
+            'value': 'N/A',
+            'wage': 'N/A',
+            'attributes': {}
+        }
+        
+        try:
+            # Procesar el primer resultado (temporada más reciente)
+            if bindings:
+                binding = bindings[0]
+                
+                # Extraer datos principales
+                stats['year'] = binding.get('year', {}).get('value', 'N/A')
+                stats['overall'] = binding.get('overall_rating', {}).get('value', 'N/A')
+                stats['potential'] = binding.get('potential', {}).get('value', 'N/A')
+                stats['age'] = binding.get('age', {}).get('value', 'N/A')
+                stats['position'] = binding.get('position', {}).get('value', 'N/A')
+                stats['value'] = binding.get('value', {}).get('value', 'N/A')
+                stats['wage'] = binding.get('wage', {}).get('value', 'N/A')
+                
+                # Extraer atributos detallados
+                attribute_keys = [
+                    'total_attacking', 'total_skill', 'total_movement', 'total_goalkeeping',
+                    'total_stats', 'weak_foot', 'skill_moves', 'international_reputation',
+                    'attacking_work_rate', 'defensive_work_rate', 'body_type', 'real_face',
+                    'height', 'weight', 'best_overall', 'best_position', 'growth',
+                    'joined', 'loan_date_end', 'release_clause', 'club_kit_number',
+                    'physical_positioning', 'base_stats'
+                ]
+
+                for attr_key in attribute_keys:
+                    value = binding.get(attr_key, {}).get('value', None)
+                    if value:
+                        # Convertir snake_case a Title Case
+                        attr_name = attr_key.replace('_', ' ').title()
+                        stats['attributes'][attr_name] = value
+        
+        except Exception as e:
+            print(f"Error procesando estadísticas SPARQL: {e}")
+        
+        return stats
+
+    def _display_player_stats(self, stats, player_name):
+        """Muestra las estadísticas del jugador en una tabla similar a la plantilla en el squad_frame"""
+        # Limpiar frame anterior
+        for widget in self.squad_frame.winfo_children():
+            widget.destroy()
+        
+        # Preparar datos para la tabla
+        all_stats = []
+        
+        # Agregar estadísticas principales
+        main_stats_list = [
+            ('Overall', stats.get('overall', 'N/A')),
+            ('Potential', stats.get('potential', 'N/A')),
+            ('Temporada', stats.get('year', 'N/A')),
+            ('Edad', stats.get('age', 'N/A')),
+            ('Posición', stats.get('position', 'N/A')),
+            ('Valor', stats.get('value', 'N/A')),
+            ('Salario', stats.get('wage', 'N/A')),
+        ]
+        all_stats.extend(main_stats_list)
+        
+        # Agregar atributos detallados
+        if stats.get('attributes'):
+            for attr_name, attr_value in stats['attributes'].items():
+                all_stats.append((attr_name, str(attr_value)))
+        
+        # Inicializar estado de paginación
+        pagination_key = f"stats_{player_name}"
+        if not hasattr(self, 'stats_pagination'):
+            self.stats_pagination = {}
+        self.stats_pagination[pagination_key] = {
+            'current_page': 0,
+            'rows_per_page': 10,
+            'data': all_stats
+        }
+        
+        # Título
+        # title_frame = ctk.CTkFrame(self.squad_frame, fg_color="transparent")
+        # title_frame.pack(fill="x", pady=(0, 10))  
+        
+        # Frame para la tabla
+        table_frame = ctk.CTkFrame(self.squad_frame, fg_color="transparent")
+        table_frame.pack(fill="both", expand=True)
+        
+        # Crear tabla
+        columns = ("Estadística", "Valor")
+        stats_tree = ttk.Treeview(
+            table_frame,
+            columns=columns,
+            height=10,
+            show="headings"
+        )
+        
+        # Configurar columnas
+        stats_tree.column('#0', width=0, stretch=tk.NO)
+        stats_tree.column("Estadística", width=400, anchor="center", stretch=True)
+        stats_tree.column("Valor", width=150, anchor="center", stretch=True)
+        
+        stats_tree.heading("Estadística", text="Estadística")
+        stats_tree.heading("Valor", text="Valor")
+        
+        stats_tree.pack(fill=tk.BOTH, expand=True, padx=1, pady=1)
+        
+        # Vincular evento de redimensionamiento
+        table_frame.bind("<Configure>", lambda e: self._adjust_stats_tree_columns(e, stats_tree))
+        
+        # Frame para paginación
+        pagination_frame = ctk.CTkFrame(self.squad_frame, fg_color="transparent")
+        pagination_frame.pack(fill="x", pady=(10, 0))
+        
+        # Label de información
+        info_label = ctk.CTkLabel(
+            pagination_frame,
+            text="",
+            font=("Segoe UI", FontSizes.TEXT_SMALL),
+            text_color=Colors.TEXT_SECONDARY
+        )
+        info_label.pack(side="left", padx=5)
+        
+        # Botones de paginación
+        btn_frame = ctk.CTkFrame(pagination_frame, fg_color="transparent")
+        btn_frame.pack(side="right", padx=5)
+        
+        btn_prev = ModernButton(btn_frame, text="← Anterior", variant="secondary",
+                               width=100, height=28)
+        btn_prev.pack(side="left", padx=5)
+        
+        btn_next = ModernButton(btn_frame, text="Siguiente →", variant="secondary",
+                               width=100, height=28)
+        btn_next.pack(side="left", padx=5)
+        
+        # Función para actualizar la tabla
+        def refresh_stats_display():
+            state = self.stats_pagination[pagination_key]
+            data = state['data']
+            
+            # Limpiar tabla
+            for item in stats_tree.get_children():
+                stats_tree.delete(item)
+            
+            # Calcular página actual
+            start = state['current_page'] * state['rows_per_page']
+            end = start + state['rows_per_page']
+            
+            # Agregar datos de la página actual
+            for stat_name, stat_value in data[start:end]:
+                stats_tree.insert("", "end", values=(stat_name, stat_value))
+            
+            # Actualizar información y botones
+            total_pages = (len(data) + state['rows_per_page'] - 1) // state['rows_per_page']
+            page_display = f"Página {state['current_page'] + 1} de {max(1, total_pages)} ({len(data)} estadísticas)"
+            info_label.configure(text=page_display)
+            
+            btn_prev.configure(state="normal" if state['current_page'] > 0 else "disabled")
+            btn_next.configure(state="normal" if state['current_page'] < total_pages - 1 else "disabled")
+        
+        # Funciones para navegación
+        def prev_page():
+            state = self.stats_pagination[pagination_key]
+            if state['current_page'] > 0:
+                state['current_page'] -= 1
+                refresh_stats_display()
+        
+        def next_page():
+            state = self.stats_pagination[pagination_key]
+            data = state['data']
+            total_pages = (len(data) + state['rows_per_page'] - 1) // state['rows_per_page']
+            
+            if state['current_page'] < total_pages - 1:
+                state['current_page'] += 1
+                refresh_stats_display()
+        
+        # Vincular botones
+        btn_prev.configure(command=prev_page)
+        btn_next.configure(command=next_page)
+        
+        # Mostrar primera página
+        refresh_stats_display()
+    
+    def _adjust_stats_tree_columns(self, event, stats_tree):
+        """Ajusta dinámicamente el ancho de las columnas de la tabla de estadísticas"""
+        if event.width <= 1:
+            return
+        
+        try:
+            # Calcular ancho disponible
+            available_width = event.width - 10  # Restar margen
+            
+            # Distribuir: 60% para estadística, 40% para valor
+            col_stat_width = int(available_width * 0.6)
+            col_value_width = int(available_width * 0.4)
+            
+            # Aplicar anchos
+            stats_tree.column("Estadística", width=col_stat_width)
+            stats_tree.column("Valor", width=col_value_width)
+        except Exception:
+            pass
+
+
     def _show_player_photo_from_combo(self):
         """Muestra la foto del jugador seleccionado en el combobox"""
         selected_text = self.player_combobox.get()
@@ -1687,6 +1980,7 @@ class FootballGraphApp:
         
         finally:
             self.root.after(0, lambda: self.special_loading.configure(text=""))
+
     
     def _display_squad_table(self, players_data, team_name, year):
         """Muestra la plantilla en una tabla con paginación"""

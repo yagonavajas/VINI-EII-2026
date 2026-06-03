@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import chardet
 
-BASE_PATH = "./Aplicacion/Fuentes/kaggle/football-database/"
-OUTPUT_PATH = "./Aplicacion/Fuentes/kaggle/football-database/generados/"
+BASE_PATH = "./Aplicacion/Fuentes/kaggle/footballdatabase/"
+OUTPUT_PATH = "./Aplicacion/Fuentes/kaggle/footballdatabase/generados/"
 
 
 def detectar_encoding(filepath):

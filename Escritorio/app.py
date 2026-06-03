@@ -502,7 +502,7 @@ class FootballGraphApp:
         buttons_config = [
             {'name': self.queries["precio_goles"]["name"], 'command': lambda: self.execute_query("precio_goles", self.players_tree, self.players_status)},
             {'name': self.queries["masGoles"]["name"], 'command': lambda: self.execute_query("masGoles", self.players_tree, self.players_status)},
-            {'name': 'Consulta 3', 'command': self.placeholder_query}
+            {'name': self.queries["veteranos"]["name"], 'command': lambda: self.execute_query("veteranos", self.players_tree, self.players_status)},
         ]
         self.players_tree, self.players_status = self.setup_query_tab(
             self.tab_players, "Consultas de Jugadores", buttons_config, columns=columns
@@ -537,8 +537,8 @@ class FootballGraphApp:
         """Configura la pestaña de Competiciones"""
         columns = self.queries["pctgApuestas"]["columns"]
         buttons_config = [
-            {'name': 'Consulta 1', 'command': self.placeholder_query},
             {'name': self.queries["pctgApuestas"]["name"], 'command': lambda: self.execute_query("pctgApuestas", self.competitions_tree, self.competitions_status)},
+            {'name': self.queries["analisiscampeones"]["name"], 'command': lambda: self.execute_query("analisiscampeones", self.competitions_tree, self.competitions_status)},
             {'name': self.queries["cambiosGanadores"]["name"], 'command': lambda: self.execute_query("cambiosGanadores", self.competitions_tree, self.competitions_status)}
         ]
         self.competitions_tree, self.competitions_status = self.setup_query_tab(

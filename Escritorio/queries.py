@@ -39,6 +39,11 @@ QUERIES_INFO = {
         "columns": ("Equipo", "Año", "Goles en Casa", "Goles Fuera", "Total Partidos"),
         "vars": ("teamName", "year", "goalsHome", "goalsAway", "totalGames")
     },
+    "analisiscampeones": {
+        "name": "Analisis de campeones de las 5 grandes ligas",
+        "columns": ("Liga", "Presupuesto Medio", "Edad Media Plantilla", "Reputación Internacional Media", "Media Equipo"),
+        "vars": ("nombreLiga", "presupuestoMedioCampeon", "edadMediaPlantilla", "reputacionInternacionalMedia", "mediaEquipo")
+    },
     "cambiosGanadores":{
         "name": "Cambios en el rendimiento de los campeones al año siguiente",
         "columns": ("Liga", "Año", "Equipo", "Media Año Campeón", "Media Año Siguiente", "Diferencia"),
@@ -58,6 +63,11 @@ QUERIES_INFO = {
         "name": "Jugadores con más goles en un partido",
         "columns": ("Fecha", "Jugador", "Goles"),
         "vars": ("date", "playerName", "goals")
+    },
+    "veteranos": {
+        "name": "Jugadores Veteranos con participacion",
+        "columns": ("Jugador", "Edad", "Posición Preferida", "Ritmo Total", "Potencial", "Minutos Promedio por Partido", "Partidos Jugados"),
+        "vars": ("nombreJugador", "edad", "posicionPref", "ritmoTotal", "potencial", "promedioMinutosPorPartido", "partidosJugados")
     },
     "team_urls": {
         "name": "URLs de equipos (Sofifa)",
@@ -235,6 +245,60 @@ ORDER BY DESC(?oddsDifference)
 LIMIT 20
 """,
 
+"analisiscampeones": """PREFIX vini: <http://vini-eii.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?nombreLiga 
+       # Calculamos la media del presupuesto ya limpio y convertido a número real
+       (xsd:decimal(ROUND(AVG(COALESCE(?presupuestoNumerico, 0.0)) * 100) / 100) AS ?presupuestoMedioCampeon)
+       
+       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?edadPlantilla), 0.0)) * 100) / 100) AS ?edadMediaPlantilla)
+       
+       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?prestigioInt), 0.0)) * 100) / 100) AS ?reputacionInternacionalMedia)
+       
+       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?media), 0.0)) * 100) / 100) AS ?mediaEquipo)
+WHERE {
+  # 1. Obtener los equipos campeones y sus ligas
+  ?winnerNode rdf:type vini:CompetitionWinner ;
+              vini:competition ?competitionUri ;
+              vini:winningTeam ?teamUri ;
+              vini:season ?seasonUri .
+  
+  ?competitionUri vini:competitionName ?nombreLiga .
+  
+  # Filtrar estrictamente por las 5 grandes ligas
+  FILTER (
+    REGEX(?nombreLiga, "Primera|Premier League|Serie A|Bundesliga|Ligue 1", "i")
+  )
+  
+  # Extraer año e ID del equipo para enlazar con Sofifa
+  BIND(REPLACE(STR(?seasonUri), "http://vini-eii.org/season/", "") AS ?anioStr)
+  BIND(REPLACE(STR(?teamUri), "http://vini-eii.org/team/", "") AS ?idEquipo)
+  
+  BIND(URI(CONCAT("http://vini-eii.org/teamSeason/", ?idEquipo, "_", ?anioStr)) AS ?teamSeasonUri)
+  
+  # 2. Extraer métricas de forma OPCIONAL
+  OPTIONAL { 
+    ?teamSeasonUri vini:transfer_budget ?presupuestoRaw .
+    
+    # --- PROCESAMIENTO DEL PRESUPUESTO (€4.2M -> 4200000) ---
+    # 1. Quitamos el símbolo de € y la M
+    BIND(REPLACE(REPLACE(STR(?presupuestoRaw), "€", ""), "M", "") AS ?soloNumero)
+    
+    # 2. Lo casteamos a double y lo multiplicamos por 1 millón para tener el valor real
+    BIND(xsd:double(?soloNumero) * 1000000 AS ?presupuestoNumerico)
+  }
+  
+  OPTIONAL { ?teamSeasonUri vini:whole_team_avg_age ?edadPlantilla . }
+  OPTIONAL { ?teamSeasonUri vini:international_prestige ?prestigioInt . }
+  OPTIONAL { ?teamSeasonUri vini:overall ?media . }
+}
+GROUP BY ?nombreLiga
+ORDER BY DESC(?presupuestoMedioCampeon)
+
+""",
+
 "cambiosGanadores": """PREFIX vini: <http://vini-eii.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -408,7 +472,47 @@ WHERE {
                 vini:year ?year ;
                 vini:url ?url .
 }
-ORDER BY ?teamName ?year"""
+ORDER BY ?teamName ?year""",
+
+"veteranos": """PREFIX vini: <http://vini-eii.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?nombreJugador ?edad ?posicionPref ?ritmoTotal ?potencial ?anioTemporada
+       (AVG(xsd:integer(?minutosJugadosStr)) AS ?promedioMinutosPorPartido) 
+       (COUNT(?appearance) AS ?partidosJugados)
+WHERE {
+  # 1. Datos generales del jugador en una temporada específica de Sofifa
+  ?player rdf:type vini:Player ;
+          vini:name ?nombreJugador ;
+          vini:hasSeason ?playerSeason .
+  
+  ?playerSeason rdf:type vini:PlayerSeason ;
+                vini:age ?edadStr ;
+                vini:best_position ?posicionPref ;
+                vini:total_movement ?ritmoTotal ;
+                vini:potential ?potencial ;
+                vini:year ?anioTemporada . # Extraemos el año de esta temporada de Sofifa
+  
+  # Filtro para buscar solo jugadores veteranos (mayores de 30 años)
+  BIND(xsd:integer(?edadStr) AS ?edad)
+  FILTER(?edad >= 30)
+  
+  # 2. Conectar con las apariciones en partidos del FBDB
+  ?player vini:appearsIn ?appearance .
+  ?appearance rdf:type vini:PlayerAppearance ;
+              vini:time ?minutosJugadosStr ;
+              vini:game ?gameUri . # Obtenemos el partido de la aparición
+  
+  # 3. CRUCIAL: Asegurar que el partido pertenezca al mismo año de la temporada que estamos evaluando
+  ?gameUri vini:year ?anioPartido .
+  FILTER(STR(?anioTemporada) = STR(?anioPartido))
+}
+GROUP BY ?nombreJugador ?edad ?posicionPref ?ritmoTotal ?potencial ?anioTemporada
+HAVING (COUNT(?appearance) >= 15 && AVG(xsd:integer(?minutosJugadosStr)) > 80.0)
+ORDER BY DESC(?edad) DESC(?promedioMinutosPorPartido) 
+LIMIT 30
+"""
 }
 
 # ============================================================================

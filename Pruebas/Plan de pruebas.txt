@@ -1,0 +1,251 @@
+PLAN DE PRUEBAS DE LA IMPLEMENTACIÓN DEL TFG
+
+Autor: [Tu nombre]
+Fecha: [Fecha]
+Lenguaje: Python
+Sistema Operativo: Windows
+
+OBJETIVO DEL PLAN DE PRUEBAS
+
+El objetivo de este plan de pruebas es verificar la corrección funcional, la calidad de los datos, el rendimiento básico y la robustez del sistema desarrollado en el TFG, el cual implementa un pipeline completo para la construcción y explotación de un grafo de conocimiento a partir de fuentes de datos heterogéneas.
+
+El sistema abarca desde la descarga de datos (scraping web, Wikidata y Kaggle), su normalización y unificación de entidades, hasta la creación de un grafo RDF en formato TTL y su consulta mediante una aplicación de escritorio que utiliza un servidor SPARQL local basado en Apache Jena Fuseki.
+
+ALCANCE
+
+Este plan cubre las siguientes fases:
+
+Descarga de datos
+Normalización de datos
+Unificación de entidades
+Creación del grafo RDF
+Carga del grafo en servidor SPARQL
+Aplicación de escritorio para consultas SPARQL
+Pruebas unitarias
+Pruebas básicas de rendimiento
+
+Quedan fuera del alcance:
+
+Pruebas de seguridad
+Pruebas de escalabilidad a gran volumen
+Pruebas en entornos distribuidos
+ENTORNO DE PRUEBAS
+Sistema Operativo: Windows 10 / 11
+Lenguaje de programación: Python
+Interfaz gráfica: Tkinter
+Servidor SPARQL: Apache Jena Fuseki (local)
+Formatos de entrada y salida: CSV, TTL
+Volumen de datos aproximado:
+Equipos: 150
+Jugadores: 6000
+Competiciones: 15
+FASE 1 – PRUEBAS DE DESCARGA DE DATOS
+4.1 Script de Scraping Web
+
+Objetivo:
+Verificar que el script de scraping obtiene correctamente los datos desde la fuente web.
+
+Casos de prueba:
+
+Ejecución correcta del script con conexión a internet.
+Generación del archivo CSV de salida.
+Verificación de que el número de registros es mayor que cero.
+Validación de columnas obligatorias.
+Comprobación de valores nulos.
+Manejo de errores HTTP (404, 500).
+Comportamiento ante cambios menores en la estructura HTML.
+Reejecución del script sin duplicar datos.
+
+Resultado esperado:
+Archivo CSV generado correctamente con datos completos y coherentes.
+
+4.2 Script de descarga desde Wikidata
+
+Objetivo:
+Validar la ejecución correcta de la consulta SPARQL a Wikidata.
+
+Casos de prueba:
+
+Ejecución correcta de la consulta SPARQL.
+Generación del CSV resultante.
+Validación del esquema del archivo.
+Verificación de la presencia de identificadores Wikidata (QIDs).
+Manejo de resultados vacíos.
+Manejo de errores de conexión.
+
+Resultado esperado:
+CSV correctamente estructurado con datos válidos.
+
+4.3 Descarga de datasets desde Kaggle
+
+Objetivo:
+Garantizar la descarga y lectura correcta de múltiples archivos CSV.
+
+Casos de prueba:
+
+Descarga completa de todos los archivos.
+Verificación del encoding.
+Validación de las columnas esperadas.
+Manejo de archivos incompletos o corruptos.
+Compatibilidad entre versiones del dataset.
+
+Resultado esperado:
+Todos los archivos CSV descargados y legibles.
+
+FASE 2 – PRUEBAS DE NORMALIZACIÓN DE DATOS
+
+Objetivo:
+Verificar que los scripts de normalización eliminan información irrelevante y homogeneizan los datos.
+
+Casos de prueba:
+
+Eliminación de columnas no necesarias.
+Conversión correcta de tipos de datos.
+Normalización de nombres (mayúsculas, acentos, espacios).
+Eliminación de duplicados.
+Manejo de valores nulos.
+Verificación de claves primarias.
+
+Resultado esperado:
+CSV normalizados con estructura uniforme y datos consistentes.
+
+FASE 3 – PRUEBAS DE UNIFICACIÓN DE ENTIDADES
+
+Objetivo:
+Validar la correcta unificación de entidades provenientes de distintas fuentes.
+
+Entidades:
+
+Equipos
+Jugadores
+Países
+Competiciones
+
+Método de unificación:
+
+Métricas de similitud de strings como métrica principal.
+Métricas adicionales con menor peso (reglas, coincidencias parciales, IDs).
+
+Casos de prueba:
+
+Unificación correcta con coincidencia exacta.
+Unificación correcta con similitud alta.
+No unificación de entidades distintas con nombres similares.
+Manejo de ambigüedad.
+Correcta asignación de IDs de cada fuente.
+Generación correcta del CSV final de entidades unificadas.
+Validación manual de una muestra representativa.
+
+Resultado esperado:
+CSV de entidades unificadas correcto, trazable y sin unificaciones erróneas críticas.
+
+FASE 4 – PRUEBAS DE CREACIÓN DEL GRAFO RDF (TTL)
+
+Objetivo:
+Verificar que el grafo RDF se genera correctamente a partir de los CSV.
+
+Casos de prueba:
+
+Generación del archivo TTL sin errores.
+Validación sintáctica del TTL.
+Asignación correcta de URIs.
+Uso consistente de ontologías.
+Creación correcta de relaciones entre entidades.
+Verificación del número esperado de triples.
+
+Resultado esperado:
+Archivo TTL válido y semánticamente coherente.
+
+FASE 5 – PRUEBAS DE CARGA EN EL SERVIDOR SPARQL
+
+Objetivo:
+Comprobar la correcta carga del grafo en el servidor SPARQL local.
+
+Casos de prueba:
+
+Arranque automático del servidor desde script.
+Comprobación del endpoint activo.
+Carga completa del archivo TTL.
+Manejo de cargas repetidas.
+Ejecución de consultas SPARQL simples de verificación.
+Apagado correcto del servidor.
+
+Resultado esperado:
+Grafo cargado correctamente y accesible mediante SPARQL.
+
+FASE 6 – PRUEBAS DE LA APLICACIÓN DE ESCRITORIO
+
+Objetivo:
+Validar la funcionalidad de la aplicación desarrollada con Tkinter.
+
+Casos de prueba:
+
+Arranque correcto de la aplicación.
+Arranque del servidor SPARQL desde la aplicación.
+Ejecución correcta de todas las consultas SPARQL predefinidas.
+Visualización correcta de resultados.
+Manejo de errores del servidor.
+Cierre correcto de la aplicación y liberación de recursos.
+
+Resultado esperado:
+Aplicación funcional y estable para la consulta del grafo.
+
+PRUEBAS UNITARIAS
+
+Objetivo:
+Verificar el correcto funcionamiento de módulos individuales.
+
+Elementos a probar:
+
+Funciones de descarga.
+Funciones de normalización.
+Funciones de cálculo de similitud.
+Funciones de generación de URIs.
+Funciones de generación de triples RDF.
+
+Criterios:
+
+Uso de datos de prueba controlados.
+Validación de salidas esperadas.
+Manejo correcto de errores.
+
+Resultado esperado:
+Todos los módulos funcionan de forma independiente según lo esperado.
+
+PRUEBAS DE RENDIMIENTO
+
+Objetivo:
+Evaluar el rendimiento básico del sistema con el volumen real de datos.
+
+Casos de prueba:
+
+Tiempo total de ejecución del pipeline completo.
+Tiempo de unificación de entidades.
+Tiempo de generación del archivo TTL.
+Tiempo medio de respuesta de las consultas SPARQL.
+
+Resultado esperado:
+
+Tiempos razonables para un entorno local.
+Respuesta fluida de las consultas SPARQL predefinidas.
+PRUEBAS DE INTEGRACIÓN
+
+Objetivo:
+Validar el flujo completo del sistema de principio a fin.
+
+Casos de prueba:
+
+Ejecución secuencial de todas las fases.
+Reejecución parcial del pipeline.
+Verificación de dependencias entre fases.
+Limpieza y regeneración completa de datos.
+
+Resultado esperado:
+Pipeline reproducible y estable.
+
+CRITERIOS DE ACEPTACIÓN
+Todas las fases se ejecutan sin errores críticos.
+Los datos finales son coherentes y consultables.
+Las entidades están correctamente unificadas.
+El grafo RDF es válido y explotable mediante SPARQL.
+La aplicación permite consultar el grafo de forma fiable.

@@ -18,7 +18,7 @@ class Colors:
     # Colores primarios
     PRIMARY_DARK = "#1e1e2e"  # Azul muy oscuro
     PRIMARY = "#16213e"  # Azul oscuro
-    PRIMARY_LIGHT = "#0f3460"  # Azul claro
+    PRIMARY_LIGHT = "#2D2E30"  # Azul claro
     
     # Colores de acentos
     ACCENT_GOLD = "#df8e1d"  # Dorado
@@ -27,14 +27,14 @@ class Colors:
     HOVER_COLOR = "#000000"  # Color de hover
     
     # Colores neutrales
-    TEXT_PRIMARY = "#cdd6f4"  # Texto principal
-    TEXT_SECONDARY = "#bac2de"  # Texto secundario
+    TEXT_PRIMARY = "#E8EBE6"  # Texto principal
+    TEXT_SECONDARY = "#E8EBE6"  # Texto secundario
     TEXT_MUTED = "#a6adc8"  # Texto deshabilitado
     
     # Fondos
-    BG_PRIMARY = "#1e1e2e"  # Fondo principal
-    BG_SECONDARY = "#181825"  # Fondo secundario
-    BG_TERTIARY = "#11111b"  # Fondo terciario
+    BG_PRIMARY = "#2D2E30"  # Fondo principal
+    BG_SECONDARY = "#212024"  # Fondo secundario
+    BG_TERTIARY = "#212024"  # Fondo terciario
     
     # Bordes
     BORDER_COLOR = "#9399b2"  # Color de bordes
@@ -122,7 +122,7 @@ class ModernButton(ctk.CTkButton):
         """
         
         color_map = {
-            "primary": (Colors.ACCENT_GREEN, Colors.ACCENT_GREEN, Colors.PRIMARY_DARK),
+            "primary": (Colors.ACCENT_GREEN, Colors.ACCENT_GOLD, Colors.PRIMARY_DARK),
             "secondary": (Colors.PRIMARY_LIGHT, Colors.PRIMARY, Colors.TEXT_PRIMARY),
             "danger": (Colors.ACCENT_RED, "#d23456", Colors.TEXT_PRIMARY),
             "success": (Colors.ACCENT_GREEN, "#2bb85d", Colors.TEXT_PRIMARY)
@@ -332,7 +332,12 @@ class ModernTable(ctk.CTkFrame):
         )
         style.map(
             "Treeview",
-            background=[("selected", Colors.HOVER_COLOR)],
+            background=[("selected", Colors.PRIMARY_LIGHT)],
+            foreground=[("selected", Colors.TEXT_PRIMARY)]
+        )
+        style.map(
+            "Treeview.Heading",
+            background=[("selected", Colors.PRIMARY_LIGHT)],
             foreground=[("selected", Colors.TEXT_PRIMARY)]
         )
         
@@ -553,9 +558,12 @@ class ModernTabview(ctk.CTkTabview):
         super().__init__(
             master,
             fg_color=Colors.BG_SECONDARY,
+            segmented_button_fg_color=Colors.BG_SECONDARY, 
+            border_color=Colors.BG_SECONDARY,
+            border_width=0,
             segmented_button_unselected_color=Colors.ACCENT_GREEN,
             segmented_button_selected_color=Colors.ACCENT_GOLD,
-            segmented_button_selected_hover_color=Colors.ACCENT_GOLD,
+            segmented_button_unselected_hover_color=Colors.ACCENT_GOLD,
             #segmented_button_unselected_hover_color=Colors.HOVER_COLOR,
             text_color=Colors.PRIMARY_DARK,
             text_color_disabled=Colors.PRIMARY_DARK,
@@ -567,9 +575,6 @@ class ModernLabel(ctk.CTkLabel):
     """Label moderno"""
     
     def __init__(self, master, text: str = "", variant: str = "primary", **kwargs):
-        """
-        variant: "primary" (blanco), "secondary" (gris), "accent" (dorado), "error" (rojo)
-        """
         
         color_map = {
             "primary": Colors.TEXT_PRIMARY,

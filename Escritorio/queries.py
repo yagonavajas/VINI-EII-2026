@@ -29,7 +29,7 @@ QUERIES_INFO = {
         "vars": ("date", "homeTeam", "awayTeam", "totalFouls", "totalRedCards")
     },
     "diferencias": {
-        "name": "Partidos con mayor diferencia de cuotas y sorpresa en el resultado",
+        "name": "Mayor diferencia de cuotas y sorpresa en el resultado",
         "columns": ("Fecha", "Equipo Local", "Equipo Visitante", "Goles Local", "Goles Visitante", "Cuota Local", "Cuota Visitante", "Diferencia de Cuotas"),
         "vars": ("date", "homeTeam", "awayTeam", "homeGoals", "awayGoals", "whHomeOdds", "whAwayOdds", "oddsDifference")
     },
@@ -60,13 +60,13 @@ QUERIES_INFO = {
         "vars": ("playerName", "wageYearFmt", "totalGoals", "costPerGoalFmt")
     },
     "masGoles": {
-        "name": "Jugadores con más goles en un partido",
+        "name": "Más goles en un partido",
         "columns": ("Fecha", "Jugador", "Goles"),
         "vars": ("date", "playerName", "goals")
     },
     "veteranos": {
-        "name": "Jugadores Veteranos con participacion",
-        "columns": ("Jugador", "Edad", "Posición Preferida", "Ritmo Total", "Potencial", "Minutos Promedio por Partido", "Partidos Jugados"),
+        "name": "Veteranos con participación",
+        "columns": ("Jugador", "Edad", "Posición Preferida", "Ritmo Total", "Potencial", "Minutos por Partido", "Partidos Jugados"),
         "vars": ("nombreJugador", "edad", "posicionPref", "ritmoTotal", "potencial", "promedioMinutosPorPartido", "partidosJugados")
     },
     "team_urls": {

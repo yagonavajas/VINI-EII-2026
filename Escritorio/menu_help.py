@@ -11,68 +11,57 @@ TABS_HELP = {
     "Jugadores": {
         "title": "Pestaña de Jugadores",
         "description": """
-Consultas relacionadas con jugadores individuales:
+Consultas relacionadas con rendimiento y datos de jugadores individuales:
 
-• Precio de Goles: Muestra los 10 jugadores con mayor salario anual, 
-  el total de goles anotados y el coste por gol (salario / goles).
-  
-Útil para analizar la relación entre inversión en salarios y 
-rendimiento goleador.
+• Precio de Goles: Muestra los jugadores con mayor salario anual, el total de goles anotados y el coste por gol (salario / goles).
+• Más goles en un partido: Lista a los máximos goleadores en un partido registrados en el sistema.
+• Veteranos con participación: Filtra y muestra a los jugadores de mayor edad y sus estadísticas.
         """
     },
     "Equipos": {
         "title": "Pestaña de Equipos",
         "description": """
-Consultas sobre equipos y sus estadísticas agregadas:
+Consultas sobre clubes, rendimiento internacional y aspectos tácticos:
 
-• Ganadores de la UEFA Champions League: Muestra los campeones de Europa
-  con su overall general y formación táctica.
-  
-• Eficacia de Goles vs Expected Goals: Analiza qué equipos son más 
-  efectivos/inefectivos comparando goles reales con goles esperados.
-  
-Útil para ver performance de equipos a nivel europeo y eficiencia ofensiva.
+• Ganadores de la UEFA Champions League: Muestra los campeones históricos de Europa junto con su valoración general (overall) y su formación táctica habitual.
+• Eficacia de Goles vs Expected Goals: Compara los goles reales anotados con los goles esperados (xG) para identificar qué equipos son los más efectivos o ineficientes de cara a portería.
+• Análisis de Formaciones Tácticas: Detalla los esquemas tácticos más utilizados por los distintos conjuntos.
         """
     },
     "Partidos": {
         "title": "Pestaña de Partidos",
         "description": """
-Consultas relacionadas con partidos individuales y estadísticas en vivo.
+Análisis estadístico de enfrentamientos directos y variables de juego:
 
-⚠️ Esta pestaña aún no tiene consultas implementadas.
-Placeholder para futuras análisis de:
-- Resultados de partidos
-- Estadísticas por jornada
-- Comparativas entre equipos
+• Goles en Casa vs Fuera: Evalúa la ventaja de la localía analizando cómo cambian los resultados cuando los equipos juegan en su propio estadio versus cuando son visitantes.
+• Partidos con más Tarjetas Rojas: Muestra las estadísticas de expulsiones en los encuentros y su impacto en el juego.
+• Mayor diferencia de cuotas y sorpresa en el resultado: Analiza las brechas en el marcador y la disparidad de nivel en los diferentes partidos.
         """
     },
     "Competiciones": {
         "title": "Pestaña de Competiciones",
         "description": """
-Consultas sobre torneos y competiciones.
+Estadísticas globales a nivel de torneos y análisis predictivo:
 
-⚠️ Esta pestaña aún no tiene consultas implementadas.
-Placeholder para futuras análisis de:
-- Clasificaciones de ligas
-- Evolución de competiciones
-- Estadísticas por competición
+• Porcentaje de aciertos por casa de apuestas: Muestra métricas de cuotas de apuesta agrupados por casa de apuesta.
+• Análisis de Campeones de las 5 grandes ligas: Revisa las estadísticas históricas de los ganadores de cada competición.
+• Cambios en el rendimiento de los campeones del año siguiente: Examina como varían de un año a otro los equipos campeones.
         """
     },
     "Especial": {
         "title": "Pestaña Especial - Consultas Avanzadas",
         "description": """
-Herramientas interactivas para explorar datos específicos:
+Herramientas interactivas y visuales para explorar datos específicos a demanda:
 
 SECCIÓN DE EQUIPOS:
-• Busca un equipo: Escribe para filtrar equipos por nombre y año
-• Ver Equipaciones: Muestra todas las camisetas/uniformes del equipo
-• Mostrar Plantilla: Tabla con jugadores del equipo y sus estadísticas
+• Búsqueda predictiva: Filtra clubes dinámicamente escribiendo su nombre.
+• Ver Equipaciones: Permite visualizar de forma gráfica los uniformes y camisetas del club seleccionado.
+• Mostrar Plantilla: Genera una tabla detallada con los jugadores del equipo y sus estadísticas actuales.
 
 SECCIÓN DE JUGADORES:
-• Busca un jugador: Escribe para filtrar jugadores por nombre y año
-• Ver Foto: Descarga y muestra la foto del jugador desde Sofifa
-
-Ideal para exploración interactiva y visualización de datos específicos.
+• Búsqueda predictiva: Filtra futbolistas dinámicamente escribiendo su nombre.
+• Ver Foto: Descarga y renderiza en tiempo real la imagen oficial del jugador desde Sofifa.
+• Ver Estadísticas: Desglosa los atributos técnicos, físicos y numéricos detallados del perfil del jugador.
         """
     },
     "Consultas personalizadas": {
@@ -80,16 +69,11 @@ Ideal para exploración interactiva y visualización de datos específicos.
         "description": """
 Editor avanzado para escribir tus propias consultas SPARQL:
 
-• Escribe tu consulta: Área de texto para introducir SPARQL válido
-• Ejecutar Consulta: Lanza la consulta contra la base de datos
-• Resultados: Tabla dinámica con todos los resultados
+• Escribe tu consulta: Área de texto libre con soporte completo para la sintaxis SPARQL.
+• Ejecutar Consulta: Lanza la petición directamente contra la base de datos de conocimiento.
+• Resultados: Renderiza una tabla dinámica que ajusta automáticamente sus columnas según las variables devueltas.
 
-Características:
-- Soporte completo de sintaxis SPARQL
-- Configuración automática de columnas según resultados
-- Manejo de errores con mensajes descriptivos
-
-Perfecto para análisis personalizados y experimentación.
+Incluye control de excepciones para capturar errores de sintaxis o conexión con mensajes descriptivos.
         """
     }
 }
@@ -173,7 +157,7 @@ def get_tabs_help_text():
     text += "=" * 60 + "\n\n"
     
     for tab_name, tab_info in TABS_HELP.items():
-        text += f"▪ {tab_info['title']}\n"
+        text += f"{tab_info['title']}\n"
         text += f"{tab_info['description']}\n"
         text += "-" * 60 + "\n\n"
     

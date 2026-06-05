@@ -26,7 +26,7 @@ class FootballGraphApp:
         
         self.root = root
         self.root.title("VINI - Consultas de Fútbol")
-        self.root.configure(fg_color=Colors.BG_PRIMARY)
+        self.root.configure(fg_color=Colors.BG_SECONDARY)
         
         # Cargar icono una sola vez
         self.icon_path = Path(__file__).resolve().parent / "resources" / "eii.ico"
@@ -61,16 +61,10 @@ class FootballGraphApp:
         self.loading_window.title("VINI - Cargando...")
         self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
         
-        try:
-            self.loading_window.iconbitmap(str(self.icon_path))
-            print(f"Icono de carga establecido correctamente: {self.icon_path}")
-        except tk.TclError as e:
-            print(f"Error cargando icono en loading_window: {e}")
-        
         self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
         self.loading_window.grab_set()
-        self.loading_window.configure(fg_color=Colors.BG_PRIMARY)
+        self.loading_window.configure(fg_color=Colors.BG_SECONDARY)
 
         frame = ctk.CTkFrame(self.loading_window, fg_color="transparent")
         frame.pack(fill="both", expand=True, padx=20, pady=20)
@@ -86,12 +80,17 @@ class FootballGraphApp:
         self.loading_progress = ctk.CTkProgressBar(
             frame, 
             mode="determinate", 
-            fg_color=Colors.BG_TERTIARY,
+            fg_color=Colors.BG_PRIMARY,
             progress_color=Colors.ACCENT_GREEN,
             height=8
         )
         self.loading_progress.set(0)
         self.loading_progress.pack(fill="x")
+
+        try:
+            self.loading_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en loading_window: {e}")
 
     def _boot_app(self):
         try:
@@ -364,8 +363,6 @@ class FootballGraphApp:
         self.setup_competitions_tab()
         self.setup_special_tab()
         self.setup_custom_queries_tab()
-        
-        # Status bar removido por request del usuario
     
     def _create_menu_bar(self):
         """Crea la barra de menú superior de la aplicación"""

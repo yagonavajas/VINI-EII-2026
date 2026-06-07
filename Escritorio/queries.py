@@ -350,7 +350,7 @@ SELECT
   ?house
   (COUNT(*) AS ?total)
   (SUM(?correct) AS ?aciertos)
-  (100.0 * SUM(?correct) / COUNT(*) AS ?porcentaje)
+  (xsd:decimal(ROUND((100.0 * SUM(?correct) / COUNT(*)) * 10000) / 10000) AS ?porcentaje)
 WHERE {
   {
     SELECT ?game ?homeResult
@@ -479,7 +479,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?nombreJugador ?edad ?posicionPref ?ritmoTotal ?potencial ?anioTemporada
-       (AVG(xsd:integer(?minutosJugadosStr)) AS ?promedioMinutosPorPartido) 
+       (xsd:decimal(ROUND(AVG(xsd:integer(?minutosJugadosStr)) * 100) / 100) AS ?promedioMinutosPorPartido)
        (COUNT(?appearance) AS ?partidosJugados)
 WHERE {
   # 1. Datos generales del jugador en una temporada específica de Sofifa

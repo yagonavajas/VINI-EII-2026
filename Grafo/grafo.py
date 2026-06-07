@@ -371,13 +371,19 @@ def addPlayersSofifa(graph):
             if count % 1000 == 0:
                 print(f"Procesadas {count} filas")
 
-def addPlayersAppearancesFBDB(graph):
+def addPlayersAppearancesFBDB(graph, start_line, end_line):
     with open("./Aplicacion/Grafo/Archivos/appearances_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
 
         for row in reader: 
+            if count < start_line:
+                count += 1
+                continue
+            if count >= end_line:
+                break
+
             id_game = row["gameID"]
             id_player = obtener_id_player(idfbdb=row["playerID"])
 
@@ -419,13 +425,19 @@ def addPlayersAppearancesFBDB(graph):
             if count % 1000 == 0:
                 print(f"Procesadas {count} filas")
 
-def addShotsFBDB(graph):
+def addShotsFBDB(graph, start_line, end_line):
     with open("./Aplicacion/Grafo/Archivos/shots_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
 
         for row in reader:
+            if count < start_line:
+                count += 1
+                continue
+            if count >= end_line:
+                break
+
             # minute,situation,lastAction,shotType,shotResult,xGoal,positionX,positionY
             id_game = row["gameID"]
             id_shooter = obtener_id_player(idfbdb=row["shooterID"])
@@ -637,11 +649,11 @@ def main():
     # saveGraph(teamsSofifa, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
     # print("(1) Grafo de equipos creado ")
 
-    competitionsWikidata = Graph()
-    competitionsWikidata.bind("vini", VINI)
-    addCompetitionsWikidata(competitionsWikidata)
-    saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
-    print("(2) Grafo de competiciones creado")
+    # competitionsWikidata = Graph()
+    # competitionsWikidata.bind("vini", VINI)
+    # addCompetitionsWikidata(competitionsWikidata)
+    # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+    # print("(2) Grafo de competiciones creado")
 
     # teamStatsFBDB = Graph()
     # teamStatsFBDB.bind("vini", VINI)
@@ -661,17 +673,35 @@ def main():
     # saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
     # print("(5) Grafo de jugadores creado")       
 
-    # appearancesFBDB = Graph()
-    # appearancesFBDB.bind("vini", VINI)
-    # addPlayersAppearancesFBDB(appearancesFBDB)
-    # saveGraph(appearancesFBDB, "./Aplicacion/Grafo/Grafos/appearances_graph.ttl")
-    # print("(6) Grafo de apariciones creado")
+    # appearances1FBDB = Graph()
+    # appearances1FBDB.bind("vini", VINI)
+    # addPlayersAppearancesFBDB(appearances1FBDB, 0, 100000)
+    # saveGraph(appearances1FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g1.ttl")
+    # print("(6) Grafo de apariciones 1 creado")
 
-    # shotsFBDB = Graph()
-    # shotsFBDB.bind("vini", VINI)
-    # addShotsFBDB(shotsFBDB)
-    # saveGraph(shotsFBDB, "./Aplicacion/Grafo/Grafos/shots_graph.ttl")
-    # print("(7) Grafo de tiros creado")
+    # appearances2FBDB = Graph()
+    # appearances2FBDB.bind("vini", VINI)
+    # addPlayersAppearancesFBDB(appearances2FBDB, 100001, 200000)
+    # saveGraph(appearances2FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g2.ttl")
+    # print("(6) Grafo de apariciones 2 creado")
+
+    # appearances3FBDB = Graph()
+    # appearances3FBDB.bind("vini", VINI)
+    # addPlayersAppearancesFBDB(appearances3FBDB, 200001, 300000)
+    # saveGraph(appearances3FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g3.ttl")
+    # print("(6) Grafo de apariciones 3 creado")
+
+    shots1FBDB = Graph()
+    shots1FBDB.bind("vini", VINI)
+    addShotsFBDB(shots1FBDB,0, 120000)
+    saveGraph(shots1FBDB, "./Aplicacion/Grafo/Grafos/shots_graph_g1.ttl")
+    print("(7) Grafo de tiros 1 creado")
+
+    shots2FBDB = Graph()
+    shots2FBDB.bind("vini", VINI)
+    addShotsFBDB(shots2FBDB, 120001, 240000)
+    saveGraph(shots2FBDB, "./Aplicacion/Grafo/Grafos/shots_graph_g2.ttl")
+    print("(7) Grafo de tiros 2 creado")
 
 
 

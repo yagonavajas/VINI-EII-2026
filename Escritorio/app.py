@@ -15,6 +15,7 @@ from io import BytesIO
 from PIL import Image, ImageTk
 import gzip
 from bs4 import BeautifulSoup
+
 from queries import *
 from menu_help import *
 from ui import *

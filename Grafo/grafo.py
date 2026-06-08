@@ -4,20 +4,25 @@ import pandas as pd
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 VINI = Namespace("http://vini-eii.org/")
 
 # Cargar el CSV de equipos unificados una sola vez
-EQUIPOS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/equipos_unificados_v3.csv"
-COUNTRIES_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/paises_unificados.csv"
-COMPETITIONS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/competiciones_unificadas.csv"
-PLAYERS_UNIFICADOS_PATH = "./Aplicacion/Grafo/Archivos/Unificaciones/jugadores_unificados_v1.csv"
+EQUIPOS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "equipos_unificados_v3.csv"
+COUNTRIES_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "paises_unificados.csv"
+COMPETITIONS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "competiciones_unificadas.csv"
+PLAYERS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "jugadores_unificados_v1.csv"
 _equipos_cache = None
 _countries_cache = None
 _competitions_cache = None
 _players_cache = None
 
 def addTeamsSofifa(graph):
-    with open("./Aplicacion/Grafo/Archivos/teams_16_20_sofifa.csv", newline='', encoding='utf-8') as teams_file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "teams_16_20_sofifa.csv", newline='', encoding='utf-8') as teams_file:
         reader = csv.DictReader(teams_file)
 
         for row in reader:
@@ -83,7 +88,7 @@ def addTeamsSofifa(graph):
             graph.add((uri, VINI.year, Literal(year)))
 
 def addCompetitionsWikidata(graph):
-    with open("./Aplicacion/Grafo/Archivos/competiciones_wikidata.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "competiciones_wikidata.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         for row in reader:
@@ -126,7 +131,7 @@ def addCompetitionsWikidata(graph):
             graph.add((competition_uri, VINI.competitionName, Literal(row["competitionLabel"])))
 
 def addTeamStatsFBDB(graph):
-    with open("./Aplicacion/Grafo/Archivos/teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "teamstats_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
@@ -186,7 +191,7 @@ def addTeamStatsFBDB(graph):
                 print(f"Procesadas {count} filas")
 
 def addGamesFBDB(graph): 
-    with open("./Aplicacion/Grafo/Archivos/games_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "games_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
@@ -282,7 +287,7 @@ def addGamesFBDB(graph):
                 print(f"Procesadas {count} filas")
 
 def addPlayersSofifa(graph):
-    with open("./Aplicacion/Grafo/Archivos/players_16_20_sofifa.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "players_16_20_sofifa.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
@@ -372,7 +377,7 @@ def addPlayersSofifa(graph):
                 print(f"Procesadas {count} filas")
 
 def addPlayersAppearancesFBDB(graph, start_line, end_line):
-    with open("./Aplicacion/Grafo/Archivos/appearances_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "appearances_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
@@ -426,7 +431,7 @@ def addPlayersAppearancesFBDB(graph, start_line, end_line):
                 print(f"Procesadas {count} filas")
 
 def addShotsFBDB(graph, start_line, end_line):
-    with open("./Aplicacion/Grafo/Archivos/shots_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
+    with open(BASE_DIR / "Grafo" / "Archivos" / "shots_16_20_fbdb.csv", newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
 
         count = 0
@@ -643,65 +648,65 @@ def saveGraph(g, filename):
         f.write(ttl)
 
 def main():
-    # teamsSofifa = Graph()
-    # teamsSofifa.bind("vini", VINI)
-    # addTeamsSofifa(teamsSofifa)
-    # saveGraph(teamsSofifa, "./Aplicacion/Grafo/Grafos/teams_graph.ttl")
-    # print("(1) Grafo de equipos creado ")
+    teamsSofifa = Graph()
+    teamsSofifa.bind("vini", VINI)
+    addTeamsSofifa(teamsSofifa)
+    saveGraph(teamsSofifa, BASE_DIR / "Grafo" / "Grafos" / "teams_graph_PPP.ttl")
+    print("(1) Grafo de equipos creado ")
 
     # competitionsWikidata = Graph()
     # competitionsWikidata.bind("vini", VINI)
     # addCompetitionsWikidata(competitionsWikidata)
-    # saveGraph(competitionsWikidata, "./Aplicacion/Grafo/Grafos/competitions_graph.ttl")
+    # saveGraph(competitionsWikidata, BASE_DIR / "Grafo" / "Grafos" / "competitions_graph.ttl")
     # print("(2) Grafo de competiciones creado")
 
     # teamStatsFBDB = Graph()
     # teamStatsFBDB.bind("vini", VINI)
     # addTeamStatsFBDB(teamStatsFBDB)
-    # saveGraph(teamStatsFBDB, "./Aplicacion/Grafo/Grafos/teamstats_graph.ttl")
+    # saveGraph(teamStatsFBDB, BASE_DIR / "Grafo" / "Grafos" / "teamstats_graph.ttl")
     # print("(3) Grafo de esatdisticasd e equipos creado")
 
     # gamesFBDB = Graph()
     # gamesFBDB.bind("vini", VINI)
     # addGamesFBDB(gamesFBDB)
-    # saveGraph(gamesFBDB, "./Aplicacion/Grafo/Grafos/games_graph.ttl")
+    # saveGraph(gamesFBDB, BASE_DIR / "Grafo" / "Grafos" / "games_graph.ttl")
     # print("(4) Grafo de partidos creado")   
 
     # playersSofifa = Graph()
     # playersSofifa.bind("vini", VINI)
     # addPlayersSofifa(playersSofifa)
-    # saveGraph(playersSofifa, "./Aplicacion/Grafo/Grafos/players_graph.ttl")
+    # saveGraph(playersSofifa, BASE_DIR / "Grafo" / "Grafos" / "players_graph.ttl")
     # print("(5) Grafo de jugadores creado")       
 
     # appearances1FBDB = Graph()
     # appearances1FBDB.bind("vini", VINI)
     # addPlayersAppearancesFBDB(appearances1FBDB, 0, 100000)
-    # saveGraph(appearances1FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g1.ttl")
+    # saveGraph(appearances1FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g1.ttl")
     # print("(6) Grafo de apariciones 1 creado")
 
     # appearances2FBDB = Graph()
     # appearances2FBDB.bind("vini", VINI)
     # addPlayersAppearancesFBDB(appearances2FBDB, 100001, 200000)
-    # saveGraph(appearances2FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g2.ttl")
+    # saveGraph(appearances2FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g2.ttl")
     # print("(6) Grafo de apariciones 2 creado")
 
     # appearances3FBDB = Graph()
     # appearances3FBDB.bind("vini", VINI)
     # addPlayersAppearancesFBDB(appearances3FBDB, 200001, 300000)
-    # saveGraph(appearances3FBDB, "./Aplicacion/Grafo/Grafos/appearances_graph_g3.ttl")
+    # saveGraph(appearances3FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g3.ttl")
     # print("(6) Grafo de apariciones 3 creado")
 
-    shots1FBDB = Graph()
-    shots1FBDB.bind("vini", VINI)
-    addShotsFBDB(shots1FBDB,0, 120000)
-    saveGraph(shots1FBDB, "./Aplicacion/Grafo/Grafos/shots_graph_g1.ttl")
-    print("(7) Grafo de tiros 1 creado")
+    # shots1FBDB = Graph()
+    # shots1FBDB.bind("vini", VINI)
+    # addShotsFBDB(shots1FBDB,0, 120000)
+    # saveGraph(shots1FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g1.ttl")
+    # print("(7) Grafo de tiros 1 creado")
 
-    shots2FBDB = Graph()
-    shots2FBDB.bind("vini", VINI)
-    addShotsFBDB(shots2FBDB, 120001, 240000)
-    saveGraph(shots2FBDB, "./Aplicacion/Grafo/Grafos/shots_graph_g2.ttl")
-    print("(7) Grafo de tiros 2 creado")
+    # shots2FBDB = Graph()
+    # shots2FBDB.bind("vini", VINI)
+    # addShotsFBDB(shots2FBDB, 120001, 240000)
+    # saveGraph(shots2FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g2.ttl")
+    # print("(7) Grafo de tiros 2 creado")
 
 
 

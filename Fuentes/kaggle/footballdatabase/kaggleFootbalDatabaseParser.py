@@ -2,8 +2,12 @@ import pandas as pd
 import numpy as np
 import chardet
 
-BASE_PATH = "./Aplicacion/Fuentes/kaggle/footballdatabase/"
-OUTPUT_PATH = "./Aplicacion/Fuentes/kaggle/footballdatabase/generados/"
+
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+BASE_PATH = BASE_DIR /  "Fuentes" / "kaggle" / "footballdatabase"
+OUTPUT_PATH = BASE_DIR / "Fuentes" / "kaggle" / "footballdatabase" / "generados"
 
 
 def detectar_encoding(filepath):
@@ -32,11 +36,11 @@ def procesarTemporada(ano_inicial, ano_final):
     season_inicial = ano_inicial - 1
     season_final = ano_final - 1
     
-    GAMES_FILE = f"{BASE_PATH}games.csv"
-    APPEARANCES_FILE = f"{BASE_PATH}appearances.csv"
-    DELETE_FILE = f"{OUTPUT_PATH}delete_16_20.csv"
-    GAMES_OUTPUT = f"{OUTPUT_PATH}games_16_20_fbdb.csv"
-    APPEARANCES_OUTPUT = f"{OUTPUT_PATH}appearances_16_20_fbdb.csv"
+    GAMES_FILE = BASE_PATH / "games.csv"
+    APPEARANCES_FILE = BASE_PATH / "appearances.csv"
+    DELETE_FILE = OUTPUT_PATH / "delete_16_20.csv"
+    GAMES_OUTPUT = OUTPUT_PATH / "games_16_20_fbdb.csv"
+    APPEARANCES_OUTPUT = OUTPUT_PATH / "appearances_16_20_fbdb.csv"
     
     # 1. Cargar y filtrar temporada inicial (año a eliminiar)
     print(f"\n1. Leyendo games.csv...")
@@ -82,9 +86,9 @@ def procesarEquiposTemporada(ano_inicial, ano_final):
     season_inicial = ano_inicial - 1
     season_final = ano_final - 1
     
-    TEAMSTATS_FILE = f"{BASE_PATH}teamstats.csv"
-    DELETE_TEAMSTATS_FILE = f"{OUTPUT_PATH}delete_teamstats_16_20.csv"
-    TEAMSTATS_OUTPUT = f"{OUTPUT_PATH}teamstats_16_20_fbdb.csv"
+    TEAMSTATS_FILE = BASE_PATH / "teamstats.csv"
+    DELETE_TEAMSTATS_FILE = OUTPUT_PATH / "delete_teamstats_16_20.csv"
+    TEAMSTATS_OUTPUT = OUTPUT_PATH / "teamstats_16_20_fbdb.csv"
     
     # 1. Cargar y filtrar teamstats
     print(f"\n1. Leyendo teamstats.csv...")
@@ -116,9 +120,9 @@ def validarYLimpiarJugadores(ano_inicial, ano_final):
     print(f"Validando y limpiando jugadores {ano_inicial}/{ano_final}...")
     print(f"{'='*60}")
     
-    APPEARANCES_FILE = f"{OUTPUT_PATH}appearances_16_20_fbdb.csv"
-    PLAYERS_FILE = f"{BASE_PATH}players.csv"
-    PLAYERS_OUTPUT = f"{OUTPUT_PATH}players_16_20_fbdb.csv"
+    APPEARANCES_FILE = OUTPUT_PATH / "appearances_16_20_fbdb.csv"
+    PLAYERS_FILE = BASE_PATH / "players.csv"
+    PLAYERS_OUTPUT = OUTPUT_PATH / "players_16_20_fbdb.csv"
     
     # 1. Cargar datos
     print(f"\n1. Cargando datos...")
@@ -158,9 +162,9 @@ def validarYLimpiarEquipos(ano_inicial, ano_final):
     print(f"Validando y limpiando equipos {ano_inicial}/{ano_final}...")
     print(f"{'='*60}")
     
-    TEAMSTATS_FILE = f"{OUTPUT_PATH}teamstats_16_20_fbdb.csv"
-    TEAMS_FILE = f"{BASE_PATH}teams.csv"
-    TEAMS_OUTPUT = f"{OUTPUT_PATH}teams_16_20_fbdb.csv"
+    TEAMSTATS_FILE = OUTPUT_PATH / "teamstats_16_20_fbdb.csv"
+    TEAMS_FILE = BASE_PATH / "teams.csv"
+    TEAMS_OUTPUT = OUTPUT_PATH / "teams_16_20_fbdb.csv"
     
     # 1. Cargar datos
     print(f"\n1. Cargando datos...")
@@ -195,9 +199,9 @@ def procesarShots(ano_inicial, ano_final):
     print(f"Procesando shots {ano_inicial}/{ano_final}...")
     print(f"{'='*60}")
     
-    SHOTS_FILE = f"{BASE_PATH}shots.csv"
-    DELETE_FILE = f"{OUTPUT_PATH}delete_16_20.csv"
-    SHOTS_OUTPUT = f"{OUTPUT_PATH}shots_16_20_fbdb.csv"
+    SHOTS_FILE = BASE_PATH / "shots.csv"
+    DELETE_FILE = OUTPUT_PATH / "delete_16_20.csv"
+    SHOTS_OUTPUT = OUTPUT_PATH / "shots_16_20_fbdb.csv"
     
     # 1. Cargar datos
     print(f"\n1. Leyendo shots.csv...")
@@ -237,11 +241,11 @@ def generarRelacionJugadoresEquipos():
     print(f"Generando relación jugadores-equipos (LÓGICA CORRECTA)...")
     print(f"{'='*60}")
     
-    APPEARANCES_FILE = f"{OUTPUT_PATH}appearances_16_20_fbdb.csv"
-    GAMES_FILE = f"{OUTPUT_PATH}games_16_20_fbdb.csv"
-    PLAYERS_FILE = f"{OUTPUT_PATH}players_16_20_fbdb.csv"
-    TEAMS_FILE = f"{OUTPUT_PATH}teams_16_20_fbdb.csv"
-    OUTPUT_FILE = f"{OUTPUT_PATH}players_teams_16_20.csv"
+    APPEARANCES_FILE = OUTPUT_PATH / "appearances_16_20_fbdb.csv"
+    GAMES_FILE = OUTPUT_PATH / "games_16_20_fbdb.csv"
+    PLAYERS_FILE = OUTPUT_PATH / "players_16_20_fbdb.csv"
+    TEAMS_FILE = OUTPUT_PATH / "teams_16_20_fbdb.csv"
+    OUTPUT_FILE = OUTPUT_PATH / "players_teams_16_20.csv"
     
     # 1. Cargar datos
     print(f"\n1. Cargando datos filtrados...")

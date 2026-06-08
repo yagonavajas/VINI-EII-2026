@@ -1,11 +1,15 @@
 import pandas as pd
 import os
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
 def unificar_paises(): 
     # Rutas de los archivos
-    ruta_sofifa = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\players_16_20.csv"
-    ruta_wikidata = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\competiciones_wikidata.csv"
-    ruta_salida = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\paises_unificados.csv"
+    ruta_sofifa = BASE_DIR / "Grafo" / "UnificacionEntidades" / "Paises" / "players_16_20.csv"
+    ruta_wikidata = BASE_DIR / "Grafo" / "UnificacionEntidades" / "Paises" / "competiciones_wikidata.csv"
+    ruta_salida = BASE_DIR  / "Grafo" / "UnificacionEntidades" / "Paises" / "paises_unificados.csv"
 
     # Mapeo de países en español a inglés (de Wikidata a Sofifa/English)
     mapeo_paises = {
@@ -43,7 +47,7 @@ def unificar_paises():
         if country_qid not in paises_wikidata_dict:
             paises_wikidata_dict[country_qid] = country_label
 
-    print("Países en Wikidata:", sorted(paises_wikidata_dict.values()))
+    #print("Países en Wikidata:", sorted(paises_wikidata_dict.values()))
 
     # Crear lista unificada de países
     paises_unificados = []
@@ -83,7 +87,7 @@ def unificar_paises():
 
     print(f"\n Archivo unificado guardado en: {ruta_salida}")
     print(f"Total de países unificados: {len(df_unificados)}")
-    print("\n" + df_unificados.to_string())
+    #print("\n" + df_unificados.to_string())
 
 if __name__ == "__main__":
     unificar_paises()

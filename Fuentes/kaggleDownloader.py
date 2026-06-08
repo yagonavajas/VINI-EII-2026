@@ -7,7 +7,11 @@ import os
 import shutil
 from typing import List, Dict, Union
 
-OUTPUT_DIR = "./Aplicacion/Fuentes/kaggle/"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+OUTPUT_DIR = BASE_DIR /  "Fuentes" / "kaggle"
 
 class KaggleDownloader:
     """Descargador de datasets desde Kaggle organizados por carpetas"""
@@ -15,6 +19,8 @@ class KaggleDownloader:
     def __init__(self, base_output_dir):
         self.base_output_dir = base_output_dir
         os.makedirs(base_output_dir, exist_ok=True)
+        print(OUTPUT_DIR)
+
     
     def download_dataset(self, dataset_name: str, folder_name: str = None) -> bool:
         """Descarga un dataset y copia sus CSVs a una carpeta específica"""

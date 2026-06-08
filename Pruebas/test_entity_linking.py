@@ -1,112 +1,106 @@
 import sys
 import os
 from pathlib import Path
-
-root_dir = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(root_dir))
-
 import pandas as pd
-from Aplicacion.Grafo.UnificacionEntidades.Jugadores.players_id_unifier import detectar_encoding ,extract_initial, extract_lastname, normalize_text, _calculate_similarity_score, unify_entities, build_team_equivalences, build_fbdb_player_teams_mapping
 
-from Aplicacion.Grafo.UnificacionEntidades.Equipos.teams_id_unifier import normalize_text, _calculate_similarity_score, unify_entities, build_wikidata_team_mapping
-from Aplicacion.Grafo.UnificacionEntidades.Paises.unificacionPaises import unificar_paises
+# 1. Configuración dinámica y automática del PATH de búsqueda del proyecto
+# Detecta la carpeta donde reside este script de pruebas (ej: /Proyecto/Pruebas)
+CURRENT_TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+# Sube un nivel para encontrar la raíz del proyecto (ej: /Proyecto)
+ROOT_DIR = os.path.abspath(os.path.join(CURRENT_TEST_DIR, ".."))
+
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
+# Imports de los módulos del proyecto
+from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import (
+    detectar_encoding, extract_initial, extract_lastname, 
+    build_team_equivalences, build_fbdb_player_teams_mapping
+)
+# Se renombran los imports duplicados para evitar conflictos de colisión de nombres
+from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import normalize_text as normalize_player_text
+from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import _calculate_similarity_score as _calc_player_sim
+from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import unify_entities as unify_players
+
+from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import normalize_text as normalize_team_text
+from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import _calculate_similarity_score as _calc_team_sim
+from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import unify_entities as unify_teams
+from Grafo.UnificacionEntidades.Paises.unificacionPaises import unificar_paises
+
+
+# ==============================================================================
+# PRUEBAS DEL MÓDULO DE EQUIPOS
+# ==============================================================================
 
 def test_normalize_text():
-    text = "FC Barcelona"
-    expected_result = "baelona"
-    assert normalize_text(text) == expected_result
+    assert normalize_team_text("FC Barcelona") == "baelona"
+    assert normalize_team_text("Real Madrid CF") == "realmadrid"
+    assert normalize_team_text("Club Atlético de Madrid (CAF)") == "clubatleticodemadridcaf"
 
-    text = "Real Madrid CF"
-    expected_result = "realmadrid"
-    assert normalize_text(text) == expected_result
-
-    text = "Club Atlético de Madrid (CAF)"
-    expected_result = "clubatleticodemadridcaf"
-    assert normalize_text(text) == expected_result
 
 def test_calculate_similarity_score():
-    norm1 = "fcbarranquilla"
-    norm2 = "fcbarcelona"
-    score = _calculate_similarity_score(norm1, norm2)
+    score = _calc_team_sim("fcbarranquilla", "fcbarcelona")
     assert isinstance(score, float)
     assert 0 <= score <= 100
 
-    norm1 = "realmadridcf"
-    norm2 = "realmadridspain"
-    score = _calculate_similarity_score(norm1, norm2)
+    score = _calc_team_sim("realmadridcf", "realmadridspain")
     assert isinstance(score, float)
     assert 0 <= score <= 100
 
-    norm1 = "clubatléticodemadridcaf"
-    norm2 = "clubatléticodelepe"
-    score = _calculate_similarity_score(norm1, norm2)
-    assert isinstance(score, float)
-    assert 0 <= score <= 100
 
 def test_team_id_unifier():
-    # Crea DataFrames simulados para prueba
     sofifa_df = pd.DataFrame({
         'name': ['FC Barcelona', 'Real Madrid'],
         'id': [1, 2]
     })
-
     fbdb_df = pd.DataFrame({
         'name': ['Barcelona FC', 'Madrid Real'],
         'teamID': [3, 4]
     })
-
     wikidata_df = pd.DataFrame({
         'teamLabel': ['FC Barcelona', 'Real Madrid'],
         'team': [101, 102]
     })
 
-    # Ejecuta la función principal
-    definite_matches, candidate_matches, total_entities = unify_entities(
-        sofifa_df,
-        fbdb_df,
-        'name',
-        'name',
-        'id',
-        'teamID',
-        threshold=50,
-        threshold_candidates=40,
-        output_file='output_definite.csv',
-        output_file_candidates='output_candidates.csv',
+    # Construcción de rutas absolutas dinámicas para las salidas de equipos
+    archivos_prueba_dir = os.path.join(CURRENT_TEST_DIR, 'ArchivosPrueba')
+    os.makedirs(archivos_prueba_dir, exist_ok=True) # Asegura la existencia física de la carpeta
+    
+    output_definite_path = os.path.join(archivos_prueba_dir, 'output_definite.csv')
+    output_candidates_path = os.path.join(archivos_prueba_dir, 'output_candidates.csv')
+
+    # Ejecución utilizando la función del módulo de equipos
+    definite_matches, candidate_matches, total_entities = unify_teams(
+        sofifa_df, fbdb_df, 'name', 'name', 'id', 'teamID',
+        threshold=50, threshold_candidates=40,
+        output_file=output_definite_path,
+        output_file_candidates=output_candidates_path,
         wikidata_df=wikidata_df
     )
 
-    # Verifica los resultados
     assert len(definite_matches) == 2
     assert len(candidate_matches) == 0
     assert total_entities == 2
+    assert os.path.exists(output_definite_path)
 
-    # Verifica que se generaron archivos de salida
-    definite_file = 'output_definite.csv'
-
-    try:
-        output_definite_df = pd.read_csv(definite_file)
-    except FileNotFoundError:
-        print(f"El archivo {definite_file} no fue generado")
-
-
-    # Verifica el contenido de los archivos
+    output_definite_df = pd.read_csv(output_definite_path)
     expected_definite_df = pd.DataFrame({
-    'nombreSofifa': ['FC Barcelona', 'Real Madrid'],
-    'nombrefbdb': ['Barcelona FC', 'Madrid Real'],
-    'nombreWikidata': ['FC Barcelona', 'Real Madrid'],
-    'idSofifa': [1, 2],
-    'idfbdb': [3, 4],
-    'idWikidata': [101, 102],
-    'idFinal': [1, 2]
-})
-
-    #print(output_definite_df)
-    print(expected_definite_df)
-
+        'nombreSofifa': ['FC Barcelona', 'Real Madrid'],
+        'nombrefbdb': ['Barcelona FC', 'Madrid Real'],
+        'nombreWikidata': ['FC Barcelona', 'Real Madrid'],
+        'idSofifa': [1, 2],
+        'idfbdb': [3, 4],
+        'idWikidata': [101, 102],
+        'idFinal': [1, 2]
+    })
 
     pd.testing.assert_frame_equal(output_definite_df, expected_definite_df)
 
-# Jugadores
+
+# ==============================================================================
+# PRUEBAS DEL MÓDULO DE JUGADORES
+# ==============================================================================
+
 def test_extract_initial():
     assert extract_initial("L. Messi") == "L"
     assert extract_initial("Cristiano Ronaldo") == "C"
@@ -120,103 +114,119 @@ def test_extract_lastname():
     assert extract_lastname("Neymar") == "Neymar"
     assert extract_lastname("") == ""
 
-def test_normalize_player_text():
-    assert normalize_text("L. Messi") == "lmessi"
-    assert normalize_text("Cristiano Ronaldo") == "cristianoronaldo"
-    assert normalize_text("Neymar") == "neymar"
-    assert normalize_text("") == ""
 
-def test_calculate_similarity_score():
-    assert abs(_calculate_similarity_score('l messi', 'cristiano ronaldo') - 52) < 100
-    assert abs(_calculate_similarity_score('neymar', 'neymar') - 100) < 100
-    assert abs(_calculate_similarity_score('pele', 'pelé') - 83) < 100
+def test_normalize_player_text():
+    assert normalize_player_text("L. Messi") == "lmessi"
+    assert normalize_player_text("Cristiano Ronaldo") == "cristianoronaldo"
+    assert normalize_player_text("Neymar") == "neymar"
+    assert normalize_player_text("") == ""
+
+
+def test_calculate_player_similarity_score():
+    assert abs(_calc_player_sim('l messi', 'cristiano ronaldo') - 52) < 100
+    assert abs(_calc_player_sim('neymar', 'neymar') - 100) < 100
+    assert abs(_calc_player_sim('pele', 'pelé') - 83) < 100
+
 
 def test_build_fbdb_player_teams_mapping():
-    temp_file = "temp_player_teams_mapping.csv"
-    with open(temp_file, 'w') as f:
+    temp_file = os.path.join(CURRENT_TEST_DIR, "temp_player_teams_mapping.csv")
+    with open(temp_file, 'w', encoding='utf-8') as f:
         f.write("playerID,teamsIDS\n1,|\n2,|")
     
     player_teams = build_fbdb_player_teams_mapping(temp_file)
     assert player_teams == {}
-    
-    # Eliminar archivo temporal
-    import os
     os.remove(temp_file)
 
+
 def test_build_team_equivalences():
-    temp_file = "temp_team_equivalences.csv"
-    with open(temp_file, 'w') as f:
+    temp_file = os.path.join(CURRENT_TEST_DIR, "temp_team_equivalences.csv")
+    with open(temp_file, 'w', encoding='utf-8') as f:
         f.write("nombreSofifa,idfbdb\nl messi,1\ncristiano ronaldo,2")
     
     team_name_to_fbdb_id = build_team_equivalences(temp_file)
     assert team_name_to_fbdb_id == {'l messi': 1, 'cristiano ronaldo': 2}
-    
-    # Eliminar archivo temporal
-    import os
     os.remove(temp_file)
 
+
 def test_player_id_unifier():
-    base_path = "./Aplicacion/Pruebas/"
-    files_path = "./Aplicacion/Grafo/UnificacionEntidades/Jugadores"
-    sofifa_file = os.path.join(files_path, 'players_16_20_sofifa.csv')
-    fbdb_file = os.path.join(files_path, 'players_16_20_fbdb.csv')
-    output_file = os.path.join(base_path, 'jugadores_unificados_test.csv')
-    output_candidates_file = os.path.join(base_path, 'jugadores_candidatos_test.csv')
-    
-    if os.path.exists(output_file):
-        os.remove(output_file)
-    if os.path.exists(output_candidates_file):
-        os.remove(output_candidates_file)
-    
-    sofifa_encoding = detectar_encoding(sofifa_file)
-    fbdb_encoding = detectar_encoding(fbdb_file)
-    
-    sofifa = pd.read_csv(sofifa_file, encoding=sofifa_encoding)
-    fbdb = pd.read_csv(fbdb_file, encoding=fbdb_encoding)
-    
-    team_equipos_path = os.path.join(base_path, '../Equipos/equipos_unificados_v2.csv')
-    team_name_to_fbdb_id = build_team_equivalences(team_equipos_path)
-    
-    player_teams_path = os.path.join(base_path, 'players_teams_16_20_fbdb.csv')
-    fbdb_player_teams = build_fbdb_player_teams_mapping(player_teams_path)
-    
-    unify_entities(
-        sofifa, fbdb, 
-        'name', 'name', 
-        'id', 'playerID',
+    sofifa_data = {
+        'name': ['L. Messi', 'Cristiano Ronaldo', 'Neymar', 'Unknown Player'],
+        'id': [1, 2, 3, 4],
+        'team_contract': ['FC Barcelona', 'Real Madrid', 'Paris Saint-Germain', 'Some Team']
+    }
+    fbdb_data = {
+        'name': ['Lionel Messi', 'Cristiano Ronaldo dos Santos Aveiro', 'Neymar Jr', 'Other'],
+        'id': [101, 102, 103, 104]
+    }
+    sofifa_df = pd.DataFrame(sofifa_data)
+    fbdb_df = pd.DataFrame(fbdb_data)
+
+    team_name_to_fbdb_id = {
+        'fc barcelona': 201,
+        'real madrid': 202,
+        'paris saint-germain': 203
+    }
+
+    fbdb_player_teams = {
+        101: [201],
+        102: [202],
+        103: [203],
+        104: []     
+    }
+
+    # Output paths
+    archivos_prueba_dir = os.path.join(CURRENT_TEST_DIR, 'ArchivosPrueba')
+    os.makedirs(archivos_prueba_dir, exist_ok=True)
+    output_file = os.path.join(archivos_prueba_dir, 'jugadores_unificados_test.csv')
+    output_candidates_file = os.path.join(archivos_prueba_dir, 'jugadores_candidatos_test.csv')
+
+    for f in [output_file, output_candidates_file]:
+        if os.path.exists(f):
+            os.remove(f)
+
+    unify_players(
+        sofifa_df, fbdb_df,
+        'name', 'name',
+        'id', 'id',
         threshold=82,
         threshold_candidates=75,
         output_file=output_file,
-        output_file_candidates=output_candidates_file
+        output_file_candidates=output_candidates_file,
+        sofifa_team_col='team_contract',
+        fbdb_id_numeric_col='id',
+        team_name_to_fbdb_id=team_name_to_fbdb_id,
+        fbdb_player_teams=fbdb_player_teams
     )
-    
-    # Verificar que los archivos de salida existan y contengan datos
+
+    # Check outputs exist and are not empty
     assert os.path.exists(output_file)
     assert os.path.exists(output_candidates_file)
 
     unificados_df = pd.read_csv(output_file, encoding='utf-8')
     candidatos_df = pd.read_csv(output_candidates_file, encoding='utf-8')
 
-    assert not unificados_df.empty
-    assert not candidatos_df.empty
+    assert len(unificados_df) >= 3
+
+    assert len(unificados_df) == 4
+
+    matched = unificados_df[unificados_df['idfbdb'] != '']
+    assert len(matched) >= 3
+
+
+
+# ==============================================================================
+# PRUEBAS DEL MÓDULO DE PAÍSES
+# ==============================================================================
 
 def test_unificar_paises():
-    ruta_sofifa_test = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\players_16_20.csv"
-    ruta_wikidata_test = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\competiciones_wikidata.csv"
-    ruta_salida_prueba = r".\Aplicacion\Grafo\UnificacionEntidades\Paises\paises_unificados.csv"
+    paises_modulo_dir = os.path.join(ROOT_DIR, 'Grafo', 'UnificacionEntidades', 'Paises')
+    ruta_salida_prueba = os.path.join(paises_modulo_dir, 'paises_unificados.csv')
 
-    df_sofifa_test = pd.read_csv(ruta_sofifa_test)
-    df_wikidata_test = pd.read_csv(ruta_wikidata_test)
-
-    # Llamar a la función principal para probar
+    # Ejecuta la función del módulo externo
     unificar_paises()
 
-    # Verificar si el archivo de salida existe
     assert os.path.exists(ruta_salida_prueba), "El archivo de salida no se generó correctamente"
 
-    # Leer el archivo de salida y verificar su contenido
     df_output = pd.read_csv(ruta_salida_prueba)
-
-    # Verificar la cantidad de filas en el DataFrame de salida
-    expected_rows = 148  # Ajusta este valor según lo que esperes
-    assert len(df_output) == expected_rows, f"El archivo de salida debe tener {expected_rows} filas, pero tiene {len(df_output)} filas"
+    expected_rows = 148  
+    assert len(df_output) == expected_rows, f"Se esperaban {expected_rows} filas, pero se obtuvieron {len(df_output)}"

@@ -3,6 +3,9 @@ from rapidfuzz import fuzz
 import unicodedata
 import numpy as np
 
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
 # Palabras a eliminar en la normalización
 STOP_WORDS = ['fc', 'ud', 'cf', 'ac', 'ud', 'cd', 'sd', 'rc', 'be', 'aik', 'as', 'if', '1.', 'Olympique', 'Sportiva', 'Football', 'Club', 'Sport']
 
@@ -188,16 +191,16 @@ def build_wikidata_team_mapping(wikidata_file):
 def team_id_unifier():
     """Unifica equipos de sofifa y fbdb, enriqueciendo con datos de WikiData"""
     print("Procesando equipos...")
-    sofifa = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/Equipos/teams_16_20_sofifa.csv')
-    fbdb = pd.read_csv('./Aplicacion/Grafo/UnificacionEntidades/Equipos/teams_16_20_fbdb.csv')
+    sofifa = pd.read_csv(BASE_DIR / "Grafo" / "UnificacionEntidades" / "Equipos" / "teams_16_20_sofifa.csv")
+    fbdb = pd.read_csv(BASE_DIR / "Grafo" / "UnificacionEntidades" / "Equipos" / "teams_16_20_fbdb.csv")
     
     # Cargar datos de WikiData
-    wikidata_df = build_wikidata_team_mapping('./Aplicacion/Grafo/UnificacionEntidades/Equipos/competiciones_wikidata.csv')
+    wikidata_df = build_wikidata_team_mapping(BASE_DIR / "Grafo" / "UnificacionEntidades" / "Equipos" / "competiciones_wikidata.csv")
     
     definite, candidates, total = unify_entities(sofifa, fbdb, 'name', 'name', 'id', 'teamID', 
                                           threshold=55, threshold_candidates=40,
-                                          output_file='./Aplicacion/Grafo/UnificacionEntidades/Equipos/equipos_unificados.csv',
-                                          output_file_candidates='./Aplicacion/Grafo/UnificacionEntidades/Equipos/equipos_candidatos.csv',
+                                          output_file=BASE_DIR / "Grafo" / "UnificacionEntidades" / "Equipos" / "equipos_unificados.csv",
+                                          output_file_candidates=BASE_DIR / "Grafo" / "UnificacionEntidades" / "Equipos" / "equipos_candidatos.csv",
                                           wikidata_df=wikidata_df)
     
     print(f"  Equipos únicos procesados: {total}")

@@ -7,7 +7,6 @@ import os
 import re
 import chardet
 
-
 def detectar_encoding(filepath):
     """
     Detecta automáticamente la codificación de un archivo.

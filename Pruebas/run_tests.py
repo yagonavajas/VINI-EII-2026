@@ -1,11 +1,16 @@
+import os
 import pytest
 
 def run_tests(test_files):
     """Función para correr los tests"""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
     for test_file in test_files:
-        print(f"Ejecutando {test_file}...")
+        test_path = os.path.join(script_dir, test_file)
+
+        print(f"Ejecutando {test_path}...")
         
-        result = pytest.main([test_file])
+        result = pytest.main([test_path])
 
         if result == 0:
             print(f"{test_file} ejecutado con éxito.")
@@ -14,11 +19,13 @@ def run_tests(test_files):
 
 if __name__ == '__main__':
     test_files = [
-        #'./Aplicacion/Pruebas/test_obtain_data.py',
-        #'./Aplicacion/Pruebas/test_normalize_data.py',
-        #'./Aplicacion/Pruebas/test_entity_linking.py',
-        #'./Aplicacion/Pruebas/test_graph_creation.py',
-        './Aplicacion/Pruebas/test_file_upload.py'
+        'test_obtain_data.py',
+        'test_normalize_data.py',
+        'test_entity_linking.py',
+        'test_graph_creation.py',
+        'test_app.py',
+        #'test_graph.py'
+
     ]
 
     run_tests(test_files)

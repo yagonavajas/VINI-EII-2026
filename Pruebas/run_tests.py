@@ -22,10 +22,8 @@ if __name__ == '__main__':
         'test_obtain_data.py',
         'test_normalize_data.py',
         'test_entity_linking.py',
-        'test_graph_creation.py',
-        'test_app.py',
-        #'test_graph.py'
-
+        'test_graph.py',
+        'test_app.py'
     ]
 
     run_tests(test_files)

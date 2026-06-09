@@ -651,7 +651,7 @@ def main():
     teamsSofifa = Graph()
     teamsSofifa.bind("vini", VINI)
     addTeamsSofifa(teamsSofifa)
-    saveGraph(teamsSofifa, BASE_DIR / "Grafo" / "Grafos" / "teams_graph_PPP.ttl")
+    saveGraph(teamsSofifa, BASE_DIR / "Grafo" / "Grafos" / "teams_graph.ttl")
     print("(1) Grafo de equipos creado ")
 
     # competitionsWikidata = Graph()

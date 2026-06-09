@@ -186,7 +186,7 @@ class FootballGraphApp:
         self._fuseki_process = subprocess.Popen(
             [str(fuseki_bat)],
             cwd=str(fuseki_dir),
-            creationflags=subprocess.CREATE_NEW_CONSOLE,
+            #creationflags=subprocess.CREATE_NEW_CONSOLE,
         )
 
     def _wait_for_fuseki_ready(self, timeout_seconds=60):

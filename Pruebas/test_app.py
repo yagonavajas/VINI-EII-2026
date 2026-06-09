@@ -12,10 +12,9 @@ root_dir = Path(__file__).parent.parent
 sys.path.insert(0, str(root_dir))
 from Escritorio.queries import SPARQL_QUERIES
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-FUSEKI_DIR = os.path.join(root_dir, "Aplicacion", "Apache Jena Fuseki", "apache-jena-fuseki-6.0.0")
-FUSEKI_BAT = os.path.join(root_dir, "Aplicacion", "Apache Jena Fuseki", "apache-jena-fuseki-6.0.0", "fuseki-server.bat")
-CARGA_SCRIPT = os.path.join(root_dir, "Grafo", "cargaGrafos.py")
+FUSEKI_DIR = root_dir / "Apache Jena Fuseki" / "apache-jena-fuseki-6.0.0"
+FUSEKI_BAT = root_dir / "Apache Jena Fuseki" / "apache-jena-fuseki-6.0.0" / "fuseki-server.bat"
+CARGA_SCRIPT = root_dir / "Grafo" / "cargaGrafos.py"
 
 
 FUSEKI_PORT = 3030
@@ -32,10 +31,9 @@ def setup_module():
 
 
     # 2. Lanzar Fuseki en segundo plano
-    _fuseki_process = subprocess.Popen(
-        [str(FUSEKI_BAT)],
-        cwd=str(FUSEKI_DIR),
-        creationflags=subprocess.CREATE_NEW_CONSOLE,
+    _fuseki_process = subprocess.Popen([FUSEKI_BAT],
+        cwd=FUSEKI_DIR,
+        #creationflags=subprocess.CREATE_NEW_CONSOLE,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL
     )
@@ -57,11 +55,12 @@ def setup_module():
 
     # 4. Ejecutar carga de grafos
     result = subprocess.run(
-        [sys.executable, str(CARGA_SCRIPT)],
-        cwd=str(CARGA_SCRIPT.parent),
+        [sys.executable, CARGA_SCRIPT],
+        cwd=CARGA_SCRIPT.parent,
         capture_output=True,
         text=True
     )
+
     if result.returncode != 0:
         _fuseki_process.kill()
         pytest.fail(f"cargaGrafos.py falló:\n{result.stderr}")

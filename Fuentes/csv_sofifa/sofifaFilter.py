@@ -82,6 +82,7 @@ def combine_player_files(start_year, end_year):
     return True
 
 def main():
+    # Configura los años que deseas combinar entre 2010 y 2022
     start_year = 2016
     end_year = 2020
     combine_team_files(start_year, end_year)

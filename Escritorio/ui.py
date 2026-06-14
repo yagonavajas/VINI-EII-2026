@@ -788,17 +788,21 @@ class ModernNotification(ctk.CTkToplevel):
         self.geometry("350x100")
         self.configure(fg_color=Colors.BG_SECONDARY, border_width=1, border_color=Colors.BORDER_COLOR)
         
-        # Intentar establecer icono
-        if icon_path:
-            try:
-                import tkinter as tk
-                self.iconbitmap(str(icon_path))
-            except tk.TclError as e:
-                pass  # Ignorar silenciosamente si falla
-        
         # Sin decoración de ventana
         self.attributes("-topmost", True)
         self.transient(master)
+
+        # Intentar establecer icono
+        if icon_path:
+            def set_icon():
+                try:
+                    self.iconbitmap(str(icon_path))
+                    print("estableciendo icono")
+                except tk.TclError as e:
+                    print(f"Error estableciendo icono: {e}")
+            self.after(100, set_icon)
+        #master.iconbitmap(icon_path)
+        
         
         # Colores según tipo
         color_map = {
@@ -827,15 +831,18 @@ class ModernNotification(ctk.CTkToplevel):
         )
         label.pack(padx=15, pady=15)
         
-        # Posicionar en la esquina superior derecha
         self.update_idletasks()
-        master.update_idletasks()
-        
-        x = master.winfo_x() + master.winfo_width() - 370
-        y = master.winfo_y() + 20
-        
-        self.geometry(f"+{x}+{y}")
-        
+
+        window_width = 350
+        window_height = 100
+
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+
+        x = (screen_width // 2) - (window_width // 2)
+        y = (screen_height // 2) - (window_height // 2)
+
+        self.geometry(f"{window_width}x{window_height}+{x}+{y}")
         # Auto-cerrar
         self.after(duration, self.destroy)
 

@@ -57,6 +57,19 @@ class FootballGraphApp:
         boot_thread = threading.Thread(target=self._boot_app, daemon=True)
         boot_thread.start()
 
+    def _set_loading_icon(self):
+        # Usa la misma variable que defines en _show_loading_screen
+        if hasattr(self, 'icon_loading_path') and self.icon_loading_path.exists():
+            try:
+                icon_image = tk.PhotoImage(file=str(self.icon_loading_path))
+                self.loading_window.icon_image = icon_image  # referencia persistente
+                # Forzar la asignación del icono después de que la ventana sea visible
+                self.loading_window.wait_visibility()  # espera a que la ventana se muestre
+                self.loading_window.iconphoto(True, icon_image)
+                self.loading_window.update_idletasks()
+            except Exception as e:
+                print(f"Error cargando icono: {e}")
+
     def _show_loading_screen(self):
         self.loading_window = ctk.CTkToplevel(self.root)
         self.loading_window.title("VINI - Cargando...")
@@ -64,8 +77,13 @@ class FootballGraphApp:
         
         self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
-        self.loading_window.grab_set()
         self.loading_window.configure(fg_color=Colors.BG_SECONDARY)
+
+        self.icon_loading_path = Path(__file__).resolve().parent / "resources" / "eii.png"
+
+        self._set_loading_icon()
+
+        self.loading_window.grab_set()
 
         frame = ctk.CTkFrame(self.loading_window, fg_color="transparent")
         frame.pack(fill="both", expand=True, padx=20, pady=20)
@@ -88,10 +106,8 @@ class FootballGraphApp:
         self.loading_progress.set(0)
         self.loading_progress.pack(fill="x")
 
-        try:
-            self.loading_window.iconbitmap(str(self.icon_path))
-        except tk.TclError as e:
-            print(f"Error cargando icono en loading_window: {e}")
+        #self.loading_window.after(1000, self._set_loading_icon)
+
 
     def _boot_app(self):
         try:
@@ -140,9 +156,12 @@ class FootballGraphApp:
     def _finish_boot(self):
         self.loading_window.destroy()
         self.root.deiconify()
+        
         # Volver a establecer el icono después de deiconify (Windows a veces lo pierde)
         try:
-            self.root.iconbitmap(str(self.icon_path))
+            icon = tk.PhotoImage(file=str(self.icon_path))
+            self.root.iconphoto(False, icon)
+            self.root._icon_ref = icon
         except tk.TclError as e:
             print(f"Error re-estableciendo icono: {e}")
         self.root.lift()

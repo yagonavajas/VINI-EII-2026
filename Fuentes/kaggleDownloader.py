@@ -85,8 +85,8 @@ class KaggleDownloader:
 
 # Datasets a descargar
 DATASETS_TO_DOWNLOAD = [
-    "technika148/football-database",
-    {"name": "davidcariboo/player-scores", "folder": "player-scores"},
+    {"name": "technika148/football-database", "folder": "footballdatabase"},
+    #{"name": "davidcariboo/player-scores", "folder": "player-scores"},
 ]
 
 

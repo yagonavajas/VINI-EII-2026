@@ -12,10 +12,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 VINI = Namespace("http://vini-eii.org/")
 
 # Cargar el CSV de equipos unificados una sola vez
-EQUIPOS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "equipos_unificados_v3.csv"
+EQUIPOS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "equipos_unificados.csv"
 COUNTRIES_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "paises_unificados.csv"
 COMPETITIONS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "competiciones_unificadas.csv"
-PLAYERS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "jugadores_unificados_v1.csv"
+PLAYERS_UNIFICADOS_PATH = BASE_DIR / "Grafo" / "Archivos" / "Unificaciones" / "jugadores_unificados.csv"
 _equipos_cache = None
 _countries_cache = None
 _competitions_cache = None
@@ -654,59 +654,59 @@ def main():
     saveGraph(teamsSofifa, BASE_DIR / "Grafo" / "Grafos" / "teams_graph.ttl")
     print("(1) Grafo de equipos creado ")
 
-    # competitionsWikidata = Graph()
-    # competitionsWikidata.bind("vini", VINI)
-    # addCompetitionsWikidata(competitionsWikidata)
-    # saveGraph(competitionsWikidata, BASE_DIR / "Grafo" / "Grafos" / "competitions_graph.ttl")
-    # print("(2) Grafo de competiciones creado")
+    competitionsWikidata = Graph()
+    competitionsWikidata.bind("vini", VINI)
+    addCompetitionsWikidata(competitionsWikidata)
+    saveGraph(competitionsWikidata, BASE_DIR / "Grafo" / "Grafos" / "competitions_graph.ttl")
+    print("(2) Grafo de competiciones creado")
 
-    # teamStatsFBDB = Graph()
-    # teamStatsFBDB.bind("vini", VINI)
-    # addTeamStatsFBDB(teamStatsFBDB)
-    # saveGraph(teamStatsFBDB, BASE_DIR / "Grafo" / "Grafos" / "teamstats_graph.ttl")
-    # print("(3) Grafo de esatdisticasd e equipos creado")
+    teamStatsFBDB = Graph()
+    teamStatsFBDB.bind("vini", VINI)
+    addTeamStatsFBDB(teamStatsFBDB)
+    saveGraph(teamStatsFBDB, BASE_DIR / "Grafo" / "Grafos" / "teamstats_graph.ttl")
+    print("(3) Grafo de esatdisticasd e equipos creado")
 
-    # gamesFBDB = Graph()
-    # gamesFBDB.bind("vini", VINI)
-    # addGamesFBDB(gamesFBDB)
-    # saveGraph(gamesFBDB, BASE_DIR / "Grafo" / "Grafos" / "games_graph.ttl")
-    # print("(4) Grafo de partidos creado")   
+    gamesFBDB = Graph()
+    gamesFBDB.bind("vini", VINI)
+    addGamesFBDB(gamesFBDB)
+    saveGraph(gamesFBDB, BASE_DIR / "Grafo" / "Grafos" / "games_graph.ttl")
+    print("(4) Grafo de partidos creado")   
 
-    # playersSofifa = Graph()
-    # playersSofifa.bind("vini", VINI)
-    # addPlayersSofifa(playersSofifa)
-    # saveGraph(playersSofifa, BASE_DIR / "Grafo" / "Grafos" / "players_graph.ttl")
-    # print("(5) Grafo de jugadores creado")       
+    playersSofifa = Graph()
+    playersSofifa.bind("vini", VINI)
+    addPlayersSofifa(playersSofifa)
+    saveGraph(playersSofifa, BASE_DIR / "Grafo" / "Grafos" / "players_graph.ttl")
+    print("(5) Grafo de jugadores creado")       
 
-    # appearances1FBDB = Graph()
-    # appearances1FBDB.bind("vini", VINI)
-    # addPlayersAppearancesFBDB(appearances1FBDB, 0, 100000)
-    # saveGraph(appearances1FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g1.ttl")
-    # print("(6) Grafo de apariciones 1 creado")
+    appearances1FBDB = Graph()
+    appearances1FBDB.bind("vini", VINI)
+    addPlayersAppearancesFBDB(appearances1FBDB, 0, 100000)
+    saveGraph(appearances1FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g1.ttl")
+    print("(6) Grafo de apariciones 1 creado")
 
-    # appearances2FBDB = Graph()
-    # appearances2FBDB.bind("vini", VINI)
-    # addPlayersAppearancesFBDB(appearances2FBDB, 100001, 200000)
-    # saveGraph(appearances2FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g2.ttl")
-    # print("(6) Grafo de apariciones 2 creado")
+    appearances2FBDB = Graph()
+    appearances2FBDB.bind("vini", VINI)
+    addPlayersAppearancesFBDB(appearances2FBDB, 100001, 200000)
+    saveGraph(appearances2FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g2.ttl")
+    print("(6) Grafo de apariciones 2 creado")
 
-    # appearances3FBDB = Graph()
-    # appearances3FBDB.bind("vini", VINI)
-    # addPlayersAppearancesFBDB(appearances3FBDB, 200001, 300000)
-    # saveGraph(appearances3FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g3.ttl")
-    # print("(6) Grafo de apariciones 3 creado")
+    appearances3FBDB = Graph()
+    appearances3FBDB.bind("vini", VINI)
+    addPlayersAppearancesFBDB(appearances3FBDB, 200001, 300000)
+    saveGraph(appearances3FBDB, BASE_DIR / "Grafo" / "Grafos" / "appearances_graph_g3.ttl")
+    print("(6) Grafo de apariciones 3 creado")
 
-    # shots1FBDB = Graph()
-    # shots1FBDB.bind("vini", VINI)
-    # addShotsFBDB(shots1FBDB,0, 120000)
-    # saveGraph(shots1FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g1.ttl")
-    # print("(7) Grafo de tiros 1 creado")
+    shots1FBDB = Graph()
+    shots1FBDB.bind("vini", VINI)
+    addShotsFBDB(shots1FBDB,0, 120000)
+    saveGraph(shots1FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g1.ttl")
+    print("(7) Grafo de tiros 1 creado")
 
-    # shots2FBDB = Graph()
-    # shots2FBDB.bind("vini", VINI)
-    # addShotsFBDB(shots2FBDB, 120001, 240000)
-    # saveGraph(shots2FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g2.ttl")
-    # print("(7) Grafo de tiros 2 creado")
+    shots2FBDB = Graph()
+    shots2FBDB.bind("vini", VINI)
+    addShotsFBDB(shots2FBDB, 120001, 240000)
+    saveGraph(shots2FBDB, BASE_DIR / "Grafo" / "Grafos" / "shots_graph_g2.ttl")
+    print("(7) Grafo de tiros 2 creado")
 
 
 

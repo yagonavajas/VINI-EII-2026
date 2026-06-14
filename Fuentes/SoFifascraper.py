@@ -469,11 +469,6 @@ def scrape_fifa_version(version: str, year: str) -> bool:
 def main() -> None:
     """
     Scrape FIFA versions from 2012 to 2022.
-    Maps years to FIFA versions:
-    - 2012 → FIFA 12
-    - 2013 → FIFA 13
-    - 2014 → FIFA 14
-    - ... and so on
     """
     # Mapping year to FIFA version
     fifa_versions = {

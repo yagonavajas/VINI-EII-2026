@@ -711,7 +711,7 @@ class FootballGraphApp:
             pagination_frame,
             text="",
             font=("Segoe UI", FontSizes.TEXT_SMALL),
-            text_color=Colors.TEXT_SECONDARY
+            text_color=Colors.ACCENT_GREEN
         )
         self.custom_info_label.pack(side="left", padx=5)
         
@@ -842,6 +842,7 @@ class FootballGraphApp:
     def _fetch_query_results(self, query_key, table, status_label):
         """Obtiene los resultados de una consulta parametrizada"""
         try:
+            start = time.time()
             query_info = self.queries[query_key]
             sparql = SPARQLWrapper(self.sparql_endpoint)
             sparql.setQuery(SPARQL_QUERIES[query_key])
@@ -863,8 +864,9 @@ class FootballGraphApp:
                 # Actualizar tabla
                 def update_ui():
                     table.set_data(data)
+                    end = time.time()
                     status_label.configure(
-                        text=f"Se cargaron {len(data)} resultados",
+                        text=f"Se cargaron {len(data)} resultados, ejecutado en {end - start:.2f} segundos",
                         text_color=Colors.ACCENT_GREEN
                     )
                 
@@ -872,7 +874,8 @@ class FootballGraphApp:
             else:
                 def update_ui():
                     table.clear()
-                    status_label.configure(text="No se encontraron resultados", text_color=Colors.ACCENT_GREEN)
+                    end = time.time()
+                    status_label.configure(text=f"No se encontraron resultados, ejecutado en {end - start:.2f} segundos", text_color=Colors.ACCENT_GREEN)
                 
                 self.root.after(0, update_ui)
         
@@ -886,6 +889,8 @@ class FootballGraphApp:
     def _fetch_custom_results(self, query):
         """Obtiene los resultados de una consulta personalizada (en thread)"""
         try:
+            start = time.time()
+            self.custom_info_label.configure(text="Ejecutando consulta...", text_color=Colors.ACCENT_GREEN)
             sparql = SPARQLWrapper(self.sparql_endpoint)
             sparql.setQuery(query)
             sparql.setReturnFormat(JSON)
@@ -939,13 +944,17 @@ class FootballGraphApp:
                     
                     # Ajustar columnas automáticamente
                     self.root.after(10, self._adjust_custom_tree_columns_deferred)
+
+                    end = time.time()
+                    self.custom_info_label.configure(text=f"Se cargaron {len(data)} resultados, ejecutado en {end - start:.2f} segundos", text_color=Colors.ACCENT_GREEN)
                 
                 self.root.after(0, update_ui)
             else:
                 def update_ui():
                     for item in self.custom_tree.get_children():
                         self.custom_tree.delete(item)
-                    self.custom_info_label.configure(text="No hay resultados", text_color=Colors.TEXT_SECONDARY)
+                    end = time.time()
+                    self.custom_info_label.configure(text=f"No hay resultados, ejecutado en {end - start:.2f} segundos", text_color=Colors.ACCENT_GREEN)
                     self.custom_btn_prev.configure(state="disabled")
                     self.custom_btn_next.configure(state="disabled")
                     self.btn_custom_execute.configure(state="normal")
@@ -957,7 +966,8 @@ class FootballGraphApp:
             def update_ui():
                 for item in self.custom_tree.get_children():
                     self.custom_tree.delete(item)
-                self.custom_info_label.configure(text=f"Error: {error_msg}", text_color=Colors.ACCENT_RED)
+                end = time.time()
+                self.custom_info_label.configure(text=f"Error: {error_msg}, ejecutado en {end - start:.2f} segundos", text_color=Colors.ACCENT_RED)
                 self.custom_btn_prev.configure(state="disabled")
                 self.custom_btn_next.configure(state="disabled")
                 self.btn_custom_execute.configure(state="normal")
@@ -1362,14 +1372,14 @@ class FootballGraphApp:
     def _extract_player_stats_from_sparql(self, bindings, player_name):
         """Extrae las estadísticas del jugador desde los resultados de SPARQL"""
         stats = {
-            'name': player_name,
-            'overall': 'N/A',
-            'potential': 'N/A',
-            'age': 'N/A',
-            'position': 'N/A',
-            'year': 'N/A',
-            'value': 'N/A',
-            'wage': 'N/A',
+            'Nombre': player_name,
+            'Media': 'N/A',
+            'Potencial': 'N/A',
+            'Edad': 'N/A',
+            'Posicion': 'N/A',
+            'Año': 'N/A',
+            'Valor': 'N/A',
+            'Salario': 'N/A',
             'attributes': {}
         }
         
@@ -1401,13 +1411,30 @@ class FootballGraphApp:
                     value = binding.get(attr_key, {}).get('value', None)
                     if value:
                         # Convertir snake_case a Title Case
-                        attr_name = attr_key.replace('_', ' ').title()
+                        attr_name = self.map_stat_name(attr_key) #attr_key.replace('_', ' ').title()
                         stats['attributes'][attr_name] = value
         
         except Exception as e:
             print(f"Error procesando estadísticas SPARQL: {e}")
         
         return stats
+    
+    def map_stat_name(self, stat):
+        stat_mapping = {'total_attacking': 'Ataque Total', 'total_skill': 'Habilidad Total', 
+                        'total_movement': 'Movimiento Total', 'total_goalkeeping': 'Portería Total',
+                        'total_stats': 'Estadísticas Totales', 
+                        'weak_foot': 'Pierna Mala', 'skill_moves': 'Movimientos de Habilidad', 
+                        'international_reputation': 'Reputación Internacional', 
+                        'attacking_work_rate': 'Ritmo de Ataque', 'defensive_work_rate': 'Ritmo Defensivo', 
+                        'body_type': 'Tipo de Cuerpo', 'real_face': 'Rostro Real',
+                        'height': 'Altura', 'weight': 'Peso', 'best_overall': 'Mejor Media', 
+                        'best_position': 'Mejor Posición', 'growth': 'Crecimiento',
+                        'joined': 'Fecha de Incorporación', 'loan_date_end': 'Fecha de Fin de la cesión', 
+                        'release_clause': 'Cláusula de Rescisión', 'club_kit_number': 'Número de Camiseta',
+                        'physical_positioning': 'Posicionamiento Físico', 'base_stats': 'Estadísticas Base'
+        }
+    
+        return stat_mapping.get(stat, stat)
 
     def _display_player_stats(self, stats, player_name):
         """Muestra las estadísticas del jugador en una tabla similar a la plantilla en el squad_frame"""
@@ -1420,8 +1447,8 @@ class FootballGraphApp:
         
         # Agregar estadísticas principales
         main_stats_list = [
-            ('Overall', stats.get('overall', 'N/A')),
-            ('Potential', stats.get('potential', 'N/A')),
+            ('Media', stats.get('overall', 'N/A')),
+            ('Potencial', stats.get('potential', 'N/A')),
             ('Temporada', stats.get('year', 'N/A')),
             ('Edad', stats.get('age', 'N/A')),
             ('Posición', stats.get('position', 'N/A')),

@@ -33,13 +33,44 @@ def combine_team_files(start_year, end_year):
     end_str = str(end_year)[2:]
     output_filename = f"teams_{start_str}_{end_str}_sofifa.csv"
     output_path = current_dir / output_filename
-    
+
+    for row in combined_df.itertuples():
+        formation = row.formation
+
+        # Reemplazar la columna "formation" con la formacion traducida
+        combined_df.at[row.Index, "formation"] =  map_formation(formation)
+
     # Guardar el archivo combinado
     combined_df.to_csv(output_path, index=False, encoding='utf-8')
     
     print(f"[OK] Archivo guardado: {output_filename}")
     
     return True
+
+def map_formation(formation):
+    """
+    Mapea la formacion traducida al español.
+    """
+    formation_mapping = {
+        "3-4-3 Flat": "3-4-3 En linea",
+        "4-1-2-1-2 Narrow": "4-1-2-1-2 Cerrado",
+        "4-1-2-1-2 Wide": "4-1-2-1-2 Abierto",
+        "4-2-3-1 Narrow": "4-2-3-1 Cerrado",
+        "4-2-3-1 Wide": "4-2-3-1 Abierto",
+        "4-3-3 Attack": "4-3-3 Ofensivo",
+        "4-3-3 Defense": "4-3-3 Defensivo",
+        "4-3-3 False 9": "4-3-3 Falso 9",
+        "4-3-3 Flat": "4-3-3 En linea",
+        "4-3-3 Holding": "4-3-3 Contencion",
+        "4-4-1-1 Attack": "4-4-1-1 Ofensivo",
+        "4-4-1-1 Midfield": "4-4-1-1 Mediocentro",
+        "4-4-2 Flat": "4-4-2 En linea",
+        "4-4-2 Holding": "4-4-2 Contencion",
+        "4-5-1 Flat": "4-5-1 En linea",
+        "5-4-1 Flat": "5-4-1 En linea",
+    }
+    
+    return formation_mapping.get(formation, formation)  # Devuelve la formacion original si no está en el mapeo
 
 def combine_player_files(start_year, end_year):
     """
@@ -74,12 +105,42 @@ def combine_player_files(start_year, end_year):
     output_filename = f"players_{start_str}_{end_str}_sofifa.csv"
     output_path = current_dir / output_filename
     
+    for row in combined_df.itertuples():
+        positions = row.positions
+
+        positions_list = positions.split(" ")
+
+        positions_final_list = []
+
+        for position in positions_list:
+            position_final = map_position(position)
+            positions_final_list.append(position_final)
+
+        best_position =  map_position(row.best_position)
+
+        # Reemplazar la columna "positions" con la lista de posiciones traducidas
+        combined_df.at[row.Index, "positions"] = " / ".join(positions_final_list)
+        combined_df.at[row.Index, "best_position"] = best_position
+
     # Guardar el archivo combinado
     combined_df.to_csv(output_path, index=False, encoding='utf-8')
     
     print(f"[OK] Archivo guardado: {output_filename}")
+
+
+def map_position(position):
+    """
+    Mapea la posición de un jugador al español.
+    """
+    position_mapping = {
+        "GK": "Portero", "CB": "Central", "LB": "Lateral Izquierdo", "RB": "Lateral Derecho",
+        "LWB": "Carrilero Izquierdo", "RWB": "Carrilero Derecho", "CDM": "Pivote Defensivo",
+        "CM": "Mediocentro", "CAM": "Mediapunta", "LM": "Medio izquierdo", "RM": "Medio derecho",
+        "LW": "Extremo izquierdo", "RW": "Extremo derecho",  "CF": "Segundo delantero", "ST": "Delantero"
+    }
     
-    return True
+    return position_mapping.get(position, position)  # Devuelve la posición original si no está en el mapeo
+
 
 def main():
     # Configura los años que deseas combinar entre 2010 y 2022

@@ -199,12 +199,13 @@ COMPETITIONS = {
     'Q156973': 'DFL-Supercup'
 }
 
-# Main
-
-if __name__ == "__main__":
+def main():
     scraper = WikidataCompetitionScraper(output_dir="wikidataCompetitions")
     all_results, filepath = scraper.fetch_multiple_competitions(competitions=COMPETITIONS)
     
     print("\n[SUMMARY]")
     print(f"  - Total de registros: {len(all_results)}")
     print(f"  >> Archivo: {filepath}")
+
+if __name__ == "__main__":
+    main()

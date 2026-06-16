@@ -1,3 +1,8 @@
+===== SELECT * =====
+SELECT (COUNT(*) AS ?numTriples)
+WHERE {
+    ?s ?p ?o .
+}
 ===== Equipos con mejor ataque 2020 =====
 
 PREFIX vini: <http://vini-eii.org/>
@@ -280,3 +285,4 @@ WHERE {
 }
 GROUP BY ?playerName ?wageYear
 ORDER BY DESC(?wageYear)
+

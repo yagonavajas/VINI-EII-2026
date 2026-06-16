@@ -634,7 +634,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -664,7 +664,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -724,7 +724,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "5-4-1 Flat" ;
+    vini:formation "5-4-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -874,7 +874,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "2" ;
@@ -904,7 +904,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -934,7 +934,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -964,7 +964,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -994,7 +994,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -1024,7 +1024,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -1054,7 +1054,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -1084,7 +1084,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -1114,7 +1114,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -1264,7 +1264,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -1294,7 +1294,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -1324,7 +1324,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -1414,7 +1414,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -1444,7 +1444,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -1474,7 +1474,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -1504,7 +1504,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -1534,7 +1534,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -1594,7 +1594,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "3-4-3 Flat" ;
+    vini:formation "3-4-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "8" ;
@@ -1654,7 +1654,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -1774,7 +1774,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -1804,7 +1804,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -1834,7 +1834,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -1864,7 +1864,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -1894,7 +1894,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -1924,7 +1924,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -1954,7 +1954,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -1984,7 +1984,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -2014,7 +2014,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "5-4-1 Flat" ;
+    vini:formation "5-4-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -2074,7 +2074,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -2104,7 +2104,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2134,7 +2134,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -2164,7 +2164,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2194,7 +2194,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -2314,7 +2314,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -2374,7 +2374,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -2404,7 +2404,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -2434,7 +2434,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "19" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "19" ;
@@ -2464,7 +2464,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "9" ;
@@ -2494,7 +2494,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "9" ;
@@ -2524,7 +2524,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "9" ;
@@ -2554,7 +2554,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "9" ;
@@ -2644,7 +2644,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -2674,7 +2674,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2704,7 +2704,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -2794,7 +2794,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -2824,7 +2824,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -2854,7 +2854,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2884,7 +2884,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2914,7 +2914,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -2944,7 +2944,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -2974,7 +2974,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -3034,7 +3034,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -3064,7 +3064,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -3094,7 +3094,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -3124,7 +3124,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -3154,7 +3154,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -3184,7 +3184,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -3274,7 +3274,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -3334,7 +3334,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -3364,7 +3364,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "18" ;
@@ -3394,7 +3394,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "8" ;
@@ -3424,7 +3424,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "7" ;
@@ -3454,7 +3454,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 False 9" ;
+    vini:formation "4-3-3 Falso 9" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "8" ;
@@ -3484,7 +3484,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 False 9" ;
+    vini:formation "4-3-3 Falso 9" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "10" ;
@@ -3514,7 +3514,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -3544,7 +3544,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "7" ;
@@ -3574,7 +3574,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "8" ;
@@ -3634,7 +3634,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -3664,7 +3664,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -3694,7 +3694,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -3724,7 +3724,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -3754,7 +3754,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -3814,7 +3814,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -3844,7 +3844,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "8" ;
@@ -3874,7 +3874,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "8" ;
@@ -3904,7 +3904,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -3964,7 +3964,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -3994,7 +3994,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "7" ;
@@ -4024,7 +4024,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "7" ;
@@ -4054,7 +4054,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -4084,7 +4084,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -4114,7 +4114,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 False 9" ;
+    vini:formation "4-3-3 Falso 9" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -4174,7 +4174,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "7" ;
@@ -4204,7 +4204,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "8" ;
@@ -4234,7 +4234,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -4264,7 +4264,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -4294,7 +4294,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "7" ;
@@ -4324,7 +4324,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -4354,7 +4354,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -4384,7 +4384,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -4444,7 +4444,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -4504,7 +4504,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "9" ;
@@ -4534,7 +4534,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "9" ;
@@ -4564,7 +4564,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "16" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -4594,7 +4594,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -4624,7 +4624,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -4654,7 +4654,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -4684,7 +4684,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -4714,7 +4714,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -4744,7 +4744,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -4774,7 +4774,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -4804,7 +4804,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -4834,7 +4834,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -4864,7 +4864,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "15" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -4894,7 +4894,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "7" ;
@@ -4924,7 +4924,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "7" ;
@@ -4954,7 +4954,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -5014,7 +5014,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "15" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -5044,7 +5044,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -5074,7 +5074,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -5104,7 +5104,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -5134,7 +5134,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "5" ;
@@ -5194,7 +5194,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -5224,7 +5224,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "5" ;
@@ -5254,7 +5254,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "5" ;
@@ -5284,7 +5284,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "5" ;
@@ -5314,7 +5314,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "18" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -5344,7 +5344,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "7" ;
@@ -5434,7 +5434,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -5464,7 +5464,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -5494,7 +5494,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -5614,7 +5614,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "19" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "17" ;
@@ -5644,7 +5644,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "8" ;
@@ -5674,7 +5674,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "8" ;
@@ -5704,7 +5704,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "7" ;
@@ -5734,7 +5734,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -5764,7 +5764,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "16" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -5794,7 +5794,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -5854,7 +5854,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -5884,7 +5884,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -5914,7 +5914,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "5" ;
@@ -5944,7 +5944,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -5974,7 +5974,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "20" ;
@@ -6004,7 +6004,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -6034,7 +6034,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "10" ;
@@ -6064,7 +6064,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "10" ;
@@ -6094,7 +6094,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "10" ;
@@ -6124,7 +6124,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -6154,7 +6154,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "5" ;
@@ -6184,7 +6184,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "5-4-1 Flat" ;
+    vini:formation "5-4-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "5" ;
@@ -6244,7 +6244,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -6394,7 +6394,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -6484,7 +6484,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -6514,7 +6514,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -6574,7 +6574,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "19" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -6604,7 +6604,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -6634,7 +6634,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -6664,7 +6664,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -6694,7 +6694,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -6724,7 +6724,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "15" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -6754,7 +6754,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "6" ;
@@ -6784,7 +6784,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "6" ;
@@ -6814,7 +6814,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "6" ;
@@ -6844,7 +6844,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -6874,7 +6874,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "14" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -6904,7 +6904,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -6934,7 +6934,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -6964,7 +6964,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -6994,7 +6994,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -7024,7 +7024,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -7084,7 +7084,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -7114,7 +7114,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -7144,7 +7144,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-5-1 Flat" ;
+    vini:formation "4-5-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -7174,7 +7174,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "15" ;
@@ -7204,7 +7204,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -7234,7 +7234,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -7294,7 +7294,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -7504,7 +7504,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -7624,7 +7624,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "20" ;
@@ -7654,7 +7654,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -7684,7 +7684,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "10" ;
@@ -7714,7 +7714,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 False 9" ;
+    vini:formation "4-3-3 Falso 9" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "10" ;
@@ -7744,7 +7744,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 False 9" ;
+    vini:formation "4-3-3 Falso 9" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "10" ;
@@ -7774,7 +7774,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "15" ;
@@ -7804,7 +7804,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "2" ;
@@ -7834,7 +7834,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -7864,7 +7864,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -7894,7 +7894,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "5" ;
@@ -7924,7 +7924,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "5" ;
@@ -7954,7 +7954,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "5" ;
@@ -7984,7 +7984,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "6" ;
@@ -8014,7 +8014,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -8044,7 +8044,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -8074,7 +8074,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "5-4-1 Flat" ;
+    vini:formation "5-4-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -8104,7 +8104,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -8164,7 +8164,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "5-4-1 Flat" ;
+    vini:formation "5-4-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -8224,7 +8224,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -8254,7 +8254,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -8284,7 +8284,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Attack" ;
+    vini:formation "4-3-3 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -8314,7 +8314,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -8344,7 +8344,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -8374,7 +8374,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -8404,7 +8404,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "16" ;
@@ -8434,7 +8434,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -8464,7 +8464,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -8494,7 +8494,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "5" ;
@@ -8524,7 +8524,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "5" ;
@@ -8614,7 +8614,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -8644,7 +8644,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -8674,7 +8674,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -8704,7 +8704,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -8734,7 +8734,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -8764,7 +8764,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -8794,7 +8794,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -8884,7 +8884,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -8914,7 +8914,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -8944,7 +8944,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -8974,7 +8974,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "20" ;
@@ -9064,7 +9064,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "9" ;
@@ -9094,7 +9094,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -9124,7 +9124,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -9244,7 +9244,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "5" ;
@@ -9274,7 +9274,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "14" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -9304,7 +9304,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -9484,7 +9484,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -9544,7 +9544,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -9664,7 +9664,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "11" ;
@@ -9694,7 +9694,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -9724,7 +9724,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -9754,7 +9754,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -9784,7 +9784,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -9814,7 +9814,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -9844,7 +9844,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -9874,7 +9874,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -9904,7 +9904,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -9934,7 +9934,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "15" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -9964,7 +9964,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -9994,7 +9994,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -10024,7 +10024,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -10054,7 +10054,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -10084,7 +10084,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -10114,7 +10114,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -10174,7 +10174,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -10204,7 +10204,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -10264,7 +10264,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -10324,7 +10324,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -10354,7 +10354,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -10384,7 +10384,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "20" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "18" ;
@@ -10414,7 +10414,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -10444,7 +10444,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "10" ;
@@ -10534,7 +10534,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -10564,7 +10564,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -10594,7 +10594,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -10624,7 +10624,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -10654,7 +10654,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "4" ;
@@ -10684,7 +10684,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -10714,7 +10714,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -10774,7 +10774,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -10864,7 +10864,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "2" ;
@@ -10894,7 +10894,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -10924,7 +10924,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -10954,7 +10954,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -11014,7 +11014,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "3-4-3 Flat" ;
+    vini:formation "3-4-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -11134,7 +11134,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "13" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -11164,7 +11164,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -11194,7 +11194,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -11224,7 +11224,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -11254,7 +11254,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -11284,7 +11284,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -11314,7 +11314,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -11404,7 +11404,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -11434,7 +11434,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -11494,7 +11494,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -11644,7 +11644,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "17" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "14" ;
@@ -11674,7 +11674,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -11704,7 +11704,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -11764,7 +11764,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -11794,7 +11794,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "19" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "18" ;
@@ -11824,7 +11824,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "9" ;
@@ -11854,7 +11854,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "9" ;
@@ -11884,7 +11884,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "8" ;
@@ -11914,7 +11914,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;
@@ -11944,7 +11944,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -11974,7 +11974,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -12004,7 +12004,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -12034,7 +12034,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -12064,7 +12064,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -12094,7 +12094,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -12124,7 +12124,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -12154,7 +12154,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -12214,7 +12214,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "7" ;
@@ -12244,7 +12244,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -12304,7 +12304,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "4" ;
@@ -12334,7 +12334,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "3" ;
@@ -12364,7 +12364,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -12394,7 +12394,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "4" ;
@@ -12424,7 +12424,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "4" ;
@@ -12454,7 +12454,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -12484,7 +12484,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -12514,7 +12514,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Wide" ;
+    vini:formation "4-1-2-1-2 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -12544,7 +12544,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -12574,7 +12574,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "3" ;
@@ -12634,7 +12634,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -12724,7 +12724,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -12754,7 +12754,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -12784,7 +12784,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -12814,7 +12814,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -12844,7 +12844,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -12904,7 +12904,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -12964,7 +12964,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -12994,7 +12994,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "2" ;
@@ -13024,7 +13024,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -13054,7 +13054,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -13084,7 +13084,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "13" ;
@@ -13114,7 +13114,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -13234,7 +13234,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "19" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Midfield" ;
+    vini:formation "4-4-1-1 Mediocentro" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "19" ;
@@ -13264,7 +13264,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "9" ;
@@ -13294,7 +13294,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "9" ;
@@ -13324,7 +13324,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "9" ;
@@ -13354,7 +13354,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "9" ;
@@ -13384,7 +13384,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "8" ;
@@ -13414,7 +13414,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Flat" ;
+    vini:formation "4-4-2 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "3" ;
@@ -13474,7 +13474,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "3" ;
@@ -13504,7 +13504,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-5-1 Flat" ;
+    vini:formation "4-5-1 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -13534,7 +13534,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -13594,7 +13594,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "8" ;
@@ -13624,7 +13624,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "2" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -13684,7 +13684,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "5" ;
@@ -13714,7 +13714,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -13744,7 +13744,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -13774,7 +13774,7 @@
     vini:defender_line "Offside trap" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Lots" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -13804,7 +13804,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -13834,7 +13834,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "6" ;
@@ -13924,7 +13924,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -13954,7 +13954,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "2" ;
@@ -13984,7 +13984,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "2" ;
@@ -14014,7 +14014,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "2" ;
@@ -14044,7 +14044,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "5" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "2" ;
@@ -14104,7 +14104,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -14134,7 +14134,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "4" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "1" ;
@@ -14164,7 +14164,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "8" ;
@@ -14224,7 +14224,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "12" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Narrow" ;
+    vini:formation "4-2-3-1 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "9" ;
@@ -14254,7 +14254,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -14344,7 +14344,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -14374,7 +14374,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "10" ;
@@ -14404,7 +14404,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Little" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "10" ;
@@ -14524,7 +14524,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/12> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -14554,7 +14554,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-4-2 Holding" ;
+    vini:formation "4-4-2 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "12" ;
@@ -14584,7 +14584,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -14614,7 +14614,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "9" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -14674,7 +14674,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "7" ;
@@ -14704,7 +14704,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/5> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -14734,7 +14734,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "11" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "10" ;
@@ -14764,7 +14764,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "3-4-3 Flat" ;
+    vini:formation "3-4-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -14824,7 +14824,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Little" ;
-    vini:formation "4-4-1-1 Attack" ;
+    vini:formation "4-4-1-1 Ofensivo" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2019> ;
     vini:international_prestige "1" ;
@@ -14884,7 +14884,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "3" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "1" ;
@@ -15004,7 +15004,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "8" ;
@@ -15034,7 +15034,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "1" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "1" ;
@@ -15064,7 +15064,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "6" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Flat" ;
+    vini:formation "4-3-3 En linea" ;
     vini:hasCountry <http://vini-eii.org/country/13> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "5" ;
@@ -15124,7 +15124,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "7" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-1-2-1-2 Narrow" ;
+    vini:formation "4-1-2-1-2 Cerrado" ;
     vini:hasCountry <http://vini-eii.org/country/2> ;
     vini:inSeason <http://vini-eii.org/season/2016> ;
     vini:international_prestige "6" ;
@@ -15214,7 +15214,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2017> ;
     vini:international_prestige "10" ;
@@ -15244,7 +15244,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "10" ;
     vini:dribbling "Normal" ;
-    vini:formation "4-3-3 Holding" ;
+    vini:formation "4-3-3 Contencion" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2018> ;
     vini:international_prestige "10" ;
@@ -15304,7 +15304,7 @@
     vini:defender_line "Cover" ;
     vini:domestic_prestige "8" ;
     vini:dribbling "Little" ;
-    vini:formation "4-2-3-1 Wide" ;
+    vini:formation "4-2-3-1 Abierto" ;
     vini:hasCountry <http://vini-eii.org/country/3> ;
     vini:inSeason <http://vini-eii.org/season/2020> ;
     vini:international_prestige "7" ;

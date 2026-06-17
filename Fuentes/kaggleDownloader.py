@@ -93,21 +93,6 @@ DATASETS_TO_DOWNLOAD = [
 def main():
     downloader = KaggleDownloader(base_output_dir=OUTPUT_DIR)
     downloader.download_multiple_datasets(DATASETS_TO_DOWNLOAD)
-    
-    summary = downloader.get_summary()
-    
-    print(f"\n{'='*60}")
-    print("RESUMEN FINAL")
-    print(f"{'='*60}")
-    print(f"Ubicacion: {summary['base_dir']}\n")
-    
-    total_files = total_size = 0
-    for folder, info in summary['datasets'].items():
-        print(f"{folder}/ - {info['count']} archivos ({info['size_mb']:.2f} MB)")
-        total_files += info['count']
-        total_size += info['size_mb']
-    
-    print(f"\nTotal: {total_files} archivos | {total_size:.2f} MB")
 
 
 if __name__ == "__main__":

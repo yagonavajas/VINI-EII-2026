@@ -781,11 +781,11 @@ class ModernFilterPanel(ctk.CTkFrame):
 class ModernNotification(ctk.CTkToplevel):
     """Notificación emergente"""
     
-    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 3000, icon_path=None):
+    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 5000, icon_path=None):
         super().__init__(master)
         
         self.title("VINI - Notificación")
-        self.geometry("350x100")
+        #self.geometry("450x150")
         self.configure(fg_color=Colors.BG_SECONDARY, border_width=1, border_color=Colors.BORDER_COLOR)
         
         # Sin decoración de ventana
@@ -831,18 +831,44 @@ class ModernNotification(ctk.CTkToplevel):
         )
         label.pack(padx=15, pady=15)
         
+        # self.update_idletasks()
+
+        # window_width = 450
+        # window_height = 150
+
+        # screen_width = self.winfo_screenwidth()
+        # screen_height = self.winfo_screenheight()
+
+        # x = (screen_width // 2) - (window_width // 2)
+        # y = (screen_height // 2) - (window_height // 2)
+
+        # self.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        master.update_idletasks()
         self.update_idletasks()
 
-        window_width = 350
-        window_height = 100
+        window_width = 450
+        window_height = 150
 
-        screen_width = self.winfo_screenwidth()
-        screen_height = self.winfo_screenheight()
+        # Obtenemos las coordenadas (x, y) de la ventana padre en la pantalla
+        master_x = master.winfo_x()
+        master_y = master.winfo_y()
 
-        x = (screen_width // 2) - (window_width // 2)
-        y = (screen_height // 2) - (window_height // 2)
+        # Obtenemos el ancho y alto real de la ventana padre
+        master_width = master.winfo_width()
+        master_height = master.winfo_height()
 
+        # Calculamos el centro relativo al padre
+        # (Posición de inicio del padre + la mitad de su tamaño - la mitad del tamaño de la notificación)
+        x = master_x + (master_width // 2) - (window_width // 2)
+        y = master_y + (master_height // 2) - (window_height // 2)
+
+        # Aplicamos la geometría con la posición calculada
         self.geometry(f"{window_width}x{window_height}+{x}+{y}")
+        
+        # 3. MOSTRAR la ventana ahora que está perfectamente posicionada
+        self.deiconify()
+
         # Auto-cerrar
         self.after(duration, self.destroy)
 

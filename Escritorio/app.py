@@ -36,8 +36,20 @@ class FootballGraphApp:
         except tk.TclError as e:
             print(f"Error cargando icono: {e}")
             print(f"Ruta intentada: {self.icon_path}")
+
+        window_width = 1200
+        window_height = 700
+
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        self.root.geometry(f"{window_width}x{window_height}+{x}+{y}")
         
-        self.root.geometry("1200x700")
+        #self.root.deiconify()
+        
+        #self.root.geometry("1200x700")
         self.root.withdraw()
         self.root.protocol("WM_DELETE_WINDOW", self._confirm_close)
         
@@ -75,11 +87,22 @@ class FootballGraphApp:
         self.loading_window.title("VINI - Cargando...")
         self.loading_window.protocol("WM_DELETE_WINDOW", self._on_loading_window_close)
         
-        self.loading_window.geometry("420x180")
+        #self.loading_window.geometry("420x180")
         self.loading_window.resizable(False, False)
         self.loading_window.configure(fg_color=Colors.BG_SECONDARY)
 
         self.icon_loading_path = Path(__file__).resolve().parent / "resources" / "eii.png"
+
+        window_width = 420
+        window_height = 180
+        screen_width = self.loading_window.winfo_screenwidth()
+        screen_height = self.loading_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        self.loading_window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        self.loading_window.deiconify()
 
         self._set_loading_icon()
 
@@ -157,7 +180,6 @@ class FootballGraphApp:
         self.loading_window.destroy()
         self.root.deiconify()
         
-        # Volver a establecer el icono después de deiconify (Windows a veces lo pierde)
         try:
             icon = tk.PhotoImage(file=str(self.icon_path))
             self.root.iconphoto(False, icon)
@@ -412,7 +434,17 @@ class FootballGraphApp:
         """Muestra la ventana de ayuda general"""
         help_window = tk.Toplevel(self.root)
         help_window.title("Ayuda - VINI")
-        help_window.geometry("700x600")
+
+        window_width = 700
+        window_height = 600
+        screen_width = help_window.winfo_screenwidth()
+        screen_height = help_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        help_window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        #help_window.geometry("700x600")
         try:
             help_window.iconbitmap(str(self.icon_path))
         except tk.TclError as e:
@@ -443,7 +475,18 @@ class FootballGraphApp:
         """Muestra la ventana de ayuda de pestañas"""
         tabs_window = tk.Toplevel(self.root)
         tabs_window.title("Ayuda - Pestañas")
-        tabs_window.geometry("800x700")
+
+        window_width = 800
+        window_height = 700
+        screen_width = tabs_window.winfo_screenwidth()
+        screen_height = tabs_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        tabs_window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+        
+
+        #tabs_window.geometry("800x700")
         try:
             tabs_window.iconbitmap(str(self.icon_path))
         except tk.TclError as e:
@@ -1794,8 +1837,19 @@ class FootballGraphApp:
         
         info_label = ttk.Label(info_frame, text=player_name, font=("Arial", FontSizes.TITLE_SMALL, "bold"))
         info_label.pack()
+
+        window_width = img_copy.width + 20
+        window_height = img_copy.height + 60
+        screen_width = photo_window.winfo_screenwidth()
+        screen_height = photo_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        photo_window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        photo_window.resizable(False, False)
         
-        photo_window.geometry(f"{img_copy.width + 20}x{img_copy.height + 60}")
+        #photo_window.geometry(f"{img_copy.width + 20}x{img_copy.height + 60}")
 
     def _fetch_and_show_kit(self, url, team_name):
         """Descarga la página y extrae la imagen de equipaciones"""
@@ -2219,8 +2273,8 @@ class FootballGraphApp:
         
         # Redimensionar imagen
         def resize_image(img):
-            max_width = 400
-            max_height = 400
+            max_width = 800
+            max_height = 800
             img_copy = img.copy()
             img_copy.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
             return img_copy
@@ -2228,12 +2282,15 @@ class FootballGraphApp:
         # Actualizar imagen
         def update_image():
             img = images[current_index[0]]
-            resized_img = resize_image(img)
+            #resized_img = resize_image(img)
+            resized_img = img.resize((400, 400), Image.Resampling.LANCZOS)
             photo = ImageTk.PhotoImage(resized_img)
             photo_ref[0] = photo
             img_label.config(image=photo)
             counter_label.config(text=f"Equipación {current_index[0] + 1} de {len(images)}")
-            # Ajustar tamaño de la ventana al tamaño de la imagen
+
+            gallery_window.resizable(False, False)
+
             gallery_window.geometry(f"{max(resized_img.width, 350) + 10}x{resized_img.height + 70}")
         
         # Mostrar primera imagen
@@ -2251,6 +2308,7 @@ class FootballGraphApp:
         # Redimensionar imagen si es muy grande
         max_width = 400
         max_height = 400
+
         img_copy = img.copy()
         img_copy.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
         
@@ -2261,8 +2319,18 @@ class FootballGraphApp:
         label = tk.Label(kit_window, image=photo, bg="white")
         label.image = photo  # Mantener referencia
         label.pack(padx=2, pady=2)
+
+
+        window_width = img_copy.height + 5
+        window_height = img_copy.width + 5
+        screen_width = kit_window.winfo_screenwidth()
+        screen_height = kit_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        kit_window.geometry(f"{window_width}x{window_height}+{x}+{y}")        
         
-        kit_window.geometry(f"{img_copy.width + 5}x{img_copy.height + 5}")
+        #kit_window.geometry(f"{img_copy.width + 5}x{img_copy.height + 5}")
 
 
 if __name__ == "__main__":

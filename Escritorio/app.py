@@ -2287,7 +2287,7 @@ class FootballGraphApp:
             photo = ImageTk.PhotoImage(resized_img)
             photo_ref[0] = photo
             img_label.config(image=photo)
-            counter_label.config(text=f"Equipación {current_index[0] + 1} de {len(images)}")
+            counter_label.config(text=f"Equipación {current_index[0] + 1} º de {len(images)}")
 
             gallery_window.resizable(False, False)
 
@@ -2306,8 +2306,8 @@ class FootballGraphApp:
             print(f"Error cargando icono en kit_window: {e}")
         
         # Redimensionar imagen si es muy grande
-        max_width = 400
-        max_height = 400
+        max_width = 800
+        max_height = 800
 
         img_copy = img.copy()
         img_copy.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
@@ -2321,8 +2321,8 @@ class FootballGraphApp:
         label.pack(padx=2, pady=2)
 
 
-        window_width = img_copy.height + 5
-        window_height = img_copy.width + 5
+        window_width = img_copy.width + 5
+        window_height = img_copy.height + 5
         screen_width = kit_window.winfo_screenwidth()
         screen_height = kit_window.winfo_screenheight()
 

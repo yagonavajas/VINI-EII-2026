@@ -1,18 +1,18 @@
 PREFIX vini: <http://vini-eii.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?teamName ?year1 ?year2 ?overall1 ?overall2 
-       ((xsd:float(?overall2) - xsd:float(?overall1)) as ?mejora)
+SELECT ?equipo ?ano1 ?ano2 ?media1 ?media2 
+       ((xsd:float(?media2) - xsd:float(?media1)) as ?mejora)
 WHERE {
-  ?t1 vini:name ?teamName .
-  ?t1 vini:year ?year1 .
-  ?t1 vini:overall ?overall1 .
+  ?t1 vini:name ?equipo .
+  ?t1 vini:year ?ano1 .
+  ?t1 vini:overall ?media1 .
   
-  ?t2 vini:name ?teamName .
-  ?t2 vini:year ?year2 .
-  ?t2 vini:overall ?overall2 .
+  ?t2 vini:name ?equipo .
+  ?t2 vini:year ?ano2 .
+  ?t2 vini:overall ?media2 .
   
-  FILTER (xsd:integer(?year2) = xsd:integer(?year1) + 1)
-  FILTER (xsd:float(?overall2) > xsd:float(?overall1))
+  FILTER (xsd:integer(?ano2) = xsd:integer(?ano1) + 1)
+  FILTER (xsd:float(?media2) > xsd:float(?media1))
 }
 ORDER BY DESC(?mejora)

@@ -781,7 +781,7 @@ class ModernFilterPanel(ctk.CTkFrame):
 class ModernNotification(ctk.CTkToplevel):
     """Notificación emergente"""
     
-    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 5000, icon_path=None):
+    def __init__(self, master, message: str = "", notification_type: str = "info", duration: int = 10000, icon_path=None):
         super().__init__(master)
         
         self.title("VINI - Notificación")

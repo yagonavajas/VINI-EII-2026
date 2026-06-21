@@ -47,7 +47,7 @@ class FootballGraphApp:
         y = int((screen_height / 2) - (window_height / 2))
         self.root.geometry(f"{window_width}x{window_height}+{x}+{y}")
         
-        #self.root.deiconify()
+        self.root.deiconify()
         
         #self.root.geometry("1200x700")
         self.root.withdraw()
@@ -2101,7 +2101,7 @@ class FootballGraphApp:
         table_frame.pack(fill="both", expand=True)
         
         # Crear tabla SIN scrollbars (usa el scroll del contenedor principal)
-        columns = ("Nombre", "Posición", "Overall", "Edad", "Potencial", "Valor", "Salario", "Dorsal")
+        columns = ("Nombre", "Posición", "Media", "Edad", "Potencial", "Valor", "Salario Semanal", "Dorsal")
         squad_tree = ttk.Treeview(
             table_frame,
             columns=columns,

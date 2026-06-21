@@ -10,7 +10,7 @@ Contiene todas las consultas parametrizadas y constantes
 QUERIES_INFO = {
     "champions": {
         "name": "Ganadores de la UEFA Champions League",
-        "columns": ("Año", "Equipo", "Overall", "Formación"),
+        "columns": ("Año", "Equipo", "Media", "Formación"),
         "vars": ("year", "teamName", "overall", "formation")
     },
     "eficacia": {
@@ -42,7 +42,7 @@ QUERIES_INFO = {
     "analisiscampeones": {
         "name": "Analisis de campeones de las 5 grandes ligas",
         "columns": ("Liga", "Presupuesto Medio", "Edad Media Plantilla", "Reputación Internacional Media", "Media Equipo"),
-        "vars": ("nombreLiga", "presupuestoMedioCampeon", "edadMediaPlantilla", "reputacionInternacionalMedia", "mediaEquipo")
+        "vars": ("nombreLiga", "presupuestoMedioCampeonFmt", "edadMediaPlantilla", "reputacionInternacionalMedia", "mediaEquipo")
     },
     "cambiosGanadores":{
         "name": "Cambios en el rendimiento de los campeones al año siguiente",
@@ -149,8 +149,8 @@ ORDER BY DESC(?avgOverall)""",
 PREFIX vini: <http://vini-eii.org/>
 
 SELECT ?teamName ?year
-       (SUM(IF(?location = "home", xsd:float(?goals), 0)) as ?goalsHome)
-       (SUM(IF(?location = "away", xsd:float(?goals), 0)) as ?goalsAway)
+       (SUM(IF(?location = "home", xsd:integer(?goals), 0)) as ?goalsHome)
+       (SUM(IF(?location = "away", xsd:integer(?goals), 0)) as ?goalsAway)
        (COUNT(?stats) as ?totalGames)
 WHERE {
   ?stats a vini:GameStats .
@@ -245,58 +245,87 @@ ORDER BY DESC(?oddsDifference)
 LIMIT 20
 """,
 
-"analisiscampeones": """PREFIX vini: <http://vini-eii.org/>
+"analisiscampeones": r"""PREFIX vini: <http://vini-eii.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?nombreLiga 
-       # Calculamos la media del presupuesto ya limpio y convertido a número real
-       (xsd:decimal(ROUND(AVG(COALESCE(?presupuestoNumerico, 0.0)) * 100) / 100) AS ?presupuestoMedioCampeon)
-       
-       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?edadPlantilla), 0.0)) * 100) / 100) AS ?edadMediaPlantilla)
-       
-       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?prestigioInt), 0.0)) * 100) / 100) AS ?reputacionInternacionalMedia)
-       
-       (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?media), 0.0)) * 100) / 100) AS ?mediaEquipo)
+       ?presupuestoMedioCampeonFmt
+       ?edadMediaPlantilla 
+       ?reputacionInternacionalMedia 
+       ?mediaEquipo
 WHERE {
-  # 1. Obtener los equipos campeones y sus ligas
-  ?winnerNode rdf:type vini:CompetitionWinner ;
-              vini:competition ?competitionUri ;
-              vini:winningTeam ?teamUri ;
-              vini:season ?seasonUri .
+  # 1. Subconsulta para calcular las medias agregadas primero
+  {
+    SELECT ?nombreLiga 
+           (AVG(COALESCE(?presupuestoNumerico, 0.0)) AS ?rawPresupuestoMedio)
+           (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?edadPlantilla), 0.0)) * 100) / 100) AS ?edadMediaPlantilla)
+           (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?prestigioInt), 0.0)) * 100) / 100) AS ?reputacionInternacionalMedia)
+           (xsd:decimal(ROUND(AVG(COALESCE(xsd:double(?media), 0.0)) * 100) / 100) AS ?mediaEquipo)
+    WHERE {
+      # Obtener los equipos campeones y sus ligas
+      ?winnerNode rdf:type vini:CompetitionWinner ;
+                  vini:competition ?competitionUri ;
+                  vini:winningTeam ?teamUri ;
+                  vini:season ?seasonUri .
+      
+      ?competitionUri vini:competitionName ?nombreLiga .
+      
+      # Filtrar estrictamente por las 5 grandes ligas
+      FILTER (
+        REGEX(?nombreLiga, "Primera|Premier League|Serie A|Bundesliga|Ligue 1", "i")
+      )
+      
+      # Extraer año e ID del equipo para enlazar con Sofifa
+      BIND(REPLACE(STR(?seasonUri), "http://vini-eii.org/season/", "") AS ?anioStr)
+      BIND(REPLACE(STR(?teamUri), "http://vini-eii.org/team/", "") AS ?idEquipo)
+      
+      BIND(URI(CONCAT("http://vini-eii.org/teamSeason/", ?idEquipo, "_", ?anioStr)) AS ?teamSeasonUri)
+      
+      # Extraer métricas de forma OPCIONAL
+      OPTIONAL { 
+        ?teamSeasonUri vini:transfer_budget ?presupuestoRaw .
+        
+        # --- PROCESAMIENTO DEL PRESUPUESTO (€4.2M -> 4200000) ---
+        # 1. Quitamos el símbolo de € y la M
+        BIND(REPLACE(REPLACE(STR(?presupuestoRaw), "€", ""), "M", "") AS ?soloNumero)
+        
+        # 2. Lo casteamos a double y lo multiplicamos por 1 millón para tener el valor real
+        BIND(xsd:double(?soloNumero) * 1000000 AS ?presupuestoNumerico)
+      }
+      
+      OPTIONAL { ?teamSeasonUri vini:whole_team_avg_age ?edadPlantilla . }
+      OPTIONAL { ?teamSeasonUri vini:international_prestige ?prestigioInt . }
+      OPTIONAL { ?teamSeasonUri vini:overall ?media . }
+    }
+    GROUP BY ?nombreLiga
+  }
+
+  # xsd:integer elimina limpiamente el .0 residual de los decimales de la parte entera
+  BIND(xsd:integer(?rawPresupuestoMedio) AS ?budgetInt)
+  BIND(xsd:integer(ROUND((?rawPresupuestoMedio - ?budgetInt) * 100)) AS ?budgetCents)
+  BIND(IF(?budgetCents < 10, CONCAT("0", STR(?budgetCents)), STR(?budgetCents)) AS ?budgetDec)
   
-  ?competitionUri vini:competitionName ?nombreLiga .
+  # Extraemos la cadena de texto de la parte entera y su longitud para formatear los miles sin usar lookarounds
+  BIND(STR(?budgetInt) AS ?strInt)
+  BIND(STRLEN(?strInt) AS ?len)
   
-  # Filtrar estrictamente por las 5 grandes ligas
-  FILTER (
-    REGEX(?nombreLiga, "Primera|Premier League|Serie A|Bundesliga|Ligue 1", "i")
+  BIND(
+    IF(?len > 9, 
+       REPLACE(?strInt, "^(\\d+)(\\d{3})(\\d{3})(\\d{3})$", "$1.$2.$3.$4"),
+       IF(?len > 6,
+          REPLACE(?strInt, "^(\\d+)(\\d{3})(\\d{3})$", "$1.$2.$3"),
+          IF(?len > 3,
+             REPLACE(?strInt, "^(\\d+)(\\d{3})$", "$1.$2"),
+             ?strInt
+          )
+       )
+    ) AS ?budgetIntFmt
   )
   
-  # Extraer año e ID del equipo para enlazar con Sofifa
-  BIND(REPLACE(STR(?seasonUri), "http://vini-eii.org/season/", "") AS ?anioStr)
-  BIND(REPLACE(STR(?teamUri), "http://vini-eii.org/team/", "") AS ?idEquipo)
-  
-  BIND(URI(CONCAT("http://vini-eii.org/teamSeason/", ?idEquipo, "_", ?anioStr)) AS ?teamSeasonUri)
-  
-  # 2. Extraer métricas de forma OPCIONAL
-  OPTIONAL { 
-    ?teamSeasonUri vini:transfer_budget ?presupuestoRaw .
-    
-    # --- PROCESAMIENTO DEL PRESUPUESTO (€4.2M -> 4200000) ---
-    # 1. Quitamos el símbolo de € y la M
-    BIND(REPLACE(REPLACE(STR(?presupuestoRaw), "€", ""), "M", "") AS ?soloNumero)
-    
-    # 2. Lo casteamos a double y lo multiplicamos por 1 millón para tener el valor real
-    BIND(xsd:double(?soloNumero) * 1000000 AS ?presupuestoNumerico)
-  }
-  
-  OPTIONAL { ?teamSeasonUri vini:whole_team_avg_age ?edadPlantilla . }
-  OPTIONAL { ?teamSeasonUri vini:international_prestige ?prestigioInt . }
-  OPTIONAL { ?teamSeasonUri vini:overall ?media . }
+  BIND(CONCAT(?budgetIntFmt, ",", ?budgetDec, "€") AS ?presupuestoMedioCampeonFmt)
 }
-GROUP BY ?nombreLiga
-ORDER BY DESC(?presupuestoMedioCampeon)
-
+ORDER BY DESC(?rawPresupuestoMedio)
 """,
 
 "cambiosGanadores": """PREFIX vini: <http://vini-eii.org/>
@@ -394,15 +423,7 @@ ORDER BY DESC(?porcentaje)""",
     "precio_goles": r"""PREFIX vini: <http://vini-eii.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?playerName
-       (CONCAT(STR(ROUND(?wageYear * 100) / 100), "€") AS ?wageYearFmt)
-       (COUNT(?shot) AS ?totalGoals)
-       (CONCAT(
-          STR(ROUND(
-              (IF(COUNT(?shot) > 0, (?wageYear / COUNT(?shot)), 0)) * 100
-          ) / 100),
-          "€"
-       ) AS ?costPerGoalFmt)
+SELECT ?playerName ?wageYearFmt ?totalGoals ?costPerGoalFmt
 WHERE {
   {
     SELECT ?player ?playerName (MAX(?wageParsed) AS ?wageWeek)
@@ -426,17 +447,46 @@ WHERE {
     }
     GROUP BY ?player ?playerName
     ORDER BY DESC(?wageWeek)
-    LIMIT 10
+    LIMIT 25
   }
 
-  OPTIONAL {
-    ?shot vini:shooter ?player ;
-          vini:shotResult "Goal" .
+  # Calculamos el total de goles en una subconsulta intermedia
+  {
+    SELECT ?player (COUNT(?shot) AS ?totalGoals)
+    WHERE {
+      OPTIONAL {
+        ?shot vini:shooter ?player ;
+              vini:shotResult "Goal" .
+      }
+    }
+    GROUP BY ?player
   }
 
-  BIND(?wageWeek * 52 AS ?wageYear)
+  # Definimos el salario acumulado de 5 años (Salario semanal * 52 semanas * 5 años)
+  BIND(?wageWeek * 52 * 5 AS ?wageYear)
+
+  # xsd:integer elimina limpiamente el .0 residual de los decimales de la parte entera
+  BIND(xsd:integer(?wageYear) AS ?wageYearInt)
+  BIND(xsd:integer(ROUND((?wageYear - ?wageYearInt) * 100)) AS ?wageYearCents)
+  BIND(IF(?wageYearCents < 10, CONCAT("0", STR(?wageYearCents)), STR(?wageYearCents)) AS ?wageYearDec)
+  
+  # Formateamos la parte entera con puntos para los miles
+  BIND(REPLACE(STR(?wageYearInt), "(\\d)(?=(\\d{3})+(?!\\d))", "$1.") AS ?wageYearIntFmt)
+  BIND(CONCAT(?wageYearIntFmt, ",", ?wageYearDec, "€") AS ?wageYearFmt)
+
+  # El coste por gol ahora divide el salario total de los 5 años entre los goles marcados
+  BIND(IF(?totalGoals > 0, ?wageYear / ?totalGoals, 0.0) AS ?costPerGoal)
+  
+  # Nuevamente, usamos xsd:integer para evitar decimales residuales a la izquierda
+  BIND(xsd:integer(?costPerGoal) AS ?costInt)
+  BIND(xsd:integer(ROUND((?costPerGoal - ?costInt) * 100)) AS ?costCents)
+  BIND(IF(?costCents < 10, CONCAT("0", STR(?costCents)), STR(?costCents)) AS ?costDec)
+  
+  # Formateamos la parte entera con puntos para los miles
+  BIND(REPLACE(STR(?costInt), "(\\d)(?=(\\d{3})+(?!\\d))", "$1.") AS ?costIntFmt)
+  BIND(CONCAT(?costIntFmt, ",", ?costDec, "€") AS ?costPerGoalFmt)
 }
-GROUP BY ?playerName ?wageYear
+GROUP BY ?playerName ?wageYearFmt ?totalGoals ?costPerGoalFmt ?wageYear
 ORDER BY DESC(?wageYear)""",
 
 "masGoles": """ PREFIX vini: <http://vini-eii.org/>

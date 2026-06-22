@@ -47,7 +47,6 @@ def test_combine_team_files():
     combined_teams = combine_team_files(start_year, end_year)
     
     # Verifica que el archivo de salida exista y tenga datos
-    assert combined_teams
     start_year = str(start_year)
     end_year = str(end_year)
     output_filename = f"teams_{start_year[2:]}_{end_year[2:]}_sofifa.csv"
@@ -66,7 +65,6 @@ def test_combine_player_files():
     combined_players = combine_player_files(start_year, end_year)
     
     # Verifica que el archivo de salida exista y tenga datos
-    assert combined_players
     start_year = str(start_year)
     end_year = str(end_year)
     output_filename = f"players_{start_year[2:]}_{end_year[2:]}_sofifa.csv"

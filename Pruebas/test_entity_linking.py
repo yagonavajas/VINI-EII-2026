@@ -13,19 +13,19 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 # Imports de los módulos del proyecto
-from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import (
+from UnificacionEntidades.Jugadores.players_id_unifier import (
     detectar_encoding, extract_initial, extract_lastname, 
     build_team_equivalences, build_fbdb_player_teams_mapping
 )
 # Se renombran los imports duplicados para evitar conflictos de colisión de nombres
-from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import normalize_text as normalize_player_text
-from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import _calculate_similarity_score as _calc_player_sim
-from Grafo.UnificacionEntidades.Jugadores.players_id_unifier import unify_entities as unify_players
+from UnificacionEntidades.Jugadores.players_id_unifier import normalize_text as normalize_player_text
+from UnificacionEntidades.Jugadores.players_id_unifier import _calculate_similarity_score as _calc_player_sim
+from UnificacionEntidades.Jugadores.players_id_unifier import unify_entities as unify_players
 
-from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import normalize_text as normalize_team_text
-from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import _calculate_similarity_score as _calc_team_sim
-from Grafo.UnificacionEntidades.Equipos.teams_id_unifier import unify_entities as unify_teams
-from Grafo.UnificacionEntidades.Paises.unificacionPaises import unificar_paises
+from UnificacionEntidades.Equipos.teams_id_unifier import normalize_text as normalize_team_text
+from UnificacionEntidades.Equipos.teams_id_unifier import _calculate_similarity_score as _calc_team_sim
+from UnificacionEntidades.Equipos.teams_id_unifier import unify_entities as unify_teams
+from UnificacionEntidades.Paises.unificacionPaises import unificar_paises
 
 
 # ==============================================================================
@@ -219,7 +219,7 @@ def test_player_id_unifier():
 # ==============================================================================
 
 def test_unificar_paises():
-    paises_modulo_dir = os.path.join(ROOT_DIR, 'Grafo', 'UnificacionEntidades', 'Paises')
+    paises_modulo_dir = os.path.join(ROOT_DIR, 'UnificacionEntidades', 'Paises')
     ruta_salida_prueba = os.path.join(paises_modulo_dir, 'paises_unificados.csv')
 
     # Ejecuta la función del módulo externo

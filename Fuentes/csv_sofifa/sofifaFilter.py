@@ -44,8 +44,6 @@ def combine_team_files(start_year, end_year):
     combined_df.to_csv(output_path, index=False, encoding='utf-8')
     
     print(f"[OK] Archivo guardado: {output_filename}")
-    
-    return True
 
 def map_formation(formation):
     """

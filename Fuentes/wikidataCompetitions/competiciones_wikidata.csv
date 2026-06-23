@@ -1,0 +1,95 @@
+año,country,countryLabel,competition,competitionLabel,team,teamLabel
+2016,Q38,Italia,Q15804,Serie A,Q1422,Juventus
+2017,Q38,Italia,Q15804,Serie A,Q1422,Juventus
+2018,Q38,Italia,Q15804,Serie A,Q1422,Juventus
+2019,Q38,Italia,Q15804,Serie A,Q1422,Juventus
+2020,Q38,Italia,Q15804,Serie A,Q1422,Juventus
+2016,Q183,Alemania,Q82595,Bundesliga,Q15789,F. C. Bayern Múnich
+2017,Q183,Alemania,Q82595,Bundesliga,Q15789,F. C. Bayern Múnich
+2018,Q183,Alemania,Q82595,Bundesliga,Q15789,F. C. Bayern Múnich
+2019,Q183,Alemania,Q82595,Bundesliga,Q15789,F. C. Bayern Múnich
+2020,Q183,Alemania,Q82595,Bundesliga,Q15789,F. C. Bayern Múnich
+2016,Q142,Francia,Q13394,Ligue 1,Q483020,Paris Saint-Germain FC
+2017,Q142,Francia,Q13394,Ligue 1,Q180305,A.S. Monaco F.C.
+2018,Q142,Francia,Q13394,Ligue 1,Q483020,Paris Saint-Germain FC
+2019,Q142,Francia,Q13394,Ligue 1,Q483020,Paris Saint-Germain FC
+2020,Q142,Francia,Q13394,Ligue 1,Q483020,Paris Saint-Germain FC
+2016,Q145,Reino Unido,Q9448,Premier League,Q19481,Leicester City Football Club
+2017,Q145,Reino Unido,Q9448,Premier League,Q9616,Chelsea Football Club
+2018,Q145,Reino Unido,Q9448,Premier League,Q50602,Manchester City Football Club
+2019,Q145,Reino Unido,Q9448,Premier League,Q50602,Manchester City Football Club
+2020,Q145,Reino Unido,Q9448,Premier League,Q1130849,Liverpool Fútbol Club
+2016,Q145,Reino Unido,Q189188,Community Shield,Q18656,Manchester United Football Club
+2017,Q145,Reino Unido,Q189188,Community Shield,Q9617,Arsenal Fútbol Club
+2018,Q145,Reino Unido,Q189188,Community Shield,Q50602,Manchester City Football Club
+2019,Q145,Reino Unido,Q189188,Community Shield,Q50602,Manchester City Football Club
+2020,Q145,Reino Unido,Q189188,Community Shield,Q9617,Arsenal Fútbol Club
+2016,Q38,Italia,Q169918,Copa Italia,Q1422,Juventus
+2017,Q38,Italia,Q169918,Copa Italia,Q1422,Juventus
+2018,Q38,Italia,Q169918,Copa Italia,Q1422,Juventus
+2019,Q38,Italia,Q169918,Copa Italia,Q2609,Società Sportiva Lazio
+2020,Q38,Italia,Q169918,Copa Italia,Q2641,Società Sportiva Calcio Napoli
+2016,Q183,Alemania,Q150880,Copa de Alemania,Q15789,F. C. Bayern Múnich
+2017,Q183,Alemania,Q150880,Copa de Alemania,Q41420,Borussia Dortmund
+2018,Q183,Alemania,Q150880,Copa de Alemania,Q38245,Eintracht Frankfurt
+2019,Q183,Alemania,Q150880,Copa de Alemania,Q15789,F. C. Bayern Múnich
+2020,Q183,Alemania,Q150880,Copa de Alemania,Q15789,F. C. Bayern Múnich
+2016,Q142,Francia,Q212412,Copa de Francia,Q483020,Paris Saint-Germain FC
+2017,Q142,Francia,Q212412,Copa de Francia,Q483020,Paris Saint-Germain FC
+2018,Q142,Francia,Q212412,Copa de Francia,Q483020,Paris Saint-Germain FC
+2019,Q142,Francia,Q212412,Copa de Francia,Q19509,Stade Rennais Football Club
+2020,Q142,Francia,Q212412,Copa de Francia,Q483020,Paris Saint-Germain FC
+2016,Q145,Reino Unido,Q11152,Copa de la Liga (Inglaterra y Gales),Q50602,Manchester City Football Club
+2017,Q145,Reino Unido,Q11152,Copa de la Liga (Inglaterra y Gales),Q18656,Manchester United Football Club
+2018,Q145,Reino Unido,Q11152,Copa de la Liga (Inglaterra y Gales),Q50602,Manchester City Football Club
+2019,Q145,Reino Unido,Q11152,Copa de la Liga (Inglaterra y Gales),Q50602,Manchester City Football Club
+2020,Q145,Reino Unido,Q11152,Copa de la Liga (Inglaterra y Gales),Q50602,Manchester City Football Club
+2016,Q29,España,Q483794,Copa del Rey,Q7156,Fútbol Club Barcelona
+2017,Q29,España,Q483794,Copa del Rey,Q7156,Fútbol Club Barcelona
+2018,Q29,España,Q483794,Copa del Rey,Q7156,Fútbol Club Barcelona
+2019,Q29,España,Q483794,Copa del Rey,Q10333,Valencia Club de Fútbol
+2020,Q29,España,Q483794,Copa del Rey,Q10315,Real Sociedad de Fútbol
+2016,Q145,Reino Unido,Q11151,FA Cup,Q18656,Manchester United Football Club
+2017,Q145,Reino Unido,Q11151,FA Cup,Q9617,Arsenal Fútbol Club
+2018,Q145,Reino Unido,Q11151,FA Cup,Q9616,Chelsea Football Club
+2019,Q145,Reino Unido,Q11151,FA Cup,Q50602,Manchester City Football Club
+2020,Q145,Reino Unido,Q11151,FA Cup,Q9617,Arsenal Fútbol Club
+2016,Q29,España,Q18760,Liga Europa de la UEFA,Q10329,Sevilla Fútbol Club
+2017,Q145,Reino Unido,Q18760,Liga Europa de la UEFA,Q18656,Manchester United Football Club
+2018,Q142,Francia,Q18760,Liga Europa de la UEFA,Q8701,Atlético de Madrid
+2019,Q227,Azerbaiyán,Q18760,Liga Europa de la UEFA,Q9616,Chelsea Football Club
+2020,Q183,Alemania,Q18760,Liga Europa de la UEFA,Q10329,Sevilla Fútbol Club
+2016,Q38,Italia,Q18756,Liga de Campeones de la UEFA,Q8682,Real Madrid Club de Fútbol
+2017,Q145,Reino Unido,Q18756,Liga de Campeones de la UEFA,Q8682,Real Madrid Club de Fútbol
+2018,Q212,Ucrania,Q18756,Liga de Campeones de la UEFA,Q8682,Real Madrid Club de Fútbol
+2019,Q29,España,Q18756,Liga de Campeones de la UEFA,Q1130849,Liverpool Fútbol Club
+2020,Q45,Portugal,Q18756,Liga de Campeones de la UEFA,Q15789,F. C. Bayern Múnich
+2016,Q29,España,Q324867,Primera División de España,Q7156,Fútbol Club Barcelona
+2017,Q29,España,Q324867,Primera División de España,Q8682,Real Madrid Club de Fútbol
+2018,Q29,España,Q324867,Primera División de España,Q7156,Fútbol Club Barcelona
+2019,Q29,España,Q324867,Primera División de España,Q7156,Fútbol Club Barcelona
+2020,Q29,España,Q324867,Primera División de España,Q8682,Real Madrid Club de Fútbol
+2016,Q183,Alemania,Q156973,Supercopa de Alemania,Q15789,F. C. Bayern Múnich
+2017,Q183,Alemania,Q156973,Supercopa de Alemania,Q15789,F. C. Bayern Múnich
+2018,Q183,Alemania,Q156973,Supercopa de Alemania,Q15789,F. C. Bayern Múnich
+2019,Q183,Alemania,Q156973,Supercopa de Alemania,Q41420,Borussia Dortmund
+2020,Q183,Alemania,Q156973,Supercopa de Alemania,Q15789,F. C. Bayern Múnich
+2016,Q29,España,Q485997,Supercopa de España,Q7156,Fútbol Club Barcelona
+2017,Q29,España,Q485997,Supercopa de España,Q8682,Real Madrid Club de Fútbol
+2018,Q29,España,Q485997,Supercopa de España,Q7156,Fútbol Club Barcelona
+2019,Q851,Arabia Saudí,Q485997,Supercopa de España,Q8682,Real Madrid Club de Fútbol
+2020,Q29,España,Q485997,Supercopa de España,Q8687,Athletic Club
+2016,Q20,Noruega,Q484028,Supercopa de Europa,Q8682,Real Madrid Club de Fútbol
+2017,Q221,Macedonia del Norte,Q484028,Supercopa de Europa,Q8682,Real Madrid Club de Fútbol
+2018,Q191,Estonia,Q484028,Supercopa de Europa,Q8701,Atlético de Madrid
+2019,Q43,Turquía,Q484028,Supercopa de Europa,Q1130849,Liverpool Fútbol Club
+2020,Q28,Hungría,Q484028,Supercopa de Europa,Q15789,F. C. Bayern Múnich
+2016,Q40,Austria,Q653544,Supercopa de Francia,Q483020,Paris Saint-Germain FC
+2017,Q1028,Marruecos,Q653544,Supercopa de Francia,Q483020,Paris Saint-Germain FC
+2018,Q148,República Popular China,Q653544,Supercopa de Francia,Q483020,Paris Saint-Germain FC
+2019,Q148,República Popular China,Q653544,Supercopa de Francia,Q483020,Paris Saint-Germain FC
+2016,Q38,Italia,Q19618,Supercopa de Italia,Q1543,A.C. Milan
+2017,Q38,Italia,Q19618,Supercopa de Italia,Q2609,Società Sportiva Lazio
+2018,Q38,Italia,Q19618,Supercopa de Italia,Q1422,Juventus
+2019,Q38,Italia,Q19618,Supercopa de Italia,Q2609,Società Sportiva Lazio
+2020,Q38,Italia,Q19618,Supercopa de Italia,Q1422,Juventus

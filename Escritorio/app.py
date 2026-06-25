@@ -427,8 +427,49 @@ class FootballGraphApp:
         menubar.add_cascade(label="Ayuda", menu=help_menu)
         help_menu.add_command(label="Ayuda General", command=self._show_general_help)
         help_menu.add_command(label="Ayuda de Pestañas", command=self._show_tabs_help)
+        help_menu.add_command(label="Modelo de datos - Ontología", command=self._show_data_model_help)
         help_menu.add_separator()
         help_menu.add_command(label="Acerca de", command=self._show_about)
+
+    def _show_data_model_help(self):
+        """Muestra la ventana de ayuda del modelo de datos"""
+        data_model_window = tk.Toplevel(self.root)
+        data_model_window.title("Ayuda - Modelo de Datos")
+
+        window_width = 800
+        window_height = 600
+        screen_width = data_model_window.winfo_screenwidth()
+        screen_height = data_model_window.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+        data_model_window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        try:
+            data_model_window.iconbitmap(str(self.icon_path))
+        except tk.TclError as e:
+            print(f"Error cargando icono en data_model_window: {e}")
+        
+        # Frame con scrollbar
+        text_frame = ttk.Frame(data_model_window)
+        text_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        
+        scrollbar = ttk.Scrollbar(text_frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        text_widget = tk.Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set,
+                             font=("Courier", FontSizes.TEXT_SMALL))
+        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.config(command=text_widget.yview)
+        
+        # Insertar texto de ayuda del modelo de datos
+        text_widget.insert(tk.END, get_data_model_help_text())
+        text_widget.config(state=tk.DISABLED)  # Solo lectura
+        
+        # Botón cerrar
+        btn_frame = ttk.Frame(data_model_window)
+        btn_frame.pack(pady=10)
+        ttk.Button(btn_frame, text="Cerrar", command=data_model_window.destroy).pack()
     
     def _show_general_help(self):
         """Muestra la ventana de ayuda general"""
@@ -1164,13 +1205,14 @@ class FootballGraphApp:
                     player_name = binding.get('playerName', {}).get('value', 'N/A')
                     year = binding.get('year', {}).get('value', 'N/A')
                     url = binding.get('url', {}).get('value', 'N/A')
-                    
-                    display_text = f"{player_name} - {year}"
+                    team_name = binding.get('teamName', {}).get('value', 'N/A')
+                    display_text = f"{player_name} - {year} - {team_name}"
                     player_items.append(display_text)
                     players_data.append({
                         'name': player_name,
                         'year': year,
                         'url': url,
+                        'teamName': team_name,
                         'display': display_text
                     })
                 

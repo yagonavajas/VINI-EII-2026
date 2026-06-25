@@ -175,3 +175,22 @@ def get_help_text():
         text += f"  {shortcut:15} → {description}\n"
     
     return text
+
+def get_data_model_help_text():
+    """Retorna el texto de ayuda del modelo de datos"""
+    text = "MODELO DE DATOS - ONTOLOGÍA\n"
+    text += "=" * 60 + "\n\n"
+    text += "La ontología VINI define los conceptos y relaciones para representar información sobre el fútbol en un entorno semántico.\n\n"
+    text += "CLASES:\n"
+    text += "- Player: Representa a un jugador de fútbol.\n"
+    text += "- Team: Representa a un equipo de fútbol.\n"
+    text += "- Season: Representa una temporada de fútbol.\n"
+    text += "- Match: Representa un partido de fútbol.\n"
+    text += "- Competition: Representa una competición de fútbol.\n\n"
+    text += "PROPIEDADES:\n"
+    text += "- name: Nombre de la entidad.\n"
+    text += "- year: Año de la temporada.\n"
+    text += "- url: URL con información adicional.\n"
+    text += "- hasSeason: Relación con una temporada.\n"
+    text += "- playsFor: Relación con un equipo.\n\n"
+    return text

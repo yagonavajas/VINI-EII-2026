@@ -581,14 +581,18 @@ ORDER BY ?teamName ?year"""
 
 FETCH_PLAYERS_QUERY = """PREFIX vini: <http://vini-eii.org/>
 
-SELECT DISTINCT ?playerName ?year ?url
+SELECT DISTINCT ?playerName ?year ?url ?teamName
 WHERE {
     ?player vini:name ?playerName ;
             vini:hasSeason ?playerSeason .
     ?playerSeason vini:year ?year ;
-                  vini:url ?url .
+                  vini:url ?url ;
+                  vini:playsFor ?team .
+    ?team vini:name ?teamName .
 }
 ORDER BY ?playerName ?year"""
+
+
 
 # ============================================================================
 # CONSULTA PARA OBTENER PLANTILLA DE UN EQUIPO

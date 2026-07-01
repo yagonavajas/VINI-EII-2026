@@ -2,8 +2,8 @@ beautifulsoup4==4.11.1
 chardet==5.2.0
 customtkinter==5.2.2
 kagglehub==1.0.1
-numpy==2.4.6
-pandas==3.0.3
+numpy==2.0.2
+pandas==2.3.3
 Pillow==12.2.0
 pytest==8.4.2
 rapidfuzz==3.14.5
